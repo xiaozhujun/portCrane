@@ -1,0 +1,119 @@
+#mainContainer
+{
+	margin: 0 auto;
+	width: 1100px;
+	padding: 0;
+}
+
+#mainDiv
+{
+	width: 100%;
+}
+
+#topDiv
+{
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	width: 100%;
+
+	 font-family: "微软雅黑";
+	 font-weight: bold;
+     font-size: 24;
+
+    background-color: #eee;
+}
+
+#topContentDiv
+{
+	margin:5px;s
+	margin-left: 30px;
+}
+
+#mainBodyDiv
+{
+	width: 100%;
+	float: left;
+	padding: 0;
+	
+}
+
+#mainHeadDiv
+{
+	width: 100%;
+	padding: 0;
+}
+
+#mainLeftDiv
+{
+	float: left;
+	margin: 0;
+	width: 18%;
+
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+
+	min-height: 530px;
+}
+
+#mainMiddleDiv
+{
+	float: left;
+	margin: 0;
+	width: 60%;
+	margin-left: 8px;
+
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+
+	min-height: 530px;
+}
+
+#mainRightDiv
+{
+	float: left;
+	width: 20%;
+	margin-left: 8px;
+
+
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+
+	min-height: 530px;
+}
+
+#middleTitleDiv
+{
+	background-color: #ccc;
+	font-weight: bold;
+	font-family: 宋体;
+	font-size: 20px;
+	color: gray;
+	padding: 5px;
+}
+
+#craneModelDiv
+{
+	text-align: center;
+	padding-top: 50px;
+}
+
+#rightTabDiv
+{
+	float: left;
+	width: 100%;
+}
+
+#rightMainDiv
+{
+	float: left;
+	width: 100%;
+}
+
+li span
+{
+	cursor: pointer;
+}

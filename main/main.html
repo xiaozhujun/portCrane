@@ -1,22 +1,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
 </head>
 <body>
-  <table width="100%" height="100%">
-    <tr>
-      <td width="200">
-        <iframe name="left" height="100%" width="200" src="left.html"></iframe>
-      </td>
-      <td align="center" valign="top">
-        <iframe name="middle" height="100%" width="100%" src="middle.html" >
-        </iframe>
-      </td>
-      <td align="center" width="300">
-        <iframe name="right" height="100%" width="100%" src="right.html" >
-        </iframe>
-      </td>
-    </tr>
-  </table>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#mainHeadDiv').load('left-tab.html');
+      $('#mainLeftDiv').load('health-forecast.html');
+      $('#mainMiddleDiv').load('middle.html');
+      $('#mainRightDiv').load('right.html');
+    });
+  </script>
+  <div id='mainHeadDiv'>
+
+  </div>
+  <div id='mainBodyDiv'>
+    <div id='mainLeftDiv'></div>
+    <div id='mainMiddleDiv'></div>
+    <div id='mainRightDiv'></div>
+  </div>
+  
 </body>
 </html>
