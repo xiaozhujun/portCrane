@@ -1,12 +1,17 @@
-
-  <link rel="stylesheet" href="tabs.css">
-  <script src="tabs.js" language="JavaScript"></script>
-
+  <link rel="stylesheet" href="css/tabs.css" type="text/css">
+  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('li span').click(function(){
+        $('#mainBodyDiv').load($(this).attr("url"));
+      });
+    });
+  </script> 
   <ul class="tabs">
     <li>
-        <span onclick="showtab(1,2,'health-forecast.html');">&gt; 健康预报</span>
+        <span url="health-forecast.html">&gt; 健康预报</span>
     </li>
     <li>
-        <span onclick="showtab(2,2,'risk-management.html');">&gt; 风险管理</span>
+        <span url="risk-management.html">&gt; 风险管理</span>
     </li>
   </ul>

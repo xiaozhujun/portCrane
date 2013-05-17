@@ -23,7 +23,7 @@
         border-bottom: none;
         background: #fff;
       }
-      .tabs a:hover , body .up a{
+      .tabs span{
         color: #333;
         border-color: #d2d2d2;
         background: #f1f1f1;
