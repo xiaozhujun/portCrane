@@ -26,7 +26,7 @@
 
 #topContentDiv
 {
-	margin:5px;s
+	margin:5px;
 	margin-left: 30px;
 }
 
@@ -54,7 +54,7 @@
 	border-color: #ccc;
 	border-width: 1px;
 
-	min-height: 530px;
+	min-height: 580px;
 }
 
 #mainMiddleDiv
@@ -68,7 +68,7 @@
 	border-color: #ccc;
 	border-width: 1px;
 
-	min-height: 530px;
+	min-height: 580px;
 }
 
 #mainRightDiv
@@ -82,7 +82,7 @@
 	border-color: #ccc;
 	border-width: 1px;
 
-	min-height: 530px;
+	min-height: 580px;
 }
 
 #middleTitleDiv
@@ -122,4 +122,155 @@ li span
 {
 	width: 75%;
 	height: 75%;
+}
+
+#rmBodyDiv
+{
+	background-color: #ccc;
+}
+
+#rmLeftDiv
+{
+	float: left;
+	width: 80%;
+}
+
+#rmRightDiv
+{
+	float: left;
+	width: 20%;
+}
+
+#title1Div
+{
+	position: absolute;
+	left: 100px;
+	top: 80px;
+	padding: 1px;
+	background-color: #ffffff;
+}
+
+#title2Div
+{
+	position: absolute;
+	left: 100px;
+	top: 184px;
+	padding: 1px;
+	background-color: #ffffff;
+}
+
+#title3Div
+{
+	position: absolute;
+	right: 180px;
+	top: 80px;
+	padding: 1px;
+	background-color: #ffffff;
+}
+
+#queryDiv
+{
+	height: 10%;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	padding: 15px;
+}
+
+#queryDiv div
+{
+	float: left;
+	display: inline;
+	margin: 8px;
+}
+
+#operationDiv
+{
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+
+}
+
+#operationDiv li
+{
+	list-style-type: none;
+	text-align: left;
+}
+
+#operationDiv li button
+{
+	padding: 10px;
+	margin-left: 25px;
+	margin-top: 5px;
+}
+
+#sortDiv
+{
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	padding: 15px;
+}
+
+#sortDiv input
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: left;
+}
+
+#tableDiv
+{
+	float: left;
+	width: 100%;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	min-height: 60%;
+}
+
+#tableDiv li
+{
+	float: left;
+	list-style-type: none;
+	border-width: 1px;
+	width: 155;
+	text-align: center;
+}
+
+#tableHeaderDiv 
+{
+	float: left;
+	margin: -16 0 0 -40;
+	padding: 0;
+}
+
+#tableHeaderDiv li
+{
+	border-style: ridge;
+	border-color: #ffffff;
+	background-color: #ccc;
+}
+
+#tableBodyDiv 
+{
+	float: left;
+	margin: -16 0 0 -40;
+	padding: 0;
+}
+
+#tableBodyDiv li
+{
+	border-style: inset;
+	border-color: 0;
 }
