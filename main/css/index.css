@@ -325,6 +325,11 @@
 	display: none;
 }
 
+div .showFirst
+{
+	display: block;
+}
+
 .rowDiv
 {
 	float: left;
