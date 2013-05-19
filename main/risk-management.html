@@ -3,12 +3,15 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css">
 <script type="text/javascript">
 		
-		$(document).ready(
-				// 日期选择器
-				function() {
+		$(document).ready(function() {
+
 					$("input.date").datepicker();
-				}
-			);
+
+					$("#tableBodyDiv ul").unbind('click');
+					$("#tableBodyDiv ul").click(function(){
+						$($(this).next()).toggle(500);
+					});
+				});
 		// 载入选择框数据
 		$("#placeDiv").mySelect({
 			url:"data/place.js",
@@ -38,51 +41,54 @@
 </script>
 <div id="rmBodyDiv">
 	<div id="rmLeftDiv">
-		<div id="title1Div">组合查询</div>
-		<div id="title2Div">排序方式</div>
-		<div id="title3Div">基本操作</div>
-		<div id="queryDiv">
-			<form>
-				<div id="placeDiv">
-				<span>应用场所:</span>
-					<select class="lvl1" name="place" style="width:120px"><!--读取应用场所数据--></select>
-				</div>
-				<div id="cityDiv">
-					<span>所在省市:</span>
-	  			<select class="lvl1" name="prov" style="width:70px"></select> 
-	    		<select class="lvl2" disabled="disabled" name="city" style="width:70px"></select>
-	   		</div>
-	   		<div id="unitDiv">
-					<span>使用单位:</span>
-					<select class="lvl1" name="unit" style="width:250px"><!--读取单位数据--></select>
-				</div>
-				<div id="devTypeDiv">
-					<span>设备类型:</span>
-					<select class="lvl1" name="devType" style="width:120px"><!--读取设备类型数据--></select>
-				</div>
-				<div id="riskLvlDiv">
-					<span>风险等级:</span>
-					<select class="lvl1" name="riskLvl" style="width:70px"><!--读取风险等级数据--></select>
-				</div>
-				<div id="dateSelectDiv">
-				<input type="checkbox" name="dateSelect" value="Select">
-				<span>检测日期</span>
-				<input type="text" class="date" style="width:72px">&nbsp&nbsp至&nbsp&nbsp
-				<input type="text" class="date" style="width:72px">
-				</div>
-				<div id="btnDiv">
-				<input type="submit" value="查询">
-				</div>
-			</form>
+		<div id='queryContainerDiv'>
+			
+			<div id="queryDiv">
+				<form>
+					<div id="placeDiv">
+					<span>应用场所:</span>
+						<select class="lvl1" name="place" style="width:120px"><!--读取应用场所数据--></select>
+					</div>
+					<div id="cityDiv">
+						<span>所在省市:</span>
+		  			<select class="lvl1" name="prov" style="width:70px"></select> 
+		    		<select class="lvl2" disabled="disabled" name="city" style="width:70px"></select>
+		   		</div>
+		   		<div id="unitDiv">
+						<span>使用单位:</span>
+						<select class="lvl1" name="unit" style="width:250px"><!--读取单位数据--></select>
+					</div>
+					<div id="devTypeDiv">
+						<span>设备类型:</span>
+						<select class="lvl1" name="devType" style="width:120px"><!--读取设备类型数据--></select>
+					</div>
+					<div id="riskLvlDiv">
+						<span>风险等级:</span>
+						<select class="lvl1" name="riskLvl" style="width:70px"><!--读取风险等级数据--></select>
+					</div>
+					<div id="dateSelectDiv">
+					<input type="checkbox" name="dateSelect" value="Select">
+					<span>检测日期</span>
+					<input type="text" class="date" style="width:72px">&nbsp&nbsp至&nbsp&nbsp
+					<input type="text" class="date" style="width:72px">
+					</div>
+					<div id="btnDiv">
+					<input type="submit" value="查询">
+					</div>
+				</form>
+			</div>
 		</div>
-		<div id="sortDiv">
-			<input type="radio" name="sortWay" value="risk">风险值
-			<input type="radio" name="sortWay" value="place">应用场所
-			<input type="radio" name="sortWay" value="unit">使用单位
-			<input type="radio" name="sortWay" value="devType">设备类型
-			<input type="radio" name="sortWay" value="prov_city">所在省市
-			<input type="radio" name="sortWay" value="cardId">射频卡号
-			<input type="radio" name="sortWay" value="checkDate">检测日期
+		<div id='sortContainerDiv'>
+			<div id="sortDiv">
+				<input type="radio" name="sortWay" value="risk">风险值
+				<input type="radio" name="sortWay" value="place">应用场所
+				<input type="radio" name="sortWay" value="unit">使用单位
+				<input type="radio" name="sortWay" value="devType">设备类型
+				<input type="radio" name="sortWay" value="prov_city">所在省市
+				<input type="radio" name="sortWay" value="cardId">射频卡号
+				<input type="radio" name="sortWay" value="checkDate">检测日期
+			</div>
+			<div id="sortTilteDiv">排序方式</div>
 		</div>
 	</div>
 	<div id="rmRightDiv">
@@ -100,6 +106,7 @@
 				<li>
 			</ul>
 		</div>
+		<div id="operationTitleDiv">基本操作</div>
 	</div>
 	<div id="tableDiv">
 		<div id="tableHeaderDiv">
@@ -114,42 +121,371 @@
 			</ul>
 		</div>
 		<div id="tableBodyDiv">
+			<div clas='tableRowDiv'>
 			<ul>
-				<li><span>1111</span></li>
-				<li><span>1111</span></li>
-				<li><span>1111</span></li>
-				<li><span>1111</span></li>
-				<li><span>1111</span></li>
-				<li><span>1111</span></li>
-				<li><span>1111</span></li>
+				<li><span class='tableColumn'>L1378y3u13F9u26</span></li>
+				<li><span class='tableColumn'>67</span></li>
+				<li><span class='tableColumn'>2</span></li>
+				<li><span class='tableColumn'>建筑工地</span></li>
+				<li><span class='tableColumn'>南京市造船厂</span></li>
+				<li><span class='tableColumn'>桥式起重机</span></li>
+				<li><span class='tableColumn'>2011-03-26</span></li>
 			</ul>
+			<div class='tableRowDetailDiv'>
+				<div class='rowDiv'>
+					<div class='labelDiv'>现场作业人员数</div>
+					<div class='valueDiv'>[5,8)人</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备价值</div>
+					<div class='valueDiv'>[100,200)万</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用场所</div>
+					<div class='valueDiv'>学校、医院、文物保护区</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>工作级别</div>
+					<div class='valueDiv'>A8</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>制造单位资质</div>
+					<div class='valueDiv'>B级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>安装单位资质等级</div>
+					<div class='valueDiv'>C级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期检验情况</div>
+					<div class='valueDiv'>一次检验合格</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备职管情况</div>
+					<div class='valueDiv'>无专职机构、有专管人员</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备管理制度及执行记录</div>
+					<div class='valueDiv'>有安全管理制度、无执行记录</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>操作人员持证时间</div>
+					<div class='valueDiv'>大于10年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期维护保养及自检</div>
+					<div class='valueDiv'>小于1次、月记录不完整</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用年限</div>
+					<div class='valueDiv'>大于15年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>年故障数</div>
+					<div class='valueDiv'>[12,24）次</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>环境条件</div>
+					<div class='valueDiv'>符合特殊环境（高温、严寒、强风、潮湿、易燃易爆、高腐蚀性、有毒有害、粉尘）1项</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>天运行时间</div>
+					<div class='valueDiv'>[8,12)小时</div>
+				</div>
+			</div>
+			</div>
+			<div clas='tableRowDiv'>
 			<ul>
-				<li><span>222222</span></li>
-				<li><span>222222</span></li>
-				<li><span>222222</span></li>
-				<li><span>222222</span></li>
-				<li><span>222222</span></li>
-				<li><span>222222</span></li>
-				<li><span>222222</span></li>
+				<li><span class='tableColumn'>L1368y3u54F93ee</span></li>
+				<li><span class='tableColumn'>70</span></li>
+				<li><span class='tableColumn'>3</span></li>
+				<li><span class='tableColumn'>工业园区</span></li>
+				<li><span class='tableColumn'>中国建筑科学研究院</span></li>
+				<li><span class='tableColumn'>门式起重机</span></li>
+				<li><span class='tableColumn'>2012-05-23</span></li>
 			</ul>
+			<div class='tableRowDetailDiv'>
+				<div class='rowDiv'>
+					<div class='labelDiv'>现场作业人员数</div>
+					<div class='valueDiv'>[5,8)人</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备价值</div>
+					<div class='valueDiv'>[100,200)万</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用场所</div>
+					<div class='valueDiv'>学校、医院、文物保护区</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>工作级别</div>
+					<div class='valueDiv'>A8</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>制造单位资质</div>
+					<div class='valueDiv'>B级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>安装单位资质等级</div>
+					<div class='valueDiv'>C级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期检验情况</div>
+					<div class='valueDiv'>一次检验合格</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备职管情况</div>
+					<div class='valueDiv'>无专职机构、有专管人员</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备管理制度及执行记录</div>
+					<div class='valueDiv'>有安全管理制度、无执行记录</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>操作人员持证时间</div>
+					<div class='valueDiv'>大于10年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期维护保养及自检</div>
+					<div class='valueDiv'>小于1次、月记录不完整</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用年限</div>
+					<div class='valueDiv'>大于15年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>年故障数</div>
+					<div class='valueDiv'>[12,24）次</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>环境条件</div>
+					<div class='valueDiv'>符合特殊环境（高温、严寒、强风、潮湿、易燃易爆、高腐蚀性、有毒有害、粉尘）1项</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>天运行时间</div>
+					<div class='valueDiv'>[8,12)小时</div>
+				</div>
+			</div>
+			</div>
+			<div clas='tableRowDiv'>
 			<ul>
-				<li><span>3333</span></li>
-				<li><span>3333</span></li>
-				<li><span>3333</span></li>
-				<li><span>3333</span></li>
-				<li><span>3333</span></li>
-				<li><span>3333</span></li>
-				<li><span>3333</span></li>
+				<li><span class='tableColumn'>L3596y3u3e69u7e</span></li>
+				<li><span class='tableColumn'>30</span></li>
+				<li><span class='tableColumn'>1</span></li>
+				<li><span class='tableColumn'>建筑工地</span></li>
+				<li><span class='tableColumn'>南京市造船厂</span></li>
+				<li><span class='tableColumn'>门式起重机</span></li>
+				<li><span class='tableColumn'>2013-02-10</span></li>
 			</ul>
+			<div class='tableRowDetailDiv'>
+				<div class='rowDiv'>
+					<div class='labelDiv'>现场作业人员数</div>
+					<div class='valueDiv'>[5,8)人</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备价值</div>
+					<div class='valueDiv'>[100,200)万</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用场所</div>
+					<div class='valueDiv'>学校、医院、文物保护区</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>工作级别</div>
+					<div class='valueDiv'>A8</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>制造单位资质</div>
+					<div class='valueDiv'>B级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>安装单位资质等级</div>
+					<div class='valueDiv'>C级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期检验情况</div>
+					<div class='valueDiv'>一次检验合格</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备职管情况</div>
+					<div class='valueDiv'>无专职机构、有专管人员</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备管理制度及执行记录</div>
+					<div class='valueDiv'>有安全管理制度、无执行记录</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>操作人员持证时间</div>
+					<div class='valueDiv'>大于10年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期维护保养及自检</div>
+					<div class='valueDiv'>小于1次、月记录不完整</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用年限</div>
+					<div class='valueDiv'>大于15年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>年故障数</div>
+					<div class='valueDiv'>[12,24）次</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>环境条件</div>
+					<div class='valueDiv'>符合特殊环境（高温、严寒、强风、潮湿、易燃易爆、高腐蚀性、有毒有害、粉尘）1项</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>天运行时间</div>
+					<div class='valueDiv'>[8,12)小时</div>
+				</div>
+			</div>
+			</div>
+			<div clas='tableRowDiv'>
 			<ul>
-				<li><span>44444</span></li>
-				<li><span>44444</span></li>
-				<li><span>44444</span></li>
-				<li><span>44444</span></li>
-				<li><span>44444</span></li>
-				<li><span>44444</span></li>
-				<li><span>44444</span></li>
+				<li><span class='tableColumn'>L18463u54F9u7e</span></li>
+				<li><span class='tableColumn'>54</span></li>
+				<li><span class='tableColumn'>2</span></li>
+				<li><span class='tableColumn'>工业园区</span></li>
+				<li><span class='tableColumn'>中国建筑科学研究院</span></li>
+				<li><span class='tableColumn'>门式起重机</span></li>
+				<li><span class='tableColumn'>2013-03-30</span></li>
 			</ul>
+			<div class='tableRowDetailDiv'>
+				<div class='rowDiv'>
+					<div class='labelDiv'>现场作业人员数</div>
+					<div class='valueDiv'>[5,8)人</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备价值</div>
+					<div class='valueDiv'>[100,200)万</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用场所</div>
+					<div class='valueDiv'>学校、医院、文物保护区</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>工作级别</div>
+					<div class='valueDiv'>A8</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>制造单位资质</div>
+					<div class='valueDiv'>B级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>安装单位资质等级</div>
+					<div class='valueDiv'>C级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期检验情况</div>
+					<div class='valueDiv'>一次检验合格</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备职管情况</div>
+					<div class='valueDiv'>无专职机构、有专管人员</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备管理制度及执行记录</div>
+					<div class='valueDiv'>有安全管理制度、无执行记录</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>操作人员持证时间</div>
+					<div class='valueDiv'>大于10年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期维护保养及自检</div>
+					<div class='valueDiv'>小于1次、月记录不完整</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用年限</div>
+					<div class='valueDiv'>大于15年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>年故障数</div>
+					<div class='valueDiv'>[12,24）次</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>环境条件</div>
+					<div class='valueDiv'>符合特殊环境（高温、严寒、强风、潮湿、易燃易爆、高腐蚀性、有毒有害、粉尘）1项</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>天运行时间</div>
+					<div class='valueDiv'>[8,12)小时</div>
+				</div>
+			</div>
+			</div>
+			<div clas='tableRowDiv'>
+			<ul>
+				<li><span class='tableColumn'>L1834f5654F9u23</span></li>
+				<li><span class='tableColumn'>80</span></li>
+				<li><span class='tableColumn'>4</span></li>
+				<li><span class='tableColumn'>建筑工地</span></li>
+				<li><span class='tableColumn'>南京市造船厂</span></li>
+				<li><span class='tableColumn'>门式起重机</span></li>
+				<li><span class='tableColumn'>2011-09-10</span></li>
+			</ul>
+			<div class='tableRowDetailDiv'>
+				<div class='rowDiv'>
+					<div class='labelDiv'>现场作业人员数</div>
+					<div class='valueDiv'>[5,8)人</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备价值</div>
+					<div class='valueDiv'>[100,200)万</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用场所</div>
+					<div class='valueDiv'>学校、医院、文物保护区</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>工作级别</div>
+					<div class='valueDiv'>A8</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>制造单位资质</div>
+					<div class='valueDiv'>B级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>安装单位资质等级</div>
+					<div class='valueDiv'>C级</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期检验情况</div>
+					<div class='valueDiv'>一次检验合格</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备职管情况</div>
+					<div class='valueDiv'>无专职机构、有专管人员</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>设备管理制度及执行记录</div>
+					<div class='valueDiv'>有安全管理制度、无执行记录</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>操作人员持证时间</div>
+					<div class='valueDiv'>大于10年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>定期维护保养及自检</div>
+					<div class='valueDiv'>小于1次、月记录不完整</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>使用年限</div>
+					<div class='valueDiv'>大于15年</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>年故障数</div>
+					<div class='valueDiv'>[12,24）次</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>环境条件</div>
+					<div class='valueDiv'>符合特殊环境（高温、严寒、强风、潮湿、易燃易爆、高腐蚀性、有毒有害、粉尘）1项</div>
+				</div>
+				<div class='rowDiv'>
+					<div class='labelDiv'>天运行时间</div>
+					<div class='valueDiv'>[8,12)小时</div>
+				</div>
+			</div>
+			</div>
 		</div>
 	</div>
 </div>

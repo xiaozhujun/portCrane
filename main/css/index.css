@@ -57,6 +57,11 @@
 	min-height: 580px;
 }
 
+#mainLeftDiv li
+{
+	cursor: pointer;
+}
+
 #mainMiddleDiv
 {
 	float: left;
@@ -113,11 +118,6 @@
 	width: 100%;
 }
 
-li span
-{
-	cursor: pointer;
-}
-
 #modelImg
 {
 	width: 75%;
@@ -141,43 +141,56 @@ li span
 	width: 20%;
 }
 
-#title1Div
+#sortTilteDiv
 {
-	position: absolute;
-	left: 100px;
-	top: 80px;
-	padding: 1px;
+	position: relative;
+	width: 65px;
+	left: 10px;
+	top: -85px;
+	padding: 1;
 	background-color: #ffffff;
 }
 
-#title2Div
+#operationTitleDiv
 {
-	position: absolute;
-	left: 100px;
-	top: 184px;
-	padding: 1px;
+	position: relative;
+	width: 65px;
+	left: 10px;
+	top: -190px;
+	padding: 1;
 	background-color: #ffffff;
 }
 
-#title3Div
+#queryContainerDiv
 {
-	position: absolute;
-	right: 180px;
-	top: 80px;
+	width: 100%;
+	padding:0;
+	float: left;
+	min-height: 50px;
+}
+
+#queryTitleDiv
+{
+	position: relative;
+	width: 65px;
+	left: 10px;
+	top: -50px;
 	padding: 1px;
 	background-color: #ffffff;
 }
 
 #queryDiv
 {
-	height: 10%;
+	position: relative;
+	left: 0;
+	top: 0;
+	min-height: 85px;
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
-	margin-top: 5px;
+	
 	margin-bottom: 10px;
 	margin-right: 5px;
-	padding: 15px;
 }
 
 #queryDiv div
@@ -192,7 +205,6 @@ li span
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
-	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 5px;
 
@@ -211,12 +223,21 @@ li span
 	margin-top: 5px;
 }
 
+#sortContainerDiv
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	min-height: 50px;
+}
+
 #sortDiv
 {
+	min-height: 40px;
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 5px;
 	margin-right: 5px;
 	padding: 15px;
@@ -237,6 +258,7 @@ li span
 	border-color: #ccc;
 	border-width: 1px;
 	min-height: 60%;
+	margin-top: -10px;
 }
 
 #tableDiv li
@@ -251,8 +273,14 @@ li span
 #tableHeaderDiv 
 {
 	float: left;
-	margin: -16 0 0 -40;
+	margin: 0;
 	padding: 0;
+}
+
+#tableHeaderDiv ul
+{
+	margin:0;
+	padding:0;
 }
 
 #tableHeaderDiv li
@@ -265,12 +293,71 @@ li span
 #tableBodyDiv 
 {
 	float: left;
-	margin: -16 0 0 -40;
+	margin: 0;
 	padding: 0;
 }
+
+#tableBodyDiv ul
+{
+	margin:0;
+	padding:0;
+
+	cursor: pointer; 
+}
+
 
 #tableBodyDiv li
 {
 	border-style: inset;
 	border-color: 0;
+}
+
+.tableRowDiv
+{
+	float: left;
+	width: 100%;
+}
+
+.tableRowDetailDiv
+{
+	float: left;
+	width: 100%;
+	display: none;
+}
+
+.rowDiv
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+
+	font-size: 14px;
+	color: #666;
+}
+
+.labelDiv
+{
+	float: left;
+	width: 20%;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-top:-1px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.valueDiv
+{
+
+	position: relative;
+	padding-left: 24%;
+	left: 0;
+	right: 0;
+	border-style: solid;ss
+	border-color: #ccc;
+	border-width: 1px;
+	text-align: left;
+	margin-top: -1px;
+	border-left: none;
 }

@@ -1,16 +1,24 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="/css/login.css">
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
 	<title>用户登录</title>
 </head>
 <body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#loginBtn").click(function(){
+				location = '/';
+			});
+		});
+	</script>
 	<h1><br>港口起重机械健康监测与预报维修<br>可视化系统</h1>
 	<form>
 		<table align="center">
 			<tr><td class="textstyle">用户名&nbsp&nbsp&nbsp&nbsp</td><td><input type="text" name="username" style="width:200px"></td></tr>
 			<tr><td class="textstyle">密&nbsp&nbsp&nbsp&nbsp码&nbsp&nbsp&nbsp&nbsp</td><td><input type="text" name="password" style="width:200px";></td></tr>
-			<tr><td></td><td align="right"><input type="submit"  value="登&nbsp&nbsp&nbsp&nbsp录"></td></tr>
+			<tr><td></td><td align="right"><input id='loginBtn' type="button"  value="登&nbsp&nbsp&nbsp&nbsp录"></td></tr>
 		</table>
 	</form>
 	<div></div>
