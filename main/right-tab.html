@@ -1,32 +1,25 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
-  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
   <script type="text/javascript">
     $(document).ready(function(){
-      $('li span').click(function(){
+      $('.other').click(function(){
         $('#rightMainDiv').load($(this).attr("url"));
+      });
+      $('.baseinfo').click(function(){
+        $('#rightMainDiv').load($("#globalVar").attr("var"));
       });
     });
   </script> 
-  <ul class="tabs">
+  <ul class="tabs" id="rightTab">
     <li>
-      <span url="details/baseinfo.html">基本信息</span>
+      <span class="baseinfo">基本参数信息</span>
     </li>
     <li>
-      <span url="details/parameters.html">基本参数</span>
+      <span class="other" url="details/monitoring.html">失效监测检测</span>
     </li>
     <li>
-      <span url="details/monitoring.html">健康监测</span>
+      <span class="other" url="details/diagnosis.html">健康诊断预报</span>
     </li>
     <li>
-      <span url="details/checking.html">检验信息</span>
-    </li>
-    <li>
-      <span url="details/failuremode.html">失效模式</span>
-    </li>
-    <li>
-      <span url="details/diagnosis.html">健康诊断与预报</span>
-    </li>
-    <li>
-      <span url="details/maintaining.html">预知维修</span>
+      <span class="other" url="details/maintaining.html">状态预知维修</span>
     </li>
   </ul>

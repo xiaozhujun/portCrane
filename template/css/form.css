@@ -1,0 +1,39 @@
+#formDiv
+{
+	margin: 0;
+	padding: 0;
+	height: 1;
+}
+#titleDiv
+{
+	text-align: center;
+}
+
+#queryDiv
+{
+	float: left;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	width: 100%;
+}
+
+#queryDiv div
+{
+	float: left;
+	display: inline;
+	margin: 10;
+}
+
+#queryDiv span, #btn
+{
+	margin-left: 15;
+}
+
+#bodyDiv
+{
+	float: left;
+	margin-top: 10;
+	padding: 0;
+	width: 100%;
+}

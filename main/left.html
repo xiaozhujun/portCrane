@@ -3,55 +3,76 @@
     <script type="text/javascript">
         $(document).ready(function(){
             convertTrees();
-            $('li span').click(function(){
-                $('#modelImg').attr('src',$(this).attr('model'));
+            //globalVar的作用参见health-forecast.html
+            $('.machine').click(function(){
+                $('#craneModelDiv').load($(this).attr('model'));
+                $("#globalVar").attr("var","details/baseinfo.html");
+                $('#rightMainDiv').load('details/baseinfo.html');
+            });
+            $(".structure li span").click(function(){
+                $('#craneModelDiv').load($(this).attr('model'));
+                $("#globalVar").attr("var","details/structureinfo.html");
+                $('#rightMainDiv').load('details/structureinfo.html');
+            });
+            $(".mechanism li span").click(function(){
+                $('#craneModelDiv').load($(this).attr('model'));
+                $("#globalVar").attr("var","details/mechanisminfo.html");
+                $('#rightMainDiv').load('details/mechanisminfo.html');
+            });
+            $(".electricity li span").click(function(){
+                $('#craneModelDiv').load($(this).attr('model'));
+                $("#globalVar").attr("var","details/electricityinfo.html");
+                $('#rightMainDiv').load('details/electricityinfo.html');
             });
         });
     </script>
 
-    <ul class=mktree id="tree1">
+    <ul class="mktree" id="tree1">
         <li class="liOpen">
             <span>上海港口管理有限公司</span>
             <ul>
                 <li class="liClosed">
-                    <span model="assets/model/1.jpg"> 港口起重机#1</span>
+                    <span class="machine" model="machine/machine1.html"> 港口起重机#1</span>
                     <ul>
                         <li class="liClosed">
                             <span>四大机构</span>
-                            <ul>
+                            <ul class="mechanism">
                                 <li class="bullet">
-                                    <span model="assets/model/1_qisheng.png">起升机构</span>
+                                    <span model="mechanism/qisheng.html">起升机构</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_bianfu.png">变幅机构</span>
+                                    <span model="mechanism/bianfu.html">变幅机构</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_xuanzhuan.png">旋转机构</span>
+                                    <span model="mechanism/xuanzhuan.html">旋转机构</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_xingzou.png">行走机构</span>
+                                    <span model="mechanism/xingzou.html">行走机构</span>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                     <ul>
                         <li class="liClosed">
-                            <span>五大结构</span>
-                            <ul>
+                            <span>六大结构</span>
+                            <ul class="structure">
                                 <li class="bullet">
-                                    <span model="assets/model/1_menjia.png">门架结构</span>
+                                    <span model="structure/menjia.html">门架结构</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_zhuanpan.png">转盘结构</span>
+                                    <span model="structure/zhuanpan.html">转盘结构</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_shangzhuanzhu.png">上转柱</span>
+                                    <span model="structure/renzijia.html">人字架</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_pingheng.png">平衡系统</span>
+                                    <span model="structure/shangzhuanzhu.html">上转柱</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_bijia.png">臂架系统</span>
+                                    <span model="structure/pingheng.html">平衡系统</span>
+                                </li>
+                                <li class="bullet">
+                                    <span model="structure/bijia.html">臂架系统</span>
                                 </li>
                             </ul>
                         </li>
@@ -59,139 +80,15 @@
                     <ul>
                         <li class="liClosed">
                             <span>电气控制系统</span>
-                            <ul>
+                            <ul class="electricity">
                                 <li class="bullet">
-                                    <span model="assets/model/1_dqkz1.jpg">电气控制1</span>
+                                    <span model="electricity/electricity1.html">电气控制1</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_dqkz2.jpg">电气控制2</span>
+                                    <span model="electricity/electricity2.html">电气控制2</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="assets/model/1_dqkz3.jpg">电气控制3</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li class="liClosed">
-                    <span model="assets/model/2.png"> 港口起重机#2</span>
-                    <ul>
-                        <li class="liClosed">
-                            <span>四大机构</span>
-                            <ul>
-                                <li class="bullet">
-                                    <span model="assets/model/1_qisheng.png">起升机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_bianfu.png">变幅机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_xuanzhuan.png">旋转机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_xingzou.png">行走机构</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="liClosed">
-                            <span>五大结构</span>
-                            <ul>
-                                <li class="bullet">
-                                    <span model="assets/model/1_menjia.png">门架结构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_zhuanpan.png">转盘结构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_shangzhuanzhu.png">上转柱</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_pingheng.png">平衡系统</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/2_bijia.png">臂架系统</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="liClosed">
-                            <span>电气控制系统</span>
-                            <ul>
-                                <li class="bullet">
-                                    <span model="assets/model/1_dqkz1.jpg">电气控制1</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_dqkz2.jpg">电气控制2</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_dqkz3.jpg">电气控制3</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li class="liClosed">
-                    <span model="assets/model/3.png"> 港口起重机#3</span>
-                    <ul>
-                        <li class="liClosed">
-                            <span>四大机构</span>
-                            <ul>
-                                <li class="bullet">
-                                    <span model="assets/model/1_qisheng.png">起升机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_bianfu.png">变幅机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_xuanzhuan.png">旋转机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_xingzou.png">行走机构</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="liClosed">
-                            <span>五大结构</span>
-                            <ul>
-                                <li class="bullet">
-                                    <span model="assets/model/1_menjia.png">门架结构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_zhuanpan.png">转盘结构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_shangzhuanzhu.png">上转柱</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_pingheng.png">平衡系统</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/3_bijia.png">臂架系统</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="liClosed">
-                            <span>电气控制系统</span>
-                            <ul>
-                                <li class="bullet">
-                                    <span model="assets/model/1_dqkz1.jpg">电气控制1</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_dqkz2.jpg">电气控制2</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="assets/model/1_dqkz3.jpg">电气控制3</span>
+                                    <span model="electricity/electricity3.html">电气控制3</span>
                                 </li>
                             </ul>
                         </li>

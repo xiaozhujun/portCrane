@@ -1,0 +1,62 @@
+<script type="text/javascript" src="js/myselect.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("input.date").datepicker();
+		$("#placeDiv").mySelect({
+			url:"js/place.js",
+			nodata:"none",
+			required:false
+		}); 
+		$("#cityDiv").mySelect({
+			url:"js/city.js",
+			nodata:"none",
+			required:false
+		}); 
+		$("#unitDiv").mySelect({
+			url:"js/unit.js",
+			nodata:"none",
+			required:false
+		}); 
+		$("#devTypeDiv").mySelect({
+			url:"js/devType.js",
+			nodata:"none",
+			required:false
+		}); 
+		$("#riskLvlDiv").mySelect({
+			url:"js/riskLvl.js",
+			nodata:"none",
+			required:false
+		}); 
+	});
+</script>
+
+<div id="placeDiv">
+	<span>应用场所:</span>
+		<select class="lvl1" name="place" style="width:140px"></select>
+</div>
+<div id="cityDiv">
+	<span>所在省市:</span>
+	<select class="lvl1" name="prov" style="width:70px"></select> 
+	<select class="lvl2" disabled="disabled" name="city" style="width:85px"></select>
+</div>
+<div id="unitDiv">
+	<span>使用单位:</span>
+	<select class="lvl1" name="unit" style="width:330px"></select>
+</div>
+<div id="devTypeDiv">
+	<span>设备类型:</span>
+	<select class="lvl1" name="devType" style="width:140px"></select>
+</div>
+<div id="riskLvlDiv">
+	<span>风险等级:</span>
+	<select class="lvl1" name="riskLvl" style="width:90px"></select>
+</div>
+<div id="dateSelectDiv">
+	<input type="checkbox" name="dateSelect" value="Select">
+	<span style="margin-left:0;margin-right:15">检测日期</span>
+	<input type="text" class="date" style="width:72px">&nbsp&nbsp至&nbsp&nbsp
+	<input type="text" class="date" style="width:72px">
+</div>
+<div id="btnDiv">
+	<input id="btn" type="submit" value="查询" style="width:100px">
+</div>

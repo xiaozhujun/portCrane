@@ -1,0 +1,22 @@
+  <link rel="stylesheet" href="css/tabs.css" type="text/css">
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#mouseoverTab li span').mouseover(function(){
+        $('#menjiaBodyDiv').load($(this).attr("url"));
+      });
+    });
+  </script> 
+  <ul id="mouseoverTab" class="tabs">
+    <li>
+      <span url="structure/menjiagaikuang.html">概况</span>
+    </li>
+    <li>
+      <span url="structure/yuantong.html">圆筒</span>
+    </li>
+    <li>
+      <span url="structure/hengliang.html">横梁</span>
+    </li>
+    <li>
+      <span url="structure/duanliang.html">端梁</span>
+    </li>
+  </ul>

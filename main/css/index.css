@@ -66,6 +66,7 @@
 {
 	float: left;
 	margin: 0;
+	padding: 0;
 	width: 60%;
 	margin-left: 8px;
 
@@ -97,19 +98,23 @@
 	font-family: 宋体;
 	font-size: 20px;
 	color: gray;
-	padding: 5px;
 }
 
 #craneModelDiv
 {
 	text-align: center;
-	padding-top: 50px;
 }
 
 #rightTabDiv
 {
 	float: left;
 	width: 100%;
+}
+
+#rightTab span
+{
+	width: 40%;
+	text-align: center;
 }
 
 #rightMainDiv
@@ -120,6 +125,7 @@
 
 #modelImg
 {
+	margin-top: 50px;
 	width: 75%;
 	height: 75%;
 }
@@ -359,10 +365,57 @@ div .showFirst
 	padding-left: 24%;
 	left: 0;
 	right: 0;
-	border-style: solid;ss
+	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
 	text-align: left;
 	margin-top: -1px;
 	border-left: none;
+}
+
+#infoDiv
+{
+	float: left;
+}
+
+#infoDiv li
+{
+	list-style-type: none;
+	text-align: left;
+}
+
+#infoDiv ul
+{
+	padding: 0;
+}
+
+#infoDiv div
+{
+	margin: 5;
+}
+
+.infoName
+{
+	float: left;
+	width: 30%;
+}
+
+.infoData
+{
+	float: left;
+	width: 60%;
+	word-break: break-all;
+}
+
+#menjiaTabDiv span,#bijiaTabDiv span
+{
+	width: 100;
+	font-size: 15;
+}
+
+#partImg
+{
+	margin-top: 10px;
+	width: 75%;
+	height: 75%;
 }

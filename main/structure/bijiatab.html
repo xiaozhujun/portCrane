@@ -1,0 +1,22 @@
+  <link rel="stylesheet" href="css/tabs.css" type="text/css">
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#mouseoverTab li span').mouseover(function(){
+        $('#bijiaBodyDiv').load($(this).attr("url"));
+      });
+    });
+  </script> 
+  <ul id="mouseoverTab" class="tabs">
+    <li>
+      <span url="structure/bijiagaikuang.html">概况</span>
+    </li>
+    <li>
+      <span url="structure/xiangbiliang.html">象鼻梁</span>
+    </li>
+    <li>
+      <span url="structure/gangxinglagan.html">刚性拉杆</span>
+    </li>
+    <li>
+      <span url="structure/bijia1.html">臂架</span>
+    </li>
+  </ul>
