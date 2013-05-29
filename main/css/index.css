@@ -93,11 +93,11 @@
 
 #middleTitleDiv
 {
-	background-color: #ccc;
+	background-color: #bbbbbb;
 	font-weight: bold;
 	font-family: 宋体;
 	font-size: 20px;
-	color: gray;
+	color: #ffffff;
 }
 
 #craneModelDiv
@@ -115,12 +115,6 @@
 {
 	width: 40%;
 	text-align: center;
-}
-
-#rightMainDiv
-{
-	float: left;
-	width: 100%;
 }
 
 #modelImg
@@ -373,10 +367,14 @@ div .showFirst
 	border-left: none;
 }
 
-#infoDiv
+#rightMainDiv
 {
 	float: left;
+	width: 100%;
+	font-size: 13;
+	padding: 0;
 }
+
 
 #infoDiv li
 {
@@ -396,8 +394,8 @@ div .showFirst
 
 .infoName
 {
-	float: left;
 	width: 30%;
+	float: left;
 }
 
 .infoData
@@ -405,6 +403,18 @@ div .showFirst
 	float: left;
 	width: 60%;
 	word-break: break-all;
+}
+
+#menjiaTabDiv,#bijiaTabDiv
+{
+	height: 26;
+	border-bottom: 1px solid #d2d2d2;
+}
+
+#mouseoverTab
+{
+	padding: 0;
+	margin: 0;
 }
 
 #menjiaTabDiv span,#bijiaTabDiv span

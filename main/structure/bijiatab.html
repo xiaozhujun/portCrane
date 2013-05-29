@@ -2,13 +2,15 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('#mouseoverTab li span').mouseover(function(){
+        $(".selected").removeClass("selected");
+        $(this).addClass("selected");
         $('#bijiaBodyDiv').load($(this).attr("url"));
       });
     });
   </script> 
   <ul id="mouseoverTab" class="tabs">
     <li>
-      <span url="structure/bijiagaikuang.html">概况</span>
+      <span class="selected" url="structure/bijiagaikuang.html">概况</span>
     </li>
     <li>
       <span url="structure/xiangbiliang.html">象鼻梁</span>

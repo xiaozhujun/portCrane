@@ -2,15 +2,18 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('li span').click(function(){
+        $(".mainselected").removeClass("mainselected");
+        $(this).addClass("mainselected");
         $('#mainBodyDiv').load($(this).attr("url"));
       });
     });
   </script> 
   <ul class="tabs">
     <li>
-        <span url="health-forecast.html">&gt; 健康管理</span>
+        <span url="health-forecast.html" class="mainselected">&gt; 健康管理</span>
     </li>
     <li>
         <span url="risk-management.html">&gt; 风险管理</span>
     </li>
   </ul>
+ 

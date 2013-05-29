@@ -2,13 +2,15 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('#mouseoverTab li span').mouseover(function(){
+        $(".selected").removeClass("selected");
+        $(this).addClass("selected");
         $('#menjiaBodyDiv').load($(this).attr("url"));
       });
     });
   </script> 
   <ul id="mouseoverTab" class="tabs">
     <li>
-      <span url="structure/menjiagaikuang.html">概况</span>
+      <span class="selected" url="structure/menjiagaikuang.html">概况</span>
     </li>
     <li>
       <span url="structure/yuantong.html">圆筒</span>

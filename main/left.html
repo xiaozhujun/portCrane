@@ -5,21 +5,29 @@
             convertTrees();
             //globalVar的作用参见health-forecast.html
             $('.machine').click(function(){
+                $(".rightselected").removeClass("rightselected");
+                $(".baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
                 $("#globalVar").attr("var","details/baseinfo.html");
                 $('#rightMainDiv').load('details/baseinfo.html');
             });
             $(".structure li span").click(function(){
+                $(".rightselected").removeClass("rightselected");
+                $(".baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
                 $("#globalVar").attr("var","details/structureinfo.html");
                 $('#rightMainDiv').load('details/structureinfo.html');
             });
             $(".mechanism li span").click(function(){
+                $(".rightselected").removeClass("rightselected");
+                $(".baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
                 $("#globalVar").attr("var","details/mechanisminfo.html");
                 $('#rightMainDiv').load('details/mechanisminfo.html');
             });
             $(".electricity li span").click(function(){
+                $(".rightselected").removeClass("rightselected");
+                $(".baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
                 $("#globalVar").attr("var","details/electricityinfo.html");
                 $('#rightMainDiv').load('details/electricityinfo.html');

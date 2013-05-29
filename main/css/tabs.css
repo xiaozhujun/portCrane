@@ -19,14 +19,12 @@
         display: block;
         margin: 0 1px 0 0;
         padding: 4px 8px;
-        color: #333;
         text-decoration: none;
         border: 1px solid #d2d2d2;
         border-bottom: none;
-        background: #fff;
-      }
-      .tabs span{
         color: #333;
-        border-color: #d2d2d2;
         background: #f1f1f1;
+      }
+      .tabs .selected,.tabs .mainselected,.tabs .rightselected{
+        background: #d2d2d2;
       }

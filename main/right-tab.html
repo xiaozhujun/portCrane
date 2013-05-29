@@ -2,16 +2,20 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.other').click(function(){
+        $(".rightselected").removeClass("rightselected");
+        $(this).addClass("rightselected");
         $('#rightMainDiv').load($(this).attr("url"));
       });
       $('.baseinfo').click(function(){
+        $(".rightselected").removeClass("rightselected");
+        $(this).addClass("rightselected");
         $('#rightMainDiv').load($("#globalVar").attr("var"));
       });
     });
   </script> 
   <ul class="tabs" id="rightTab">
     <li>
-      <span class="baseinfo">基本参数信息</span>
+      <span class="baseinfo rightselected">基本参数信息</span>
     </li>
     <li>
       <span class="other" url="details/monitoring.html">失效监测检测</span>
