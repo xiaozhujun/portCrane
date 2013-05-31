@@ -404,7 +404,7 @@ div .showFirst
 	word-break: break-all;
 }
 
-#menjiaTabDiv,#bijiaTabDiv
+#menjiaTabDiv,#bijiaTabDiv,#qishengTabDiv,#bianfuTabDiv,#xuanzhuanTabDiv,#xingzouTabDiv
 {
 	height: 26;
 	border-bottom: 1px solid #d2d2d2;
@@ -416,9 +416,9 @@ div .showFirst
 	margin: 0;
 }
 
-#menjiaTabDiv span,#bijiaTabDiv span
+#menjiaTabDiv span,#bijiaTabDiv span,#qishengTabDiv span,#bianfuTabDiv span,#xuanzhuanTabDiv span,#xingzouTabDiv span
 {
-	width: 100;
+	width: 120;
 	font-size: 15;
 }
 
@@ -427,4 +427,11 @@ div .showFirst
 	margin-top: 10px;
 	width: 75%;
 	height: 75%;
+}
+
+#partImg1
+{
+	margin: 20px;
+	width: 80%;
+	height: 65%;
 }

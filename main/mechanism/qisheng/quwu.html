@@ -1,0 +1,35 @@
+<link rel="stylesheet" type="text/css" href="css/righttab.css">
+<script type="text/javascript" language="javascript">
+function tab(tabId, tabC){
+	var len =document.getElementById('getId').getElementsByTagName('li').length;
+	for(i=1; i <= len; i++){
+	if ("tabId"+i==tabId){
+		document.getElementById(tabId).className="current";
+	}else{
+		document.getElementById("tabId"+i).className="";
+	}
+	if ("tabC"+i==tabC){
+		document.getElementById(tabC).className="show";
+	}else{
+		document.getElementById("tabC"+i).className="hidden";
+	}
+	}
+}
+</script>
+
+<div id="getId">
+
+	<div class="show" id="tabC1"><div class="con"><img id="partImg1" src="assets/model/diaogouzu.jpg"></div>
+	</div>
+	<div class="hidden" id="tabC2"><div class="con"><img id="partImg1" src="assets/model/zhuadou.png"></div>
+	</div>
+	<div class="hidden" id="tabC3"><div class="con"><img id="partImg1" src="assets/model/diaoju.jpg"></div>
+	</div>
+<div class="tabT">
+		<ul class="tab">
+		<li id="tabId1" class="current" onmouseover="tab('tabId1','tabC1');">吊钩组</li>
+		<li id="tabId2" onmouseover="tab('tabId2','tabC2');">抓斗</li>
+		<li id="tabId3" onmouseover="tab('tabId3','tabC3');">集装箱吊具</li>
+		</ul>
+</div>
+</div>

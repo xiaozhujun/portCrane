@@ -23,7 +23,7 @@
         border: 1px solid #d2d2d2;
         border-bottom: none;
         color: #333;
-        background: #f1f1f1;
+        background: #dfdfdf;
       }
       .tabs .selected,.tabs .mainselected,.tabs .rightselected{
         background: #d2d2d2;
