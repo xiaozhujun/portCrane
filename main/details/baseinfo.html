@@ -1,15 +1,200 @@
-	<div id="infoDiv">
-		<ul>
-			<li><div class="infoName">设备名称</div><div class="infoData">港口门座式起重机</div></li>
-			<li><div class="infoName">设备编号</div><div class="infoData">XXXX-XX</div></li>
-			<li><div class="infoName">设备类别</div><div class="infoData">门座式起重机</div></li>
-			<li><div class="infoName">单位名称</div><div class="infoData">XXXXXXXXXXXXaaaa</div></li>
-			<li><div class="infoName">单位地址</div><div class="infoData">XXXXXXXXXXXX</div></li>
-			<li><div class="infoName">使用地点</div><div class="infoData">XXXXXXXXXXXX</div></li>
-			<li><div class="infoName">管理人员</div><div class="infoData">XXX</div></li>
-			<li><div class="infoName">联系电话</div><div class="infoData">012345555556789</div></li>
-			<li><div class="infoName">制造单位</div><div class="infoData">XXXXXXXXXXXX</div></li>
-			<li><div class="infoName">制造日期</div><div class="infoData">2013-05-24</div></li>
-			<li><div class="infoName">工作级别</div><div class="infoData">XX</div></li>
+<link rel="stylesheet" type="text/css" href="css/infotab.css">
+<link rel="stylesheet" type="text/css" href="css/infotable.css">
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+	heightAlign();
+});
+function tab(tabId, tabC){
+	heightAlign();
+	var len =document.getElementById('getId').getElementsByTagName('li').length;
+	for(i=1; i <= len; i++){
+	if ("tabId"+i==tabId){
+		document.getElementById(tabId).className="current";
+	}else{
+		document.getElementById("tabId"+i).className="";
+	}
+	if ("tabC"+i==tabC){
+		document.getElementById(tabC).className="show";
+	}else{
+		document.getElementById("tabC"+i).className="hidden";
+	}
+	}
+}
+function heightAlign(){
+	$(".infoName").each(function(){
+		$(this).next().height($(this).height());
+	});
+	$(".infoData").each(function(){
+		$(this).next().height($(this).height());
+	});
+}
+</script>
+<div id="getId">
+
+	<div class="tabT">
+		<ul class="tab">
+			<li id="tabId1" class="current" onmouseover="tab('tabId1','tabC1');">
+				<span>基本信息</span>
+			</li>
+			<li id="tabId2" onmouseover="tab('tabId2','tabC2');">
+				<span>基本参数</span>
+			</li>
 		</ul>
 	</div>
+	<div class="show" id="tabC1">
+		<div class="con">
+			<div class="infoDiv">
+				<ul>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">设备名称</div>
+							<div class="infoData">港口门座式起重机</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">设备编号</div>
+							<div class="infoData">XXXX-XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">设备类别</div>
+							<div class="infoData">门座式起重机</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">单位名称</div>
+							<div class="infoData">XXXXXXXXXXXXaaaa</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">单位地址</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">使用地点</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">管理人员</div>
+							<div class="infoData">XXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">联系电话</div>
+							<div class="infoData">012345555556789</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">制造单位</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">制造日期</div>
+							<div class="infoData">2013-05-24</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="hidden" id="tabC2">
+		<div class="con">
+			<div class="infoDiv">
+				<ul>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">名称</div>
+							<div class="infoData">数据</div>
+							<div class="infoUnit">单位</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">最大幅度起重量/额定起重量</div>
+							<div class="infoData">
+								<div class="horizontalCell">XX</div>
+								<div class="horizontalCell">CC</div>
+							</div>
+							<div class="infoUnit">t</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">工作幅度</div>
+							<div class="infoData">
+								<div class="horizontalCell">RXX-XX</div>
+								<div class="horizontalCell">RXX-XX</div>
+							</div>
+							<div class="infoUnit">m</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">工作级别</div>
+							<div class="infoData">XX</div>
+							<div class="infoUnit"></div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">最大起重力矩</div>
+							<div class="infoData">XXX</div>
+							<div class="infoUnit">Nm</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">
+								<div class="horizontalCell">起升高度</div>
+								<div class="horizontalCell">RXX-XX</div>
+							</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">使用地点</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">管理人员</div>
+							<div class="infoData">XXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">联系电话</div>
+							<div class="infoData">012345555556789</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">制造单位</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">制造日期</div>
+							<div class="infoData">2013-05-24</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

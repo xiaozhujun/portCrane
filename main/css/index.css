@@ -374,36 +374,6 @@ div .showFirst
 	padding-left: 10;
 }
 
-
-#infoDiv li
-{
-	list-style-type: none;
-	text-align: left;
-}
-
-#infoDiv ul
-{
-	padding: 0;
-}
-
-#infoDiv div
-{
-	margin: 5;
-}
-
-.infoName
-{
-	width: 30%;
-	float: left;
-}
-
-.infoData
-{
-	float: left;
-	width: 60%;
-	word-break: break-all;
-}
-
 #menjiaTabDiv,#bijiaTabDiv,#qishengTabDiv,#bianfuTabDiv,#xuanzhuanTabDiv,#xingzouTabDiv
 {
 	height: 26;

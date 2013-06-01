@@ -1,0 +1,51 @@
+.infoDiv li
+{
+	list-style-type: none;
+	text-align: left;
+}
+
+.infoDiv ul
+{
+	padding: 0;
+}
+
+.rowDiv
+{
+	width: 100%;
+	float: left;
+	color: black;
+}
+
+.infoName,.infoData,.infoUnit
+{
+	float: left;
+	border: 1px solid #000;
+	text-align: center;
+	word-break: break-all;
+}
+
+.infoName
+{
+	width: 30%;
+}
+
+.infoData
+{
+	width: 51%;
+}
+
+.infoUnit
+{
+	width: 10%;
+}
+
+.horizontalCell
+{
+	border-left: 1px solid #000;
+	float:left;
+	width: 49.43%;
+}
+.verticalCell
+{
+
+}
