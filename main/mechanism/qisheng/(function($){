@@ -1,0 +1,6 @@
+(function($){
+	//展示模型图片
+	$.showModel = function(img){
+		$("#craneModelImg").attr("src",img);
+	}
+})(jQuery);

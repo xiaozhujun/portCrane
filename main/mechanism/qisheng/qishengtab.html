@@ -1,21 +1,27 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-      $('#mouseoverTab li span').mouseover(function(){
-        $(".selected").removeClass("selected");
-        $(this).addClass("selected");
-        $('#qishengBodyDiv').load($(this).attr("url"));
+      $('.tab').mouseover(function(){
+        $(this).addClass("current").siblings().removeClass("current"); 
+        $('#'+$(this).attr('body')).show().siblings().hide();
       });
     });
   </script> 
-  <ul id="mouseoverTab" class="tabs">
-    <li>
-      <span style="float:right;width:85" url="mechanism/qisheng/quwu.html">取物装置</span>
-    </li>
-    <li>
-      <span style="float:right;width:110" url="mechanism/qisheng/gangsisheng.html">钢丝绳卷绕系统</span>
-    </li>
-    <li>
-      <span style="float:right;width:85" url="mechanism/qisheng/qudong.html">驱动装置</span>
-    </li>
-  </ul>
+  <div id="tishengTab" class='modContainer'>
+    <div  class="sidebar-tab">
+      <div body='quwuBody' class="tab current" url="mechanism/qisheng/quwu.html">取物装置</div>
+      <div body='gangsishengBody' class="tab" url="mechanism/qisheng/gangsisheng.html">钢丝绳卷绕系统</div>
+      <div body='qudongBody' class="tab" url="mechanism/qisheng/qudong.html">驱动装置</div> 
+      <div class="tab-content">
+        <div id="quwuBody" class="tab-body">
+          <div class='tabItem'></div><div class='tabItem'></div><div class='tabItem'></div>
+        </div>
+        <div id='gangsishengBody' class="tab-body">
+          <div class='tabItem'></div><div class='tabItem'></div><div class='tabItem'></div>
+        </div>
+        <div id='qudongBody' class="tab-body">
+          <div class='tabItem'></div><div class='tabItem'></div><div class='tabItem'></div>
+        </div>
+      </div> 
+    </div>
+  </div>

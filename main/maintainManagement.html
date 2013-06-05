@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="maintain/css/maintain.css">
+<link rel="stylesheet" type="text/css" href="maintain/css/menu.css">
+<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('.moduleTitle').click(function(){
+			$(this).next().toggle(500);
+		});
+		
+		$('.menuItem').click(function(){
+			$('#maintainRightDiv').load($(this).attr('url'));
+		});
+		});
+		
+</script>
+<div id="maintainBodyDiv">
+	<div id='maintainLeftDiv'>
+		<div class='menuDiv'>
+
+
+
+    		<div class='menuModule'>
+	    		<div class='moduleTitle'>综合信息管理</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>基本信息</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>变动管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>润滑管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>状态管理</div></div>
+	    		</div>
+	    	</div>
+	    	
+	    	<div class='menuModule'>
+	    		<div class='moduleTitle'>备品备件管理</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>基本信息</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>库存管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>计划管理</div></div>
+	    		</div>
+	    	</div>
+
+	    	<div class='menuModule'>
+	    		<div class='moduleTitle'>维修标准管理</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>起重机维修标准</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>任务管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>工作票</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>操作票</div></div>
+	    		</div>
+	    	</div>
+
+	    	<div class='menuModule'>
+	    		<div class='moduleTitle'>维修作业管理</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>维修工单管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>设备缺陷管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>维修项目管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>现场安全管理</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>维修计划管理</div></div>
+	    		</div>
+	    	</div>
+
+	    	<div class='menuModule'>
+	    		<div class='moduleTitle'>基础维护管理</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>清洁</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>检查</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>防腐</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>紧固</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>易损件更换</div></div>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+	<div id='maintainRightDiv'></div>
+</div>
