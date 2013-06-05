@@ -1,9 +1,25 @@
-  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+
+  <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-      $('#bijiaTabDiv').load('structure/bijiatab.html');
-      $('#bijiaBodyDiv').load('structure/bijiagaikuang.html');
+    	iniTab();
     });
-  </script>
-  <div id='bijiaTabDiv'></div>
-  <div id='bijiaBodyDiv'></div>
+  </script> 
+  <div id="bianfuTab" class='modContainer'>
+    <div  class="sidebar-tab">
+      <div body='xiangbiliangBody' class="tab current" model='assets/model/xiangbiliang.png'>象鼻梁</div>
+      <div body='gangxingliganBody' class="tab" model='assets/model/gangxinglagan.png'>刚性拉杆</div>
+      <div body='bijiaBody' class="tab" model='assets/model/xiangbiliang.png'>臂架</div>
+      <div class="tab-content">
+        <div id="xiangbiliangBody" class="body-current">
+        	&nbsp;
+        </div>
+       <div id="gangxingliganBody" class="tab-body">
+        	&nbsp;
+        </div>
+        <div id="bijiaBody" class="tab-body">
+        	&nbsp;
+        </div>
+      </div> 
+    </div>
+  </div>
