@@ -8,19 +8,20 @@
                 $(".rightselected").removeClass("rightselected");
                 $(".baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
-                $("#globalVar").attr("var","details/baseinfo.html");
-                $('#rightMainDiv').load('details/baseinfo.html');
+                baseInfoPage="details/baseinfo.html";
+                $('#rightMainDiv').load(baseInfoPage);
             });
             $(".structure li span").click(function(){
                 $(".rightselected").removeClass("rightselected");
                 $(".baseinfo").addClass("rightselected");
                 //$('#craneModelDiv').load($(this).attr('model'));
-                $("#globalVar").attr("var","details/structureinfo.html");
                 //$('#rightMainDiv').load('details/structureinfo.html');
 
                 <!-- xiaozhujun  为了上下分割 -->
                 $('#rightMainDiv').html("<div class='structTitle'>结构组成</div><div id='structDiv'></div><div class='structContentTitle'>结构信息</div><div id='structContentDiv'></div>");
-                $('#structContentDiv').load('details/structureinfo.html');
+                baseInfoPage="details/structureinfo.html";
+                structContentTitle="结构信息";
+                $('#structContentDiv').load(baseInfoPage);
                 $('#structDiv').load($(this).attr('url'));
                 showModel($(this).attr('model'));
 
@@ -29,12 +30,13 @@
                 $(".rightselected").removeClass("rightselected");
                 $(".baseinfo").addClass("rightselected");
                 //$('#craneModelDiv').load($(this).attr('model'));
-                $("#globalVar").attr("var","details/mechanisminfo.html");
                 //$('#rightMainDiv').load('details/mechanisminfo.html');
 
                 <!-- xiaozhujun  为了上下分割 -->
                 $('#rightMainDiv').html("<div class='structTitle'>机构组成</div><div id='structDiv'></div><div class='structContentTitle'>机构信息</div><div id='structContentDiv'></div>");
-                $('#structContentDiv').load('details/structureinfo.html');
+                baseInfoPage='details/mechanisminfo.html';
+                structContentTitle="机构信息";
+                $('#structContentDiv').load(baseInfoPage);
                 $('#structDiv').load($(this).attr('url'));
                 showModel($(this).attr('model'));
             });
@@ -42,8 +44,9 @@
                 $(".rightselected").removeClass("rightselected");
                 $(".baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
-                $("#globalVar").attr("var","details/electricityinfo.html");
-                $('#rightMainDiv').load('details/electricityinfo.html');
+                baseInfoPage='details/electricityinfo.html';
+                structContentTitle="电气信息";
+                $('#rightMainDiv').load(baseInfoPage);
             });
         });
     </script>

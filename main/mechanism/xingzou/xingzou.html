@@ -1,22 +1,24 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-    	iniTab();
+    	iniTab("xingzou");
     });
   </script> 
   <div id="bianfuTab" class='modContainer'>
     <div  class="sidebar-tab">
       <div body='qudongBody' class="tab current">驱动装置</div>
-      <div body='zhichengBody' class="tab" model='assets/model/zhicheng.jpg'>支承装置</div>
+      <div body='zhichengBody' class="tab" id="zhichengzhuangzhi" nochild="yes" model='assets/model/zhicheng.jpg'>支承装置</div>
+      <div body='diankongBody' class="tab" id="diankong" nochild="yes">电控系统</div>     
       <div class="tab-content">
         <div id="qudongBody" class="body-current">
-         <div class='tabItem' model='assets/model/yuandongji.jpg'>原动机</div>
-          <div class='tabItem' model='assets/model/zhidongqi.jpg'>制动器</div>
-          <div class='tabItem' model='assets/model/lianzhouqi1.jpg'>联轴器</div>
-          <div class='tabItem' model='assets/model/chuandong.png'>传动装置</div>
+         <div class='tabItem' model='assets/model/yuandongji.jpg' id="yuandongji">原动机</div>
+          <div class='tabItem' model='assets/model/zhidongqi.jpg' id="zhidongqi">制动器</div>
+          <div class='tabItem' model='assets/model/lianzhouqi1.jpg' id="lianzhouqi">联轴器</div>
+          <div class='tabItem' model='assets/model/chuandong.png' id="chuandongzhuangzhi">传动装置</div>
         </div>
         <div id='zhichengBody' class="tab-body">
-        	&nbsp;
+        </div>
+        <div id='diankongBody' class="tab-body">
         </div>
       </div> 
     </div>

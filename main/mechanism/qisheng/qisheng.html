@@ -1,7 +1,7 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-    	iniTab();
+    	iniTab("qisheng");
     });
   </script> 
   <div id="tishengTab" class='modContainer'>
@@ -9,27 +9,26 @@
       <div body='quwuBody' class="tab current" >取物装置</div>
       <div body='gangsishengBody' class="tab" >钢丝绳卷绕系统</div>
       <div body='qudongBody' class="tab" >驱动装置</div>      
-      <div body='diankongBody' class="tab" >电控系统</div>      
+      <div body='diankongBody' class="tab" id="diankong" nochild="yes">电控系统</div>      
       <div class="tab-content">
         <div id="quwuBody" class="body-current">
-          <div class='tabItem' model='assets/model/diaogouzu.jpg'>吊钩组</div>
-          <div class='tabItem' model='assets/model/zhuadou.png'>抓斗</div>
-          <div class='tabItem' model='assets/model/diaoju.jpg'>集装箱吊具</div>
+          <div class='tabItem' model='assets/model/diaogouzu.jpg' id="diaogouzu">吊钩组</div>
+          <div class='tabItem' model='assets/model/zhuadou.png' id="zhuadou">抓斗</div>
+          <div class='tabItem' model='assets/model/diaoju.jpg' id="jizhuangxiangdiaoju">集装箱吊具</div>
         </div>
         <div id='gangsishengBody' class="tab-body">
-          <div class='tabItem' model='assets/model/juantong.jpg'>卷筒</div>
-          <div class='tabItem' model='assets/model/gangsisheng.png'>钢丝绳</div>
-          <div class='tabItem' model='assets/model/hualun.jpg'>滑轮</div>
+          <div class='tabItem' model='assets/model/juantong.jpg' id="juantong">卷筒</div>
+          <div class='tabItem' model='assets/model/gangsisheng.png' id="gangsisheng">钢丝绳</div>
+          <div class='tabItem' model='assets/model/hualun.jpg' id="hualun">滑轮</div>
         </div>
         <div id='qudongBody' class="tab-body">
-          <div class='tabItem' model='assets/model/diandongji.jpg'>电动机</div>
-          <div class='tabItem' model='assets/model/zhidongqi.jpg'>制动器</div>
-          <div class='tabItem' model='assets/model/jiansuqi.jpg'>减速器</div>
-          <div class='tabItem' model='assets/model/juantong.jpg'>卷筒</div>
-          <div class='tabItem' model='assets/model/lianzhouqi.jpg'>联轴器</div>
+          <div class='tabItem' model='assets/model/diandongji.jpg' id="diandongji">电动机</div>
+          <div class='tabItem' model='assets/model/zhidongqi.jpg' id="zhidongqi">制动器</div>
+          <div class='tabItem' model='assets/model/jiansuqi.jpg' id="jiansuqi">减速器</div>
+          <div class='tabItem' model='assets/model/juantong.jpg' id="juantong1">卷筒</div>
+          <div class='tabItem' model='assets/model/lianzhouqi.jpg' id="lianzhouqi">联轴器</div>
         </div>
         <div id='diankongBody' class="tab-body">
-          
         </div>
       </div> 
     </div>

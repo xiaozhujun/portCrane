@@ -1,28 +1,31 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-    	iniTab();
+    	iniTab("xuanzhuan");
     });
   </script> 
   <div id="bianfuTab" class='modContainer'>
     <div  class="sidebar-tab">
       <div body='qudongBody' class="tab current" model='assets/model/chuanchong.jpg'>驱动装置</div>
       <div body='zhichengBody' class="tab">支承装置</div>
+      <div body='diankongBody' class="tab" id="diankong" nochild="yes">电控系统</div>    
       <div class="tab-content">
         <div id="qudongBody" class="body-current">
-          <div class='tabItem' model='assets/model/woshi_chilun.png'>卧式电动机与圆柱、圆锥齿轮传动</div>
-          <div class='tabItem' model='assets/model/woshi_wolun.png'>卧式电动机与蜗轮减速器传动</div>
-          <div class='tabItem' model='assets/model/lishi_yuanzhu.png'>立式电动机与立式圆柱齿轮减速器传动</div>
-          <div class='tabItem' model='assets/model/lishi_xingxing.png'>立式电动机与行星齿轮减速器传动</div>
-          <div class='tabItem' model='assets/model/yeya.png'>液压驱动的传动方式</div>
-          <div class='tabItem' model='assets/model/shengsuo.png'>绳索牵引的传动方式</div>
+          <div class='tabItem' model='assets/model/woshi_chilun.png' id="woshiyuan">卧式电动机与圆柱、圆锥齿轮传动</div>
+          <div class='tabItem' model='assets/model/woshi_wolun.png' id="woshiwolun">卧式电动机与蜗轮减速器传动</div>
+          <div class='tabItem' model='assets/model/lishi_yuanzhu.png' id="lishiyuan">立式电动机与立式圆柱齿轮减速器传动</div>
+          <div class='tabItem' model='assets/model/lishi_xingxing.png' id="lishichilun">立式电动机与行星齿轮减速器传动</div>
+          <div class='tabItem' model='assets/model/yeya.png' id="yeya">液压驱动的传动方式</div>
+          <div class='tabItem' model='assets/model/shengsuo.png' id="shengsuo">绳索牵引的传动方式</div>
         </div>
         <div id='zhichengBody' class="tab-body">
-          <div class='tabItem' model='assets/model/zhuanzhu.png'>转柱式</div>
-          <div class='tabItem' model='assets/model/dingzhu.png'>定柱式</div>
-          <div class='tabItem' model='assets/model/gunlun.png'>滚轮式</div>
-          <div class='tabItem' model='assets/model/gunzijiatao.png'>滚子夹套式</div>
-          <div class='tabItem' model='assets/model/gundongzhoucheng.png'>滚动轴承式</div>
+          <div class='tabItem' model='assets/model/zhuanzhu.png' id="zhuanzhushi">转柱式</div>
+          <div class='tabItem' model='assets/model/dingzhu.png' id="dingzhushi">定柱式</div>
+          <div class='tabItem' model='assets/model/gunlun.png' id="gunlunshi">滚轮式</div>
+          <div class='tabItem' model='assets/model/gunzijiatao.png' id="gunzijiataoshi">滚子夹套式</div>
+          <div class='tabItem' model='assets/model/gundongzhoucheng.png' id="gundongzhouchengshi">滚动轴承式</div>
+        </div>
+        <div id='diankongBody' class="tab-body">
         </div>
       </div> 
     </div>

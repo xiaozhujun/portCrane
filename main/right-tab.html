@@ -1,26 +1,31 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-      $('.other').click(function(){
-        $(".rightselected").removeClass("rightselected");
-        $(this).addClass("rightselected");
-        $('#rightMainDiv').load($(this).attr("url"));
+      $("#rightTab li span").click(function(){
+        rightShowCtx=$(this).attr("id");
       });
-      $('.baseinfo').click(function(){
+      $('#failuremode,#forcast').click(function(){
         $(".rightselected").removeClass("rightselected");
         $(this).addClass("rightselected");
-        $('#rightMainDiv').load($("#globalVar").attr("var"));
+        $('#structContentDiv').load($(this).attr("url"));
+        $(".structContentTitle").text("失效模式");
+      });
+      $('#baseinfo').click(function(){
+        $(".rightselected").removeClass("rightselected");
+        $(this).addClass("rightselected");
+        $('#structContentDiv').load(baseInfoPage);
+        $(".structContentTitle").text(structContentTitle);
       });
     });
   </script> 
   <ul class="tabs" id="rightTab">
     <li>
-      <span class="baseinfo rightselected">基本参数信息</span>
+      <span id="baseinfo" class="rightselected">基本参数信息</span>
     </li>
     <li>
-      <span class="other" url="details/monitoring.html">失效监测检测</span>
+      <span id="failuremode" url="details/monitoring.html">失效监测检测</span>
     </li>
     <li>
-      <span class="other" url="details/diagnosis.html">健康诊断预报</span>
+      <span id="forcast" url="details/diagnosis.html">健康诊断预报</span>
     </li>
   </ul>

@@ -1,26 +1,29 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-      iniTab();
+      iniTab("bianfu");
     });
   </script> 
   <div id="bianfuTab" class='modContainer'>
     <div  class="sidebar-tab">
-      <div body='huanchongBody' class="tab current" model='assets/model/chuanchong.jpg'>缓冲装置</div>
+      <div body='huanchongBody' id="huanchong" class="tab current" model='assets/model/chuanchong.jpg' nochild="yes">缓冲装置</div>
       <div body='qudongBody' class="tab">驱动装置</div>
-      <div body='baidongbijiaBody' class="tab" model='assets/model/baidongbijia.jpg'>摆动臂架</div> 
+      <div body='baidongbijiaBody' id="bijia" class="tab" model='assets/model/baidongbijia.jpg' nochild="yes">摆动臂架</div>
+      <div body='diankongBody' class="tab" id="diankong" nochild="yes">电控系统</div>    
       <div class="tab-content">
         <div id="huanchongBody" class="tab-body">
         	&nbsp;
         </div>
         <div id='qudongBody' class="body-current">
-          <div class='tabItem' model='assets/model/shengsuoqudong.png'>绳索驱动</div>
-          <div class='tabItem' model='assets/model/chitiaoqudong.png'>齿条驱动</div>
-          <div class='tabItem' model='assets/model/luoganqudong.png'>螺杆驱动</div>
-          <div class='tabItem' model='assets/model/yeyaqudong.png'>液压驱动</div>
+          <div class='tabItem' model='assets/model/shengsuoqudong.png' id="shengsuo">绳索驱动</div>
+          <div class='tabItem' model='assets/model/chitiaoqudong.png' id="chitiao">齿条驱动</div>
+          <div class='tabItem' model='assets/model/luoganqudong.png' id="luogan">螺杆驱动</div>
+          <div class='tabItem' model='assets/model/yeyaqudong.png' id="yeya">液压驱动</div>
         </div>
         <div id='baidongbijiaBody' class="tab-body">
           &nbsp;
+        </div>
+        <div id='diankongBody' class="tab-body">
         </div>
       </div> 
     </div>

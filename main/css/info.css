@@ -1,0 +1,13 @@
+.inforow
+{
+	float: left;
+	width: 100%;
+	margin: 8;
+}
+
+.inforow div
+{
+	float: left;
+	margin-left: 10;
+	margin-right: 10; 
+}
