@@ -16,36 +16,24 @@
 	color: black;
 }
 
-.infoName,.infoData,.infoUnit
+.infoName,.infoData
 {
 	float: left;
-	border: 1px solid #000;
+	border: 1px solid #aaa;
 	text-align: center;
 	word-break: break-all;
+	margin-right: -1;
+	margin-bottom: -1;
+	padding-top: 5;
+	padding-bottom: 5;
 }
 
 .infoName
 {
-	width: 30%;
+	width: 50%;
 }
 
 .infoData
 {
-	width: 51%;
-}
-
-.infoUnit
-{
-	width: 10%;
-}
-
-.horizontalCell
-{
-	border-left: 1px solid #000;
-	float:left;
-	width: 49.43%;
-}
-.verticalCell
-{
-
+	width: 49%;
 }

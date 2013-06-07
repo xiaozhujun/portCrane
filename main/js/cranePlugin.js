@@ -53,6 +53,8 @@ function showContent(directory,obj)
   switch(rightShowCtx)
         {
           case "baseinfo":
+            $('#structContentDiv').load("mechanism/" + directory + "/baseinfo.html");
+            shownId = $(obj).attr('id');
             break;
           case "failuremode":
             $('#structContentDiv').load("mechanism/" + directory + "/failuremode.html");

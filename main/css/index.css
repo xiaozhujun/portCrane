@@ -52,11 +52,9 @@
 #mainHeadDiv .tabs span
 {
 	color: #FFFFFF;
-    font-family: 宋体;
-    font-size: 16px;
-    font-weight: bold;
-
-    background-color: #bbb;
+  font-family: 宋体;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #mainLeftDiv
@@ -129,7 +127,6 @@
 	width: 27.5%;
 	text-align: center;
 
-	background-color: #BBBBBB;
     color: #FFFFFF;
     font-family: 宋体;
     font-size: 16px;

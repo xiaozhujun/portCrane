@@ -6,47 +6,58 @@
             //globalVar的作用参见health-forecast.html
             $('.machine').click(function(){
                 $(".rightselected").removeClass("rightselected");
-                $(".baseinfo").addClass("rightselected");
+                $("#baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
                 baseInfoPage="details/baseinfo.html";
                 $('#rightMainDiv').load(baseInfoPage);
             });
             $(".structure li span").click(function(){
-                $(".rightselected").removeClass("rightselected");
-                $(".baseinfo").addClass("rightselected");
-                //$('#craneModelDiv').load($(this).attr('model'));
-                //$('#rightMainDiv').load('details/structureinfo.html');
+                if(typeof($(this).attr("url"))!="undefined"){
+                    $(".rightselected").removeClass("rightselected");
+                    $("#baseinfo").addClass("rightselected");
+                    //$('#craneModelDiv').load($(this).attr('model'));
+                    //$('#rightMainDiv').load('details/structureinfo.html');
 
-                <!-- xiaozhujun  为了上下分割 -->
-                $('#rightMainDiv').html("<div class='structTitle'>结构组成</div><div id='structDiv'></div><div class='structContentTitle'>结构信息</div><div id='structContentDiv'></div>");
-                baseInfoPage="details/structureinfo.html";
-                structContentTitle="结构信息";
-                $('#structContentDiv').load(baseInfoPage);
-                $('#structDiv').load($(this).attr('url'));
-                showModel($(this).attr('model'));
-
+                    <!-- xiaozhujun  为了上下分割 -->
+                    $('#rightMainDiv').html("<div class='structTitle'>结构组成</div><div id='structDiv'></div><div class='structContentTitle'>结构信息</div><div id='structContentDiv'></div>");
+                    baseInfoPage="details/structureinfo.html";
+                    structContentTitle="结构信息";
+                    $('#structContentDiv').load(baseInfoPage);
+                    $('#structDiv').load($(this).attr('url'));
+                    showModel($(this).attr('model'));
+                    $(".menuSelected").removeClass("menuSelected");
+                    $(this).addClass("menuSelected");
+                };
             });
             $(".mechanism li span").click(function(){
-                $(".rightselected").removeClass("rightselected");
-                $(".baseinfo").addClass("rightselected");
-                //$('#craneModelDiv').load($(this).attr('model'));
-                //$('#rightMainDiv').load('details/mechanisminfo.html');
+                if(typeof($(this).attr("url"))!="undefined"){
+                    $(".rightselected").removeClass("rightselected");
+                    $("#baseinfo").addClass("rightselected");
+                    //$('#craneModelDiv').load($(this).attr('model'));
+                    //$('#rightMainDiv').load('details/mechanisminfo.html');
 
-                <!-- xiaozhujun  为了上下分割 -->
-                $('#rightMainDiv').html("<div class='structTitle'>机构组成</div><div id='structDiv'></div><div class='structContentTitle'>机构信息</div><div id='structContentDiv'></div>");
-                baseInfoPage='details/mechanisminfo.html';
-                structContentTitle="机构信息";
-                $('#structContentDiv').load(baseInfoPage);
-                $('#structDiv').load($(this).attr('url'));
-                showModel($(this).attr('model'));
+                    <!-- xiaozhujun  为了上下分割 -->
+                    $('#rightMainDiv').html("<div class='structTitle'>机构组成</div><div id='structDiv'></div><div class='structContentTitle'>机构信息</div><div id='structContentDiv'></div>");
+                    baseInfoPage='details/mechanisminfo.html';
+                    structContentTitle="机构信息";
+                    $('#structContentDiv').load(baseInfoPage);
+                    $('#structDiv').load($(this).attr('url'));
+                    showModel($(this).attr('model'));
+                    $(".menuSelected").removeClass("menuSelected");
+                    $(this).addClass("menuSelected");
+                }
             });
             $(".electricity li span").click(function(){
-                $(".rightselected").removeClass("rightselected");
-                $(".baseinfo").addClass("rightselected");
-                $('#craneModelDiv').load($(this).attr('model'));
-                baseInfoPage='details/electricityinfo.html';
-                structContentTitle="电气信息";
-                $('#rightMainDiv').load(baseInfoPage);
+                if(typeof($(this).attr("url"))!="undefined"){
+                    $(".rightselected").removeClass("rightselected");
+                    $("#baseinfo").addClass("rightselected");
+                    $('#craneModelDiv').load($(this).attr('model'));
+                    baseInfoPage='details/electricityinfo.html';
+                    structContentTitle="电气信息";
+                    $('#rightMainDiv').load(baseInfoPage);
+                    $(".menuSelected").removeClass("menuSelected");
+                    $(this).addClass("menuSelected");
+                }
             });
         });
     </script>
@@ -103,13 +114,13 @@
                             <span>电气控制系统</span>
                             <ul class="electricity">
                                 <li class="bullet">
-                                    <span model="electricity/electricity1.html">电气控制1</span>
+                                    <span model="electricity/electricity1.html" url="">电气控制1</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="electricity/electricity2.html">电气控制2</span>
+                                    <span model="electricity/electricity2.html" url="">电气控制2</span>
                                 </li>
                                 <li class="bullet">
-                                    <span model="electricity/electricity3.html">电气控制3</span>
+                                    <span model="electricity/electricity3.html" url="">电气控制3</span>
                                 </li>
                             </ul>
                         </li>

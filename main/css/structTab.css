@@ -8,14 +8,6 @@
 	font-size: 14px;
 	
 }
- 
-#rightMainDiv .current{
-	color:#356aa0;
-	border-bottom:0px;
-	padding-bottom: 6px;
-	background-color: white;
-}
-
 .tab{
 	position:relative;
 	float:left;
