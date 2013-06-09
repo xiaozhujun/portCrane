@@ -59,7 +59,7 @@
 	cursor: pointer;
 }
 
-.tabItem:HOVER
+.current
 {
 	background-color: #ccc;
 }

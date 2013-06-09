@@ -25,6 +25,7 @@ function iniTab(directory)
 
       //展示模型图片
       $(".tabItem").click(function(){
+    $(this).addClass("current").siblings().removeClass("current"); 
       	showModel($(this).attr('model'));
         showContent(directory,this);
       });

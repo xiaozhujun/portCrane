@@ -1,0 +1,315 @@
+<link rel="stylesheet" type="text/css" href="css/infotab.css">
+<link rel="stylesheet" type="text/css" href="css/infotable.css">
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+	heightAlign();
+	$(".show").show().siblings().hide();
+	$(".tab li").mouseover(function(){
+		$(".currentTab").removeClass("currentTab");
+		$(this).addClass("currentTab");
+		heightAlign();
+		$("#"+$(this).attr("cref")).show().siblings().hide();
+
+	});
+});
+function heightAlign(){
+	$(".infoName").each(function(){
+		$(this).next().height($(this).height());
+	});
+}
+</script>
+<div id="getId">
+
+	<div class="tabT">
+		<ul class="tab">
+			<li class="currentTab" cref="tabContent1">
+				<span>基本信息</span>
+			</li>
+			<li cref="tabContent2">
+				<span>基本参数</span>
+			</li>
+		</ul>
+	</div>
+	<div>
+	<div class="show" id="tabContent1">
+		<div class="con">
+			<div class="infoDiv">
+				<ul>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">设备名称</div>
+							<div class="infoData">港口门座式起重机</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">设备编号</div>
+							<div class="infoData">XXXX-XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">设备类别</div>
+							<div class="infoData">门座式起重机</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">单位名称</div>
+							<div class="infoData">XXXXXXXXXXXXaaaa</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">单位地址</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">使用地点</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">管理人员</div>
+							<div class="infoData">XXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">联系电话</div>
+							<div class="infoData">012345555556789</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">制造单位</div>
+							<div class="infoData">XXXXXXXXXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">制造日期</div>
+							<div class="infoData">2013-05-24</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="tabContent2">
+		<div class="con">
+			<div class="infoDiv" style="overflow-y:scroll;height:88%;">
+				<ul>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">名称</div>
+							<div class="infoData">数据</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">最大幅度起重量/额定起重量</div>
+							<div class="infoData">XX/XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">工作幅度</div>
+							<div class="infoData">RXX-XX/RXX-XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">工作级别</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">最大起重力矩</div>
+							<div class="infoData">XXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">轨面上起升高度</div>
+							<div class="infoData">XX吊钩/XX抓斗</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">轨面下起升高度</div>
+							<div class="infoData">XXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">起升机构工作速度</div>
+							<div class="infoData">XX/XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">变幅机构工作速度</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">旋转机构工作速度</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">行走机构工作速度</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">起升机构电动机型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">变幅机构电动机型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">旋转机构电动机型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">行走机构电动机型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">起升机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">变幅机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">旋转机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">行走机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">起升机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">变幅机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">旋转机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">行走机构减速器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">起升机构制动器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">变幅机构制动器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">旋转机构制动器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">行走机构制动器型号</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">轨距X基距</div>
+							<div class="infoData">XXXXX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">最大轮压</div>
+							<div class="infoData">XX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">轨道型号</div>
+							<div class="infoData">XxX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">门架下净空高度大于</div>
+							<div class="infoData">XxX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">尾部回转半径</div>
+							<div class="infoData">XxX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">供电方式</div>
+							<div class="infoData">XxX</div>
+						</div>
+					</li>
+					<li>
+						<div class="rowDiv">
+							<div class="infoName">装机容量</div>
+							<div class="infoData">XxX</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>

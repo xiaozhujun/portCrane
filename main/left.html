@@ -9,6 +9,7 @@
                 $("#baseinfo").addClass("rightselected");
                 $('#craneModelDiv').load($(this).attr('model'));
                 baseInfoPage="details/baseinfo.html";
+                rightShowCtx="baseinfo";
                 $('#rightMainDiv').load(baseInfoPage);
             });
             $(".structure li span").click(function(){
@@ -22,6 +23,7 @@
                     $('#rightMainDiv').html("<div class='structTitle'>结构组成</div><div id='structDiv'></div><div class='structContentTitle'>结构信息</div><div id='structContentDiv'></div>");
                     baseInfoPage="details/structureinfo.html";
                     structContentTitle="结构信息";
+                    rightShowCtx="baseinfo";
                     $('#structContentDiv').load(baseInfoPage);
                     $('#structDiv').load($(this).attr('url'));
                     showModel($(this).attr('model'));
@@ -40,6 +42,7 @@
                     $('#rightMainDiv').html("<div class='structTitle'>机构组成</div><div id='structDiv'></div><div class='structContentTitle'>机构信息</div><div id='structContentDiv'></div>");
                     baseInfoPage='details/mechanisminfo.html';
                     structContentTitle="机构信息";
+                    rightShowCtx="baseinfo";
                     $('#structContentDiv').load(baseInfoPage);
                     $('#structDiv').load($(this).attr('url'));
                     showModel($(this).attr('model'));
@@ -54,6 +57,7 @@
                     $('#craneModelDiv').load($(this).attr('model'));
                     baseInfoPage='details/electricityinfo.html';
                     structContentTitle="电气信息";
+                    rightShowCtx="baseinfo";
                     $('#rightMainDiv').load(baseInfoPage);
                     $(".menuSelected").removeClass("menuSelected");
                     $(this).addClass("menuSelected");
