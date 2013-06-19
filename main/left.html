@@ -1,133 +1,183 @@
-    <link rel="stylesheet" href="css/mktree.css">
-    <script src="js/mktree.js" language="JavaScript"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            convertTrees();
-            //globalVar的作用参见health-forecast.html
-            $('.machine').click(function(){
-                $(".rightselected").removeClass("rightselected");
-                $("#baseinfo").addClass("rightselected");
-                $('#craneModelDiv').load($(this).attr('model'));
-                baseInfoPage="details/baseinfo.html";
-                rightShowCtx="baseinfo";
-                $('#rightMainDiv').load(baseInfoPage);
-            });
-            $(".structure li span").click(function(){
-                if(typeof($(this).attr("url"))!="undefined"){
-                    $(".rightselected").removeClass("rightselected");
-                    $("#baseinfo").addClass("rightselected");
-                    //$('#craneModelDiv').load($(this).attr('model'));
-                    //$('#rightMainDiv').load('details/structureinfo.html');
-
-                    <!-- xiaozhujun  为了上下分割 -->
-                    $('#rightMainDiv').html("<div class='structTitle'>结构组成</div><div id='structDiv'></div><div class='structContentTitle'>结构信息</div><div id='structContentDiv'></div>");
-                    baseInfoPage="details/structureinfo.html";
-                    structContentTitle="结构信息";
-                    rightShowCtx="baseinfo";
-                    $('#structContentDiv').load(baseInfoPage);
-                    $('#structDiv').load($(this).attr('url'));
-                    showModel($(this).attr('model'));
-                    $(".menuSelected").removeClass("menuSelected");
-                    $(this).addClass("menuSelected");
-                };
-            });
-            $(".mechanism li span").click(function(){
-                if(typeof($(this).attr("url"))!="undefined"){
-                    $(".rightselected").removeClass("rightselected");
-                    $("#baseinfo").addClass("rightselected");
-                    //$('#craneModelDiv').load($(this).attr('model'));
-                    //$('#rightMainDiv').load('details/mechanisminfo.html');
-
-                    <!-- xiaozhujun  为了上下分割 -->
-                    $('#rightMainDiv').html("<div class='structTitle'>机构组成</div><div id='structDiv'></div><div class='structContentTitle'>机构信息</div><div id='structContentDiv'></div>");
-                    baseInfoPage='details/mechanisminfo.html';
-                    structContentTitle="机构信息";
-                    rightShowCtx="baseinfo";
-                    $('#structContentDiv').load(baseInfoPage);
-                    $('#structDiv').load($(this).attr('url'));
-                    showModel($(this).attr('model'));
-                    $(".menuSelected").removeClass("menuSelected");
-                    $(this).addClass("menuSelected");
-                }
-            });
-            $(".electricity li span").click(function(){
-                if(typeof($(this).attr("url"))!="undefined"){
-                    $(".rightselected").removeClass("rightselected");
-                    $("#baseinfo").addClass("rightselected");
-                    $('#craneModelDiv').load($(this).attr('model'));
-                    baseInfoPage='details/electricityinfo.html';
-                    structContentTitle="电气信息";
-                    rightShowCtx="baseinfo";
-                    $('#rightMainDiv').load(baseInfoPage);
-                    $(".menuSelected").removeClass("menuSelected");
-                    $(this).addClass("menuSelected");
-                }
-            });
+<link rel="stylesheet" type="text/css" href="css/simpleTree.css">
+<script type="text/javascript" src="js/simpleTree.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        simpleTree($("#tree"));
+        // 由于事件响应是冒泡式的,所以如果用这种方法,
+        // 在.bullet的事件处理完后才会处理.item的事件
+        // $(".item").click(function(){
+        //     if(typeof($(this).attr("domain"))!="undefined"){
+        //         domain=$(this).attr("domain");
+        //     }
+        //     if(typeof($(this).attr("scope"))!="undefined"){
+        //         scope=$(this).attr("scope");
+        //     }
+        // });
+        $(".machine").click(function(event){
+            $(".rightselected").removeClass("rightselected");
+            $("#baseinfo").addClass("rightselected");
+            $(".menuSelected").removeClass("menuSelected");
+            $('#craneModelDiv').load("machine/machine1.html");
+            rightShowCtx="baseinfo";
+            domain=scope=shownId=null;
+            $('#rightMainDiv').load("machine/baseinfo.html");
+            // 阻止事件冒泡,另一种方式是return false
+            event.stopPropagation();
         });
-    </script>
+        $(".bullet").click(function(){
+            scope=$(this).parents(".item .scope").attr("scope");
+            domain=$(this).parents(".item .domain").attr("domain");
+            shownId=$(this).attr("id");
+            showContent(domain,scope,shownId);
+        });
+        $("[id$='diankong']").click(function(){
+            $("#craneModelDiv").html("<div><img class='modelImg' style='width:45%;height:45%' src='assets/model/1_dqkz1.jpg'/></div><div class='componentInfoTitle'>动态信息</div><div id='craneComponentInfo'></div>");
+            $("#craneComponentInfo").load(domain + "/" + scope + "/elecinfo.html");
+        });
+    });
+</script>
 
-    <ul class="mktree" id="tree1">
-        <li class="liOpen">
-            <span class="machine" model="machine/machine1.html"> 门式起重机#1</span>
-                    <ul>
-                        <li class="liOpen">
-                            <span>四大机构</span>
-                            <ul class="mechanism">
-                                <li class="bullet">
-                                    <span url="mechanism/qisheng/qisheng.html" model='assets/model/1_qisheng.png'>起升机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="mechanism/bianfu/bianfu.html" model='assets/model/1_bianfu.png'>变幅机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="mechanism/xuanzhuan/xuanzhuan.html" model='assets/model/1_xuanzhuan.png'>旋转机构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="mechanism/xingzou/xingzou.html" model='assets/model/1_xingzou.png'>行走机构</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="liOpen">
-                            <span>六大结构</span>
-                            <ul class="structure">
-                                <li class="bullet">
-                                    <span url="structure/menjia.html" model='assets/model/1_menjia.png'>门架结构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="structure/zhuanpan.html" model='assets/model/1_zhuanpan.png'>转盘结构</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="structure/renzijia.html" model='assets/model/1_renzijia.jpg'>人字架</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="structure/shangzhuanzhu.html" model='assets/model/1_shangzhuanzhu.png'>上转柱</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="structure/pingheng.html" model='assets/model/1_pingheng.png'>平衡系统</span>
-                                </li>
-                                <li class="bullet">
-                                    <span url="structure/bijia.html" model='assets/model/1_bijia.png'>臂架系统</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="liOpen">
-                            <span>电气控制系统</span>
-                            <ul class="electricity">
-                                <li class="bullet">
-                                    <span model="electricity/electricity1.html" url="">电气控制1</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="electricity/electricity2.html" url="">电气控制2</span>
-                                </li>
-                                <li class="bullet">
-                                    <span model="electricity/electricity3.html" url="">电气控制3</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-        </li>
-    </ul>
+<div id="tree">
+    <div class="item">
+        <div class="itemTitle">
+            <div class="machine" model="machine/machine1.html">门式起重机#1</div>
+        </div>
+        <div class="itemContent">
+            <div class="item domain" domain="mechanism">
+                <div class="itemTitle">四大机构</div>
+                <div class="itemContent">
+                    <div class="item scope" scope="qisheng">
+                        <div class="itemTitle">起升机构</div>
+                        <div class="itemContent">
+                            <div class="item">
+                                <div class="itemTitle">取物装置</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="diaogouzu">吊钩组</div>
+                                    <div class="bullet" id="zhuadou">抓斗</div>
+                                    <div class="bullet" id="jizhuangxiangdiaoju">集装箱吊具</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="itemTitle">钢丝绳卷绕系统</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="juantong">卷筒</div>
+                                    <div class="bullet" id="gangsisheng">钢丝绳</div>
+                                    <div class="bullet" id="hualun">滑轮</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="itemTitle">驱动装置</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="diandongji">电动机</div>
+                                    <div class="bullet" id="zhidongqi">制动器</div>
+                                    <div class="bullet" id="jiansuqi">减速器</div>
+                                    <div class="bullet" id="juantong1">卷筒</div>
+                                    <div class="bullet" id="lianzhouqi">联轴器</div>
+                                </div>
+                            </div>
+                            <div class="bullet" id="qishengdiankong">电控系统</div>
+                        </div>
+                    </div>
+                    <div class="item scope" scope="bianfu">
+                        <div class="itemTitle">变幅机构</div>
+                        <div class="itemContent">
+                            <div class="bullet" id="huanchong">缓冲装置</div>
+                            <div class="item">
+                                <div class="itemTitle">驱动装置</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="shengsuo">绳索驱动</div>
+                                    <div class="bullet" id="chitiao">齿条驱动</div>
+                                    <div class="bullet" id="luogan">螺杆驱动</div>
+                                    <div class="bullet" id="yeya">液压驱动</div>
+                                </div>
+                            </div>
+                            <div class="bullet" id="bijia">摆动臂架</div>
+                            <div class="bullet" id="bianfudiankong">电控系统</div>
+                        </div>
+                    </div>
+                    <div class="item scope" scope="xuanzhuan">
+                        <div class="itemTitle">旋转机构</div>
+                        <div class="itemContent">
+                            <div class="item">
+                                <div class="itemTitle">驱动装置</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="woshiyuan">卧式电动机与圆柱、圆锥齿轮传动</div>
+                                    <div class="bullet" id="woshiwolun">卧式电动机与涡轮减速器传动</div>
+                                    <div class="bullet" id="lishiyuan">立式电动机与立式圆柱齿轮减速器传动</div>
+                                    <div class="bullet" id="lishichilun">立式电动机与行星齿轮减速器传动</div>
+                                    <div class="bullet" id="yeya1">液压驱动的传动方式</div>
+                                    <div class="bullet" id="shengsuo1">绳索牵引的传动方式</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="itemTitle">支承装置</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="zhuanzhushi">转柱式</div>
+                                    <div class="bullet" id="dingzhushi">定柱式</div>
+                                    <div class="bullet" id="gunlunshi">滚轮式</div>
+                                    <div class="bullet" id="gunzijiataoshi">滚子夹套式</div>
+                                    <div class="bullet" id="gundongzhouchengshi">滚动轴承式</div>
+                                </div>
+                            </div>
+                            <div class="bullet" id="xuanzhuandiankong">电控系统</div>
+                        </div>
+                    </div>
+                    <div class="item scope"  scope="xingzou">
+                        <div class="itemTitle">行走机构</div>
+                        <div class="itemContent">
+                            <div class="item">
+                                <div class="itemTitle">驱动装置</div>
+                                <div class="itemContent">
+                                    <div class="bullet" id="yuandongji">原动机</div>
+                                    <div class="bullet" id="zhidongqi1">制动器</div>
+                                    <div class="bullet" id="lianzhouqi1">联轴器</div>
+                                    <div class="bullet" id="chuandongzhuangzhi">传动装置</div>
+                                </div>
+                            </div>
+                            <div class="bullet" id="zhichengzhuangzhi">支承装置</div>
+                            <div class="bullet" id="xingzoudiankong">电控系统</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item domain" domain="structure">
+                <div class="itemTitle">六大结构</div>
+                <div class="itemContent">
+                    <div class="item scope" scope="menjia">
+                        <div class="itemTitle">门架结构</div>
+                        <div class="itemContent">
+                            <div class="bullet">圆筒</div>
+                            <div class="bullet">横梁</div>
+                            <div class="bullet">端梁</div>
+                        </div>
+                    </div>
+                    <div class="bullet">转盘结构</div>
+                    <div class="bullet">人字架</div>
+                    <div class="bullet">上转柱</div>
+                    <div class="bullet">平衡系统</div>
+                    <div class="item scope">
+                        <div class="itemTitle" scope="bijia">臂架系统</div>
+                        <div class="itemContent">
+                            <div class="bullet">象鼻梁</div>
+                            <div class="bullet">刚性拉杆</div>
+                            <div class="bullet">臂架</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item domain" domain="electricity">
+                <div class="itemTitle">电气控制系统</div>
+                <div class="itemContent">
+                    <div class="bullet">电气控制1</div>
+                    <div class="bullet">电气控制2</div>
+                    <div class="bullet">电气控制3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="itemTitle">
+            <div class="machine" model="machine/machine2.html">门式起重机#2</div>
+        </div>
+    </div>
+</div>

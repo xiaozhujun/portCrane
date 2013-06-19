@@ -3,18 +3,9 @@
     $(document).ready(function(){
       $("#rightTab li span").click(function(){
         rightShowCtx=$(this).attr("id");
-      });
-      $('#failuremode,#forcast').click(function(){
         $(".rightselected").removeClass("rightselected");
         $(this).addClass("rightselected");
-        $('#structContentDiv').load($(this).attr("url"));
-        $(".structContentTitle").text("失效模式");
-      });
-      $('#baseinfo').click(function(){
-        $(".rightselected").removeClass("rightselected");
-        $(this).addClass("rightselected");
-        $('#structContentDiv').load(baseInfoPage);
-        $(".structContentTitle").text(structContentTitle);
+        showContent(domain,scope,shownId);
       });
     });
   </script> 

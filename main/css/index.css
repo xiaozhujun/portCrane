@@ -61,6 +61,7 @@
 {
 	float: left;
 	margin: 0;
+	padding-top: 12;
 	width: 18%;
 
 	border-style: solid;
@@ -133,11 +134,18 @@
     font-weight: bold;
 }
 
-#modelImg
+.modelImg
 {
 	margin-top: 30px;
-	width: 45%;
-	height: 45%;
+	width: 60%;
+	height: 60%;
+}
+
+object
+{
+	margin-top: 30px;
+	width: 90%;
+	height: 60%;
 }
 
 #rmBodyDiv
