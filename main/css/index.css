@@ -1,7 +1,7 @@
 #mainContainer
 {
 	margin: 0 auto;
-	width: 1100px;
+	width: 1200px;
 	padding: 0;
 }
 
@@ -35,7 +35,12 @@
 	width: 100%;
 	float: left;
 	padding: 0;
+
 	min-height: 600px;
+	min-height:600px;
+	height:100%;
+    _height:600px;
+
 	background-color:#fff;
 	margin-bottom: 20px;
 }
@@ -61,7 +66,6 @@
 {
 	float: left;
 	margin: 0;
-	padding-top: 12;
 	width: 18%;
 
 	border-style: solid;
@@ -117,6 +121,11 @@
 	text-align: center;
 }
 
+#modelDiv{
+	padding-top: 5px;
+	height: 400px;
+}
+
 #rightTabDiv
 {
 	float: left;
@@ -144,8 +153,8 @@
 object
 {
 	margin-top: 30px;
-	width: 90%;
-	height: 60%;
+	width: 99%;
+	height: 99%;
 }
 
 #rmBodyDiv
@@ -469,4 +478,33 @@ div .showFirst
 	border-style: dashed;
 	border-width: 1px;
 	border-color: #999;
+}
+
+#tree
+{
+	margin-top: 12px;
+}
+
+.infoTab
+{
+	border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 25px;
+    line-height: 1.5;
+    list-style: none outside none;
+    text-align: center;
+    width: 50%;
+    background-color: #eee;
+}
+
+.infoTab:HOVER
+{
+    background-color: #9cf;
+}
+
+.currentInfoTab
+{
+	background-color: #69c;
 }

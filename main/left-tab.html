@@ -1,22 +1,17 @@
   <link rel="stylesheet" href="css/tabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
-      $('li span').click(function(){
+      $('#headTab .tabItem').click(function(){
         $(".mainselected").removeClass("mainselected");
         $(this).addClass("mainselected");
         $('#mainBodyDiv').load($(this).attr("url"));
       });
     });
   </script> 
-  <ul class="tabs">
-    <li>
-        <span url="risk-management.html">&gt; 动态风险管理</span>
-    </li>
-    <li>
-        <span url="health-forecast.html" class="mainselected">&gt; 安全健康管理</span>
-    </li>
-    <li>
-        <span url="maintainManagement.html">&gt; 预知维修管理</span>
-    </li>
-  </ul>
+  <div id='headTab' class='tabs'>
+    <div class='tabItem' url="risk-management.html">&gt; 动态风险管理</div>    
+    <div class='tabItem' url="health-forecast.html" class="mainselected">&gt; 安全健康管理</div> 
+    <div class='tabItem' url="maintainManagement.html">&gt; 预知维修管理</div>
+  </div>
+
  

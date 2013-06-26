@@ -8,6 +8,7 @@
 	font-size: 14px;
 	
 }
+
 .tab{
 	position:relative;
 	float:left;
@@ -49,17 +50,26 @@
 }
 
 
-.tabItem
-{
-	float: left;
-	margin-top: 3px;
-	margin-right: 5px;
-	padding: 3 5px;
-	background-color: #eee;
-	cursor: pointer;
-}
-
 .current
 {
 	background-color: #9cf;
+}
+
+
+.rightTabItem
+{
+    float:left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 1px;
+    background-color: #eee;
+    cursor: pointer;
+    text-align: center;
+
+    width: 33%;
+}
+
+.rightTabItem:HOVER
+{
+    background: #69c;
 }
