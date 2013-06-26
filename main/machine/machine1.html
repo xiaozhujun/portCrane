@@ -1,4 +1,33 @@
-<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/machine1.wrl">
-		<param name="vrml_background_color" value="#ffffff">
+<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona" codebase="http://www.parallelgraphics.com/bin/cortona3d.cab#Version=6,0,0,179">
+<param name="scene" value="assets/model3d/machine1.wrl">
+<param name="vrml_background_color" value="#cdcdcd">
+<param name="vrml_splashscreen" value="false">
+<param name="contextmenu" value="false">
+<param name="NavigationBar" value="1">
+<param name="license" value="{5AB1EBB2-ED44-4E1C-8FA7-F24C3F47335D};http://www.parallelgraphics.com/vrml/parallelgraphics_license.xml;{28988016-E3A8-43A3-94E5-A3545D177405};http://draft.paragraph.ru/vrml/draft_license.xml">
+<script language="JavaScript" src="js/install_plugin.js"></script>
+
+<script language="JavaScript">
+
+emb = '<embed id="Cortona" style="width:80%;height:60%" type="application/x-cortona" src="assets/model3d/machine1.wrl" pluginspage="http://www.parallelgraphics.com/cortona" VRML_BACKGROUND_COLOR="#cdcdcd" VRML_SPLASHSCREEN="false" VRML_DASHBOARD="false" NavigationBar="1" CONTEXTMENU="false" license="{72A21002-F8B8-48FB-B635-6ED76A358951};http://www.parallelgraphics.com/vrml/parallelgraphics_license.xml;"  align="middle" frameborder="no">';
+
+installed();
+
+if (goodns67 || chrome || safari || opera)
+{ 
+	if (cortonabuild == 0 && win)
+	{
+		$("#modelDiv").html("<table cellpadding=40 cellspacing=2 bgcolor=#CCCCCC><tr><td align=center bgcolor=#FFFFFF>The 3D scene requires Cortona3D Viewer.<br><a href='http://www.parallelgraphics.com/products/cortona3d/download/'><img src='/l2/images/cortona/install-cortona.gif' border=0 vspace=10 hspace=20></a></td></tr></table><p>");
+	}
+	else if (cortonabuild < 179 && win)
+	{
+		$("#modelDiv").html("<table cellpadding=40 cellspacing=2 bgcolor=#CCCCCC><tr><td align=center bgcolor=#FFFFFF>Your version of Cortona3D Viewer is out of date.<br><a href='http://www.parallelgraphics.com/products/cortona3d/download/'><img src='/l2/images/cortona/install-cortona.gif' border=0 vspace=10 hspace=20></a></td></tr></table><p>");		
+	}
+	else 
+	{
+		$("#modelDiv").html(emb); 
+	}	
+}
+
+</script>
 </object>

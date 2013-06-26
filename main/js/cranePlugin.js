@@ -7,9 +7,13 @@ var scope;
 // 存储被点击的部件id,传递给失效模式页面以确定显示哪一个部件的失效模式
 var shownId;
 
-//根据不同的目录(也就是不同的机构)和不同的rightShowCtx显示不同的内容
-function showContent(domain,scope,id)
-{
-  $("#craneModelDiv").load(domain + "/" + scope + "/model.html");
-  $('#rightMainDiv').load(domain + "/" + scope + "/" + rightShowCtx + ".html");
+// 判断字符串是否以s结尾
+String.prototype.endWith=function(s){
+  if(s==null||s==""||this.length==0||s.length>this.length)
+   return false;
+  if(this.substring(this.length-s.length)==s)
+    return true;
+  else
+    return false;
+  return true;
 }

@@ -1,4 +1,4 @@
-function simpleTree(obj) {
+function simpleTree() {
 	$(".itemTitle").addClass("titleHide");
 	$(".itemContent").addClass("contentHide");
 	$(".itemTitle").click(function(){

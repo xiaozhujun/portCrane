@@ -2,17 +2,24 @@
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#"+shownId+"M").show().siblings().hide();
+		var tempId = shownId;
+		if (tempId.endWith("diankong")) {
+			tempId = scope + "diankong";
+		};
+		$("#"+tempId+"M").show().siblings().hide();
 	});
 </script>
 
+<div id="xingzouM">
+	<img class="modelImg" src="assets/model/1_xingzou.png">
+</div>
 <div id="zhichengzhuangzhiM">
 	<img class="modelImg" src="assets/model/zhicheng.jpg">
 </div>
 <div id="yuandongjiM">
 	<img class="modelImg" src="assets/model/yuandongji.jpg">
 </div>
-<div id="zhidongqiM">
+<div id="zhidongqi1M">
 	<img class="modelImg" src="assets/model/zhidongqi.jpg">
 </div>
 <div id="lianzhouqi1M">
@@ -22,4 +29,5 @@
 	<img class="modelImg" src="assets/model/chuandong.png">
 </div>
 <div id="xingzoudiankongM">
+	<img class="modelImg" src="assets/model/1_dqkz3.jpg">
 </div>

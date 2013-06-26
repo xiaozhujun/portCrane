@@ -2,13 +2,19 @@
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#"+shownId+"FM").show().siblings().hide();
+		var tempId = shownId;
+		if (tempId.endWith("diankong")) {
+			tempId = scope + "diankong";
+		};
+		$("#"+tempId+"BI").show().siblings().hide();
 	});
 </script>
 
-<div id="yuandongjiFM"><img src="assets/details/diandongji.jpg">
+<div id="xingzouBI">
 </div>
-<div id="zhidongqi1FM">
+<div id="yuandongjiBI"><img src="assets/details/diandongji.jpg">
+</div>
+<div id="zhidongqi1BI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -38,7 +44,7 @@
 		</ul>
 	</div>
 </div>
-<div id="lianzhouqi1FM">
+<div id="lianzhouqi1BI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -86,10 +92,10 @@
 		</ul>
 	</div>
 </div>
-<div id="chuandongzhuangzhiFM">
+<div id="chuandongzhuangzhiBI">
 	<div class="inforow"><img src="assets/details/jiansuqi.jpg"></div>
 </div>
-<div id="zhichengzhuangzhiFM">
+<div id="zhichengzhuangzhiBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -149,5 +155,5 @@
 		</ul>
 	</div>
 </div>
-<div id="xingzoudiankongFM">
+<div id="xingzoudiankongBI">
 </div>

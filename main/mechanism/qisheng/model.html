@@ -2,15 +2,19 @@
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#"+shownId+"M").show().siblings().hide();
+		var tempId = shownId;
+		if (tempId.endWith("diankong")) {
+			tempId = scope + "diankong";
+		};
+		$("#"+tempId+"M").show().siblings().hide();
 	});
 </script>
 
+<div id="qishengM">
+	<img class="modelImg" src="assets/model/1_qisheng.png">
+</div>
 <div id="diaogouzuM">
-	<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/diaogouzu.wrl">
-		<param name="vrml_background_color" value="#ffffff">
-	</object>
+	<img class="modelImg" src="assets/model/diaogouzu.jpg">
 </div>
 <div id="zhuadouM">
 	<img class="modelImg" src="assets/model/zhuadou.png">
@@ -25,37 +29,23 @@
 	<img class="modelImg" src="assets/model/gangsisheng.png">
 </div>
 <div id="hualunM">
-	<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/hualun.wrl">
-		<param name="vrml_background_color" value="#ffffff">
-	</object>
+	<img class="modelImg" src="assets/model/hualun.jpg">
 </div>
 <div id="diandongjiM">
-	<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/diandongji.wrl">
-		<param name="vrml_background_color" value="#ffffff">
-	</object>
+	<img class="modelImg" src="assets/model/">
 </div>
 <div id="zhidongqiM">
-	<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/zhidongqi.wrl">
-		<param name="vrml_background_color" value="#ffffff">
-	</object>
+	<img class="modelImg" src="assets/model/diandongji.jpg">
 </div>
 <div id="jiansuqiM">
-  <object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/jiansuqi.wrl">
-		<param name="vrml_background_color" value="#ffffff">
-	</object>
+	<img class="modelImg" src="assets/model/jiansuqi.jpg">
 </div>
 <div id="juantong1M">
 	<img class="modelImg" src="assets/model/juantong.jpg">
 </div>
 <div id="lianzhouqiM">
-	<object classid="clsid:86A88967-7A20-11d2-8EDA-00600818EDB1" id="Cortona">
-		<param name="scene" value="assets/model3d/lianzhouqi.wrl">
-		<param name="vrml_background_color" value="#ffffff">
-	</object>
+	<img class="modelImg" src="assets/model/lianzhouqi.jpg">
 </div>
 <div id="qishengdiankongM">
+	<img class="modelImg" src="assets/model/1_dqkz1.jpg">
 </div>

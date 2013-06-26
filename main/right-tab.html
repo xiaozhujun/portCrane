@@ -5,7 +5,11 @@
         rightShowCtx=$(this).attr("id");
         $(".rightselected").removeClass("rightselected");
         $(this).addClass("rightselected");
-        showContent(domain,scope,shownId);
+        if (typeof(scope)=="undefined") {
+          $('#rightMainDiv').load(domain + "/" + rightShowCtx + ".html");
+        } else {
+          $('#rightMainDiv').load(domain + "/" + scope + "/" + rightShowCtx + ".html");
+        }
       });
     });
   </script> 

@@ -2,11 +2,17 @@
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#"+shownId+"FM").show().siblings().hide();
+		var tempId = shownId;
+		if (tempId.endWith("diankong")) {
+			tempId = scope + "diankong";
+		};
+		$("#"+tempId+"BI").show().siblings().hide();
 	});
 </script>
 
-<div id="woshiyuanFM">
+<div id="xuanzhuanBI">
+</div>
+<div id="woshiyuanBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -30,7 +36,7 @@
 		</ul>
 	</div>
 </div>
-<div id="woshiwolunFM">
+<div id="woshiwolunBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -54,7 +60,7 @@
 		</ul>
 	</div>
 </div>
-<div id="lishiyuanFM">
+<div id="lishiyuanBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -78,7 +84,7 @@
 		</ul>
 	</div>
 </div>
-<div id="lishichilunFM">
+<div id="lishichilunBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -102,7 +108,7 @@
 		</ul>
 	</div>
 </div>
-<div id="yeya1FM">
+<div id="yeya1BI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -126,7 +132,7 @@
 		</ul>
 	</div>
 </div>
-<div id="shengsuo1FM">
+<div id="shengsuo1BI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -150,7 +156,7 @@
 		</ul>
 	</div>
 </div>
-<div id="zhuanzhushiFM">
+<div id="zhuanzhushiBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -174,7 +180,7 @@
 		</ul>
 	</div>
 </div>
-<div id="dingzhushiFM">
+<div id="dingzhushiBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -198,7 +204,7 @@
 		</ul>
 	</div>
 </div>
-<div id="gunlunshiFM">
+<div id="gunlunshiBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -222,7 +228,7 @@
 		</ul>
 	</div>
 </div>
-<div id="gunzijiataoshiFM">
+<div id="gunzijiataoshiBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -246,7 +252,7 @@
 		</ul>
 	</div>
 </div>
-<div id="gundongzhouchengshiFM">
+<div id="gundongzhouchengshiBI">
 	<div class="infoDiv">
 		<ul>
 			<li>
@@ -270,5 +276,5 @@
 		</ul>
 	</div>
 </div>
-<div id="xuanzhuandiankongFM">
+<div id="xuanzhuandiankongBI">
 </div>
