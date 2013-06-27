@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="css/fault-right.css">
+
+<script type="text/javascript">
+	$(document).ready(function(){
+      $('#faultResultList').load(domain + "/" + scope + "/" + "failuremode.html");
+      $('#faultTrendList').load(domain + "/" + scope + "/" + "failuremode.html");
+    });
+</script>
+<div id='faultResult'>
+	<div class='containerTitle'>失效诊断</div>
+	<div id='faultResultList'>
+
+	</div>
+</div>
+<div id='faultTrend'>
+	<div class='containerTitle'>失效预警</div>
+	<div id='faultTrendList'>
+
+	</div>
+</div>

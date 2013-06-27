@@ -8,7 +8,14 @@
         if (typeof(scope)=="undefined") {
           $('#rightMainDiv').load(domain + "/" + rightShowCtx + ".html");
         } else {
-          $('#rightMainDiv').load(domain + "/" + scope + "/" + rightShowCtx + ".html");
+           if(rightShowCtx=="failuremode")
+           {
+              $('#rightMainDiv').load("right-fault.html");
+           }
+           else
+           {
+              $('#rightMainDiv').load(domain + "/" + scope + "/" + rightShowCtx + ".html");
+           }          
         }
       });
     });

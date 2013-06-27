@@ -29,3 +29,13 @@
 {
 	background-color: #9cf;
 }
+
+.treeItem .contentHide
+{
+	display: none;
+}
+
+.treeItem .contentShow
+{
+	display: block;
+}

@@ -1,4 +1,4 @@
-/*
+
 function simpleTree() {
 	$(".itemTitle").addClass("titleHide");
 	$(".itemContent").addClass("contentHide");
@@ -16,7 +16,8 @@ function simpleTree() {
 		$(this).addClass("menuSelected");
 	});
 }
-*/
+
+/*
 function simpleTree(){
 	collapseAll()
 	$(".itemTitle").click(function(){
@@ -38,3 +39,5 @@ function expandAll() {
 	$(".itemTitle").addClass("titleShow");
 	$(".itemContent").show();
 }
+*/
+
