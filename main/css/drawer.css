@@ -6,3 +6,15 @@
 #drawerItem .bullet:hover{
 	background-color: #9cf;
 }
+
+#drawerItem .bullet{
+	width: 100%;
+    margin-top: 1px;
+}
+
+#drawerItem .ui-accordion-content {
+    border-top: 0 none;
+    overflow: auto;
+    padding: 1em 1em;
+}
+ 

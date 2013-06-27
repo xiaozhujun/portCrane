@@ -82,8 +82,10 @@
 
 #menuDiv
 {
-	height: 45%;
-  overflow-y:auto;
+	height: 50%;
+    overflow-y:auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 #mainLeftDiv li
@@ -135,7 +137,7 @@
 
 #modelDiv{
 	padding-top: 5px;
-	height: 400px;
+	height: 250px;
 }
 
 #rightTabDiv
