@@ -37,7 +37,14 @@
         $('#rightMainDiv').load(domain + "/" + rightShowCtx + ".html");
       } else {
         $("#modelDiv").load(domain + "/" + scope + "/model.html");
-        $('#rightMainDiv').load(domain + "/" + scope + "/" + rightShowCtx + ".html");
+        if(rightShowCtx=="failuremode")
+           {
+              $('#rightMainDiv').load("right-fault.html");
+           }
+           else
+           {
+              $('#rightMainDiv').load(domain + "/" + scope + "/" + rightShowCtx + ".html");
+           }       
       }
       if (shownId.endWith("diankong")) {
         $("#craneComponentInfo").load(domain + "/" + scope + "/elecinfo.html");
