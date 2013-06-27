@@ -1,0 +1,22 @@
+.drawerItem .itemTitle
+{
+	margin: 1px 5px 0px 5px;
+	cursor: pointer;
+	text-align: center;
+	color: #0d5f83;
+	font: 900 14px "Arial", Helvetica, sans-serif;
+	background: url(../assets/btnbg/blue.png) no-repeat top right;
+}
+.drawerItem .bullet
+{
+	padding-left: 1em;
+}
+.drawerItem .bullet:first-child
+{
+	padding-top: 4px;
+}
+
+.drawerItem .menuSelected
+{
+	color: #FF0000;
+}

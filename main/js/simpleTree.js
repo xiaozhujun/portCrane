@@ -1,3 +1,4 @@
+/*
 function simpleTree() {
 	$(".itemTitle").addClass("titleHide");
 	$(".itemContent").addClass("contentHide");
@@ -15,4 +16,27 @@ function simpleTree() {
 		$(this).addClass("menuSelected");
 	});
 }
- 
+*/
+function simpleTree(){
+	collapseAll()
+	$(".itemTitle").click(function(){
+		$(this).toggleClass("titleShow titleHide");
+		if ($(this).parent().hasClass("treeItem")) {
+			$(this).next().toggle();
+		} else if ($(this).parent().hasClass("drawerItem")) {
+			$(this).next().slideToggle();
+		};
+	});
+	$(".bullet").click(function(){
+		$(".menuSelected").removeClass("menuSelected");
+		$(this).addClass("menuSelected");
+	});
+}
+function collapseAll(){
+	$(".itemTitle").addClass("titleHide");
+	$(".itemContent").hide();
+}
+function expandAll() {
+	$(".itemTitle").addClass("titleShow");
+	$(".itemContent").show();
+}

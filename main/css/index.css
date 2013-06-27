@@ -74,6 +74,12 @@
 	height: 100%;
 }
 
+#categoryDiv
+{
+	padding-bottom: 5px;
+	border-bottom: solid #ccc 1px;
+}
+
 #mainLeftDiv li
 {
 	cursor: pointer;

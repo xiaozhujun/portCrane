@@ -1,9 +1,9 @@
-.item
+.treeItem
 {
 	margin-left: 1em;
 }
 
-.itemTitle
+.treeItem .itemTitle
 {
 	padding-left: 1em; 
 	cursor: pointer;
@@ -12,28 +12,20 @@
 {
 	cursor: pointer;
 }
-.itemContent>.bullet
+.treeItem .itemContent>.bullet
 {
 	padding-left: 1em; 
 	margin-left: 1em;
 }
-.titleShow
+.treeItem .titleShow
 {
 	background: url(../assets/menu/minus.gif) no-repeat;
 }
-.titleHide
+.treeItem .titleHide
 {
 	background: url(../assets/menu/plus.gif) no-repeat;
 }
-.contentShow
-{
-	display: block;
-}
-.contentHide
-{
-	display: none;
-}
-.menuSelected
+.treeItem .menuSelected
 {
 	background-color: #9cf;
 }
