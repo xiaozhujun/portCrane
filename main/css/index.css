@@ -80,6 +80,12 @@
 	border-bottom: solid #ccc 1px;
 }
 
+#menuDiv
+{
+	height: 45%;
+  overflow-y:auto;
+}
+
 #mainLeftDiv li
 {
 	cursor: pointer;

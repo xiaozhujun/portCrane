@@ -1,38 +1,35 @@
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
 <link rel="stylesheet" type="text/css" href="css/drawer.css">
-<script type="text/javascript" src="js/simpleTree.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css">
 <script type="text/javascript">
 	$(document).ready(function(){
-
+		$("#drawerItem").accordion();
+		$(".bullet").click(function(){
+			$(".menuSelected").removeClass("menuSelected");
+			$(this).addClass("menuSelected");
+		});
 	});
 </script>
-<div class="drawerItem">
-	<div class="itemTitle">类别1</div>
+<div id="drawerItem">
+	<h3 class="itemTitle">岸桥</h3>
 	<div class="itemContent">
-		<div class="bullet">港机1</div>
-		<div class="bullet">港机2</div>
+		<div class="bullet">岸桥#001</div>
+		<div class="bullet">岸桥#002</div>
+		<div class="bullet">岸桥#003</div>
 	</div>
-</div>
-<div class="drawerItem">
-	<div class="itemTitle">类别2</div>
+	<h3 class="itemTitle">轮胎吊</h3>
 	<div class="itemContent">
-		<div class="bullet">港机3</div>
-		<div class="bullet">港机4</div>
-		<div class="bullet">港机5</div>
+		<div class="bullet">轮胎吊#001</div>
+		<div class="bullet">轮胎吊#002</div>
+		<div class="bullet">轮胎吊#003</div>
 	</div>
-</div>
-<div class="drawerItem">
-	<div class="itemTitle">类别3</div>
+	<h3 class="itemTitle">龙门吊</h3>
 	<div class="itemContent">
-		<div class="bullet">港机6</div>
+		<div class="bullet">龙门吊#001</div>
 	</div>
-</div>
-<div class="drawerItem">
-	<div class="itemTitle">类别4</div>
+	<h3 class="itemTitle">通用型</h3>
 	<div class="itemContent">
-		<div class="bullet">港机7</div>
-		<div class="bullet">港机8</div>
+		<div class="bullet">通用型#001</div>
+		<div class="bullet">通用型#002</div>
 	</div>
-</div>
-<div class="drawerItem">
-	<div class="itemTitle">类别5</div>
 </div>

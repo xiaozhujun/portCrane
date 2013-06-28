@@ -23,9 +23,7 @@ function simpleTree(){
 		$(this).toggleClass("titleShow titleHide");
 		if ($(this).parent().hasClass("treeItem")) {
 			$(this).next().toggle();
-		} else if ($(this).parent().hasClass("drawerItem")) {
-			$(this).next().slideToggle();
-		};
+		} ;
 	});
 	$(".bullet").click(function(){
 		$(".menuSelected").removeClass("menuSelected");
