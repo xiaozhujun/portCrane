@@ -29,6 +29,19 @@
 	padding-bottom: 5px;
 }
 
+	#faultResultList .firstInfoName,#faultResultList .firstInfoData{
+		background-color: #ccc;
+	}
+	#faultResultList .infoName,#faultResultList .firstInfoName{
+		margin-right: 1em;
+		float: right;
+		width: 15%;
+	}
+	#faultResultList .infoData,#faultResultList .firstInfoData{
+		float: right;
+		width: 75%;
+	}
+
 .infoName
 {
 	width: 49%;

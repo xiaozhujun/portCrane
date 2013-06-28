@@ -1,7 +1,9 @@
-<script type="text/javascript" src="js/grid.locale-cn.js"></script>
-<script type="text/javascript" src="js/jquery.jqGrid.src.js"></script>
-<link rel="stylesheet" type="text/css" href="css/ui.jqgrid.css">
-<script type="text/javascript">
+<html>
+<head>
+  <script type="text/javascript" src="js/grid.locale-cn.js"></script>
+  <script type="text/javascript" src="js/jquery.jqGrid.src.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/ui.jqgrid.css">
+  <script type="text/javascript">
 $(function(){ 
   /*table必须有id和url属性,url为表格内容的路径.
     表格内容为json格式,其必须有如下属性:
@@ -27,12 +29,12 @@ $(function(){
     colNames:colNames,
     colModel:colModel,
     jsonReader: {
-    	root:"rows",
-    	page:"page",
-    	total:"pages",
-    	records:"records",
-    	cell:"",
-    	id:"0"
+      root:"rows",
+      page:"page",
+      total:"pages",
+      records:"records",
+      cell:"",
+      id:"0"
     },
     pager: '#navigationDiv',
     rowNum:20,
@@ -47,6 +49,9 @@ $(function(){
   }).navGrid('#navigationDiv');
 }); 
 </script>
-
-<table id="grid" url="data/invdata.js"></table> 
-<div id="navigationDiv"></div> 
+</head>
+<body>
+  <table id="grid" url="data/invdata.js"></table>
+  <div id="navigationDiv"> hahah</div>
+</body>
+</html>

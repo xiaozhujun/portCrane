@@ -1,109 +1,381 @@
-<link rel="stylesheet" type="text/css" href="css/info.css">
+<link rel="stylesheet" type="text/css" href="css/infotable.css">
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 	});
 </script>
 
-<div id="xuanzhuanFM">
-</div>
+<div id="xuanzhuanFM"></div>
 <div id="woshiyuanFM">
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="woshiwolunFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="lishiyuanFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="lishichilunFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="yeya1FM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="shengsuo1FM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="zhuanzhushiFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="dingzhushiFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="gunlunshiFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="gunzijiataoshiFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <div id="gundongzhouchengshiFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>裂纹</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>变形</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>断裂</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>弯折</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.jpg"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+		<div class="infoData">弯折</div>
+	</div>
 </div>
 <!--
 <div id="xuanzhuandiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转1制动单元故障</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>旋转1变频器故障</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转2制动单元故障</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>旋转2变频器故障</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转风机1接触器故障</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>旋转风机2接触器故障</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转手柄故障</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转1制动单元故障</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">旋转1变频器故障</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转2制动单元故障</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">旋转2变频器故障</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转风机1接触器故障</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">旋转风机2接触器故障</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转手柄故障</div>
+</div>
 </div>
 <div id="xzhzhudianyuandiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>空开分闸、元件损坏或线路损坏、回路过流</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">空开分闸、元件损坏或线路损坏、回路过流</div>
+</div>
 </div>
 <div id="xzhbianpinqidiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>电机保护装置动作、元件损坏或线路损坏</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>制动单元过载、元件损坏或线路损坏</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">电机保护装置动作、元件损坏或线路损坏</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">制动单元过载、元件损坏或线路损坏</div>
+</div>
 </div>
 <div id="xzhbaohudiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>手刹限位到达、限位损坏或线路损坏</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>旋转锚定限位到达、限位损坏或线路损坏</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">手刹限位到达、限位损坏或线路损坏</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">旋转锚定限位到达、限位损坏或线路损坏</div>
+</div>
 </div>
 <div id="xzhfengjidiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>空开分闸、元件损坏或线路损坏、回路过流</div></div>
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>接触器反馈检测故障、元件损坏或线路损坏</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">空开分闸、元件损坏或线路损坏、回路过流</div>
+</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">接触器反馈检测故障、元件损坏或线路损坏</div>
+</div>
 </div>
 <div id="xzhshoubingdiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/green.jpg"></div><div>手柄检测故障、元件损坏或线路损坏</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoData">
+		<img src="assets/toggle/green.jpg"></div>
+	<div class="infoData">手柄检测故障、元件损坏或线路损坏</div>
+</div>
 </div>
 -->
 <div id="xuanzhuandiankongFM">
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转不动作</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转单向不动作</div></div>
-	<div class="inforow"><div><img src="assets/toggle/red.jpg"></div><div>旋转不加速</div></div>
+	<div class="rowDiv">
+		<div class="firstInfoName">当前状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+<div class="rowDiv">
+	<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转不动作</div>
+</div>
+<div class="rowDiv">
+	<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转单向不动作</div>
+</div>
+<div class="rowDiv">
+	<div class="infoName"><img src="assets/toggle/red.jpg"></div>
+	<div class="infoData">旋转不加速</div>
+</div>
 </div>

@@ -4,7 +4,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#drawerItem").accordion();
-		$(".bullet").click(function(){
+		$("#drawerItem .bullet").click(function(){
 			$(".menuSelected").removeClass("menuSelected");
 			$(this).addClass("menuSelected");
 			$("#modelDiv").load("machine/machine1.html");
