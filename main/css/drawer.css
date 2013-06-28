@@ -18,3 +18,7 @@
     padding: 1em 1em;
 }
  
+#drawerItem .ui-accordion-header
+{
+	padding: 0.1em 2em;
+}
