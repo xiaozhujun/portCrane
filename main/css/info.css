@@ -11,3 +11,13 @@
 	margin-left: 10;
 	margin-right: 10; 
 }
+.failureTitle
+{
+	margin-left: 2px;
+	width: 95%;
+	background-color: #99f; 
+	float: left;
+	border: solid 1px #ccc;
+	padding: 5px;
+	padding-left: 1em;
+}
