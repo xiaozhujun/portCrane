@@ -12,6 +12,10 @@
 {
 	cursor: pointer;
 }
+.nocursor .itemTitle,.nocursor .bullet
+{
+	cursor: auto;
+}
 .treeItem .itemContent>.bullet
 {
 	padding-left: 1em; 
@@ -25,11 +29,14 @@
 {
 	background: url(../assets/menu/plus.gif) no-repeat;
 }
-.treeItem .menuSelected
+.menuSelected
 {
 	background-color: #9cf;
 }
-
+.nocursor .menuSelected
+{
+	background-color: transparent;
+}
 .treeItem .contentHide
 {
 	display: none;

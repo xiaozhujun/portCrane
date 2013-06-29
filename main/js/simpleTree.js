@@ -1,8 +1,8 @@
-
-function simpleTree() {
-	$(".itemTitle").addClass("titleHide");
-	$(".itemContent").addClass("contentHide");
-	$(".itemTitle").click(function(){
+// 加参数obj是因为当多个元素调用simpleTree方法时,如果不对每个方法调用限定范围,会产生冲突
+function simpleTree(obj) {
+	$(".itemTitle",obj).addClass("titleHide");
+	$(".itemContent",obj).addClass("contentHide");
+	$(".itemTitle",obj).click(function(){
 		if ($(this).hasClass("titleShow")) {
 			$(this).removeClass("titleShow").addClass("titleHide");
 			$(this).next().removeClass("contentShow").addClass("contentHide");
@@ -11,33 +11,8 @@ function simpleTree() {
 			$(this).next().removeClass("contentHide").addClass("contentShow");
 		};
 	});
-	$(".bullet").click(function(){
+	$(".bullet",obj).click(function(){
 		$(".menuSelected").removeClass("menuSelected");
 		$(this).addClass("menuSelected");
 	});
 }
-
-/*
-function simpleTree(){
-	collapseAll()
-	$(".itemTitle").click(function(){
-		$(this).toggleClass("titleShow titleHide");
-		if ($(this).parent().hasClass("treeItem")) {
-			$(this).next().toggle();
-		} ;
-	});
-	$(".bullet").click(function(){
-		$(".menuSelected").removeClass("menuSelected");
-		$(this).addClass("menuSelected");
-	});
-}
-function collapseAll(){
-	$(".itemTitle").addClass("titleHide");
-	$(".itemContent").hide();
-}
-function expandAll() {
-	$(".itemTitle").addClass("titleShow");
-	$(".itemContent").show();
-}
-*/
-

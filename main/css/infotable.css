@@ -29,24 +29,6 @@
 	padding-bottom: 5px;
 }
 
-	#faultResultList .firstInfoName,#faultResultList .firstInfoData,
-	#faultTrendList .firstInfoName,#faultTrendList .firstInfoData{
-		background-color: #ccc;
-	}
-	#faultResultList .infoName,#faultResultList .firstInfoName,
-	#faultTrendList .infoName,#faultTrendList .firstInfoName
-	{
-		margin-right: 1em;
-		float: right;
-		width: 15%;
-	}
-	#faultResultList .infoData,#faultResultList .firstInfoData,
-	#faultTrendList .infoData,#faultTrendList .firstInfoData
-	{
-		float: right;
-		width: 75%;
-	}
-
 .infoName
 {
 	width: 49%;
@@ -73,3 +55,18 @@
 	float: left;
 	padding: 5px;
 }
+	.reversalInfoTable .firstInfoName,.reversalInfoTable .firstInfoData
+	{
+		background-color: #ccc;
+	}
+	.reversalInfoTable .infoName,.reversalInfoTable .firstInfoName
+	{
+		margin-right: 1em;
+		float: right;
+		width: 15%;
+	}
+	.reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
+	{
+		float: right;
+		width: 75%;
+	}
