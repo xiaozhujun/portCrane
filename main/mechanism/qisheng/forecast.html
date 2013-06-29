@@ -1,10 +1,11 @@
 <link rel="stylesheet" type="text/css" href="css/info.css">
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css">
 
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
-		$(".failureTitle").next().hide();
+		$(".failureTitle:not(:first)").next().hide();
 		$(".failureTitle").click(function(){
 				$(this).next().slideToggle();
 		});
@@ -46,7 +47,8 @@
 	
 </div>
 <div id="qishengdiankongFC">
-	<div class="failureTitle">起升双机不动作<img src="assets/toggle/green.jpg"></div>
+	<div class="failureTitle">起升双机不动作<img src="assets/toggle/green.jpg">
+	</div>
 	<div class="reversalInfoTable">
 		<div class="rowDiv">
 			<div class="firstInfoName">当前状态</div>

@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
-		$(".failureTitle").next().hide();
+		$(".failureTitle:not(:first)").next().hide();
 		$(".failureTitle").click(function(){
 				$(this).next().slideToggle();
 		});

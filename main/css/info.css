@@ -26,3 +26,11 @@
 	margin-right:20px; 
 	float: right;
 }
+.collapsed
+{
+	background: url(../assets/menu/down.gif) no-repeat;
+}
+.expanded
+{
+	background: url(../assets/menu/up.gif) no-repeat;
+}
