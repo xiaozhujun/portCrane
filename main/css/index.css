@@ -1,3 +1,8 @@
+body
+{
+	font-size: 20px;
+}
+
 #mainContainer
 {
 	margin: 0 auto;
@@ -12,22 +17,23 @@
 
 #topDiv
 {
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 1px;
+	border-style: solid 1px #ccc;
 	width: 100%;
 
 	 font-family: "微软雅黑";
 	 font-weight: bold;
-     font-size: 24;
+     font-size: 40px;
+
+     padding-top: 10px;
+     padding-bottom: 10px;
 
     background-color: #eee;
 }
 
 #topContentDiv
 {
-	margin:5px;
-	margin-left: 30px;
+	width: 100%;
+	text-align: center;
 }
 
 #mainBodyDiv
@@ -66,7 +72,7 @@
 {
 	float: left;
 	margin: 0;
-	width: 18%;
+	width: 25%;
 
 	border-style: solid;
 	border-color: #ccc;
@@ -99,7 +105,7 @@
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 45%;
+	width: 35%;
 	margin-left: 8px;
 
 	border-style: solid;
@@ -112,7 +118,7 @@
 #mainRightDiv
 {
 	float: left;
-	width: 35%;
+	width: 38%;
 	margin-left: 8px;
 	padding: 0;
 
@@ -124,11 +130,11 @@
 
 #middleTitleDiv
 {
-	background-color: #bbbbbb;
-	font-weight: bold;
-	font-family: 宋体;
-	font-size: 20px;
-	color: #ffffff;
+	background-color: #DDDDDD;
+    float: left;
+    padding: 5px 10px;
+    text-align: left;
+    width: 95.5%;
 }
 
 #craneModelDiv
