@@ -2,111 +2,257 @@
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
 <script type="text/javascript">
 	$(document).ready(function(){
-		var tempId = shownId;
-		if (tempId.endWith("diankong")) {
-			tempId = scope + "diankong";
-		};
-		$("#"+tempId+"BI").show().siblings().hide();
+		$(".information").next().hide();
+		$("#"+shownId+"BI").show().siblings().hide();
 	});
 </script>
 
 <div id="xingzouBI">
+	<div class="information">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">行走机构的类型</div>
+				<div class="firstInfoData"></div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">制造厂商</div>
+				<div class="infoData">xxxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">厂商电话</div>
+				<div class="infoData">xxxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">厂商资质</div>
+				<div class="infoData">xxxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">出厂时间</div>
+				<div class="infoData">xxxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">投入使用时间</div>
+				<div class="infoData">xxxxx</div>
+			</div>
+		</div>
+	</div>
+	<div class="parameter">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">运行速度</div>
+				<div class="firstInfoData">xxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">机构工作级别</div>
+				<div class="infoData">xxx</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div id="yuandongjiBI"><img src="assets/details/diandongji.jpg">
+<div id="yuandongjiBI">
+	<div class="information">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">电动机</div>
+				<div class="firstInfoData">XXX</div>
+			</div>
+		</div>
+	</div>
+	<div class="parameter">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">型号</div>
+				<div class="firstInfoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">接法</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定功率</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定电压</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定频率</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定转速</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定效率</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定功率因数</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">绝缘等级</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div id="zhidongqi1BI">
-	<div class="infoDiv">
-				<div class="rowDiv">
-					<div class="infoName">型号</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">制动规格</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">每一瓦块额定退距</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">额定制动转矩</div>
-					<div class="infoData">XXX</div>
-				</div>
+	<div class="information">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">块式制动器</div>
+				<div class="firstInfoData">xxxxx</div>
+			</div>
+		</div>
+	</div>
+	<div class="parameter">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">型号</div>
+				<div class="firstInfoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">制动规格</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">每一瓦块额定退距</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">额定制动转矩</div>
+				<div class="infoData">xxxx</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div id="lianzhouqi1BI">
-	<div class="infoDiv">
-				<div class="rowDiv">
-					<div class="infoName">型号</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">公称扭矩</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">许用转速</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">轴孔直径</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">轴孔配合长度</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">重量</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">转动惯量</div>
-					<div class="infoData">XXX</div>
-				</div>
+	<div class="information">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">联轴器类型</div>
+				<div class="firstInfoData">XXXXX</div>
+			</div>
+		</div>
+	</div>
+	<div class="parameter">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">型号</div>
+				<div class="firstInfoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">公称扭矩</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">许用转速</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">轴孔直径</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">轴孔配合长度</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">重量</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">转动惯量</div>
+				<div class="infoData">XXXXX</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div id="chuandongzhuangzhiBI">
-	<div class="inforow"><img src="assets/details/jiansuqi.jpg"></div>
+	<div class="information">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">传动方式</div>
+				<div class="firstInfoData">xxxx</div>
+			</div>
+		</div>
+	</div>
+	<div class="parameter">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">型号</div>
+				<div class="firstInfoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">输入轴转速</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">名义中心距</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">许用输出扭矩</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">公称传动比</div>
+				<div class="infoData">xxxx</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div id="zhichengzhuangzhiBI">
-	<div class="infoDiv">
-				<div class="rowDiv">
-					<div class="infoName">生产厂家</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">型号</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">产品标号</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">机构各部分材料</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">焊接形式</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">焊缝位置</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">条数</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">长度</div>
-					<div class="infoData">XXX</div>
-				</div>
-				<div class="rowDiv">
-					<div class="infoName">运行速度</div>
-					<div class="infoData">XXX</div>
-				</div>
+	<div class="information">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">生产厂家</div>
+				<div class="firstInfoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">型号</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">产品标号</div>
+				<div class="infoData">xxxx</div>
+			</div>
+		</div>
+	</div>
+	<div class="parameter">
+		<div class="infoDiv">
+			<div class="rowDiv">
+				<div class="firstInfoName">机构各部分材料</div>
+				<div class="firstInfoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">焊接形式</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">焊缝位置</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">条数</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">长度</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">运行速度</div>
+				<div class="infoData">xxxx</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">厂家说明书</div>
+				<div class="infoData">xxxx</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div id="xingzoudiankongBI">

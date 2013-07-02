@@ -20,6 +20,8 @@
         $("#faultTreeTitleDiv").text("失效模式与失效树");
         $("#diagnosisTitleDiv").text("损伤监测检测");
       }
+      $(".currentInfoTab").removeClass("currentInfoTab");
+      $("#information1").addClass("currentInfoTab");
       event.stopPropagation();
     });
   });

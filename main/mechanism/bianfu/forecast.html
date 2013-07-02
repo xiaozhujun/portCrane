@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
-		$(".failureTitle:not(:first)").next().hide();
+		$(".failureTitle:not(:first)",$("[id$='FC']")).next().hide();
 		$(".failureTitle").click(function(){
 				$(this).next().slideToggle();
 		});
@@ -10,7 +10,41 @@
 </script>
 
 <div id="bianfuFC">
-	
+	<div class="failureTitle">主臂架折断<img src="assets/toggle/yellow.png">
+	</div>
+	<div class="reversalInfoTable">
+		<div class="rowDiv">
+			<div class="firstInfoName">当前状态</div>
+			<div class="firstInfoData">故障因素</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/green.png"></div>
+			<div class="infoData">裂纹</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
+			<div class="infoData">断裂</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/green.png"></div>
+			<div class="infoData">局部失稳</div>
+		</div>
+	</div>
+	<div class="failureTitle">减速器传动轴断裂<img src="assets/toggle/green.png"></div>
+	<div class="reversalInfoTable">
+		<div class="rowDiv">
+			<div class="firstInfoName">当前状态</div>
+			<div class="firstInfoData">故障因素</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
+			<div class="infoData">传动轴断裂</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/green.png"></div>
+			<div class="infoData">花键断裂</div>
+		</div>
+	</div>
 </div>
 <div id="huanchongFC">
 	

@@ -1,82 +1,55 @@
-<link rel="stylesheet" type="text/css" href="css/infotab.css">
 <link rel="stylesheet" type="text/css" href="css/infotable.css">
-<script type="text/javascript" language="javascript">
-$(document).ready(function(){
-	heightAlign();
-	$(".show").show().siblings().hide();
-	$(".infoTab").mouseover(function(){
-		$(".currentInfoTab").removeClass("currentInfoTab");
-		$(this).addClass("currentInfoTab");
-		heightAlign();
-		$("#"+$(this).attr("cref")).show().siblings().hide();
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".information").next().hide();
 	});
-});
-function heightAlign(){
-	$(".infoName").each(function(){
-		//$(this).next().height($(this).height());
-	});
-}
 </script>
-<div id="getId">
 
-	<div class="tabT">
-		<div>
-			<div class="infoTab currentInfoTab" cref="tabContent1">基本信息</div>
-			<div class='infoTab' cref="tabContent2">基本参数</div>
-		</div>	
-	</div>
-	<div>
-	<div class="show" id="tabContent1">
-		<div class="con">
-			<div class="infoDiv">
-						<div class="rowDiv">
-							<div class="firstInfoName">设备名称</div>
-							<div class="firstInfoData">港口门座式起重机</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">设备编号</div>
-							<div class="infoData">XXXX-XX</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">设备类别</div>
-							<div class="infoData">门座式起重机</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">单位名称</div>
-							<div class="infoData">XXXXXXXXXXXXaaaa</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">单位地址</div>
-							<div class="infoData">XXXXXXXXXXXX</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">使用地点</div>
-							<div class="infoData">XXXXXXXXXXXX</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">管理人员</div>
-							<div class="infoData">XXX</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">联系电话</div>
-							<div class="infoData">012345555556789</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">制造单位</div>
-							<div class="infoData">XXXXXXXXXXXX</div>
-						</div>
-						<div class="rowDiv">
-							<div class="infoName">制造日期</div>
-							<div class="infoData">2013-05-24</div>
-						</div>
-			</div>
+<div class="information show">
+	<div class="infoDiv">
+		<div class="rowDiv">
+			<div class="firstInfoName">设备名称</div>
+			<div class="firstInfoData">港口门座式起重机</div>
 		</div>
-	</div>
-	<div id="tabContent2">
-		<div class="con">
-			<img src="assets/details/baseinfo.jpg" style="width:90%">
+		<div class="rowDiv">
+			<div class="infoName">设备编号</div>
+			<div class="infoData">XXXX-XX</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">设备类别</div>
+			<div class="infoData">门座式起重机</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">单位名称</div>
+			<div class="infoData">XXXXXXXXXXXXaaaa</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">单位地址</div>
+			<div class="infoData">XXXXXXXXXXXX</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">使用地点</div>
+			<div class="infoData">XXXXXXXXXXXX</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">管理人员</div>
+			<div class="infoData">XXX</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">联系电话</div>
+			<div class="infoData">012345555556789</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">制造单位</div>
+			<div class="infoData">XXXXXXXXXXXX</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName">制造日期</div>
+			<div class="infoData">2013-05-24</div>
 		</div>
 	</div>
 </div>
+<div class="parameter">
+	<img src="assets/details/baseinfo.jpg" style="width:90%">
 </div>

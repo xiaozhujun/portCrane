@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
-		$(".failureTitle:not(:first)").next().hide();
+		$(".failureTitle:not(:first)",$("[id$='FC']")).next().hide();
 		$(".failureTitle").click(function(){
 				$(this).next().slideToggle();
 		});
@@ -10,6 +10,41 @@
 </script>
 
 <div id="xingzouFC">
+	<div class="failureTitle">防风锚定装置导致倾覆<img src="assets/toggle/yellow.png">
+	</div>
+	<div class="reversalInfoTable">
+		<div class="rowDiv">
+			<div class="firstInfoName">当前状态</div>
+			<div class="firstInfoData">故障因素</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/green.png"></div>
+			<div class="infoData">夹轨器齿轮失效夹轨器齿轮失效</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
+			<div class="infoData">弹簧失效</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/green.png"></div>
+			<div class="infoData">油缸漏油</div>
+		</div>
+	</div>
+	<div class="failureTitle">辅助装置<img src="assets/toggle/green.png"></div>
+	<div class="reversalInfoTable">
+		<div class="rowDiv">
+			<div class="firstInfoName">当前状态</div>
+			<div class="firstInfoData">故障因素</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
+			<div class="infoData">缓冲器弹簧失效、推杆失效</div>
+		</div>
+		<div class="rowDiv">
+			<div class="infoName"><img src="assets/toggle/green.png"></div>
+			<div class="infoData">行程限位器连杆失效、弹簧失效</div>
+		</div>
+	</div>
 </div>
 <div id="yuandongjiFC">
 	

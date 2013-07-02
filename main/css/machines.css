@@ -21,14 +21,21 @@
 	float: left;
 	width: 100%;
 }
+.machineDiv div
+{
+	width: 100%;
+	float: left;
+}
 .machineDiv a
 {
 	float: left;
-	width: 70%;
+	width: 60%;
 	margin: 10;
+	vertical-align: middle;
 }
 .machineDiv img
 {
 	float: right;
 	margin: 10;
+	vertical-align: text-bottom;
 }

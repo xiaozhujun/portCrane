@@ -65,6 +65,11 @@
 		float: right;
 		width: 15%;
 	}
+	.infoName img,.firstInfoName img
+	{
+		width: 16;
+		height: 16;
+	}
 	.reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
 	{
 		float: right;
