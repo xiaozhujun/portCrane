@@ -1,0 +1,239 @@
+#rmBodyDiv
+{
+	background-color: #ccc;
+}
+
+#rmLeftDiv
+{
+	float: left;
+	width: 80%;
+}
+
+#rmRightDiv
+{
+	float: left;
+	width: 20%;
+}
+
+#sortTilteDiv
+{
+	position: relative;
+	width: 65px;
+	left: 10px;
+	top: -85px;
+	padding: 1;
+	background-color: #ffffff;
+}
+
+#operationTitleDiv
+{
+	position: relative;
+	width: 65px;
+	left: 10px;
+	top: -120px;
+	padding: 1;
+	background-color: #ffffff;
+}
+
+#queryContainerDiv
+{
+	width: 100%;
+	padding:0;
+	float: left;
+	min-height: 50px;
+}
+
+#queryTitleDiv
+{
+	position: relative;
+	width: 65px;
+	left: 10px;
+	top: -50px;
+	padding: 1px;
+	background-color: #ffffff;
+}
+
+#queryDiv
+{
+	position: relative;
+	left: 0;
+	top: 0;
+	min-height: 85px;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
+#queryDiv div
+{
+	float: left;
+	display: inline;
+	margin: 8px;
+}
+
+#operationDiv
+{
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+
+}
+
+#operationDiv li
+{
+	list-style-type: none;
+	text-align: left;
+}
+
+#operationDiv li button
+{
+	padding: 10px;
+	margin-left: 25px;
+	margin-top: 5px;
+}
+
+#sortContainerDiv
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	min-height: 50px;
+}
+
+#sortDiv
+{
+	min-height: 40px;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	padding: 15px;
+}
+
+#sortDiv input
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: left;
+}
+
+#tableDiv
+{
+	float: left;
+	width: 100%;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	min-height: 60%;
+	margin-top: -10px;
+}
+
+#tableDiv li
+{
+	float: left;
+	list-style-type: none;
+	border-width: 1px;
+	width: 155;
+	text-align: center;
+}
+
+#tableHeaderDiv 
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#tableHeaderDiv ul
+{
+	margin:0;
+	padding:0;
+}
+
+#tableHeaderDiv li
+{
+	border-style: ridge;
+	border-color: #ffffff;
+	background-color: #ccc;
+}
+
+#tableBodyDiv 
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#tableBodyDiv ul
+{
+	margin:0;
+	padding:0;
+	cursor: pointer; 
+}
+
+
+#tableBodyDiv li
+{
+	border-style: inset;
+	border-color: 0;
+}
+
+.tableRowDiv
+{
+	float: left;
+	width: 100%;
+}
+
+.tableRowDetailDiv
+{
+	float: left;
+	width: 100%;
+	display: none;
+}
+
+div .showFirst
+{
+	display: block;
+}
+
+.rowDiv
+{
+	float: left;
+	width: 100%;
+	padding: 0;
+	font-size: 14px;
+	color: #666;
+}
+
+.labelDiv
+{
+	float: left;
+	width: 20%;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	margin-top:-1px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.valueDiv
+{
+
+	position: relative;
+	padding-left: 24%;
+	left: 0;
+	right: 0;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+	text-align: left;
+	margin-top: -1px;
+	border-left: none;
+}
