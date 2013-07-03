@@ -1,0 +1,32 @@
+.tabs
+{
+  float: left;
+  width: 100%;
+  margin: 0;
+  margin-top: 1px;
+  margin-left: 1px;
+  padding: 0;
+  list-style: none;
+  border-bottom: none;
+  font-family: "宋体", sans-serif;
+  cursor: pointer;
+}
+
+.tabItem
+{
+  float:left;
+  padding: 10px 20px;
+  margin-right: 1px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.tabItem:HOVER
+{
+  background: #69c;
+}
+
+.tabs .mainselected
+{
+  background: #69c;
+}

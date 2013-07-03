@@ -1,24 +1,29 @@
 <html>
   <head>
     <title>港口起重机械健康监测与预报维修可视化系统</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+    <link rel="stylesheet" type="text/css" href="css/info.css">
+    <link rel="stylesheet" type="text/css" href="css/infotable.css">
+
     <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
     <script type="text/javascript" src='js/globalVar.js'></script>
     <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/structTab.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css">
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
   </head>
   <body>
     <script type="text/javascript">
       $(document).ready(function(){
-          $('#mainDiv').load('maincontent.html');
+          $('#mainHeadDiv').load('left-tab.html');
+          $('#mainBodyDiv').load('health-forecast.html');
       });
      </script>
     <div id='mainContainer'>
-      <div id='topDiv'><div id='topContentDiv'>港口起重机械健康监测与预报维修可视化系统</div></div>
-      <div id='mainDiv'></div>
+      <div id='titleDiv'>港口起重机械健康监测与预报维修可视化系统</div>
+      <div id='mainHeadDiv'></div>
+      <div id='mainBodyDiv'></div>
     </div>
   </body>
 </html>

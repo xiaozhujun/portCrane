@@ -1,4 +1,3 @@
-
 .rowDiv
 {
 	width: 100%;
@@ -55,23 +54,24 @@
 	float: left;
 	padding: 5px;
 }
-	.reversalInfoTable .firstInfoName,.reversalInfoTable .firstInfoData
-	{
-		background-color: #ccc;
-	}
-	.reversalInfoTable .infoName,.reversalInfoTable .firstInfoName
-	{
-		margin-right: 1em;
-		float: right;
-		width: 15%;
-	}
-	.infoName img,.firstInfoName img
-	{
-		width: 16;
-		height: 16;
-	}
-	.reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
-	{
-		float: right;
-		width: 75%;
-	}
+
+.reversalInfoTable .firstInfoName,.reversalInfoTable .firstInfoData
+{
+	background-color: #ccc;
+}
+.reversalInfoTable .infoName,.reversalInfoTable .firstInfoName
+{
+	margin-right: 1em;
+	float: right;
+	width: 15%;
+}
+.infoName img,.firstInfoName img
+{
+	width: 18;
+	height: 18;
+}
+.reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
+{
+	float: right;
+	width: 75%;
+}

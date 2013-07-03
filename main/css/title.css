@@ -1,0 +1,12 @@
+#titleDiv
+{
+	border-style: solid 1px #ccc;
+	width: 100%;
+	font-family: "微软雅黑";
+	font-weight: bold;
+  font-size: 40px;
+	padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+	text-align: center;
+}

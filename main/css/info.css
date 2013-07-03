@@ -28,11 +28,3 @@
 	width: 25;
 	height: 25;
 }
-.collapsed
-{
-	background: url(../assets/menu/down.gif) no-repeat;
-}
-.expanded
-{
-	background: url(../assets/menu/up.gif) no-repeat;
-}
