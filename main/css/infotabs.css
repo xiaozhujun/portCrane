@@ -1,16 +1,16 @@
-
 .infoTab
 {
 	border-bottom: 1px solid #FFFFFF;
     cursor: pointer;
     display: block;
     float: left;
-    height: 25px;
+    height: 28px;
     line-height: 1.5;
     list-style: none outside none;
     text-align: center;
-    width: 50%;
-    background-color: #eee;
+    width: 33.1%;
+    background-color: #ddd;
+    margin-left: 1px;
 }
 
 .infoTab:HOVER

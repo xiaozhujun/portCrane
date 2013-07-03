@@ -7,11 +7,16 @@
       shownId=$(this).attr("id");
       scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
+      var tmp=$(".currentInfoTab").attr("cref");
+      if(tmp!="faultTree"){
+        $("."+tmp).show().siblings().hide();
+      }
       render("model");
       render("baseinfo");
       render("faultTree");
       render("diagnosis");
       render("forecast");
+
       if (shownId.endWith("diankong")) {
         $("#faultTreeTitleDiv").text("故障树");
         $("#diagnosisTitleDiv").text("故障诊断");
@@ -19,19 +24,10 @@
         $("#faultTreeTitleDiv").text("失效模式与失效树");
         $("#diagnosisTitleDiv").text("损伤监测检测");
       }
-      $(".currentInfoTab").removeClass("currentInfoTab");
-      $("#information1").addClass("currentInfoTab");
       event.stopPropagation();
     });
   });
 
-  function render (page) {
-     if (typeof(scope)=="undefined") {
-        $("#"+page+"Div").load(domain + "/" + page + ".html");
-      } else {
-        $("#"+page+"Div").load(domain + "/" + scope + "/" + page + ".html");
-      }
-  }
 </script>
 
 <div id="tree">

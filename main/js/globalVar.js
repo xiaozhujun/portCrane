@@ -14,3 +14,11 @@ String.prototype.endWith=function(s){
     return false;
   return true;
 }
+
+function render (page) {
+	if (typeof(scope)=="undefined") {
+  $("#"+page+"Content").load(domain + "/" + page + ".html");
+  } else {
+  $("#"+page+"Content").load(domain + "/" + scope + "/" + page + ".html");
+  }
+}

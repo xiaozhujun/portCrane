@@ -1,118 +1,218 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
-		$(".failureTitle:not(:first)",$("[id$='FC']")).next().hide();
-		$(".failureTitle").click(function(){
-				$(this).next().slideToggle();
-		});
+		// $(".failureTitle:not(:first)",$("[id$='FC']")).next().hide();
+		// $(".failureTitle").click(function(){
+		// 		$(this).next().slideToggle();
+		// });
 	});
 </script>
 
 <div id="xingzouFC">
-	<div class="failureTitle">防风锚定装置导致倾覆<img src="assets/toggle/yellow.png">
+	<div class="failureTable">
+		<div class="failureTitle">
+			防风锚定装置导致倾覆
+				<img src="assets/toggle/green.png">
+				<img src="assets/toggle/yellow.png">
+		</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">夹轨器齿轮失效夹轨器齿轮失效</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/green.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">弹簧失效</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">油缸漏油</div>
+			</div>
+		</div>
 	</div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			辅助装置
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/yellow.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">夹轨器齿轮失效夹轨器齿轮失效</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">弹簧失效</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">油缸漏油</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">缓冲器弹簧失效、推杆失效</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">行程限位器连杆失效、弹簧失效</div>
+			</div>
 		</div>
 	</div>
-	<div class="failureTitle">辅助装置<img src="assets/toggle/green.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">缓冲器弹簧失效、推杆失效</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">行程限位器连杆失效、弹簧失效</div>
-		</div>
-	</div>
 </div>
-<div id="yuandongjiFC">
-	
-</div>
-<div id="zhidongqi1FC">
-	
-</div>
-<div id="lianzhouqi1FC">
-
-</div>
-<div id="chuandongzhuangzhiFC">
-
-</div>
-<div id="zhichengzhuangzhiFC">
-	
-</div>
+<div id="yuandongjiFC"></div>
+<div id="zhidongqi1FC"></div>
+<div id="lianzhouqi1FC"></div>
+<div id="chuandongzhuangzhiFC"></div>
+<div id="zhichengzhuangzhiFC"></div>
 <div id="xingzoudiankongFC">
-	<div class="failureTitle">拨行走开关车不动<img src="assets/toggle/green.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			拨行走开关车不动
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/yellow.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">行走控制开关</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">选择开关</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">防爬开关</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">行走初级接触器</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">行走初级线圈</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">行走控制开关</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">选择开关</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">防爬开关</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">行走初级接触器</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/green.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">行走初级线圈</div>
+			</div>
 		</div>
 	</div>
-	<div class="failureTitle">行走不加速，车跑不动<img src="assets/toggle/yellow.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			行走不加速，车跑不动
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/green.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">时间继电器</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">中间继电器</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">吸合级接触器</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">行走制动器</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">行走电机</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">时间继电器</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/green.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">中间继电器</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">吸合级接触器</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/green.png"></div>
+				</div>
+				<div class="infoData">行走制动器</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">行走电机</div>
+			</div>
 		</div>
 	</div>
 </div>

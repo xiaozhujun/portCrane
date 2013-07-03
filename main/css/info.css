@@ -13,7 +13,6 @@
 }
 .failureTitle
 {
-	cursor: pointer;
 	width: 95%;
 	background-color:#eeeeee;
 	float: left;
@@ -25,6 +24,12 @@
 {
 	margin-right:20px; 
 	float: right;
-	width: 25;
-	height: 25;
+	width: 18.2;
+	height: 18.2;
+}
+.failureTable
+{
+	margin: 1px;
+	float: left;
+	width: 49%;
 }

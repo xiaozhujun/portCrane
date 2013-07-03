@@ -5,22 +5,14 @@
 	padding: 0;
 }
 
-#mainDiv
-{
-	width: 100%;
-}
-
 #mainBodyDiv
 {
 	width: 100%;
 	float: left;
 	padding: 0;
-
 	min-height: 600px;
 	min-height:600px;
 	height:100%;
-    _height:600px;
-
 	background-color:#fff;
 	margin-bottom: 20px;
 }
@@ -31,15 +23,13 @@
 	width: 100%;
 	padding: 0;
 	margin-bottom: 1px;
-	
 }
 
-#mainLeftDiv
+#navDiv
 {
 	float: left;
 	margin: 0;
-	width: 25%;
-
+	width: 22%;
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
@@ -47,69 +37,84 @@
 	overflow-y:auto;
 }
 
-#mainMiddleDiv
+#contentDiv
 {
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 35%;
+	width: 77%;
 	margin-left: 8px;
-
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 1px;
 	height: 100%;
-
 }
 
-#mainRightDiv
+#modelDiv,#baseinfoDiv,#faultTreeDiv,#diagnosisDiv,#forecastDiv
 {
 	float: left;
-	width: 38%;
-	margin-left: 8px;
-	padding: 0;
+	margin: 2;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+}	
 
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 1px;
-	height: 100%;
-}
-
-#middleTitleDiv
-{
-	background-color: #DDDDDD;
-  float: left;
-  padding: 5px 10px;
-  text-align: left;
-  width: 95.5%;
-}
-
-.modelImg
-{
-	margin-top: 5px;
-	width: 80%;
-	height: 80%;
-}
-
-object
-{
-	margin-top: 5px;
-	width: 80%;
-	height: 80%;
-}
-
-#menuDiv
-{
-	height: 50%;
-  overflow-y:auto;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-#rightMainDiv
+#modelContent,#baseinfoContent,#faultTreeContent,#diagnosisContent,#forecastContent
 {
 	float: left;
 	width: 100%;
-	font-size: 16;
+	height: 85%;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
 
+#modelContent
+{
+	text-align: center;
+}
+
+#modelDiv
+{
+	width: 49%;
+	height: 200;
+}
+
+#baseinfoDiv,#faultTreeDiv
+{
+	width: 49%;
+	height: 200;
+}
+
+#diagnosisDiv
+{
+	width: 99%;
+	height: 200;
+}
+
+#forecastDiv
+{
+	width: 99%;
+	height: 200;
+}
+
+#modelTitleDiv,#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv
+{
+	float: left;
+	text-align: left;
+	background-color: #dddddd;
+	padding: 5px 10px;
+}
+
+#modelTitleDiv,#faultTreeTitleDiv
+{
+	width: 95.5%;
+}
+
+#diagnosisTitleDiv,#forecastTitleDiv
+{
+	width: 97.8%;
+}
+
+.modelImg,object
+{
+	margin-top: 5px;
+	width: 70%;
+	height: 90%;
 }

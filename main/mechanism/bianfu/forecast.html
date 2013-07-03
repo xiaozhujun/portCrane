@@ -1,116 +1,208 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
-		$(".failureTitle:not(:first)",$("[id$='FC']")).next().hide();
-		$(".failureTitle").click(function(){
-				$(this).next().slideToggle();
-		});
+		// $(".failureTitle:not(:first)",$("[id$='FC']")).next().hide();
+		// $(".failureTitle").click(function(){
+		// 		$(this).next().toggle();
+		// });
 	});
 </script>
 
 <div id="bianfuFC">
-	<div class="failureTitle">主臂架折断<img src="assets/toggle/yellow.png">
+	<div class="failureTable">
+		<div class="failureTitle">
+			主臂架折断
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/green.png">
+		</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">裂纹</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/green.png"></div>
+				</div>
+				<div class="infoData">断裂</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/green.png"></div>
+				</div>
+				<div class="infoData">局部失稳</div>
+			</div>
+		</div>
 	</div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			减速器传动轴断裂
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/yellow.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">裂纹</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">断裂</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">局部失稳</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">传动轴断裂</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">花键断裂</div>
+			</div>
 		</div>
 	</div>
-	<div class="failureTitle">减速器传动轴断裂<img src="assets/toggle/green.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">传动轴断裂</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">花键断裂</div>
-		</div>
-	</div>
 </div>
-<div id="huanchongFC">
-	
-</div>
-<div id="shengsuoFC">
-	
-</div>
-<div id="chitiaoFC">
-
-</div>
-<div id="luoganFC">
-
-</div>
-<div id="yeyaFC">
-
-</div>
-<div id="bijiaFC">
-	
-</div>
+<div id="huanchongFC"></div>
+<div id="shengsuoFC"></div>
+<div id="chitiaoFC"></div>
+<div id="luoganFC"></div>
+<div id="yeyaFC"></div>
+<div id="bijiaFC"></div>
 <div id="bianfudiankongFC">
-	<div class="failureTitle">变幅不动作<img src="assets/toggle/yellow.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			变幅不动作
+				<img src="assets/toggle/green.png">
+				<img src="assets/toggle/green.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">变幅零压</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">变幅限位</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/greengreen.png"></div>
+				</div>
+				<div class="infoData">变幅零压</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">变幅限位</div>
+			</div>
 		</div>
 	</div>
-	<div class="failureTitle">变幅不加速或不完全加速<img src="assets/toggle/green.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			变幅不加速或不完全加速
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/yellow.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">变幅加速时间继电器</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">全加速继电器</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/greengreengreen.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">变幅加速时间继电器</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/green.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">全加速继电器</div>
+			</div>
 		</div>
 	</div>
-	<div class="failureTitle">变幅只增幅不收幅或只收幅不增幅<img src="assets/toggle/green.png"></div>
-	<div class="reversalInfoTable">
-		<div class="rowDiv">
-			<div class="firstInfoName">当前状态</div>
-			<div class="firstInfoData">故障因素</div>
+	<div class="failureTable">
+		<div class="failureTitle">
+			变幅只增幅不收幅或只收幅不增幅
+				<img src="assets/toggle/yellow.png">
+				<img src="assets/toggle/yellow.png">
 		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">变幅限位开关</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/green.png"></div>
-			<div class="infoData">变幅初级接触器线圈</div>
-		</div>
-		<div class="rowDiv">
-			<div class="infoName"><img src="assets/toggle/yellow.png"></div>
-			<div class="infoData">增幅初级接触器辅助触点的常闭触点</div>
+		<div class="reversalInfoTable">
+			<div class="rowDiv">
+				<div class="firstInfoName">
+					<div class="firstCell">监测</div>
+					<div>检测</div>
+				</div>
+				<div class="firstInfoData">故障因素</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">变幅限位开关</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">变幅初级接触器线圈</div>
+			</div>
+			<div class="rowDiv">
+				<div class="infoName">
+					<div class="firstCell">
+						<img src="assets/toggle/yellow.png"></div>
+					<div>
+						<img src="assets/toggle/yellow.png"></div>
+				</div>
+				<div class="infoData">增幅初级接触器辅助触点的常闭触点</div>
+			</div>
 		</div>
 	</div>
 </div>
