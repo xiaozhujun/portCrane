@@ -4,54 +4,57 @@
   <script type="text/javascript" src="js/jquery.jqGrid.src.js"></script>
   <link rel="stylesheet" type="text/css" href="css/ui.jqgrid.css">
   <script type="text/javascript">
-$(function(){ 
-  /*table必须有id和url属性,url为表格内容的路径.
-    表格内容为json格式,其必须有如下属性:
-    colNames:列名(字符串数组)
-    colModel:列模式描述(对象数组),每个对象一次描述每一列的信息
-    page:当前页码
-    pages:总页数
-    records:总记录数
-    rows:具体数据(二维数组),数组元素为各个记录
-  */
-  var url=$("#grid").attr("url");
-  var colNames;
-  var colModel;
-  $.getJSON(url,function(data){
-    colNames=data["colNames"];
-    colModel=data["colModel"];
-  });
-
-  $("#grid").jqGrid({
-    url:url,
-    datatype: 'json',
-    mtype: 'GET',
-    colNames:colNames,
-    colModel:colModel,
-    jsonReader: {
-      root:"rows",
-      page:"page",
-      total:"pages",
-      records:"records",
-      cell:"",
-      id:"0"
-    },
-    pager: '#navigationDiv',
-    rowNum:20,
-    rowList:[20,50,100],
-    sortname: 'invid',
-    sortorder: 'asc',
-    viewrecords: true,
-    autowidth:true,
-    height:440,
-    loadonce:true,
-    rownumbers:true
-  }).navGrid('#navigationDiv');
-}); 
-</script>
+  $(function(){ 
+    /*table必须有id和url属性,url为表格内容的路径.
+      表格内容为json格式,其必须有如下属性:
+      colNames:列名(字符串数组)
+      colModel:列模式描述(对象数组),每个对象一次描述每一列的信息
+      page:当前页码
+      pages:总页数
+      records:总记录数
+      rows:具体数据(二维数组),数组元素为各个记录
+    */
+    var url=$("#grid").attr("url");
+    var colNames;
+    var colModel;
+    $.getJSON(url,function(data){
+      alert(data["colNames"]);
+      alert(data["colModel"]);
+      colNames=data["colNames"];
+      colModel=data["colModel"];
+    });
+    alert(colNames);
+    alert(colModel);
+    $("#grid").jqGrid({
+      url:url,
+      datatype: 'json',
+      mtype: 'GET',
+      colNames:colNames,
+      colModel:colModel,
+      jsonReader: {
+        root:"rows",
+        page:"page",
+        total:"pages",
+        records:"records",
+        cell:"",
+        id:"0"
+      },
+      pager: '#navigationDiv',
+      rowNum:20,
+      rowList:[20,50,100],
+      sortname: 'invid',
+      sortorder: 'asc',
+      viewrecords: true,
+      autowidth:true,
+      height:440,
+      loadonce:true,
+      rownumbers:true
+    }).navGrid('#navigationDiv');
+  }); 
+  </script>
 </head>
 <body>
   <table id="grid" url="data/invdata.js"></table>
-  <div id="navigationDiv"> hahah</div>
+  <div id="navigationDiv"></div>
 </body>
 </html>

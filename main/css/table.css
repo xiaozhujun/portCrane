@@ -15,42 +15,12 @@
 	width: 20%;
 }
 
-#sortTilteDiv
-{
-	position: relative;
-	width: 65px;
-	left: 10px;
-	top: -85px;
-	padding: 1;
-	background-color: #ffffff;
-}
-
-#operationTitleDiv
-{
-	position: relative;
-	width: 65px;
-	left: 10px;
-	top: -120px;
-	padding: 1;
-	background-color: #ffffff;
-}
-
 #queryContainerDiv
 {
 	width: 100%;
 	padding:0;
 	float: left;
 	min-height: 50px;
-}
-
-#queryTitleDiv
-{
-	position: relative;
-	width: 65px;
-	left: 10px;
-	top: -50px;
-	padding: 1px;
-	background-color: #ffffff;
 }
 
 #queryDiv
@@ -83,10 +53,12 @@
 
 }
 
-#operationDiv li
+#operationDiv button
 {
-	list-style-type: none;
-	text-align: left;
+	display: block;
+	width: 200;
+	height: 45;
+	margin: 10;
 }
 
 #operationDiv li button
@@ -131,16 +103,6 @@
 	border-color: #ccc;
 	border-width: 1px;
 	min-height: 60%;
-	margin-top: -10px;
-}
-
-#tableDiv li
-{
-	float: left;
-	list-style-type: none;
-	border-width: 1px;
-	width: 155;
-	text-align: center;
 }
 
 #tableHeaderDiv 
@@ -209,31 +171,29 @@ div .showFirst
 	padding: 0;
 	font-size: 14px;
 	color: #666;
+	margin-left: 2em;
 }
 
-.labelDiv
+.tableColumn
 {
+	border-style: ridge;
 	float: left;
-	width: 20%;
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 1px;
-	margin-top:-1px;
-	text-align: right;
-	padding-right: 20px;
+	border: solid 1px #000;
+	width: 154.3;
+	margin-right: -1;
+	margin-bottom: -1;
+	padding-left: 1em;
 }
-
-.valueDiv
+#tableHeaderDiv .tableColumn
 {
-
-	position: relative;
-	padding-left: 24%;
-	left: 0;
-	right: 0;
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 1px;
-	text-align: left;
-	margin-top: -1px;
-	border-left: none;
+	background-color: #ccc
+}
+.tableRowMainDiv
+{
+	cursor: pointer;
+}
+.rowDiv .tableColumn
+{
+	width: 213;
+	border-color: #666;
 }

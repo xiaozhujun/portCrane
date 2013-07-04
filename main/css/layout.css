@@ -71,7 +71,7 @@
 
 #modelDiv
 {
-	width: 49%;
+	width: 49.3%;
 	height: 250;
 }
 
@@ -84,13 +84,13 @@
 #diagnosisDiv
 {
 	width: 99%;
-	height: 250;
+	height: 225;
 }
 
 #forecastDiv
 {
 	width: 99%;
-	height: 200;
+	height: 225;
 }
 
 #modelTitleDiv,#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv
