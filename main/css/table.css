@@ -112,38 +112,11 @@
 	padding: 0;
 }
 
-#tableHeaderDiv ul
-{
-	margin:0;
-	padding:0;
-}
-
-#tableHeaderDiv li
-{
-	border-style: ridge;
-	border-color: #ffffff;
-	background-color: #ccc;
-}
-
 #tableBodyDiv 
 {
 	float: left;
 	margin: 0;
 	padding: 0;
-}
-
-#tableBodyDiv ul
-{
-	margin:0;
-	padding:0;
-	cursor: pointer; 
-}
-
-
-#tableBodyDiv li
-{
-	border-style: inset;
-	border-color: 0;
 }
 
 .tableRowDiv
@@ -194,6 +167,15 @@ div .showFirst
 }
 .rowDiv .tableColumn
 {
-	width: 213;
+	width: 215;
 	border-color: #666;
+}
+.tooltip
+{
+	padding: 0 1em 0 1em; 
+	line-height: 1.5;
+	font-size: 13.5;
+	color: #666;
+	width: 200;
+	font-family: "宋体";
 }
