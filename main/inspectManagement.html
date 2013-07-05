@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css" href="maintain/css/maintain.css">
+<link rel="stylesheet" type="text/css" href="maintain/css/menu.css">
+<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('.moduleTitle').click(function(){
+			$(this).next().toggle(500);
+		});
+		
+		$('.menuItem').click(function(){
+			$('#maintainRightDiv').load($(this).attr('url'));
+		});
+		
+		});
+		
+</script>
+<div id="maintainBodyDiv">
+	<div id='maintainLeftDiv'>
+		<div class='menuDiv'>
+    		<div class='menuModule'>
+	    		<div class='moduleTitle'>日常自检</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>日常维修检验</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>维修检验</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>常用设备操作规程</div></div>
+	    		</div>
+	    	</div>
+	    	
+	    	<div class='menuModule'>
+	    		<div class='moduleTitle'>定期检验监检</div>
+	    		<div class='menuItems'>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>定期检验</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>维修改造监检</div></div>
+	    			<div class='menuItem' url='#'><div class='menuNameDiv'>常用设备操作规程</div></div>
+	    		</div>
+	    	</div>
+
+	    	<div class='menuModule'>
+	    		<div class='moduleTitle'>无损检验</div>
+	    		<div class='menuItems'>
+	    			&nbsp;
+	    		</div>
+	    	</div>
+
+	    </div>
+	</div>
+	<div id='maintainRightDiv'></div>
+</div>
