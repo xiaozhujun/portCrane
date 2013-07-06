@@ -30,8 +30,8 @@
 {
 	margin-right: 1em;
 	float: right;
-	width: 60%;
-	padding: 0;
+	width: 30%;
+	height: 17px;
 }
 .reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
 {
@@ -45,22 +45,5 @@
 .reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
 {
 	float: right;
-	width: 30%;
-}
-.infoName div,.firstInfoName div
-{
-	float: left;
-	width: 50%;
-	padding-top: 5;
-	padding-bottom: 5;
-	height: 17;
-}
-.infoName .firstCell,.firstInfoName .firstCell
-{
-	margin-left: -1;
-	border-right: solid 1px #ccc;
-}
-.firstInfoName .firstCell
-{
-	border-right: solid 1px #aaa;
+	width: 60%;
 }

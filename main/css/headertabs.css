@@ -19,14 +19,24 @@
   margin-right: 1px;
   background-color: #eee;
   cursor: pointer;
+  text-align: center;
 }
-
+#mainTab .tabItem
+{
+  padding: 5px 0;
+  width: 150;
+}
 .tabItem:HOVER
 {
   background: #69c;
 }
 
 .tabs .mainselected
+{
+  background: #69c;
+}
+
+.tabs .containerselected
 {
   background: #69c;
 }

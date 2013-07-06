@@ -1,12 +1,24 @@
+#titleContainerDiv
+{
+	float: left;
+	width: 100%;
+  background-color: #eee;
+}
 #titleDiv
 {
-	border-style: solid 1px #ccc;
-	width: 100%;
+	float: left;
+	width: 80%;
 	font-family: "微软雅黑";
 	font-weight: bold;
   font-size: 40px;
 	padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #eee;
-	text-align: center;
+	text-align: right;
+}
+#devNameDiv
+{
+	float: left;
+	width: 6%;
+	margin: 2.5em 0 0 2.5em;
+	font-family: "楷体";
 }

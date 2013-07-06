@@ -12,18 +12,23 @@
     <script type="text/javascript" src='js/globalVar.js'></script>
     <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
     <script type="text/javascript" src="js/simpleTree.js"></script>
+    <script type="text/javascript" src="js/getParam.js"></script>
 
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
   </head>
   <body>
     <script type="text/javascript">
       $(document).ready(function(){
-          $('#mainHeadDiv').load('left-tab.html');
-          $('#mainBodyDiv').load('health-forecast.html');
+        $("#devNameDiv").html(decodeURI($.getUrlVar("devName")));
+        $('#mainHeadDiv').load('left-tab.html');
+        $('#mainBodyDiv').load('health-forecast.html');
       });
      </script>
     <div id='mainContainer'>
-      <div id='titleDiv'>港口起重机械健康监测与预报维修可视化系统</div>
+      <div id='titleContainerDiv'>
+        <div id="titleDiv">港口起重机械健康监测与预报维修可视化系统</div>
+        <div id="devNameDiv"></div>
+      </div>
       <div id='mainHeadDiv'></div>
       <div id='mainBodyDiv'></div>
     </div>

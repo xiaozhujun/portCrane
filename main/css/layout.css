@@ -53,7 +53,7 @@
 	border-left: solid 1px #ccc;
 	border-right: solid 1px #ccc;
 	border-bottom: solid 1px #ccc;
-}	
+}
 
 #modelContent,#baseinfoContent,#faultTreeContent,#diagnosisContent,#forecastContent
 {
@@ -71,26 +71,26 @@
 
 #modelDiv
 {
-	width: 49.3%;
-	height: 250;
+	width: 99%;
+	height: 337;
+	border-top: solid 1px #ccc;
 }
 
-#baseinfoDiv,#faultTreeDiv
-{
-	width: 49%;
-	height: 250;
-}
-
-#diagnosisDiv
+#baseinfoDiv
 {
 	width: 99%;
-	height: 225;
+	height: 337;
 }
 
-#forecastDiv
+#faultTreeDiv{
+	width: 25%;
+	height: 95.8%;
+}
+
+#diagnosisDiv,#forecastDiv
 {
-	width: 99%;
-	height: 225;
+	width: 73.3%;
+	height: 47.5%;
 }
 
 #modelTitleDiv,#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv
@@ -102,19 +102,19 @@
 	font-weight: 900;
 }
 
-#modelTitleDiv,#faultTreeTitleDiv
+#faultTreeTitleDiv
 {
-	width: 95.5%;
+	width: 92%;
 }
 
 #diagnosisTitleDiv,#forecastTitleDiv
 {
-	width: 97.8%;
+	width: 97.2%;
 }
 
 .modelImg,object
 {
-	margin-top: 5px;
+	margin-top: 20px;
 	width: 70%;
 	height: 90%;
 }

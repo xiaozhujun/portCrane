@@ -3,47 +3,50 @@
 	$("#modelContent").load("machine/machine1.html");
 	$("#baseinfoContent").load("machine/baseinfo.html");
 	$(document).ready(function(){
-		$("#faultTreeContent").hide();
+		$("#container2").hide();
+		$('#mainTab .tabItem').click(function(){
+    	$(".containerselected").removeClass("containerselected");
+    	$(this).addClass("containerselected");
+      $("#"+$(this).attr("url")).show().siblings().hide();
+    });
 		$(".infoTab").mouseover(function(){
 			$(".currentInfoTab").removeClass("currentInfoTab");
 			$(this).addClass("currentInfoTab");
-			var tmp=$(this).attr("cref");
-			if (tmp=="faultTree") {
-				$("#faultTreeContent").show();
-				$("#baseinfoContent").hide();
-			} else {
-				$("#baseinfoContent").show();
-				$("#faultTreeContent").hide();
-				$("."+tmp).show().siblings().hide();
-			}
+			$("."+$(this).attr("cref")).show().siblings().hide();
 		});
 	});
 </script>
-<div id="modelDiv">
-	<div id="modelTitleDiv">可视化模型</div>
-	<div id="modelContent"></div>
+<div id='mainTab' class='tabs'>
+	<div class='tabItem containerselected' url="container1">可视化</div>
+	<div class='tabItem' url="container2">监测失效预报</div>
 </div>
-
-<div id="baseinfoDiv">
-	<div id="baseinfoTitleDiv">
-		<div class="infoTab currentInfoTab" cref="information" id="information1">基本信息</div>
-		<div class='infoTab' cref="parameter">基本参数</div>
-		<div class="infoTab" cref="faultTree">失效树</div>
+<div>
+<div id="container1">
+	<div id="modelDiv">
+		<div id="modelContent"></div>
 	</div>
-	<div id="baseinfoContent"></div>
-	<div id='faultTreeContent'></div>
+
+	<div id="baseinfoDiv">
+		<div id="baseinfoTitleDiv">
+			<div class="infoTab currentInfoTab" cref="information" id="information1">基本信息</div>
+			<div class='infoTab' cref="parameter">基本参数</div>
+		</div>
+		<div id="baseinfoContent"></div>
+	</div>
 </div>
-<!--
-<div id='faultTreeDiv'>
-	<div id="faultTreeTitleDiv">失效模式与失效树</div>
-	<div id='faultTreeContent'></div>
+<div id="container2">
+	<div id='faultTreeDiv'>
+		<div id="faultTreeTitleDiv">失效模式与失效树</div>
+		<div id='faultTreeContent'></div>
+	</div>
+
+	<div id='diagnosisDiv'>
+		<div id="diagnosisTitleDiv">损伤监测检测</div>
+		<div id='diagnosisContent'></div>
+	</div>
+	<div id='forecastDiv'>
+		<div id="forecastTitleDiv">健康预报</div>
+		<div id='forecastContent'></div>
+	</div>
 </div>
--->
-<div id='diagnosisDiv'>
-	<div id="diagnosisTitleDiv">损伤监测检测</div>
-	<div id='diagnosisContent'></div>
-</div>
-<div id='forecastDiv'>
-	<div id="forecastTitleDiv">健康预报</div>
-	<div id='forecastContent'></div>
 </div>
