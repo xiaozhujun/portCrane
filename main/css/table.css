@@ -156,7 +156,13 @@ div .showFirst
 	margin-right: -1;
 	margin-bottom: -1;
 	padding-left: 1em;
+	display: block;
+	line-height: 25px;
+	height: 25px;
+	word-wrap:break-word; overflow:hidden;
+
 }
+
 #tableHeaderDiv .tableColumn
 {
 	background-color: #ccc
