@@ -3,7 +3,7 @@
 	$("#modelContent").load("machine/machine1.html");
 	$("#baseinfoContent").load("machine/baseinfo.html");
 	$(document).ready(function(){
-		$("#container2").hide();
+		// $("#container2").hide();
 		$('#mainTab .tabItem').click(function(){
     	$(".containerselected").removeClass("containerselected");
     	$(this).addClass("containerselected");
@@ -16,11 +16,16 @@
 		});
 	});
 </script>
+
+<!--
 <div id='mainTab' class='tabs'>
 	<div class='tabItem containerselected' url="container1">可视化</div>
 	<div class='tabItem' url="container2">监测失效预报</div>
 </div>
+-->
+
 <div>
+	<!--
 <div id="container1">
 	<div id="modelDiv">
 		<div id="modelContent"></div>
@@ -34,6 +39,7 @@
 		<div id="baseinfoContent"></div>
 	</div>
 </div>
+-->
 <div id="container2">
 	<div id='faultTreeDiv'>
 		<div id="faultTreeTitleDiv">失效模式与失效树</div>
