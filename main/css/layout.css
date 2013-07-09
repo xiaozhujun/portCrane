@@ -84,13 +84,13 @@
 
 #faultTreeDiv{
 	width: 25%;
-	height: 95.8%;
+	height: 100%;
 }
 
 #diagnosisDiv,#forecastDiv
 {
 	width: 73.3%;
-	height: 47.5%;
+	height: 49.6%;
 }
 
 #modelTitleDiv,#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv
