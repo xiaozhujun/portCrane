@@ -1,24 +1,19 @@
-.treeItem
-{
-	margin-left: 1em;
-}
-
-.treeItem .itemTitle
-{
-	padding-left: 1em; 
-	cursor: pointer;
-}
 .bullet
 {
 	cursor: pointer;
 }
-.nocursor .itemTitle,.nocursor .bullet
-{
-	cursor: auto;
-}
-.treeItem .itemContent>.bullet
+.itemTitle
 {
 	padding-left: 1em; 
+	cursor: pointer;
+}
+.itemContent>.bullet
+{
+	padding-left: 1em; 
+	margin-left: 1em;
+}
+.treeItem
+{
 	margin-left: 1em;
 }
 .treeItem .titleShow
@@ -29,13 +24,9 @@
 {
 	background: url(../assets/menu/plus.gif) no-repeat;
 }
-.menuSelected
+.treeItem .menuSelected
 {
 	background-color: #9cf;
-}
-.nocursor .menuSelected
-{
-	background-color: transparent;
 }
 .treeItem .contentHide
 {
@@ -45,4 +36,8 @@
 .treeItem .contentShow
 {
 	display: block;
+}
+.listItem .sn
+{
+	float: left;
 }
