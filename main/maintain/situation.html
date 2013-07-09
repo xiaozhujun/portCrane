@@ -1,1 +1,92 @@
-2
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#headerContainer").load("maintain/header.html");
+	});
+</script>
+<div id="headerContainer"></div>
+<div id="mainInfo">
+	<div class="label">工单</div>
+	<div class="inputDiv"><input type='text'></div>
+	<div class="inputDiv"><input type='text'></div>
+	<div class="label">状态</div>
+	<div class="inputDiv"><input type='text'></div>
+	<div class="label">地点</div>
+	<div class="inputDiv"><input type='text'></div>
+	<div class="label">附件</div>
+</div>
+<div id="detailInfo">
+	<div class="title">详细信息</div>
+	<div class="infoContainer2">
+		<div class="label">位置</div>
+		<div class="inputDiv"><input type="text" style="width:100"><input type="text" style="width:160"></div>
+		<div class="label">名称</div>
+		<div class="inputDiv"><input type="text" style="width:100"><input type="text" style="width:160"></div>
+		<div class="label">检修路线</div>
+		<div class="inputDiv"><input type="text" style="width:270"></div>
+	</div>
+	<div class="infoContainer2">
+		<div class="label">提前期</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">提前期有效</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+</div>
+<div id="worksheelInfo">
+	<div class="title">工单信息</div>
+	<div class="infoContainer3">
+		<div class="label">标准作业计划</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">工作类型</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">工作状态</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">优先级</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">可中断</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+	<div class="infoContainer3">
+		<div class="label">描述</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">上次开始日期</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">上次完成日期</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">最早一下到期日</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+	<div class="infoContainer3">
+		<div class="label">主管人</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">班组</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">负责人</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">工作组</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">所有者</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">所有者组</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+</div>
+<div id="fault">
+	<div class='title'>故障</div>
+	<div id="faultEditBtn"><input type="button" value="故障编辑"></div>
+	<div class="tableHeader">
+		<div class="col1">编码</div>
+		<div class="col5">描述</div>
+	</div>
+	<div class="tableRow">
+		<div class="col1"><input type="text"></div>
+		<div class="col5"><input type="text"></div>
+	</div>
+	<div class="tableRow">
+		<div class="col1"><input type="text"></div>
+		<div class="col5"><input type="text"></div>
+	</div>
+	<div class="tableRow">
+		<div class="col1"><input type="text"></div>
+		<div class="col5"><input type="text"></div>
+	</div>
+</div>
