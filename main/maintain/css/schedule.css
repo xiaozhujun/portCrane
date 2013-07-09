@@ -1,0 +1,95 @@
+.title
+{
+	width: 100%;
+	background-color: #aaa; 
+}
+#toolBar
+{
+	float: right;
+	width: 48%;
+	background-color: #aaa; 
+}
+#toolBar,#headerNav
+{
+	margin: 0 0 1em 1em; 
+}
+#headerNav,#mainInfo,#detailInfo,#jobOrder,#worksheel
+{
+	float: left;
+	width: 100%;
+	margin-bottom: 1em;
+}
+#toolBar div,#headerNav div
+{
+	float: left;
+	cursor: pointer;
+	margin-right: 1em;
+	text-decoration: underline;
+}
+#mainInfo .label,#mainInfo .inputDiv
+{
+	float: left;
+	margin: 0.5em;
+}
+#detailInfo input
+{
+	width: 100;
+}
+#detailInfo .label,#detailInfo .inputDiv
+{
+	float: left;
+	width: 100;
+	height: 40;
+	padding: 10;
+	text-align: right;
+}
+.infoContainer
+{
+	float: left;
+	width: 24.5%;
+	height: 170;
+}
+.tableHeader,.tableRow
+{
+	float: left;
+	width: 100%;
+}
+.tableHeader
+{
+	text-align: center;
+}
+.col0,.col1,.col2,.col3,.col4,.col5,.col6
+{
+	float: left;
+	height: 30;
+	margin: 5 10 0 10;
+}
+.col0,.col0 input
+{
+	width: 60;
+}
+.col1,.col1 input
+{
+	width: 100;
+}
+.col2,.col2 input
+{
+	width: 120;
+}
+.col3,.col3 input
+{
+	width: 140;
+}
+.col4,.col4 input
+{
+	width: 270;
+}
+.insertBtn
+{
+	float: right;
+	margin: 1em; 
+}
+#worksheel .infoTab
+{
+	width: 4em;
+}

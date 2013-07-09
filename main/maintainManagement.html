@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="maintain/css/maintain.css">
 <link rel="stylesheet" type="text/css" href="maintain/css/menu.css">
+<link rel="stylesheet" type="text/css" href="maintain/css/schedule.css">
 <script type="text/javascript">
 		
 		$(document).ready(function() {
@@ -10,7 +11,7 @@
 		$('.menuItem').click(function(){
 			$('#maintainRightDiv').load($(this).attr('url'));
 		});
-		$("#maintainRightDiv").load("maintainContent.html");
+		$("#maintainRightDiv").load("maintain/schedule.html");
 		});
 		
 </script>
@@ -18,11 +19,13 @@
 	<div id='maintainLeftDiv'>
 		<div class='menuDiv'>
 	    	<div class='menuModule'>
-	    		<div class='moduleTitle'>备品备件管理</div>
+	    		<div class='moduleTitle'>维修流程</div>
 	    		<div class='menuItems'>
-	    			<div class='menuItem' url='#'><div class='menuNameDiv'>基本信息</div></div>
-	    			<div class='menuItem' url='#'><div class='menuNameDiv'>库存管理</div></div>
-	    			<div class='menuItem' url='#'><div class='menuNameDiv'>计划管理</div></div>
+	    			<div class='menuItem' url='maintain/schedule.html'><div class='menuNameDiv'>维修计划</div></div>
+	    			<div class='menuItem' url='maintain/situation.html'><div class='menuNameDiv'>实际情况</div></div>
+	    			<div class='menuItem' url='maintain/worksheet.html'><div class='menuNameDiv'>工单</div></div>
+	    			<div class='menuItem' url='maintain/faultreport.html'><div class='menuNameDiv'>故障汇报</div></div>
+	    			<div class='menuItem' url='maintain/refdocs.html'><div class='menuNameDiv'>相关文档</div></div>
 	    		</div>
 	    	</div>
 
