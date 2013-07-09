@@ -1,0 +1,26 @@
+.statisticContainer
+{
+	float: left;
+	width: 95%;
+	height: 18%;
+	border: dashed 1px #ccc;
+	margin: 5;
+	padding: 1em;
+}
+.statisticContainer div
+{
+	float: left;
+	margin-right: 5.5em; 
+}
+.labelDiv
+{
+	width: 120;
+}
+.timeSelectDiv input
+{
+	margin: 0 1em 0 1em;
+}
+.resultDiv
+{
+	
+}
