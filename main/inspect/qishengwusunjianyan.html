@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+ 		$("#tab1").siblings().hide();
+    $(".infoTab").mouseover(function(){
+			$(".currentInfoTab").removeClass("currentInfoTab");
+			$(this).addClass("currentInfoTab");
+			$("#"+$(this).attr("cref")).show().siblings().hide();
+		});
+  });
+</script>
+<div class="twoTabs">
+	<div class="infoTab currentInfoTab" cref="tab1">超声波探伤报告</div>
+	<div class='infoTab' cref="tab2">磁粉检测报告</div>
+</div>
+<div class="docImgDiv">
+	<div id="tab1">
+		<img src="assets/docs/chaoshengbotanshangbaogao.jpg">
+	</div>
+	<div id="tab2">
+		<img src="assets/docs/cifenjiancebaogao.jpg">
+	</div>
+</div>
