@@ -1,8 +1,10 @@
 <link rel="stylesheet" type="text/css" href="css/infotabs.css">
 <script type="text/javascript">
-	$("#modelContent").load("machine/machine1.html");
-	$("#baseinfoContent").load("machine/baseinfo.html");
 	$(document).ready(function(){
+		$("#faultTreeContent").load("mechanism/qisheng/faultTree.html");
+		$("#diagnosisContent").load("mechanism/qisheng/diagnosis.html");
+		$("#forecastContent").load("mechanism/qisheng/forecast.html");
+		
 		// $("#container2").hide();
 		$('#mainTab .tabItem').click(function(){
     	$(".containerselected").removeClass("containerselected");
