@@ -1,11 +1,3 @@
-input
-{
-	border-width: 2;
-}
-.label
-{
-	background-color: #eee;
-}
 .title
 {
 	width: 100%;
@@ -43,46 +35,53 @@ input
 {
 	float: left;
 	width: 24.5%;
-	height: 170;
+	padding: 0;
 }
 .infoContainer2
 {
 	float: left;
-	width: 49.5%;
-	height: 170;
+	width: 40%;
+	padding: 0;
 }
 .infoContainer3
 {
 	float: left;
-	width: 33.3%;
-	height: 220;
+	width: 28%;
+	padding: 0;
 }
-.infoContainer1 .label,.infoContainer1 .inputDiv
+.infoContainer1 .label
 {
 	float: left;
 	width: 100;
-	height: 40;
-	margin: 10;
+	height: 10;
+	margin: 10 5;
 	text-align: center;
+}
+.infoContainer1 .inputDiv
+{
+	float: left;
+	width: 120;
+	height: 10;
+	margin: 10 5;
 }
 .infoContainer1 input
 {
-	width: 100;
+	width: 120;
 }
 .infoContainer2 .label
 {	
 	float: left;
 	width: 100;
-	height: 40;
-	margin: 10;
+	height: 10;
+	margin: 10 5;
 	text-align: center;
 }
 .infoContainer2 .inputDiv
 {
 	float: left;
 	width: 300;
-	height: 40;
-	padding: 10;
+	height: 10;
+	margin: 10 5;
 }
 .infoContainer2 input
 {
@@ -91,21 +90,21 @@ input
 .infoContainer3 .label
 {
 	float: left;
-	width: 150;
-	height: 20;
-	margin: 10;
+	width: 140;
+	height: 10;
+	margin: 10 5;
 	text-align: center;
 }
 .infoContainer3 .inputDiv
 {
 	float: left;
-	width: 100;
-	height: 20;
-	padding: 10;
+	width: 120;
+	height: 10;
+	margin: 10 5;
 }
 .infoContainer3 input
 {
-	width: 90;
+	width: 120;
 }
 .tableHeader,.tableRow
 {
@@ -116,19 +115,15 @@ input
 {
 	text-align: center;
 }
-.tableHeader div
-{
-	background-color: #eee;
-}
 .col0,.col1,.col2,.col3,.col4,.col5
 {
 	float: left;
-	height: 30;
-	margin: 5 10 0 10;
+	height: 20;
+	margin: 5 5 0 5;
 }
 .col0,.col0 input
 {
-	width: 60;
+	width: 70;
 }
 .col1,.col1 input
 {
@@ -140,20 +135,20 @@ input
 }
 .col3,.col3 input
 {
-	width: 140;
+	width: 150;
 }
 .col4,.col4 input
 {
-	width: 270;
+	width: 320;
 }
 .col5,.col5 input
 {
-	width: 600;
+	width: 650;
 }
 .insertBtn
 {
 	float: right;
-	margin: 1em; 
+	margin: 10 3em 10 10;
 }
 #worksheel .infoTab
 {
@@ -162,9 +157,15 @@ input
 #faultEditBtn
 {
 	float: right;
-	margin-right: 2em;
+	margin-right: 10em;
 }
 #faultEditBtn input
 {
 	padding: 3;
+}
+input[type="button"]
+{
+	font-size: 15;
+	padding: 0 10;
+	height: 25;
 }

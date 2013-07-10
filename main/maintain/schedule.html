@@ -8,7 +8,7 @@
 			$(this).addClass("currentInfoTab");
 			$("#"+$(this).attr("cref")).show().siblings().hide();
 		});
-
+		$("input[type=button]").button();
 	});
 </script>
 <div id="headerContainer"></div>
@@ -20,7 +20,7 @@
 	<div class="inputDiv"><input type='text'></div>
 	<div class="label">地点</div>
 	<div class="inputDiv"><input type='text'></div>
-	<div class="label">附件</div>
+	<div class="label" style="text-decoration: underline;cursor: pointer">附件</div>
 </div>
 <div id="detailInfo">
 	<div class="title">详细信息</div>
@@ -190,6 +190,7 @@
 				<div class="col0"><input type="text"></div>
 				<div class="col0"><input type="button" value="删除该行"></div>
 			</div>
+	<input class="insertBtn" type="button" value="新增行">
 		</div>
 		<div id="tab3">
 			<div class="tableHeader">
@@ -231,6 +232,7 @@
 				<div class="col2"><input type="text"></div>
 				<div class="col1"><input type="button" value="删除该行"></div>
 			</div>
+	<input class="insertBtn" type="button" value="新增行">
 		</div>
 	</div>
 </div>
