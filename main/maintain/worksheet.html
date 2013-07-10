@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="css/infotabs.css">
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#headerContainer").load("maintain/header.html");
@@ -9,91 +8,85 @@
 	<div class="label">工单</div>
 	<div class="inputDiv"><input type='text'></div>
 	<div class="inputDiv"><input type='text'></div>
-	<div class="label">当前状态</div>
+	<div class="label">状态</div>
 	<div class="inputDiv"><input type='text'></div>
+	<div class="label">地点</div>
+	<div class="inputDiv"><input type='text'></div>
+	<div class="label" style="text-decoration: underline;">附件</div>
 </div>
-<div id="statHistory">
-	<div class='title'>状态历史</div>
-	<div class="tableHeader">
-		<div class="col2">状态</div>
-		<div class="col3">日期</div>
-		<div class="col3">修改人</div>
-		<div class="col4">备忘录</div>
-		<div class="col3">设备编码</div>
+<div id="detailInfo">
+	<div class="title">详细信息</div>
+	<div class="infoContainer2">
+		<div class="label">位置</div>
+		<div class="inputDiv"><input type="text" style="width:100"><input type="text" style="width:160"></div>
+		<div class="label">名称</div>
+		<div class="inputDiv"><input type="text" style="width:100"><input type="text" style="width:160"></div>
+		<div class="label">检修路线</div>
+		<div class="inputDiv"><input type="text" style="width:270"></div>
 	</div>
-	<div class="tableRow">
-		<div class="col2"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-	</div>
-	<div class="tableRow">
-		<div class="col2"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-	</div>
-	<div class="tableRow">
-		<div class="col2"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-	</div>
-	<div class="tableRow">
-		<div class="col2"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-	</div>
-	<div class="tableRow">
-		<div class="col2"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
+	<div class="infoContainer2">
+		<div class="label">提前期</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">提前期有效</div>
+		<div class="inputDiv"><input type="text"></div>
 	</div>
 </div>
-<div id="flowHistory">
-	<div class='title'>工作历史流程</div>
+<div id="worksheelInfo">
+	<div class="title">工单信息</div>
+	<div class="infoContainer3">
+		<div class="label">标准作业计划</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">工作类型</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">工作状态</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">优先级</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">可中断</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+	<div class="infoContainer3">
+		<div class="label">描述</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">上次开始日期</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">上次完成日期</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">最早一下到期日</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+	<div class="infoContainer3">
+		<div class="label">主管人</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">班组</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">负责人</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">工作组</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">所有者</div>
+		<div class="inputDiv"><input type="text"></div>
+		<div class="label">所有者组</div>
+		<div class="inputDiv"><input type="text"></div>
+	</div>
+</div>
+<div id="fault">
+	<div class='title'>故障</div>
+	<div id="faultEditBtn"><input type="button" value="故障编辑"></div>
 	<div class="tableHeader">
-		<div class="col3">处理类型</div>
-		<div class="col3">日期</div>
-		<div class="col3">员工代码</div>
-		<div class="col4">备忘录</div>
+		<div class="col1">编码</div>
+		<div class="col5">描述</div>
 	</div>
 	<div class="tableRow">
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
+		<div class="col1"><input type="text"></div>
+		<div class="col5"><input type="text"></div>
 	</div>
 	<div class="tableRow">
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
+		<div class="col1"><input type="text"></div>
+		<div class="col5"><input type="text"></div>
 	</div>
 	<div class="tableRow">
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
+		<div class="col1"><input type="text"></div>
+		<div class="col5"><input type="text"></div>
 	</div>
-	<div class="tableRow">
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-	</div>
-	<div class="tableRow">
-		<div class="col3"><input type="text"></div>
-		<div class="col3"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-		<div class="col4"><input type="text"></div>
-	</div>
-	<input class="insertBtn" type="button" value="确定" style="margin-right:10em">
 </div>
