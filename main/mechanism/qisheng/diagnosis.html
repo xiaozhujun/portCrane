@@ -1,10 +1,49 @@
+<script src="js/rgraph/libraries/RGraph.common.core.js" ></script>
+<script src="js/rgraph/libraries/RGraph.common.effects.js" ></script>
+<script src="js/rgraph/libraries/RGraph.line.js" ></script>
+
 <script type="text/javascript">
+	
+
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		//$(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
+		data = RGraph.array_pad([], 60);
+
+
+		DrawGraph2();
 	});
+
+
+	function DrawGraph2 (target)
+        {
+
+            RGraph.Clear(document.getElementById("line1"));
+            RGraph.ObjectRegistry.Clear();
+
+            var line = new RGraph.Line("line1", data)
+                .Set('colors', ['green'])
+                .Set('linewidth', 1)
+                .Set('filled', true)
+                .Set('fillstyle', 'rgba(128,255,128,0.5)')
+                .Set('ymax', 60)
+                .Set('numxticks', 5)
+                .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
+                .Draw();
+
+            r    = RGraph.random(20,55);
+            data = [r].concat(data);
+            data.pop();
+
+            
+            setTimeout(DrawGraph2, 1000);
+        }
 </script>
 <div id="qishengFM" class="reversalInfoTable">
+	<div class="failureTable" style="width:100%;">
+		<canvas id="line1" style='width:100%;height:100%'>[No canvas support]</canvas>
+	</div>
+	
 	<div class="failureTable">
 		<div class="failureTitle">取物装置断裂导致所取物体掉落</div>
 		<div class="reversalInfoTable">
@@ -45,6 +84,7 @@
 		</div>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
+
 </div>
 <div id="diaogouzuFM" class="reversalInfoTable">
 	<div class="rowDiv">

@@ -1,3 +1,7 @@
+<script src="js/rgraph/libraries/RGraph.common.core.js" ></script>
+<script src="js/rgraph/libraries/RGraph.common.effects.js" ></script>
+<script src="js/rgraph/libraries/RGraph.line.js" ></script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"FC").show().siblings().hide();
@@ -5,9 +9,88 @@
 		// $(".failureTitle").click(function(){
 		// 		$(this).next().slideToggle();
 		// });
+
+		showGrahp("cvs");
 	});
+
+	
+
+	function showGrahp(target)
+	{
+			var RG        = RGraph;
+            var canvas    = document.getElementById(target);
+            var obj       = null;
+            var data      = [];
+            var l         = 0; // The letter 'L' - NOT a one
+            var numvalues = 1200;
+        
+            // Pre-pad the arrays with null values
+            for (var i=0; i<numvalues; ++i) {
+                data.push(null);
+            }
+        
+            function drawGraph ()
+            {
+                RG.Clear(canvas);
+                
+
+                if (!obj) {
+                    obj = new RG.Line(target, [])
+                        .Set('xticks', 100)
+                        .Set('background.barcolor1', 'white')
+                        .Set('background.barcolor2', 'white')
+                        .Set('title.xaxis', 'Last minute')
+                        .Set('title.yaxis', 'Bandwidth (MB/s)')
+                        .Set('title.vpos', 0.5)
+                        .Set('title', 'Bandwidth used')
+                        .Set('title.yaxis.pos', 0.5)
+                        .Set('title.xaxis.pos', 0.5)
+                        .Set('colors', ['black'])
+                        .Set('linewidth',0.5)
+                        .Set('yaxispos', 'right')
+                        .Set('ymax', 50)
+                        .Set('xticks', 25)
+                        .Set('filled', true);
+                    
+                    var grad = obj.context.createLinearGradient(0,0,0,250);
+                    grad.addColorStop(0, '#efefef');
+                    grad.addColorStop(0.9, 'rgba(0,0,0,0)');
+    
+                    obj.Set('chart.fillstyle', [grad]);
+                }
+
+                // Add some data to the data arrays
+                var len          = data.length;
+                var lastvalue    = RG.is_null(data[len - 1]) ? 26 : data[len - 1];
+                var random_value = RG.random(lastvalue  - 2,lastvalue  + 2);
+               
+               random_value = Math.max(random_value, 0);
+               random_value = Math.min(random_value, 50);
+
+                data.push(random_value);
+                
+                if (data.length > numvalues) {
+                    data = RG.array_shift(data);
+                }
+    
+                if (ISIE8) {
+                    alert('[MSIE] Sorry, Internet Explorer 8 is not fast enough to support dynamic charts');
+                } else {
+                    obj.original_data[0] = data;
+                    obj.Draw();
+                    setTimeout(drawGraph, 50);
+                }
+            }
+        
+            drawGraph();
+	}
 </script>
 <div id="qishengFC">
+
+	<div class="failureTable" style="width:100%;">
+		<canvas id="cvs" style='width:100%;height:100%'>[No canvas support]</canvas>
+	</div>
+
 	<div class="failureTable">
 		<div class="failureTitle">取物装置断裂导致所取物体掉落</div>
 		<div class="reversalInfoTable">
@@ -46,6 +129,7 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 <div id="diaogouzuFC"></div>
 <div id="zhuadouFC"></div>
