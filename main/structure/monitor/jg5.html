@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var jggd5;
+	$(document).ready(function(){
+		if (typeof(jggd5)!="undefined") {
+			jggd5.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		jggd5 = new GraphDrawer("linejg5", data);
+		jggd5.drawGraph();
+		$("#linejg5").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">杆件裂纹<img src="assets/toggle/green.png"></div>
+<canvas id="linejg5">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

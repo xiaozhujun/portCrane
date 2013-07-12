@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var qsgd4;
+	$(document).ready(function(){
+		if (typeof(qsgd4)!="undefined") {
+			qsgd4.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		qsgd4 = new GraphDrawer("lineqs4", data);
+		qsgd4.drawGraph();
+		$("#lineqs4").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">传动轴断裂<img src="assets/toggle/green.png"></div>
+<canvas id="lineqs4">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

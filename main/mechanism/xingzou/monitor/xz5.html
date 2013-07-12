@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var xzgd5;
+	$(document).ready(function(){
+		if (typeof(xzgd5)!="undefined") {
+			xzgd5.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		xzgd5 = new GraphDrawer("linexz5", data);
+		xzgd5.drawGraph();
+		$("#linexz5").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">行程限位器连杆失效、弹簧失效<img src="assets/toggle/green.png"></div>
+<canvas id="linexz5">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

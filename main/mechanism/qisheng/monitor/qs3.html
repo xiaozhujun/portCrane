@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var qsgd3;
+	$(document).ready(function(){
+		if (typeof(qsgd3)!="undefined") {
+			qsgd3.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		qsgd3 = new GraphDrawer("lineqs3", data);
+		qsgd3.drawGraph();
+		$("#lineqs3").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">裂纹<img src="assets/toggle/red.png"></div>
+<canvas id="lineqs3">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	var jggd1;
+	$(document).ready(function(){
+		if (typeof(jggd1)!="undefined") {
+			jggd1.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		jggd1 = new GraphDrawer("linejg1", data);
+		jggd1.drawGraph();
+		$("#linejg1").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">圆筒局部失稳<img src="assets/toggle/green.png"></div>
+<canvas id="linejg1">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>

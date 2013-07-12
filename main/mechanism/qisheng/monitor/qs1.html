@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	var qsgd1;
+	$(document).ready(function(){
+		if (typeof(qsgd1)!="undefined") {
+			qsgd1.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		qsgd1 = new GraphDrawer("lineqs1", data);
+		qsgd1.drawGraph();
+		$("#lineqs1").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">磨损<img src="assets/toggle/green.png"></div>
+<canvas id="lineqs1">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>

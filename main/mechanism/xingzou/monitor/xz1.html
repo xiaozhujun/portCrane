@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	var xzgd1;
+	$(document).ready(function(){
+		if (typeof(xzgd1)!="undefined") {
+			xzgd1.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		xzgd1 = new GraphDrawer("linexz1", data);
+		xzgd1.drawGraph();
+		$("#linexz1").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">夹轨器齿轮失效<img src="assets/toggle/green.png"></div>
+<canvas id="linexz1">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>

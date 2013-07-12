@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var jggd4;
+	$(document).ready(function(){
+		if (typeof(jggd4)!="undefined") {
+			jggd4.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		jggd4 = new GraphDrawer("linejg4", data);
+		jggd4.drawGraph();
+		$("#linejg4").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">局部失稳<img src="assets/toggle/green.png"></div>
+<canvas id="linejg4">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

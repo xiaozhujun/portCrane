@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	var bfgd1;
+	$(document).ready(function(){
+		if (typeof(bfgd1)!="undefined") {
+			bfgd1.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		bfgd1 = new GraphDrawer("linebf1", data);
+		bfgd1.drawGraph();
+		$("#linebf1").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">裂纹<img src="assets/toggle/green.png"></div>
+<canvas id="linebf1">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>

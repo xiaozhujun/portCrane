@@ -1,0 +1,105 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>港口起重机械健康监测与预报维修可视化系统</title>
+	<link rel="stylesheet" type="text/css" href="css/monitor.css">
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+ 	<script src="js/rgraph/libraries/RGraph.common.core.js" ></script>
+  <script src="js/rgraph/libraries/RGraph.common.effects.js" ></script>
+  <script src="js/rgraph/libraries/RGraph.line.js" ></script>
+  <script type="text/javascript" src="js/dynamicProfile.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  	$("#structureMonitor").hide();
+  	$("#tabs div").mousemove(function(){
+  		$(".current").removeClass("current");
+  		$(this).addClass("current");
+  		$("#"+$(this).attr("cref")).show().siblings().hide();
+  	});
+		$("#qs1monitor").load("mechanism/qisheng/monitor/qs1.html");
+		$("#qs2monitor").load("mechanism/qisheng/monitor/qs2.html");
+		$("#qs3monitor").load("mechanism/qisheng/monitor/qs3.html");
+		$("#qs4monitor").load("mechanism/qisheng/monitor/qs4.html");
+		$("#qs5monitor").load("mechanism/qisheng/monitor/qs5.html");
+		$("#bf1monitor").load("mechanism/bianfu/monitor/bf1.html");
+		$("#bf2monitor").load("mechanism/bianfu/monitor/bf2.html");
+		$("#bf3monitor").load("mechanism/bianfu/monitor/bf3.html");
+		$("#bf4monitor").load("mechanism/bianfu/monitor/bf4.html");
+		$("#bf5monitor").load("mechanism/bianfu/monitor/bf5.html");
+		$("#xz1monitor").load("mechanism/xingzou/monitor/xz1.html");
+		$("#xz2monitor").load("mechanism/xingzou/monitor/xz2.html");
+		$("#xz3monitor").load("mechanism/xingzou/monitor/xz3.html");
+		$("#xz4monitor").load("mechanism/xingzou/monitor/xz4.html");
+		$("#xz5monitor").load("mechanism/xingzou/monitor/xz5.html");
+		$("#xzh1monitor").load("mechanism/xuanzhuan/monitor/xzh1.html");
+		$("#xzh2monitor").load("mechanism/xuanzhuan/monitor/xzh2.html");
+		$("#xzh3monitor").load("mechanism/xuanzhuan/monitor/xzh3.html");
+		$("#xzh4monitor").load("mechanism/xuanzhuan/monitor/xzh4.html");
+		$("#xzh5monitor").load("mechanism/xuanzhuan/monitor/xzh5.html");
+		$("#jg1monitor").load("structure/monitor/jg1.html");
+		$("#jg2monitor").load("structure/monitor/jg2.html");
+		$("#jg3monitor").load("structure/monitor/jg3.html");
+		$("#jg4monitor").load("structure/monitor/jg4.html");
+		$("#jg5monitor").load("structure/monitor/jg5.html");
+		$("#jg6monitor").load("structure/monitor/jg6.html");
+		$("#jg7monitor").load("structure/monitor/jg7.html");
+		$("#jg8monitor").load("structure/monitor/jg8.html");
+		$("#jg9monitor").load("structure/monitor/jg9.html");
+		$("#jg10monitor").load("structure/monitor/jg10.html");
+  });
+  </script>
+</head>
+<body>
+	<div id="tabs">
+		<div id="tabT1" class="current" cref="mechanismMonitor">主要机构</div>
+		<div id="tabT2" cref="structureMonitor">主要结构</div>
+	</div>
+	<div>
+	<div id="mechanismMonitor">
+		<div class="monitorContainer">
+			<div class="monitorTitle">起升机构</div>
+			<div class="failureTable" id="qs1monitor"></div>
+			<div class="failureTable" id="qs2monitor"></div>
+			<div class="failureTable" id="qs3monitor"></div>
+			<div class="failureTable" id="qs4monitor"></div>
+			<div class="failureTable" id="qs5monitor"></div>
+		</div>
+		<div class="monitorContainer">
+			<div class="monitorTitle">变幅机构</div>
+			<div class="failureTable" id="bf1monitor"></div>
+			<div class="failureTable" id="bf2monitor"></div>
+			<div class="failureTable" id="bf3monitor"></div>
+			<div class="failureTable" id="bf4monitor"></div>
+			<div class="failureTable" id="bf5monitor"></div>
+		</div>
+		<div class="monitorContainer">
+			<div class="monitorTitle">行走机构</div>
+			<div class="failureTable" id="xz1monitor"></div>
+			<div class="failureTable" id="xz2monitor"></div>
+			<div class="failureTable" id="xz3monitor"></div>
+			<div class="failureTable" id="xz4monitor"></div>
+			<div class="failureTable" id="xz5monitor"></div>
+		</div>
+		<div class="monitorContainer">
+			<div class="monitorTitle">旋转机构</div>
+			<div class="failureTable" id="xzh1monitor"></div>
+			<div class="failureTable" id="xzh2monitor"></div>
+			<div class="failureTable" id="xzh3monitor"></div>
+			<div class="failureTable" id="xzh4monitor"></div>
+			<div class="failureTable" id="xzh5monitor"></div>
+		</div>
+	</div>
+	<div id="structureMonitor">
+			<div class="failureTable" id="jg1monitor"></div>
+			<div class="failureTable" id="jg2monitor"></div>
+			<div class="failureTable" id="jg3monitor"></div>
+			<div class="failureTable" id="jg4monitor"></div>
+			<div class="failureTable" id="jg5monitor"></div>
+			<div class="failureTable" id="jg6monitor"></div>
+			<div class="failureTable" id="jg7monitor"></div>
+			<div class="failureTable" id="jg8monitor"></div>
+			<div class="failureTable" id="jg9monitor"></div>
+			<div class="failureTable" id="jg10monitor"></div>
+	</div>
+	</div>
+</body>

@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var bfgd2;
+	$(document).ready(function(){
+		if (typeof(bfgd2)!="undefined") {
+			bfgd2.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		bfgd2 = new GraphDrawer("linebf2", data);
+		bfgd2.drawGraph();
+		$("#linebf2").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">断裂<img src="assets/toggle/red.png"></div>
+<canvas id="linebf2">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var jggd2;
+	$(document).ready(function(){
+		if (typeof(jggd2)!="undefined") {
+			jggd2.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		jggd2 = new GraphDrawer("linejg2", data);
+		jggd2.drawGraph();
+		$("#linejg2").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">端梁变形过量<img src="assets/toggle/red.png"></div>
+<canvas id="linejg2">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

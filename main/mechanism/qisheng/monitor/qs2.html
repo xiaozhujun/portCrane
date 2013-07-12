@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var qsgd2;
+	$(document).ready(function(){
+		if (typeof(qsgd2)!="undefined") {
+			qsgd2.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		qsgd2 = new GraphDrawer("lineqs2", data);
+		qsgd2.drawGraph();
+		$("#lineqs2").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">锈蚀<img src="assets/toggle/red.png"></div>
+<canvas id="lineqs2">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
+	

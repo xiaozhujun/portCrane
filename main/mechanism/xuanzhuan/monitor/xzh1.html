@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	var xzhgd1;
+	$(document).ready(function(){
+		if (typeof(xzhgd1)!="undefined") {
+			xzhgd1.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		xzhgd1 = new GraphDrawer("linexzh1", data);
+		xzhgd1.drawGraph();
+		$("#linexzh1").click(function(){
+			window.open("monitor.html");
+		});
+	});
+</script>
+<div class="failureTitle">裂纹<img src="assets/toggle/green.png"></div>
+<canvas id="linexzh1">[No canvas support]</canvas>
+<div class="detectLink"><a href="">检测</a></div>
