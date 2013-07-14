@@ -1,20 +1,71 @@
+<script src="js/rgraph/libraries/RGraph.common.core.js" ></script>
+<script src="js/rgraph/libraries/RGraph.common.effects.js" ></script>
+<script src="js/rgraph/libraries/RGraph.line.js" ></script>
+
 <script type="text/javascript">
+	var gd1;
+	var gd2;
+	var gd3;
+	var gd4;
+	var gd5;
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		//$(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		$("#qs1").load("mechanism/qisheng/monitor/qs1.html");
-		$("#qs2").load("mechanism/qisheng/monitor/qs2.html");
-		$("#qs3").load("mechanism/qisheng/monitor/qs3.html");
-		$("#qs4").load("mechanism/qisheng/monitor/qs4.html");
-		$("#qs5").load("mechanism/qisheng/monitor/qs5.html");
+		if (typeof(gd1)!="undefined") {
+			gd1.stopDrawing();
+		};
+		if (typeof(gd2)!="undefined") {
+			gd2.stopDrawing();
+		};
+		if (typeof(gd3)!="undefined") {
+			gd3.stopDrawing();
+		};
+		if (typeof(gd4)!="undefined") {
+			gd4.stopDrawing();
+		};
+		if (typeof(gd5)!="undefined") {
+			gd5.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		gd1 = new GraphDrawer("lineqs1", data);
+		gd1.drawGraph();
+		gd2 = new GraphDrawer("lineqs2", data);
+		gd2.drawGraph();
+		gd3 = new GraphDrawer("lineqs3", data);
+		gd3.drawGraph();
+		gd4 = new GraphDrawer("lineqs4", data);
+		gd4.drawGraph();
+		gd5 = new GraphDrawer("lineqs5", data);
+		gd5.drawGraph();
+		// DrawGraph("lineqs1",data);
 	});
 </script>
 <div id="qishengFM" class="reversalInfoTable">
-	<div class="failureTable" id="qs1"></div>
-	<div class="failureTable" id="qs2"></div>
-	<div class="failureTable" id="qs3"></div>
-	<div class="failureTable" id="qs4"></div>
-	<div class="failureTable" id="qs5"></div>
+	<div class="failureTable">
+		<div class="failureTitle">磨损<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs1">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">锈蚀<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs2">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">裂纹<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs3">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">传动轴断裂<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs4">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">花键断裂<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs5">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
 </div>
 <div id="diaogouzuFM" class="reversalInfoTable">
 	<div class="rowDiv">
