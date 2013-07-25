@@ -6,7 +6,12 @@
 {
 	width: 100%;
 }
-.threeTabs .infoTab
+.threeTabs
 {
-	width: 33.2%;
+	width: 100%;
+}
+
+.infoTab
+{
+	width: 24.9%;
 }

@@ -17,8 +17,10 @@ String.prototype.endWith=function(s){
 
 function render (page) {
 	if (typeof(scope)=="undefined") {
+    //alert(domain + "/" + page + ".html");
   $("#"+page+"Content").load(domain + "/" + page + ".html");
   } else {
+    //alert(domain + "/" + scope + "/" + page + ".html");
   $("#"+page+"Content").load(domain + "/" + scope + "/" + page + ".html");
   }
 }

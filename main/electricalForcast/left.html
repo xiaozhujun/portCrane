@@ -1,0 +1,89 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    simpleTree($("#tree"));
+
+    $(".faultTree").click(function(event){
+      shownId=$(this).parent().attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+
+      $("#faultTreeContainer").show();
+      $("#monitorForcastContainer").hide();
+
+      render("faultTree");
+      //render("diagnosis");
+      //render("forecast");
+      
+      //$("#faultTreeContainer").load("mechanism/" + $(this).parent().parent().attr("scope") + "/faultTree.html");
+      event.stopPropagation();
+    });
+
+    $(".electricalForcast").click(function(event){
+
+      shownId=$(this).parent().attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+
+      $("#faultTreeContainer").hide();
+      $("#monitorForcastContainer").show();
+      
+      //render("faultTree");
+      render("diagnosis");
+      render("forecast");
+
+      //$("#diagnosisContent").load("mechanism/" + $(this).parent().parent().attr("scope") + "/diagnosis.html");
+      //$("#forecastContent").load("mechanism/" + $(this).parent().parent().attr("scope") + "/forecast.html");
+
+      event.stopPropagation();
+    });
+  });
+
+</script>
+
+<div id="tree" domain="mechanism">
+ <div class="treeItem" scope="qisheng">
+        <div class="itemTitle titleshow">
+          <div class="bullet menuSelected" id="qisheng">起升机构</div>
+        </div>
+        <div class="itemContent contentshow">
+          <div class="treeItem" id="qishengdiankong">
+            <div class="bullet faultTree">故障树</div>
+            <div class="bullet electricalForcast">故障监测</div>
+          </div>
+        </div>
+      </div>
+      <div class="treeItem" scope="bianfu">
+        <div class="itemTitle titleshow">
+          <div class="bullet" id="bianfu">变幅机构</div>
+        </div>
+        <div class="itemContent contentshow">
+          <div class="treeItem" id="bianfudiankong">
+            <div class="bullet faultTree">故障树</div>
+            <div class="bullet electricalForcast">故障监测</div>
+          </div>
+        </div>
+      </div>
+      <div class="treeItem" scope="xuanzhuan">
+        <div class="itemTitle titleshow">
+          <div class="bullet" id="xuanzhuan">旋转机构</div>
+        </div>
+        <div class="itemContent contentshow">
+          <div class="treeItem" id="xuanzhuandiankong">
+            <div class="bullet faultTree">故障树</div>
+            <div class="bullet electricalForcast">故障监测</div>
+          </div>
+        </div>
+      </div>
+      <div class="treeItem" scope="xingzou">
+        <div class="itemTitle titleshow">
+          <div class="bullet" id="xingzou">行走机构</div>
+        </div>
+        <div class="itemContent contentshow">
+          <div class="treeItem" id="xingzoudiankong">
+            <div class="bullet faultTree">故障树</div>
+            <div class="bullet electricalForcast">故障监测</div>
+          </div>
+        </div>
+      </div>
+
+</div>

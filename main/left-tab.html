@@ -1,6 +1,8 @@
   <link rel="stylesheet" href="css/headertabs.css" type="text/css">
   <script type="text/javascript">
     $(document).ready(function(){
+      $('#mainBodyDiv').load($(".mainselected").attr("url"));
+
       $('#headTab .tabItem').click(function(){
         $(".mainselected").removeClass("mainselected");
         $(this).addClass("mainselected");
@@ -9,11 +11,15 @@
     });
   </script> 
   <div id='headTab' class='tabs'>
-    <div class='tabItem' url="integrateManagement.html">设备信息管理</div>    
-    <div class='tabItem' url="inspectManagement.html">安全检验检测</div>
-    <div class='tabItem mainselected' url="health-forecast.html" class="mainselected"> 健康监测预报</div> 
+    <div class='tabItem' url="integrateManagement.html">港机信息可视化</div>   
+    <div class='tabItem' url="/elecKeyMonitor.html">安全监控管理</div>
+    <div class='tabItem' url="inspectManagement.html">港机智能点检</div>
+    <div class='tabItem mainselected' url="/mechanismForcast/health-forecast.html">机构健康监测</div>
+    <div class='tabItem ' url="/structForcast/health-forecast.html">结构健康监测</div>
+    <div class='tabItem' url="/electricalForcast/health-forecast.html">电气健康监测</div>
+    <div class='tabItem' url="/health-forecast.html">健康趋势预报</div>
     <div class='tabItem' url="maintainManagement.html">预知维修决策</div>
-    <div class='tabItem' url="risk-management.html">动态风险评估</div>    
+    <div class='tabItem' url="risk-management.html">动态风险评估</div>
   </div>
 
  

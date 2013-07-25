@@ -1,14 +1,20 @@
 body
 {
-	font-size: 24px;
+	font-size: 20px;
+}
+
+#mainContainer
+{
+	margin: 0 auto;
+	width: 1400px;
 }
 
 .categoryDiv
 {
 	float: left;
-	width: 19%;
-	height: 50%;
-	margin: 80 10 0 10;
+	width: 28%;
+	margin: 50 10 0 10;
+	height: 600px;
 	padding: 20;
 	border: dashed 2px #ccc;
 	background-color: #eee;
@@ -43,4 +49,15 @@ body
 	float: right;
 	margin: 10;
 	vertical-align: text-bottom;
+}
+
+.elecKeyMonitorDiv
+{
+	float: left;
+	width: 45%;
+	margin: 20 10 0 10;
+	height: 950px;
+	padding: 20;
+	border: dashed 2px #ccc;
+	background-color: #eee;
 }

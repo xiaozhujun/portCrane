@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="css/infotabs.css">
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#faultTreeContainer").hide();
+    $("#monitorForcastContainer").show();
+    $("#diagnosisContent").load("mechanism/qisheng/diagnosis.html");
+    $("#forecastContent").load("mechanism/qisheng/forecast.html");
+
+
+    $('#navDiv').load('mechanismForcast/left.html');
+
+    $('#mainTab .tabItem').click(function(){
+    	$(".containerselected").removeClass("containerselected");
+    	$(this).addClass("containerselected");
+      $("#"+$(this).attr("url")).show().siblings().hide();
+    });
+		$(".infoTab").mouseover(function(){
+			$(".currentInfoTab").removeClass("currentInfoTab");
+			$(this).addClass("currentInfoTab");
+			$("."+$(this).attr("cref")).show().siblings().hide();
+		});
+  });
+</script>
+<div id='navDiv'></div>
+<div id='contentDiv'>
+	<div id='faultTreeContainer'>
+		<div id='faultTreeContent'></div>
+	</div>
+
+	<div id='monitorForcastContainer'>
+		<div id='diagnosisDiv'>
+			<div id="diagnosisTitleDiv">损伤监测检测</div>
+			<div id='diagnosisContent'></div>
+		</div>
+		<div id='forecastDiv'>
+			<div id="forecastTitleDiv">健康预报</div>
+			<div id='forecastContent'></div>
+		</div>
+	</div>
+</div>

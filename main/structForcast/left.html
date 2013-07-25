@@ -1,0 +1,94 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    simpleTree($("#tree"));
+
+    $(".faultTree").click(function(event){
+      shownId=$(this).parent().attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+
+      $("#faultTreeContainer").show();
+      $("#monitorForcastContainer").hide();
+      
+      //$("#faultTreeContainer").load("structure/faultTree.html");
+
+      render("faultTree");
+
+      event.stopPropagation();
+    });
+
+    $(".monitorForcast").click(function(event){
+      shownId=$(this).parent().attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+
+      $("#faultTreeContainer").hide();
+      $("#monitorForcastContainer").show();
+      
+
+      //$("#diagnosisContent").load("structure/diagnosis.html");
+      //$("#forecastContent").load("structure/forecast.html");
+
+      render("diagnosis");
+      render("forecast");
+
+
+      event.stopPropagation();
+    });
+  });
+
+</script>
+
+<div id="tree" domain="structure">
+  <div class="treeItem">
+        <div class="itemTitle titleshow">
+          <div class="bullet">门架结构</div>
+        </div>
+        <div class="itemContent contentshow"  id="menjia">
+          <div class="bullet faultTree">失效模式</div>
+          <div class="bullet monitorForcast">健康监测预警</div>
+          <div class="bullet healthForcast">健康趋势预报</div>
+        </div>
+  </div>
+  <div class="treeItem">
+      <div class="itemTitle titleshow">
+          <div class="bullet">转盘结构</div>
+        </div>
+        <div class="itemContent contentshow"  id="zhuanpan">
+          <div class="bullet faultTree">失效模式</div>
+          <div class="bullet monitorForcast">健康监测预警</div>
+          <div class="bullet healthForcast">健康趋势预报</div>
+        </div>
+      </div>
+  <div class="treeItem">
+      <div class="itemTitle titleshow">
+          <div class="bullet">上转柱</div>
+        </div>
+        <div class="itemContent contentshow" id="shangzhuanzhu">
+          <div class="bullet faultTree">失效模式</div>
+          <div class="bullet monitorForcast">健康监测预警</div>
+          <div class="bullet healthForcast">健康趋势预报</div>
+        </div>
+  </div>
+  <div class="treeItem">
+      <div class="itemTitle titleshow">
+          <div class="bullet">平衡系统</div>
+        </div>
+        <div class="itemContent contentshow" id="pingheng">
+          <div class="bullet faultTree">失效模式</div>
+          <div class="bullet monitorForcast">健康监测预警</div>
+          <div class="bullet healthForcast">健康趋势预报</div>
+        </div>
+      </div>
+  <div class="treeItem">
+        <div class="itemTitle titleshow" id="bijia">
+          <div class="bullet">臂架系统</div>
+        </div>
+        <div class="itemContent contentshow">
+          <div class="bullet faultTree">失效模式</div>
+          <div class="bullet monitorForcast">健康监测预警</div>
+          <div class="bullet healthForcast">健康趋势预报</div>
+        </div>
+      </div>
+</div>
+

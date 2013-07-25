@@ -7,14 +7,29 @@
 #titleDiv
 {
 	float: left;
-	width: 80%;
+	width: 100%;
 	font-family: "微软雅黑";
 	font-weight: bold;
   font-size: 40px;
 	padding-top: 10px;
   padding-bottom: 10px;
-	text-align: right;
+	text-align: center;
+
 }
+
+#title2Div
+{
+	float: left;
+	width: 90%;
+	font-family: "微软雅黑";
+	font-weight: bold;
+  font-size: 30px;
+	padding-top: 10px;
+  padding-bottom: 10px;
+	text-align: right;
+	color: red;
+}
+
 #devNameDiv
 {
 	float: left;

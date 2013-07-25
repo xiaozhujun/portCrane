@@ -4,6 +4,7 @@ body {
 	background-image: url(../assets/login/port.jpg);
 }
 h1 {
+	margin-top: 50px;
 	text-align: center;
 	font-family: \534E\6587\7425\73C0;
 	font-size: 50px;
@@ -32,4 +33,12 @@ address {
 	font-family: \534E\6587\96B6\4E66;
 	color: #ffffff;
 	font-size: 20;
+}
+
+#enterDiv
+{
+	font-size:40px;
+	color: blue;
+	text-align: right;
+	
 }
