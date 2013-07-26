@@ -1,12 +1,101 @@
+<script type="text/javascript" src="js/go.js"></script>
 <script type="text/javascript">
+
+	go.Diagram.inherit(FlatTreeLayout, go.TreeLayout);
+
+    // This assumes the TreeLayout.angle is 90 -- growing downward
+    FlatTreeLayout.prototype.commitLayout = function() {
+      go.TreeLayout.prototype.commitLayout.call(this);  // call base method first
+      // find maximum Y position of all Nodes
+      var y = -Infinity;
+      var it = this.network.vertexes.iterator;
+      while (it.next()) {
+        var node = it.value.node;
+        y = Math.max(y, node.position.y);
+      }
+      // move down all leaf nodes to that Y position, but keeping their X position
+      it.reset();
+      while (it.next()) {
+        var node = it.value.node;
+        if (node.isTreeLeaf) {
+          node.position = new go.Point(node.position.x, y);
+         
+        }
+      }
+    };
+
 	$(document).ready(function(){
 		hierarchicalList($("#qishengFT"));
 		hierarchicalList($("#qishengdiankongFT"));
 		$("#"+shownId+"FT").show().siblings().hide();
+		init();
 	});
+
+	 function init() {
+      var $ = go.GraphObject.make;  // for conciseness in defining templates
+      myDiagram =
+        $(go.Diagram, "myDiagram",
+          { allowCopy: false,
+            allowDelete: false,
+            allowMove: false,
+            initialContentAlignment: go.Spot.Center});
+
+      myDiagram.nodeTemplate =
+        $(go.Node, "Vertical",
+          { selectionObjectName: "BODY" },
+          $(go.Panel, "Auto", { name: "BODY" },
+            $(go.Shape, "RoundedRectangle",
+              new go.Binding("fill"),
+              new go.Binding("stroke")),
+            $(go.TextBlock,
+              { font: "bold 12pt Arial", margin: new go.Margin(4, 2, 2, 2), stretch: go.GraphObject.Vertical,angle: 90},
+              new go.Binding("text"))),
+          $(go.Panel,  // this is underneath the "BODY"
+            { height: 15 },  // always this height, even if the TreeExpanderButton is not visible
+            $("TreeExpanderButton")));
+
+      myDiagram.linkTemplate =
+        $(go.Link,
+          $(go.Shape, { strokeWidth: 1.5 }));
+
+      myDiagram.layout =
+        $(FlatTreeLayout,
+          { angle: 90,
+            compaction: go.TreeLayout.CompactionNone });
+
+      load();
+    }
+
+
+    function load() {
+      var str = document.getElementById("mySavedModel").value;
+      myDiagram.model = go.Model.fromJson(str);
+      myDiagram.undoManager.isEnabled = true;
+    }
+
+    // Customize the TreeLayout to position all of the leaf nodes at the same vertical Y position.
+    function FlatTreeLayout() {
+      go.TreeLayout.call(this);  // call base constructor
+    }
+
 </script>
 <div id="qishengFaultTreeDiv">
 <div id="qishengFT">
+
+	<div id="sample">
+  <div id="myDiagram" style="border: 1px solid black; width: 100%; height: 800px; position: relative;"><canvas tabindex="0" height="800" width="500" style="position: absolute; top: 0px; left: 0px; z-index: 2; -moz-user-select: none;">This text is displayed if your browser does not support the Canvas HTML element.</canvas><div style="position: absolute; overflow: auto; width: 500; height: 600px; z-index: 1;"><div style="position: absolute; width: 1px; height: 1px;"></div></div><div style="position: absolute; overflow: auto; width: 500; height: 800px; z-index: 1;"><div style="position: absolute; width: 1px; height: 1px;"></div></div></div>
+
+  <textarea id="mySavedModel" style="width:100%;height:300px;display:none;">{
+  "class": "go.GraphLinksModel",
+  "nodeDataArray":[{"key":1,"text":"起升机构","fill":"#f68c06","stroke":"#4d90fe"},{"key":11,"text":"驱动装置","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":12,"text":"传动装置","fill":"#ccc","stroke":"#4d90fe"},{"key":13,"text":"取物装置","fill":"#ccc","stroke":"#4d90fe"},{"key":14,"text":"辅助装置","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":15,"text":"钢丝绳卷绕系统","fill":"#ccc","stroke":"#4d90fe"},{"key":111,"text":"电动机","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":121,"text":"减速机","fill":"#ccc","stroke":"#4d90fe"},{"key":122,"text":"高速联轴器","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":123,"text":"低速连接轴","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":124,"text":"制动盘","fill":"#ccc","stroke":"#4d90fe"},{"key":131,"text":"抓斗","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":132,"text":"制动器","fill":"#ccc","stroke":"#4d90fe"},{"key":141,"text":"起升限位器","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":142,"text":"负荷限位器","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":143,"text":"压绳器","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":151,"text":"钢丝绳","fill":"#ccc","stroke":"#4d90fe"},{"key":152,"text":"卷筒","fill":"#f8f8f8","stroke":"#4d90fe"},{"key":153,"text":"滑轮","fill":"#ccc","stroke":"#4d90fe"},{"key":1111,"text":"匝间绝缘失效","fill":"#f68c06","stroke":"#4d90fe"},{"key":1112,"text":"铸铝转子有断条或气孔","fill":"#f68c06","stroke":"#4d90fe"},{"key":1113,"text":"轴承失效、定转子间碰擦","fill":"#f68c06","stroke":"#4d90fe"},{"key":1211,"text":"轴断","fill":"#f68c06","stroke":"#4d90fe"},{"key":1212,"text":"齿断","fill":"#f68c06","stroke":"#4d90fe"},{"key":1213,"text":"齿面磨损","fill":"#f68c06","stroke":"#4d90fe"},{"key":1214,"text":"胶合","fill":"#f68c06","stroke":"#4d90fe"},{"key":1215,"text":"疲劳点蚀","fill":"#f68c06","stroke":"#4d90fe"},{"key":1216,"text":"传动轴断裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1217,"text":"花键断裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1218,"text":"塑性变形","fill":"#f68c06","stroke":"#4d90fe"},{"key":1221,"text":"齿面磨损","fill":"#f68c06","stroke":"#4d90fe"},{"key":1222,"text":"打滑","fill":"#f68c06","stroke":"#4d90fe"},{"key":1223,"text":"弹性元件失效","fill":"#f68c06","stroke":"#4d90fe"},{"key":1231,"text":"齿面磨损","fill":"#f68c06","stroke":"#4d90fe"},{"key":1232,"text":"打滑","fill":"#f68c06","stroke":"#4d90fe"},{"key":1233,"text":"弹性元件失效","fill":"#f68c06","stroke":"#4d90fe"},{"key":1241,"text":"磨损过量","fill":"#f68c06","stroke":"#4d90fe"},{"key":1242,"text":"制动力矩不足","fill":"#f68c06","stroke":"#4d90fe"},{"key":1311,"text":"破裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1312,"text":"磨损","fill":"#f68c06","stroke":"#4d90fe"},{"key":1313,"text":"变形","fill":"#f68c06","stroke":"#4d90fe"},{"key":1314,"text":"锈蚀","fill":"#f68c06","stroke":"#4d90fe"},{"key":1315,"text":"裂纹","fill":"#f68c06","stroke":"#4d90fe"},{"key":1321,"text":"轴断","fill":"#f68c06","stroke":"#4d90fe"},{"key":1322,"text":"齿断、齿面磨损、胶合、点蚀","fill":"#f68c06","stroke":"#4d90fe"},{"key":1323,"text":"传动轴断裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1324,"text":"花键断裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1325,"text":"液压缸漏油","fill":"#f68c06","stroke":"#4d90fe"},{"key":1326,"text":"推杆故障","fill":"#f68c06","stroke":"#4d90fe"},{"key":1327,"text":"制动不足","fill":"#f68c06","stroke":"#4d90fe"},{"key":1328,"text":"制动失灵","fill":"#f68c06","stroke":"#4d90fe"},{"key":1411,"text":"限位器失灵","fill":"#f68c06","stroke":"#4d90fe"},{"key":1421,"text":"限位器的压力传感器失灵","fill":"#f68c06","stroke":"#4d90fe"},{"key":1431,"text":"不能压紧钢丝绳","fill":"#f68c06","stroke":"#4d90fe"},{"key":1511,"text":"磨损","fill":"#f68c06","stroke":"#4d90fe"},{"key":1512,"text":"断股","fill":"#f68c06","stroke":"#4d90fe"},{"key":1513,"text":"变形","fill":"#f68c06","stroke":"#4d90fe"},{"key":1514,"text":"断裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1515,"text":"咬绳","fill":"#f68c06","stroke":"#4d90fe"},{"key":1516,"text":"锈蚀","fill":"#f68c06","stroke":"#4d90fe"},{"key":1517,"text":"疲劳","fill":"#f68c06","stroke":"#4d90fe"},{"key":1518,"text":"打结","fill":"#f68c06","stroke":"#4d90fe"},{"key":1521,"text":"变形","fill":"#f68c06","stroke":"#4d90fe"},{"key":1522,"text":"磨损","fill":"#f68c06","stroke":"#4d90fe"},{"key":1523,"text":"裂纹","fill":"#f68c06","stroke":"#4d90fe"},{"key":1524,"text":"穿孔","fill":"#f68c06","stroke":"#4d90fe"},{"key":1531,"text":"破裂","fill":"#f68c06","stroke":"#4d90fe"},{"key":1532,"text":"磨损","fill":"#f68c06","stroke":"#4d90fe"}
+],
+  "linkDataArray":[{"from":1,"to":11,"answer":""},{"from":1,"to":12,"answer":""},{"from":1,"to":13,"answer":""},{"from":1,"to":14,"answer":""},{"from":1,"to":15,"answer":""},{"from":11,"to":111,"answer":""},{"from":12,"to":121,"answer":""},{"from":12,"to":122,"answer":""},{"from":12,"to":123,"answer":""},{"from":12,"to":124,"answer":""},{"from":13,"to":131,"answer":""},{"from":13,"to":132,"answer":""},{"from":14,"to":141,"answer":""},{"from":14,"to":142,"answer":""},{"from":14,"to":143,"answer":""},{"from":15,"to":151,"answer":""},{"from":15,"to":152,"answer":""},{"from":15,"to":153,"answer":""},{"from":111,"to":1111,"answer":""},{"from":111,"to":1112,"answer":""},{"from":111,"to":1113,"answer":""},{"from":121,"to":1211,"answer":""},{"from":121,"to":1212,"answer":""},{"from":121,"to":1213,"answer":""},{"from":121,"to":1214,"answer":""},{"from":121,"to":1215,"answer":""},{"from":121,"to":1216,"answer":""},{"from":121,"to":1217,"answer":""},{"from":121,"to":1218,"answer":""},{"from":122,"to":1221,"answer":""},{"from":122,"to":1222,"answer":""},{"from":122,"to":1223,"answer":""},{"from":123,"to":1231,"answer":""},{"from":123,"to":1232,"answer":""},{"from":123,"to":1233,"answer":""},{"from":124,"to":1241,"answer":""},{"from":124,"to":1242,"answer":""},{"from":131,"to":1311,"answer":""},{"from":131,"to":1312,"answer":""},{"from":131,"to":1313,"answer":""},{"from":131,"to":1314,"answer":""},{"from":131,"to":1315,"answer":""},{"from":132,"to":1321,"answer":""},{"from":132,"to":1322,"answer":""},{"from":132,"to":1323,"answer":""},{"from":132,"to":1324,"answer":""},{"from":132,"to":1325,"answer":""},{"from":132,"to":1326,"answer":""},{"from":132,"to":1327,"answer":""},{"from":132,"to":1328,"answer":""},{"from":141,"to":1411,"answer":""},{"from":142,"to":1421,"answer":""},{"from":143,"to":1431,"answer":""},{"from":151,"to":1511,"answer":""},{"from":151,"to":1512,"answer":""},{"from":151,"to":1513,"answer":""},{"from":151,"to":1514,"answer":""},{"from":151,"to":1515,"answer":""},{"from":151,"to":1516,"answer":""},{"from":151,"to":1517,"answer":""},{"from":151,"to":1518,"answer":""},{"from":152,"to":1521,"answer":""},{"from":152,"to":1522,"answer":""},{"from":152,"to":1523,"answer":""},{"from":152,"to":1524,"answer":""},{"from":153,"to":1531,"answer":""},{"from":153,"to":1532,"answer":""}
+  ]
+}
+  </textarea>
+  </div>
+
+	<!--
 	<div class="listItem">
 		<div class="itemTitle"><div class="sn"></div>取物装置断裂</div>
 		<div class="itemContent">
@@ -22,6 +111,7 @@
 			<div class="bullet"><div class="sn"></div>花键断裂</div>
 		</div>
 	</div>
+	-->
 </div>
 <div id="diaogouzuFT">
 	
