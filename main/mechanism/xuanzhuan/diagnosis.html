@@ -1,57 +1,19 @@
 <script type="text/javascript">
-	var gd1,gd2,gd3,gd4,gd5,gd6,gd7,gd8,gd9,gd10,gd11,gd12,gd13,gd14,gd15,gd16,gd17;
+	var gd3,gd4,gd5;
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
-		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
 		if (typeof(gd3)!="undefined") {gd3.stopDrawing();};
 		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
 		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
-		if (typeof(gd6)!="undefined") {gd6.stopDrawing();};
-		if (typeof(gd7)!="undefined") {gd7.stopDrawing();};
-		if (typeof(gd8)!="undefined") {gd8.stopDrawing();};
-		if (typeof(gd9)!="undefined") {gd9.stopDrawing();};
-		if (typeof(gd10)!="undefined") {gd10.stopDrawing();};
-		if (typeof(gd11)!="undefined") {gd11.stopDrawing();};
-		if (typeof(gd12)!="undefined") {gd12.stopDrawing();};
-		if (typeof(gd13)!="undefined") {gd13.stopDrawing();};
-		if (typeof(gd14)!="undefined") {gd14.stopDrawing();};
-		if (typeof(gd15)!="undefined") {gd15.stopDrawing();};
-		if (typeof(gd16)!="undefined") {gd16.stopDrawing();};
-		if (typeof(gd17)!="undefined") {gd17.stopDrawing();};
-		gd1 = new GraphDrawer("linexzh1", data);gd1.drawGraph();
-		gd2 = new GraphDrawer("linexzh2", data);gd2.drawGraph();
 		gd3 = new GraphDrawer("linexzh3", data);gd3.drawGraph();
 		gd4 = new GraphDrawer("linexzh4", data);gd4.drawGraph();
 		gd5 = new GraphDrawer("linexzh5", data);gd5.drawGraph();
-		gd6 = new GraphDrawer("linexzh6", data);gd6.drawGraph();
-		gd7 = new GraphDrawer("linexzh7", data);gd7.drawGraph();
-		gd8 = new GraphDrawer("linexzh8", data);gd8.drawGraph();
-		gd9 = new GraphDrawer("linexzh9", data);gd9.drawGraph();
-		gd10 = new GraphDrawer("linexzh10", data);gd10.drawGraph();
-		gd11 = new GraphDrawer("linexzh11", data);gd11.drawGraph();
-		gd12 = new GraphDrawer("linexzh12", data);gd12.drawGraph();
-		gd13 = new GraphDrawer("linexzh13", data);gd13.drawGraph();
-		gd14 = new GraphDrawer("linexzh14", data);gd14.drawGraph();
-		gd15 = new GraphDrawer("linexzh15", data);gd15.drawGraph();
-		gd16 = new GraphDrawer("linexzh16", data);gd16.drawGraph();
-		gd17 = new GraphDrawer("linexzh17", data);gd17.drawGraph();
 	});
 </script>
 <div id="xuanzhuanFM" class="reversalInfoTable">
 </div>
 <div id="huizhuandianjiFM" class="reversalInfoTable">
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-尾端X<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh1">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-尾端Y<img src="assets/toggle/red.png"></div>
-		<canvas id="linexzh2">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
 	<div class="failureTable">
 		<div class="failureTitle">回转电机-轴端X<img src="assets/toggle/red.png"></div>
 		<canvas id="linexzh3">[No canvas support]</canvas>
@@ -67,39 +29,9 @@
 		<canvas id="linexzh5">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-联轴器X<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh6">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-联轴器Y<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh7">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-小齿轮与大齿轮啮合位置X1<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh8">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-小齿轮与大齿轮啮合位置Y1<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh9">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-小齿轮与大齿轮啮合位置X2<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh10">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
-	<div class="failureTable">
-		<div class="failureTitle">回转电机-小齿轮与大齿轮啮合位置Y2<img src="assets/toggle/green.png"></div>
-		<canvas id="linexzh11">[No canvas support]</canvas>
-		<div class="detectLink"><a href="">检测</a></div>
-	</div>
 </div>
 <div id="huizhuanzhichengFM" class="reversalInfoTable">
-	<div class="failureTable">
+	<!-- <div class="failureTable">
 		<div class="failureTitle">回转支承-环焊缝12点方向<img src="assets/toggle/green.png"></div>
 		<canvas id="linexzh12">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
@@ -118,10 +50,10 @@
 		<div class="failureTitle">回转支承-环焊缝9点方向<img src="assets/toggle/green.png"></div>
 		<canvas id="linexzh15">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-	</div>
+	</div> -->
 </div>
 <div id="huizhuanzhouchengFM" class="reversalInfoTable">
-	<div class="failureTable">
+	<!-- <div class="failureTable">
 		<div class="failureTitle">回转轴承-轴承根部X<img src="assets/toggle/green.png"></div>
 		<canvas id="linexzh16">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
@@ -130,7 +62,7 @@
 		<div class="failureTitle">回转轴承-轴承根部Z<img src="assets/toggle/red.png"></div>
 		<canvas id="linexzh17">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-	</div>
+	</div> -->
 </div>
 <div id="xuanzhuandiankongFM" class="reversalInfoTable">
 	<div class="rowDiv">

@@ -1,9 +1,11 @@
 <script type="text/javascript">
   $(document).ready(function(){
     simpleTree($("#mTree"));
+    $("#monitorForcastContainer").hide();
 
     $(".faultTree .itemContent .bullet").click(function(event){
-      shownId=$(this).attr("scope");
+      shownId=$(this).attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
       $("#faultTreeContainer").show();
@@ -18,7 +20,8 @@
     });
 
     $(".monitorForcast .itemContent .bullet").click(function(event){
-      shownId=$(this).attr("scope");
+      shownId=$(this).attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
       $("#faultTreeContainer").hide();
@@ -56,28 +59,28 @@
     </div>
     <div class="itemContent contentShow">
       <div class="treeItem">
-        <div class="itemTitle">门架结构</div>
-        <div class="itemContent">
+        <div class="itemTitle titleShow">门架结构</div>
+        <div class="itemContent contentShow">
           <div class="bullet" id="hanfeng1">焊缝</div>
           <div class="bullet" id="luoshuan">螺栓</div>
         </div>
       </div>
       <div class="treeItem">
-        <div class="itemTitle">转盘结构</div>
-        <div class="itemContent">
+        <div class="itemTitle titleShow">转盘结构</div>
+        <div class="itemContent contentShow">
           <div class="bullet" id="hanfeng2">焊缝</div>
         </div>
       </div>
       <div class="treeItem">
-        <div class="itemTitle">上转柱(人字架)</div>
-        <div class="itemContent">
+        <div class="itemTitle titleShow">上转柱(人字架)</div>
+        <div class="itemContent contentShow">
           <div class="bullet" id="hanfeng3">焊缝</div>
           <div class="bullet" id="zhizuozhoucheng">支座轴承</div>
         </div>
       </div>
       <div class="treeItem">
-        <div class="itemTitle">主臂架</div>
-        <div class="itemContent">
+        <div class="itemTitle titleShow">主臂架</div>
+        <div class="itemContent contentShow">
           <div class="bullet" id="zhubijia">整体结构关键位置</div>
         </div>
       </div>
