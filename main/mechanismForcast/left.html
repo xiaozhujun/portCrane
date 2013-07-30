@@ -2,9 +2,9 @@
   $(document).ready(function(){
     simpleTree($("#mTree"));
 
+
     $(".faultTree .itemContent .bullet").click(function(event){
-      shownId=$(this).attr("id");
-      scope=$(this).parents("[scope]").attr("scope");
+      scope=shownId=$(this).attr("id");
       domain=$(this).parents("[domain]").attr("domain");
 
       $("#faultTreeContainer").show();
@@ -42,13 +42,13 @@
 <div id="mTree" domain="mechanism">
       <div class="treeItem faultTree">
         <div class="itemTitle titleShow">
-          <div class="bullet menuSelected">失效树</div>
+          <div class="bullet">失效树</div>
         </div>
         <div class="itemContent contentShow">
-          <div class="bullet" scope="qisheng">起升机构</div>
-          <div class="bullet" scope="bianfu">变幅机构</div>
-          <div class="bullet" scope="xuanzhuan">旋转机构</div>
-          <div class="bullet" scope="xingzou">行走机构</div>
+          <div class="bullet" scope="qisheng" id="qisheng">起升机构</div>
+          <div class="bullet" scope="bianfu" id="bianfu">变幅机构</div>
+          <div class="bullet" scope="xuanzhuan" id="xuanzhuan">旋转机构</div>
+          <div class="bullet" scope="xingzou" id="xingzou">行走机构</div>
         </div>
       </div>
       <div class="treeItem monitorForcast">
@@ -59,7 +59,7 @@
           <div class="treeItem" scope="qisheng">
             <div class="itemTitle titleShow">起升机构</div>
             <div class="itemContent contentShow">
-              <div class="bullet" id="zhidongqi">制动器</div>
+              <div class="bullet menuSelected" id="zhidongqi">制动器</div>
               <div class="bullet" id="qudongzhudianji">驱动主电机</div>
               <div class="bullet" id="jiansuji">减速机</div>
               <div class="bullet" id="gangsisheng">钢丝绳</div>

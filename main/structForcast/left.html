@@ -1,15 +1,13 @@
 <script type="text/javascript">
   $(document).ready(function(){
     simpleTree($("#mTree"));
-    $("#monitorForcastContainer").hide();
 
     $(".faultTree .itemContent .bullet").click(function(event){
       shownId=$(this).attr("id");
-      scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
-      $("#faultTreeContainer").show();
-      $("#monitorForcastContainer").hide();
+      $("#faultTreeContainer1").show();
+      $("#monitorForcastContainer1").hide();
 
       render("faultTree");
       //render("diagnosis");
@@ -24,8 +22,8 @@
       scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
-      $("#faultTreeContainer").hide();
-      $("#monitorForcastContainer").show();
+      $("#faultTreeContainer1").hide();
+      $("#monitorForcastContainer1").show();
       
       //render("faultTree");
       render("diagnosis");
@@ -43,14 +41,14 @@
 <div id="mTree" domain="structure">
   <div class="treeItem faultTree">
     <div class="itemTitle titleShow">
-      <div class="bullet menuSelected">失效树</div>
+      <div class="bullet">失效树</div>
     </div>
     <div class="itemContent contentShow">
-      <div class="bullet" scope="menjia">门架结构</div>
-      <div class="bullet" scope="zhuanpan">转盘结构</div>
-      <div class="bullet" scope="shangzhuanzhu">上转柱</div>
-      <div class="bullet" scope="pingheng">平衡系统</div>
-      <div class="bullet" scope="bijia">臂架系统</div>
+      <div class="bullet" id="menjia">门架结构</div>
+      <div class="bullet" id="zhuanpan">转盘结构</div>
+      <div class="bullet" id="shangzhuanzhu">上转柱</div>
+      <div class="bullet" id="pinghang">平衡系统</div>
+      <div class="bullet" id="bijia">臂架系统</div>
     </div>
   </div>
   <div class="treeItem monitorForcast">
@@ -61,7 +59,7 @@
       <div class="treeItem">
         <div class="itemTitle titleShow">门架结构</div>
         <div class="itemContent contentShow">
-          <div class="bullet" id="hanfeng1">焊缝</div>
+          <div class="bullet menuSelected" id="hanfeng1">焊缝</div>
           <div class="bullet" id="luoshuan">螺栓</div>
         </div>
       </div>

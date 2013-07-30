@@ -1,11 +1,13 @@
 <link rel="stylesheet" type="text/css" href="css/infotabs.css">
 <script type="text/javascript">
   $(document).ready(function(){
-    $("#faultTreeContainer").hide();
-    $("#monitorForcastContainer").show();
+    shownId="hanfeng1";
+    domain="structure";
     $("#diagnosisContent").load("structure/diagnosis.html");
     // $("#forecastContent").load("structure/qisheng/forecast.html");
 
+    $("#faultTreeContainer1").hide();
+    $("#monitorForcastContainer1").show();
 
     $('#navDiv').load('structForcast/left.html');
 
@@ -23,11 +25,11 @@
 </script>
 <div id='navDiv'></div>
 <div id='contentDiv'>
-	<div id='faultTreeContainer'>
+	<div id='faultTreeContainer1'>
 		<div id='faultTreeContent'></div>
 	</div>
 
-	<div id='monitorForcastContainer'>
+	<div id='monitorForcastContainer1'>
 		<div id='diagnosisDiv'>
 			<!-- <div id="diagnosisTitleDiv">损伤监测检测</div> -->
 			<div id='diagnosisContent'></div>
