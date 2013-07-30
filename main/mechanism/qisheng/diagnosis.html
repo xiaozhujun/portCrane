@@ -3,378 +3,239 @@
 <script src="js/rgraph/libraries/RGraph.line.js" ></script>
 
 <script type="text/javascript">
-	var gd1;
-	var gd2;
-	var gd3;
-	var gd4;
-	var gd5;
+	var gd1,gd2,gd3,gd4,gd5,gd6,gd7,gd8,gd9,gd10,gd11,gd12,gd13,gd14,gd15,gd16,gd17,gd18,gd19,gd20,gd21,gd22,gd23,gd24,gd25,gd26,gd27,gd28,gd29,gd30;
+	// var gdList = new Array(30);
+	var data = RGraph.array_pad([], 60);
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
-		//$(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		if (typeof(gd1)!="undefined") {
-			gd1.stopDrawing();
-		};
-		if (typeof(gd2)!="undefined") {
-			gd2.stopDrawing();
-		};
-		if (typeof(gd3)!="undefined") {
-			gd3.stopDrawing();
-		};
-		if (typeof(gd4)!="undefined") {
-			gd4.stopDrawing();
-		};
-		if (typeof(gd5)!="undefined") {
-			gd5.stopDrawing();
-		};
-		var data = RGraph.array_pad([], 60);
-		gd1 = new GraphDrawer("lineqs1", data);
-		gd1.drawGraph();
-		gd2 = new GraphDrawer("lineqs2", data);
-		gd2.drawGraph();
-		gd3 = new GraphDrawer("lineqs3", data);
-		gd3.drawGraph();
-		gd4 = new GraphDrawer("lineqs4", data);
-		gd4.drawGraph();
-		gd5 = new GraphDrawer("lineqs5", data);
-		gd5.drawGraph();
-		// DrawGraph("lineqs1",data);
+		// for (var i = 0; i < gdList.length; i++) {
+		// 	if (gdList[i]!=null) {
+		// 		gdList[i].stopDrawing();
+		// 	};
+		// 	gdList[i] = new GraphDrawer("lineqs"+(i+1), data);
+		// 	gdList[i].drawGraph();
+		// };
+		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
+		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
+		if (typeof(gd3)!="undefined") {gd3.stopDrawing();};
+		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
+		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
+		if (typeof(gd6)!="undefined") {gd6.stopDrawing();};
+		if (typeof(gd7)!="undefined") {gd7.stopDrawing();};
+		if (typeof(gd8)!="undefined") {gd8.stopDrawing();};
+		if (typeof(gd9)!="undefined") {gd9.stopDrawing();};
+		if (typeof(gd10)!="undefined") {gd10.stopDrawing();};
+		if (typeof(gd11)!="undefined") {gd11.stopDrawing();};
+		if (typeof(gd12)!="undefined") {gd12.stopDrawing();};
+		if (typeof(gd13)!="undefined") {gd13.stopDrawing();};
+		if (typeof(gd14)!="undefined") {gd14.stopDrawing();};
+		if (typeof(gd15)!="undefined") {gd15.stopDrawing();};
+		if (typeof(gd16)!="undefined") {gd16.stopDrawing();};
+		if (typeof(gd17)!="undefined") {gd17.stopDrawing();};
+		if (typeof(gd18)!="undefined") {gd18.stopDrawing();};
+		if (typeof(gd19)!="undefined") {gd19.stopDrawing();};
+		if (typeof(gd20)!="undefined") {gd20.stopDrawing();};
+		if (typeof(gd21)!="undefined") {gd21.stopDrawing();};
+		if (typeof(gd22)!="undefined") {gd22.stopDrawing();};
+		if (typeof(gd23)!="undefined") {gd23.stopDrawing();};
+		if (typeof(gd24)!="undefined") {gd24.stopDrawing();};
+		if (typeof(gd25)!="undefined") {gd25.stopDrawing();};
+		if (typeof(gd26)!="undefined") {gd26.stopDrawing();};
+		if (typeof(gd27)!="undefined") {gd27.stopDrawing();};
+		if (typeof(gd28)!="undefined") {gd28.stopDrawing();};
+		if (typeof(gd29)!="undefined") {gd29.stopDrawing();};
+		if (typeof(gd30)!="undefined") {gd30.stopDrawing();};
+		gd1 = new GraphDrawer("lineqs1", data);gd1.drawGraph();
+		gd2 = new GraphDrawer("lineqs2", data);gd2.drawGraph();
+		gd3 = new GraphDrawer("lineqs3", data);gd3.drawGraph();
+		gd4 = new GraphDrawer("lineqs4", data);gd4.drawGraph();
+		gd5 = new GraphDrawer("lineqs5", data);gd5.drawGraph();
+		gd6 = new GraphDrawer("lineqs6", data);gd6.drawGraph();
+		gd7 = new GraphDrawer("lineqs7", data);gd7.drawGraph();
+		gd8 = new GraphDrawer("lineqs8", data);gd8.drawGraph();
+		gd9 = new GraphDrawer("lineqs9", data);gd9.drawGraph();
+		gd10 = new GraphDrawer("lineqs10", data);gd10.drawGraph();
+		gd11 = new GraphDrawer("lineqs11", data);gd11.drawGraph();
+		gd12 = new GraphDrawer("lineqs12", data);gd12.drawGraph();
+		gd13 = new GraphDrawer("lineqs13", data);gd13.drawGraph();
+		gd14 = new GraphDrawer("lineqs14", data);gd14.drawGraph();
+		gd15 = new GraphDrawer("lineqs15", data);gd15.drawGraph();
+		gd16 = new GraphDrawer("lineqs16", data);gd16.drawGraph();
+		gd17 = new GraphDrawer("lineqs17", data);gd17.drawGraph();
+		gd18 = new GraphDrawer("lineqs18", data);gd18.drawGraph();
+		gd19 = new GraphDrawer("lineqs19", data);gd19.drawGraph();
+		gd20 = new GraphDrawer("lineqs20", data);gd20.drawGraph();
+		gd21 = new GraphDrawer("lineqs21", data);gd21.drawGraph();
+		gd22 = new GraphDrawer("lineqs22", data);gd22.drawGraph();
+		gd23 = new GraphDrawer("lineqs23", data);gd23.drawGraph();
+		gd24 = new GraphDrawer("lineqs24", data);gd24.drawGraph();
+		gd25 = new GraphDrawer("lineqs25", data);gd25.drawGraph();
+		gd26 = new GraphDrawer("lineqs26", data);gd26.drawGraph();
+		gd27 = new GraphDrawer("lineqs27", data);gd27.drawGraph();
+		gd28 = new GraphDrawer("lineqs28", data);gd28.drawGraph();
+		gd29 = new GraphDrawer("lineqs29", data);gd29.drawGraph();
+		gd30 = new GraphDrawer("lineqs30", data);gd30.drawGraph();
 	});
 </script>
 <div id="qishengFM" class="reversalInfoTable">
+</div>
+<div id="zhidongqiFM" class="reversalInfoTable">
 	<div class="failureTable">
-		<div class="failureTitle">磨损<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">制动器-位置1<img src="assets/toggle/green.png"></div>
 		<canvas id="lineqs1">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">锈蚀<img src="assets/toggle/red.png"></div>
+		<div class="failureTitle">制动器-位置2<img src="assets/toggle/red.png"></div>
 		<canvas id="lineqs2">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">裂纹<img src="assets/toggle/red.png"></div>
+		<div class="failureTitle">制动器-位置3<img src="assets/toggle/red.png"></div>
 		<canvas id="lineqs3">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">传动轴断裂<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">制动器-位置4<img src="assets/toggle/green.png"></div>
 		<canvas id="lineqs4">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
+</div>
+<div id="qudongzhudianjiFM" class="reversalInfoTable">
 	<div class="failureTable">
-		<div class="failureTitle">花键断裂<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">驱动主电机-位置X1<img src="assets/toggle/green.png"></div>
 		<canvas id="lineqs5">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-</div>
-<div id="diaogouzuFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">破裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">锈蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">驱动主电机-位置Y1<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs6">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="zhuadouFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">破裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">锈蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">驱动主电机-位置Z1<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs7">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="jizhuangxiangdiaojuFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">破裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">锈蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">驱动主电机-位置X2<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs8">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="juantongFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">穿孔</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">驱动主电机-位置Y2<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs9">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">驱动主电机-位置Z2<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs10">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+</div>
+<div id="jiansujiFM" class="reversalInfoTable">
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置1<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs11">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置2<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs12">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置3<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs13">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置4<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs14">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置5<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs15">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置6<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs16">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置7<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs17">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置8<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs18">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置9<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs19">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-位置10<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs20">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
 </div>
 <div id="gangsishengFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">断股</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">咬绳</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">锈蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">疲劳</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">打结</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-卷筒支撑轴承X1<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs21">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="hualunFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">破裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-卷筒支撑轴承Y1<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs22">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="diandongjiFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">匝间绝缘失效</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">铸铝</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">轴承失效</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">定转子间碰擦</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-卷筒支撑轴承Z1<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs23">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="zhidongqiFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">轴断</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">齿断</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">齿面磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">胶合</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">点蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">传动轴断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">花键断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">液压缸漏油</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">推杆故障</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">制动不足</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">制动失灵</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">制动器打不开</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-卷筒支撑轴承X2<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs24">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="jiansuqiFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">轴断</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">齿断</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">齿面磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">胶合</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">疲劳点蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">传动轴断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">花键断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">塑性变形</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-卷筒支撑轴承Y2<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs25">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="juantong1FM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-卷筒支撑轴承Z2<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs26">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="lianzhouqiFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">齿面磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">打滑</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">弹性元件失效</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-S轮1<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs27">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-S轮2<img src="assets/toggle/red.png"></div>
+		<canvas id="lineqs28">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-S轮3<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs29">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">钢丝绳-S轮4<img src="assets/toggle/green.png"></div>
+		<canvas id="lineqs30">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
 </div>
 <div id="qishengdiankongFM" class="reversalInfoTable">
 	<div class="rowDiv">

@@ -1,248 +1,250 @@
 <script type="text/javascript">
-	var gd1;
-	var gd2;
-	var gd3;
-	var gd4;
-	var gd5;
+	var gd1,gd2,gd3,gd4,gd5,gd6,gd7,gd8,gd9,gd10,gd11,gd12,gd13,gd14,gd15,gd16,gd17,gd18,gd19,gd20,gd21,gd22,gd23,gd24,gd25,gd26,gd27,gd28,gd29,gd30,gd31,gd32,gd33;
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		if (typeof(gd1)!="undefined") {
-			gd1.stopDrawing();
-		};
-		if (typeof(gd2)!="undefined") {
-			gd2.stopDrawing();
-		};
-		if (typeof(gd3)!="undefined") {
-			gd3.stopDrawing();
-		};
-		if (typeof(gd4)!="undefined") {
-			gd4.stopDrawing();
-		};
-		if (typeof(gd5)!="undefined") {
-			gd5.stopDrawing();
-		};
-		var data = RGraph.array_pad([], 60);
-		gd1 = new GraphDrawer("linebf1", data);
-		gd1.drawGraph();
-		gd2 = new GraphDrawer("linebf2", data);
-		gd2.drawGraph();
-		gd3 = new GraphDrawer("linebf3", data);
-		gd3.drawGraph();
-		gd4 = new GraphDrawer("linebf4", data);
-		gd4.drawGraph();
-		gd5 = new GraphDrawer("linebf5", data);
-		gd5.drawGraph();
+		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
+		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
+		if (typeof(gd3)!="undefined") {gd3.stopDrawing();};
+		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
+		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
+		if (typeof(gd6)!="undefined") {gd6.stopDrawing();};
+		if (typeof(gd7)!="undefined") {gd7.stopDrawing();};
+		if (typeof(gd8)!="undefined") {gd8.stopDrawing();};
+		if (typeof(gd9)!="undefined") {gd9.stopDrawing();};
+		if (typeof(gd10)!="undefined") {gd10.stopDrawing();};
+		if (typeof(gd11)!="undefined") {gd11.stopDrawing();};
+		if (typeof(gd12)!="undefined") {gd12.stopDrawing();};
+		if (typeof(gd13)!="undefined") {gd13.stopDrawing();};
+		if (typeof(gd14)!="undefined") {gd14.stopDrawing();};
+		if (typeof(gd15)!="undefined") {gd15.stopDrawing();};
+		if (typeof(gd16)!="undefined") {gd16.stopDrawing();};
+		if (typeof(gd17)!="undefined") {gd17.stopDrawing();};
+		if (typeof(gd18)!="undefined") {gd18.stopDrawing();};
+		if (typeof(gd19)!="undefined") {gd19.stopDrawing();};
+		if (typeof(gd20)!="undefined") {gd20.stopDrawing();};
+		if (typeof(gd21)!="undefined") {gd21.stopDrawing();};
+		if (typeof(gd22)!="undefined") {gd22.stopDrawing();};
+		if (typeof(gd23)!="undefined") {gd23.stopDrawing();};
+		if (typeof(gd24)!="undefined") {gd24.stopDrawing();};
+		if (typeof(gd25)!="undefined") {gd25.stopDrawing();};
+		if (typeof(gd26)!="undefined") {gd26.stopDrawing();};
+		if (typeof(gd27)!="undefined") {gd27.stopDrawing();};
+		if (typeof(gd28)!="undefined") {gd28.stopDrawing();};
+		if (typeof(gd29)!="undefined") {gd29.stopDrawing();};
+		if (typeof(gd30)!="undefined") {gd30.stopDrawing();};
+		if (typeof(gd31)!="undefined") {gd31.stopDrawing();};
+		if (typeof(gd32)!="undefined") {gd32.stopDrawing();};
+		if (typeof(gd33)!="undefined") {gd33.stopDrawing();};
+		gd1 = new GraphDrawer("linebf1", data);gd1.drawGraph();
+		gd2 = new GraphDrawer("linebf2", data);gd2.drawGraph();
+		gd3 = new GraphDrawer("linebf3", data);gd3.drawGraph();
+		gd4 = new GraphDrawer("linebf4", data);gd4.drawGraph();
+		gd5 = new GraphDrawer("linebf5", data);gd5.drawGraph();
+		gd6 = new GraphDrawer("linebf6", data);gd6.drawGraph();
+		gd7 = new GraphDrawer("linebf7", data);gd7.drawGraph();
+		gd8 = new GraphDrawer("linebf8", data);gd8.drawGraph();
+		gd9 = new GraphDrawer("linebf9", data);gd9.drawGraph();
+		gd10 = new GraphDrawer("linebf10", data);gd10.drawGraph();
+		gd11 = new GraphDrawer("linebf11", data);gd11.drawGraph();
+		gd12 = new GraphDrawer("linebf12", data);gd12.drawGraph();
+		gd13 = new GraphDrawer("linebf13", data);gd13.drawGraph();
+		gd14 = new GraphDrawer("linebf14", data);gd14.drawGraph();
+		gd15 = new GraphDrawer("linebf15", data);gd15.drawGraph();
+		gd16 = new GraphDrawer("linebf16", data);gd16.drawGraph();
+		gd17 = new GraphDrawer("linebf17", data);gd17.drawGraph();
+		gd18 = new GraphDrawer("linebf18", data);gd18.drawGraph();
+		gd19 = new GraphDrawer("linebf19", data);gd19.drawGraph();
+		gd20 = new GraphDrawer("linebf20", data);gd20.drawGraph();
+		gd21 = new GraphDrawer("linebf21", data);gd21.drawGraph();
+		gd22 = new GraphDrawer("linebf22", data);gd22.drawGraph();
+		gd23 = new GraphDrawer("linebf23", data);gd23.drawGraph();
+		gd24 = new GraphDrawer("linebf24", data);gd24.drawGraph();
+		gd25 = new GraphDrawer("linebf25", data);gd25.drawGraph();
+		gd26 = new GraphDrawer("linebf26", data);gd26.drawGraph();
+		gd27 = new GraphDrawer("linebf27", data);gd27.drawGraph();
+		gd28 = new GraphDrawer("linebf28", data);gd28.drawGraph();
+		gd29 = new GraphDrawer("linebf29", data);gd29.drawGraph();
+		gd30 = new GraphDrawer("linebf30", data);gd30.drawGraph();
+		gd31 = new GraphDrawer("linebf31", data);gd31.drawGraph();
+		gd32 = new GraphDrawer("linebf32", data);gd32.drawGraph();
+		gd33 = new GraphDrawer("linebf33", data);gd33.drawGraph();
 	});
 </script>
 <div id="bianfuFM" class="reversalInfoTable">
+</div>
+<div id="jiansuji1FM" class="reversalInfoTable">
 	<div class="failureTable">
-		<div class="failureTitle">裂纹<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">减速机-高速轴内侧X<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf1">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">断裂<img src="assets/toggle/red.png"></div>
+		<div class="failureTitle">减速机-高速轴内侧Y<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf2">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">局部失稳<img src="assets/toggle/red.png"></div>
+		<div class="failureTitle">减速机-高速轴内侧Z<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf3">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">传动轴断裂<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">减速机-高速轴外侧X<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf4">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="failureTable">
-		<div class="failureTitle">花键断裂<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">减速机-高速轴外侧Y<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf5">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-</div>
-<div id="huanchongFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">破裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">锈蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-高速轴外侧Z<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf6">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="shengsuoFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">破裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">锈蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-地脚1<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf7">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="chitiaoFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">折齿</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">点蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">胶合</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-地脚2<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf8">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="luoganFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">穿孔</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-地脚3<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf9">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="yeyaFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">轴断</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">齿断</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">齿面磨损</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">胶合</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">点蚀</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">传动轴断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">花键断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">液压缸漏油</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">推杆故障</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">制动不足</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">制动失灵</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">制动器打不开</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-地脚4<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf10">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
-</div>
-<div id="bijiaFM" class="reversalInfoTable">
-	<div class="rowDiv">
-		<div class="firstInfoName">监测状态</div>
-		<div class="firstInfoData">故障模式</div>
 	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/red.png"></div>
-		<div class="infoData">裂纹</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">变形</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">断裂</div>
-	</div>
-	<div class="rowDiv">
-		<div class="infoName"><img src="assets/toggle/green.png"></div>
-		<div class="infoData">弯折</div>
-	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-低速轴内侧X<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf11">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-低速轴内侧Y<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf12">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-低速轴内侧Z<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf13">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-低速轴外侧X<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf14">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-低速轴外侧Y<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf15">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-低速轴外侧Z<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf16">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">减速机-减速机油窗上侧<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf17">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+</div>
+<div id="chitiaozhouchengFM" class="reversalInfoTable">
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-上压轮12点方向<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf18">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-上压轮6点方向<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf19">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-#1下压轮12点方向<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf20">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-#1压轮6点方向<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf21">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-#2下压轮12点方向<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf22">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-#2压轮6点方向<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf23">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-驱动轮12点方向<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf24">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-驱动轮3点方向<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf25">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-驱动轮6点方向<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf26">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">齿条轴承-驱动轮9点方向<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf27">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+</div>
+<div id="bianfudianjiFM" class="reversalInfoTable">
+	<div class="failureTable">
+		<div class="failureTitle">变幅电机-尾端X<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf28">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">变幅电机-尾端Y<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf29">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">变幅电机-轴端X<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf30">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">变幅电机-轴端Y<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf31">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+</div>
+<div id="gaosuzhidongqiFM" class="reversalInfoTable">
+	<div class="failureTable">
+		<div class="failureTitle">高速制动器-传动轴输入X<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf32">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">高速制动器-传动轴输入Y<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf33">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
 </div>
 <div id="bianfudiankongFM" class="reversalInfoTable">
 	<div class="rowDiv">

@@ -1,37 +1,35 @@
 <script type="text/javascript">
   $(document).ready(function(){
-    simpleTree($("#tree"));
+    simpleTree($("#mTree"));
 
-    $(".faultTree").click(function(event){
-      shownId=$(this).parent().attr("id");
-      scope=$(this).parents("[scope]").attr("scope");
+    $(".faultTree .itemContent .bullet").click(function(event){
+      shownId=$(this).attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
       $("#faultTreeContainer").show();
       $("#monitorForcastContainer").hide();
-      
-      //$("#faultTreeContainer").load("structure/faultTree.html");
 
       render("faultTree");
-
+      //render("diagnosis");
+      //render("forecast");
+      
+      //$("#faultTreeContainer").load("mechanism/" + $(this).parent().parent().attr("scope") + "/faultTree.html");
       event.stopPropagation();
     });
 
-    $(".monitorForcast").click(function(event){
-      shownId=$(this).parent().attr("id");
-      scope=$(this).parents("[scope]").attr("scope");
+    $(".monitorForcast .itemContent .bullet").click(function(event){
+      shownId=$(this).attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
       $("#faultTreeContainer").hide();
       $("#monitorForcastContainer").show();
       
-
-      //$("#diagnosisContent").load("structure/diagnosis.html");
-      //$("#forecastContent").load("structure/forecast.html");
-
+      //render("faultTree");
       render("diagnosis");
-      render("forecast");
+      // render("forecast");
 
+      //$("#diagnosisContent").load("mechanism/" + $(this).parent().parent().attr("scope") + "/diagnosis.html");
+      //$("#forecastContent").load("mechanism/" + $(this).parent().parent().attr("scope") + "/forecast.html");
 
       event.stopPropagation();
     });
@@ -39,56 +37,50 @@
 
 </script>
 
-<div id="tree" domain="structure">
-  <div class="treeItem">
-        <div class="itemTitle titleshow">
-          <div class="bullet">门架结构</div>
-        </div>
-        <div class="itemContent contentshow"  id="menjia">
-          <div class="bullet faultTree">失效模式</div>
-          <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
-        </div>
+<div id="mTree" domain="structure">
+  <div class="treeItem faultTree">
+    <div class="itemTitle titleShow">
+      <div class="bullet menuSelected">失效树</div>
+    </div>
+    <div class="itemContent contentShow">
+      <div class="bullet" scope="menjia">门架结构</div>
+      <div class="bullet" scope="zhuanpan">转盘结构</div>
+      <div class="bullet" scope="shangzhuanzhu">上转柱</div>
+      <div class="bullet" scope="pingheng">平衡系统</div>
+      <div class="bullet" scope="bijia">臂架系统</div>
+    </div>
   </div>
-  <div class="treeItem">
-      <div class="itemTitle titleshow">
-          <div class="bullet">转盘结构</div>
-        </div>
-        <div class="itemContent contentshow"  id="zhuanpan">
-          <div class="bullet faultTree">失效模式</div>
-          <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
+  <div class="treeItem monitorForcast">
+    <div class="itemTitle titleShow">
+      <div class="bullet">健康监测预警</div>
+    </div>
+    <div class="itemContent contentShow">
+      <div class="treeItem">
+        <div class="itemTitle">门架结构</div>
+        <div class="itemContent">
+          <div class="bullet" id="hanfeng1">焊缝</div>
+          <div class="bullet" id="luoshuan">螺栓</div>
         </div>
       </div>
-  <div class="treeItem">
-      <div class="itemTitle titleshow">
-          <div class="bullet">上转柱</div>
+      <div class="treeItem">
+        <div class="itemTitle">转盘结构</div>
+        <div class="itemContent">
+          <div class="bullet" id="hanfeng2">焊缝</div>
         </div>
-        <div class="itemContent contentshow" id="shangzhuanzhu">
-          <div class="bullet faultTree">失效模式</div>
-          <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
+      </div>
+      <div class="treeItem">
+        <div class="itemTitle">上转柱(人字架)</div>
+        <div class="itemContent">
+          <div class="bullet" id="hanfeng3">焊缝</div>
+          <div class="bullet" id="zhizuozhoucheng">支座轴承</div>
         </div>
+      </div>
+      <div class="treeItem">
+        <div class="itemTitle">主臂架</div>
+        <div class="itemContent">
+          <div class="bullet" id="zhubijia">整体结构关键位置</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="treeItem">
-      <div class="itemTitle titleshow">
-          <div class="bullet">平衡系统</div>
-        </div>
-        <div class="itemContent contentshow" id="pingheng">
-          <div class="bullet faultTree">失效模式</div>
-          <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
-        </div>
-      </div>
-  <div class="treeItem">
-        <div class="itemTitle titleshow" id="bijia">
-          <div class="bullet">臂架系统</div>
-        </div>
-        <div class="itemContent contentshow">
-          <div class="bullet faultTree">失效模式</div>
-          <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
-        </div>
-      </div>
 </div>
-

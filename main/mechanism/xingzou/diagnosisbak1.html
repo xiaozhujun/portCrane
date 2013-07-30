@@ -1,0 +1,202 @@
+<script type="text/javascript">
+	var gd1;
+	var gd2;
+	var gd3;
+	var gd4;
+	var gd5;
+	$(document).ready(function(){
+		$("#"+shownId+"FM").show().siblings().hide();
+		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
+		if (typeof(gd1)!="undefined") {
+			gd1.stopDrawing();
+		};
+		if (typeof(gd2)!="undefined") {
+			gd2.stopDrawing();
+		};
+		if (typeof(gd3)!="undefined") {
+			gd3.stopDrawing();
+		};
+		if (typeof(gd4)!="undefined") {
+			gd4.stopDrawing();
+		};
+		if (typeof(gd5)!="undefined") {
+			gd5.stopDrawing();
+		};
+		var data = RGraph.array_pad([], 60);
+		gd1 = new GraphDrawer("linexz1", data);
+		gd1.drawGraph();
+		gd2 = new GraphDrawer("linexz2", data);
+		gd2.drawGraph();
+		gd3 = new GraphDrawer("linexz3", data);
+		gd3.drawGraph();
+		gd4 = new GraphDrawer("linexz4", data);
+		gd4.drawGraph();
+		gd5 = new GraphDrawer("linexz5", data);
+		gd5.drawGraph();
+	});
+</script>
+<div id="xingzouFM" class="reversalInfoTable">
+	<div class="failureTable">
+		<div class="failureTitle" style="font-size:19">夹轨器齿轮失效夹轨器齿轮失效<img src="assets/toggle/green.png"></div>
+		<canvas id="linexz1">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">弹簧失效<img src="assets/toggle/red.png"></div>
+		<canvas id="linexz2">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">油缸漏油<img src="assets/toggle/red.png"></div>
+		<canvas id="linexz3">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle">缓冲器弹簧失效、推杆失效<img src="assets/toggle/green.png"></div>
+		<canvas id="linexz4">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="failureTable">
+		<div class="failureTitle" style="font-size:19">行程限位器连杆失效、弹簧失效<img src="assets/toggle/green.png"></div>
+		<canvas id="linexz5">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+</div>
+<div id="yuandongjiFM" class="reversalInfoTable">
+	<div class="rowDiv">
+		<div class="firstInfoName">监测状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.png"></div>
+		<div class="infoData">匝间绝缘失效</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">铸铝转子有断条或气孔</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">轴承失效</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">定转子间碰擦</div>
+	</div>
+		<div class="detectLink"><a href="">检测</a></div>
+</div>
+<div id="zhidongqi1FM" class="reversalInfoTable">
+	<div class="rowDiv">
+		<div class="firstInfoName">监测状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">轴断</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">齿断</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">齿面磨损</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">胶合</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.png"></div>
+		<div class="infoData">点蚀</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">传动轴断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">花键断裂</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">液压缸漏油</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">推杆故障</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">制动不足</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">制动失灵</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">制动器打不开</div>
+	</div>
+		<div class="detectLink"><a href="">检测</a></div>
+</div>
+<div id="lianzhouqi1FM" class="reversalInfoTable">
+	<div class="rowDiv">
+		<div class="firstInfoName">监测状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+		<div class="detectLink"><a href="">检测</a></div>
+</div>
+<div id="chuandongzhuangzhiFM" class="reversalInfoTable">
+	<div class="rowDiv">
+		<div class="firstInfoName">监测状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+		<div class="detectLink"><a href="">检测</a></div>
+</div>
+<div id="zhichengzhuangzhiFM" class="reversalInfoTable">
+	<div class="rowDiv">
+		<div class="firstInfoName">监测状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.png"></div>
+		<div class="infoData">裂纹</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">变形</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">啃道</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">下陷</div>
+	</div>
+		<div class="detectLink"><a href="">检测</a></div>
+</div>
+<div id="xingzoudiankongFM" class="reversalInfoTable">
+	<div class="rowDiv">
+		<div class="firstInfoName">监测状态</div>
+		<div class="firstInfoData">故障模式</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/green.png"></div>
+		<div class="infoData">拨行走开关车不动</div>
+	</div>
+	<div class="rowDiv">
+		<div class="infoName"><img src="assets/toggle/red.png"></div>
+		<div class="infoData">行走不加速，车跑不动</div>
+	</div>
+		<div class="detectLink"><a href="">检测</a></div>
+</div>

@@ -64,6 +64,16 @@
 	overflow-x:hidden;
 }
 
+#diagnosisDiv
+{
+	border-top: solid 1px #ccc;
+}
+
+#diagnosisContent
+{
+	height: 100%;
+}
+
 #modelContent
 {
 	text-align: center;
@@ -91,7 +101,7 @@
 #diagnosisDiv,#forecastDiv
 {
 	width: 100%;
-	height: 49.6%;
+	height: 100%;
 }
 
 #modelTitleDiv,#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv

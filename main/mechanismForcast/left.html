@@ -1,9 +1,9 @@
 <script type="text/javascript">
   $(document).ready(function(){
-    simpleTree($("#tree"));
+    simpleTree($("#mTree"));
 
-    $(".faultTree").click(function(event){
-      shownId=$(this).parent().attr("id");
+    $(".faultTree .itemContent .bullet").click(function(event){
+      shownId=$(this).attr("id");
       scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
@@ -18,9 +18,8 @@
       event.stopPropagation();
     });
 
-    $(".monitorForcast").click(function(event){
-
-      shownId=$(this).parent().attr("id");
+    $(".monitorForcast .itemContent .bullet").click(function(event){
+      shownId=$(this).attr("id");
       scope=$(this).parents("[scope]").attr("scope");
       domain=$(this).parents("[domain]").attr("domain");
 
@@ -29,7 +28,7 @@
       
       //render("faultTree");
       render("diagnosis");
-      render("forecast");
+      // render("forecast");
 
       //$("#diagnosisContent").load("mechanism/" + $(this).parent().parent().attr("scope") + "/diagnosis.html");
       //$("#forecastContent").load("mechanism/" + $(this).parent().parent().attr("scope") + "/forecast.html");
@@ -40,45 +39,49 @@
 
 </script>
 
-<div id="tree" domain="mechanism">
-  <div class="treeItem" scope="qisheng">
-        <div class="itemTitle titleshow">
-          <div class="bullet menuSelected">起升机构</div>
+<div id="mTree" domain="mechanism">
+      <div class="treeItem faultTree">
+        <div class="itemTitle titleShow">
+          <div class="bullet menuSelected">失效树</div>
         </div>
-        <div id="qisheng" class="itemContent contentshow">
-           <div class="bullet faultTree">失效模式</div>
-           <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
-        </div>
-      </div>
-      <div class="treeItem" scope="xuanzhuan">
-        <div class="itemTitle titleshow">
-          <div class="bullet">旋转机构</div>
-        </div>
-        <div id="xuanzhuan" class="itemContent contentshow">
-           <div class="bullet faultTree">失效模式</div>
-           <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
+        <div class="itemContent contentShow">
+          <div class="bullet" scope="qisheng">起升机构</div>
+          <div class="bullet" scope="bianfu">变幅机构</div>
+          <div class="bullet" scope="xuanzhuan">旋转机构</div>
+          <div class="bullet" scope="xingzou">行走机构</div>
         </div>
       </div>
-      <div class="treeItem" scope="bianfu">
-        <div class="itemTitle titleshow">
-          <div class="bullet">变幅机构</div>
+      <div class="treeItem monitorForcast">
+        <div class="itemTitle titleShow">
+          <div class="bullet">健康监测预警</div>
         </div>
-        <div id="bianfu" class="itemContent contentshow">
-           <div class="bullet faultTree">失效模式</div>
-           <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
-        </div>
-      </div>
-      <div class="treeItem" scope="xingzou">
-        <div class="itemTitle titleshow">
-          <div class="bullet">行走机构</div>
-        </div>
-        <div id="xingzou" class="itemContent contentshow">
-           <div class="bullet faultTree">失效模式</div>
-           <div class="bullet monitorForcast">健康监测预警</div>
-          <div class="bullet healthForcast">健康趋势预报</div>
+        <div class="itemContent contentShow">
+          <div class="treeItem" scope="qisheng">
+            <div class="itemTitle">起升机构</div>
+            <div class="itemContent">
+              <div class="bullet" id="zhidongqi">制动器</div>
+              <div class="bullet" id="qudongzhudianji">驱动主电机</div>
+              <div class="bullet" id="jiansuji">减速机</div>
+              <div class="bullet" id="gangsisheng">钢丝绳</div>
+            </div>
+          </div>
+          <div class="treeItem" scope="bianfu">
+            <div class="itemTitle">变幅机构</div>
+            <div class="itemContent">
+              <div class="bullet" id="jiansuji1">减速机</div>
+              <div class="bullet" id="chitiaozhoucheng">齿条轴承</div>
+              <div class="bullet" id="bianfudianji">变幅电机</div>
+              <div class="bullet" id="gaosuzhidongqi">高速制动器</div>
+            </div>
+          </div>
+          <div class="treeItem" scope="xuanzhuan">
+            <div class="itemTitle">回转机构</div>
+            <div class="itemContent">
+              <div class="bullet" id="huizhuandianji">回转电机</div>
+              <div class="bullet" id="huizhuanzhicheng">回转支承</div>
+              <div class="bullet" id="huizhuanzhoucheng">回转轴承</div>
+            </div>
+          </div>
         </div>
       </div>
 </div>
