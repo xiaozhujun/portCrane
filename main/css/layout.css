@@ -104,7 +104,7 @@
 	height: 100%;
 }
 
-#modelTitleDiv,#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv
+#faultTreeTitleDiv,#diagnosisTitleDiv,#forecastTitleDiv
 {
 	float: left;
 	text-align: left;

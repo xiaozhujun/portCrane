@@ -6,23 +6,27 @@
 		$("#baseinfoContent").load("mechanism/qisheng/baseinfo.html");
     $('#structNavDiv').load('left.html');
 
-    $(".infoTab").mouseover(function(){
-			$(".currentInfoTab").removeClass("currentInfoTab");
-			$(this).addClass("currentInfoTab");
-			$("."+$(this).attr("cref")).show().siblings().hide();
-		});
+  //   $(".infoTab").mouseover(function(){
+		// 	$(".currentInfoTab").removeClass("currentInfoTab");
+		// 	$(this).addClass("currentInfoTab");
+		// 	$("."+$(this).attr("cref")).show().siblings().hide();
+		// });
   });
 </script>
 <div id='structNavDiv'></div>
 <div id='contentDiv'>
 	<div id="modelDiv">
+		<div id="modelTitleDiv">
+			<div class="infoTab">模型</div>
+			<div class='infoTab'>图纸</div>
+		</div>
 		<div id="modelContent"></div>
 	</div>
 
 	<div id="baseinfoDiv">
 		<div id="baseinfoTitleDiv">
-			<div class="infoTab currentInfoTab" cref="information" id="information1">基本信息</div>
-			<div class='infoTab' cref="parameter">基本参数</div>
+			<div class="infoTab">基本信息</div>
+			<div class='infoTab'>基本参数</div>
 		</div>
 		<div id="baseinfoContent"></div>
 	</div>

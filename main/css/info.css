@@ -11,6 +11,37 @@
 	margin-left: 10;
 	margin-right: 10; 
 }
+.information
+{
+	float: left;
+	width: 50%;
+}
+.parameter
+{
+	margin-left: 5px; 
+	float: left;
+	width: 48%;
+}
+.information img,.parameter img
+{
+	width: 90%;
+}
+
+.figure
+{
+	float: left;
+	width: 50%;
+}
+.draft
+{
+	margin-left: 5px; 
+	float: left;
+	width: 48%;
+}
+.figure img,.draft img
+{
+	width: 90%;
+}
 .failureTitle
 {
 	width: 90%;
