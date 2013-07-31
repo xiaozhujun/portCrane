@@ -46,7 +46,7 @@
 	height: 100%;
 }
 
-#modelDiv,#baseinfoDiv,#faultTreeDiv,#diagnosisDiv,#forecastDiv
+#modelDiv,#baseinfoDiv,#faultTreeDiv,#diagnosisDiv
 {
 	float: left;
 	margin: 2;
@@ -64,12 +64,12 @@
 	overflow-x:hidden;
 }
 
-#diagnosisDiv
+#diagnosisDiv,#forecastDiv
 {
-	border-top: solid 1px #ccc;
+	border: solid 1px #ccc;
 }
 
-#diagnosisContent
+#diagnosisContent,#forecastContent
 {
 	height: 100%;
 }

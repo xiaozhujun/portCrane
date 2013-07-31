@@ -36,7 +36,7 @@
 }
 .reversalInfoTable .infoName,.reversalInfoTable .firstInfoName
 {
-	margin-right: 1em;
+	margin-right: 1px;
 	float: right;
 	width: 30%;
 	height: 17px;
@@ -53,5 +53,5 @@
 .reversalInfoTable .infoData,.reversalInfoTable .firstInfoData
 {
 	float: right;
-	width: 60%;
+	width: 68.7%;
 }
