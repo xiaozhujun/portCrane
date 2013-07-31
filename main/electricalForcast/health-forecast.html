@@ -1,10 +1,12 @@
 <link rel="stylesheet" type="text/css" href="css/infotabs.css">
 <script type="text/javascript">
   $(document).ready(function(){
-    $("#faultTreeContainer").hide();
-    $("#monitorForcastContainer").show();
-    $("#diagnosisContent").load("mechanism/qisheng/diagnosis.html");
-    $("#forecastContent").load("mechanism/qisheng/forecast.html");
+    $("#faultTreeContainer2").hide();
+    $("#monitorForcastContainer2").show();
+    shownId="qswufaqidong";
+    scope="qisheng";
+    domain="electricity";
+    $("#forecastContent").load("electricity/qisheng/forecast.html");
 
 
     $('#navDiv').load('electricalForcast/left.html');
@@ -23,17 +25,12 @@
 </script>
 <div id='navDiv'></div>
 <div id='contentDiv'>
-	<div id='faultTreeContainer'>
+	<div id='faultTreeContainer2'>
 		<div id='faultTreeContent'></div>
 	</div>
 
-	<div id='monitorForcastContainer'>
-		<div id='diagnosisDiv'>
-			<div id="diagnosisTitleDiv">损伤监测检测</div>
-			<div id='diagnosisContent'></div>
-		</div>
+	<div id='monitorForcastContainer2'>
 		<div id='forecastDiv'>
-			<div id="forecastTitleDiv">健康预报</div>
 			<div id='forecastContent'></div>
 		</div>
 	</div>

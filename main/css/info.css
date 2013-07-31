@@ -58,13 +58,25 @@
 	width: 21;
 	height: 21;
 }
+.bullet img
+{
+	float: left;
+	width: 16;
+	height: 16;
+	margin-top: 3.5px;
+	/*margin-right: 6em;*/
+}
 .failureTable
 {
 	margin: 5px;
 	padding-bottom: 20;
 	float: left;
 	width: 32%;
-	background-color: #eee
+	background-color: #eee;
+}
+#forecastContent .failureTable
+{
+	height: 200;
 }
 .failureTable canvas
 {
