@@ -23,16 +23,18 @@
 	width: 90%;
 	font-family: "微软雅黑";
 	font-weight: bold;
-  font-size: 30px;
+  	font-size: 30px;
 	padding-top: 10px;
-  padding-bottom: 10px;
+  	padding-bottom: 10px;
 	text-align: right;
 	color: red;
 }
 
 #devNameDiv
 {
-	float: left;
-	margin: 2.5em 0 0 2.5em;
+	
 	font-family: "楷体";
+	font-weight: bold;
+  	font-size: 25px;
 }
+

@@ -25,15 +25,14 @@
   <body>
     <script type="text/javascript">
       $(document).ready(function(){
-        $("#devNameDiv").html(decodeURI($.getUrlVar("devName")));
+        $("#devNameDiv").html("--"+decodeURI($.getUrlVar("devName")));
         shownId="qisheng";
         $('#mainHeadDiv').load('left-tab.html');
       });
      </script>
     <div id='mainContainer'>
       <div id='titleContainerDiv'>
-        <div id="titleDiv">港口起重机械健康监测与预报可视化系统</div>
-        <div id="devNameDiv"></div>
+        <div id="titleDiv">港口起重机械健康监测与预报可视化系统<span id="devNameDiv"></span></div>
       </div>
       <div id='mainHeadDiv'></div>
       <div id='mainBodyDiv'></div>
