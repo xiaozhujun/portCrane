@@ -1,6 +1,14 @@
 .bullet
 {
 	cursor: pointer;
+	white-space:nowrap; 
+	overflow:hidden; 
+	width: 12em;
+}
+.bullet:hover
+{
+	text-overflow:ellipsis;
+	overflow:visible;
 }
 .itemTitle
 {
