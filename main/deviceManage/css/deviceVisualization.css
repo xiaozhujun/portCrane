@@ -1,0 +1,25 @@
+#structNavDiv
+{
+	float: left;
+	height: 100%;
+	width:30%;
+	border:solid 1px #eee;
+}
+
+#contentDiv
+{
+	float: left;
+	width: 69%;
+	height: 100%;
+}
+
+#modelDiv {
+    border-top: 1px solid #CCCCCC;
+    height: 49%;
+    width: 99%;
+}
+
+#baseinfoDiv {
+    height: 50%;
+    width: 99%;
+}
