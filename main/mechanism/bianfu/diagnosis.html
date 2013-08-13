@@ -1,8 +1,10 @@
 <script type="text/javascript">
-	var gd4,gd5,gd6,gd7,gd14,gd15,gd16,gd17,gd18,gd19,gd20,gd21,gd22,gd23,gd24,gd30,gd31,gd32,gd33;
+	var gd1,gd2,gd4,gd5,gd6,gd7,gd14,gd15,gd16,gd17,gd18,gd19,gd20,gd21,gd22,gd23,gd24,gd30,gd31,gd32,gd33;
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
+		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
+		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
 		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
 		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
 		if (typeof(gd6)!="undefined") {gd6.stopDrawing();};
@@ -22,6 +24,8 @@
 		if (typeof(gd31)!="undefined") {gd31.stopDrawing();};
 		if (typeof(gd32)!="undefined") {gd32.stopDrawing();};
 		if (typeof(gd33)!="undefined") {gd33.stopDrawing();};
+		gd1 = new GraphDrawer("linebf1", data);gd1.drawGraph();
+		gd2 = new GraphDrawer("linebf2", data);gd2.drawGraph();
 		gd4 = new GraphDrawer("linebf4", data);gd4.drawGraph();
 		gd5 = new GraphDrawer("linebf5", data);gd5.drawGraph();
 		gd6 = new GraphDrawer("linebf6", data);gd6.drawGraph();
@@ -45,109 +49,111 @@
 </script>
 <div id="bianfuFM" class="reversalInfoTable">
 </div>
-<div id="jiansuji1FM" class="reversalInfoTable">
-	<div class="failureTable">
-		<div class="failureTitle">高速轴外侧X<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="gaosuzhouxFM">
+		<div class="failureTitle">高速轴外侧X向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf4">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">高速轴外侧Y<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="gaosuzhouyFM">
+		<div class="failureTitle">高速轴外侧Y向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf5">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">高速轴外侧Z<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="gaosuzhouzFM">
+		<div class="failureTitle">高速轴外侧Z向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf6">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">地脚1<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="dijiaoFM">
+		<div class="failureTitle">高速轴地脚1振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf7">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">低速轴外侧X<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="disuzhouxFM">
+		<div class="failureTitle">低速轴外侧X向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf14">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">低速轴外侧Y<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="disuzhouyFM">
+		<div class="failureTitle">低速轴外侧Y向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf15">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">低速轴外侧Z<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="disuzhouzFM">
+		<div class="failureTitle">低速轴外侧Z向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf16">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">减速机油窗上侧<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="youchuangFM">
+		<div class="failureTitle">减速机油窗上侧温度监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf17">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-</div>
-<div id="chitiaozhouchengFM" class="reversalInfoTable">
-	<div class="failureTable">
-		<div class="failureTitle">上压轮12点方向<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="shangyalun12FM">
+		<div class="failureTitle">上压轮12点方向应力监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf18">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">上压轮6点方向<img src="assets/toggle/red.png"></div>
+	<div class="canvasDiv" id="shangyalun6FM">
+		<div class="failureTitle">上压轮6点方向应力监测<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf19">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">#1下压轮12点方向<img src="assets/toggle/red.png"></div>
+	<div class="canvasDiv" id="1xiayalun12FM">
+		<div class="failureTitle">1#下压轮12点方向应力监测<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf20">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">#1压轮6点方向<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="1xiayalun6FM">
+		<div class="failureTitle">1#压轮6点方向应力监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf21">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">#2下压轮12点方向<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="2xiayalun12FM">
+		<div class="failureTitle">2#下压轮12点方向应力监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf22">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">#2压轮6点方向<img src="assets/toggle/red.png"></div>
+	<div class="canvasDiv" id="2xiayalun6FM">
+		<div class="failureTitle">2#压轮6点方向应力监测<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf23">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">驱动轮12点方向<img src="assets/toggle/red.png"></div>
+	<div class="canvasDiv" id="qudonglunyingliFM">
+		<div class="failureTitle">驱动轮12点方向应力监测<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf24">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-</div>
-<div id="bianfudianjiFM" class="reversalInfoTable">
-	<div class="failureTable">
-		<div class="failureTitle">轴端X<img src="assets/toggle/red.png"></div>
+	<div class="canvasDiv" id="qudonglunzhendongFM">
+		<div class="failureTitle">驱动轮12点方向振动监测<img src="assets/toggle/red.png"></div>
+		<canvas id="linebf1">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="canvasDiv" id="zhouduanxFM">
+		<div class="failureTitle">轴端 X向振动监测<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf30">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">轴端Y<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="zhouduanyFM">
+		<div class="failureTitle">轴端 Y向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf31">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-</div>
-<div id="gaosuzhidongqiFM" class="reversalInfoTable">
-	<div class="failureTable">
-		<div class="failureTitle">传动轴输入X<img src="assets/toggle/green.png"></div>
+	<div class="canvasDiv" id="zhouduanzFM">
+		<div class="failureTitle">轴端 Z向振动监测<img src="assets/toggle/green.png"></div>
+		<canvas id="linebf2">[No canvas support]</canvas>
+		<div class="detectLink"><a href="">检测</a></div>
+	</div>
+	<div class="canvasDiv" id="chuandongzhouxFM">
+		<div class="failureTitle">传动轴输入X 向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linebf32">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-	<div class="failureTable">
-		<div class="failureTitle">传动轴输入Y<img src="assets/toggle/red.png"></div>
+	<div class="canvasDiv" id="chuandongzhouyFM">
+		<div class="failureTitle">传动轴输入Y 向振动监测<img src="assets/toggle/red.png"></div>
 		<canvas id="linebf33">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
-</div>
 <div id="bianfudiankongFM" class="reversalInfoTable">
 	<div class="rowDiv">
 		<div class="firstInfoName">监测状态</div>

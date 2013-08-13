@@ -80,13 +80,26 @@
 {
 	height: 200;
 }
-.failureTable canvas
-{
-	width: 100%;
-}
 .detectLink
 {
 	float: right;
 	margin-right: 1em;
 	margin-top: 0.5em;
+}
+.canvasDiv
+{
+	margin: 5px;
+	padding-bottom: 20;
+	float: left;
+	width: 90%;
+	background-color: #eee;
+}
+
+.canvasDiv canvas
+{
+	width: 100%;
+}
+.canvasDiv .failureTitle
+{
+	width: 96.3%;
 }
