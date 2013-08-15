@@ -16,11 +16,11 @@
 		  r    = RGraph.random(20,55);
 		  data = [r].concat(data);
 		  data.pop();
-		  this.timer = setInterval(this.drawGraph, 1000);
+		  // this.timer = setInterval(this.drawGraph, 1000);
 	  };
-	  this.stopDrawing = function(){
-	  	clearInterval(this.timer);
-	  };
+	  // this.stopDrawing = function(){
+	  // 	clearInterval(this.timer);
+	  // };
 	}
 
 

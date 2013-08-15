@@ -2,9 +2,10 @@
 	var gd1,gd2,gd3,gd4,gd5,gd6,gd7,gd11,gd12,gd13,gd14,gd15,gd16,gd17,gd18,gd19,gd21,gd22,gd23,gd24,gd25,gd26,gd27,gd28,gd29,gd30;
 	// var gdList = new Array(30);
 	var data = RGraph.array_pad([], 60);
+	var timer;
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
-		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
+		if (typeof(gd1)!="undefined") {clearInterval(timer);};
 		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
 		if (typeof(gd3)!="undefined") {gd3.stopDrawing();};
 		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
@@ -31,6 +32,7 @@
 		if (typeof(gd29)!="undefined") {gd29.stopDrawing();};
 		if (typeof(gd30)!="undefined") {gd30.stopDrawing();};
 		gd1 = new GraphDrawer("lineqs1", data);gd1.drawGraph();
+		timer = setInterval(gd1.drawGraph, 1000);
 		gd2 = new GraphDrawer("lineqs2", data);gd2.drawGraph();
 		gd3 = new GraphDrawer("lineqs3", data);gd3.drawGraph();
 		gd4 = new GraphDrawer("lineqs4", data);gd4.drawGraph();
