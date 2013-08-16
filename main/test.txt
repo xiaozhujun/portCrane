@@ -1,0 +1,6 @@
+[{"sensor":"zd000001","timestamp":1376544300000,"values":[{"type":"zhendong","value":1.0}]},
+	{"sensor":"zd000001","timestamp":1376544360000,"values":[{"type":"zhendong","value":4.0}]},
+	{"sensor":"zd000001","timestamp":1376544420000,"values":[{"type":"zhendong","value":7.0}]},
+	{"sensor":"zd000001","timestamp":1376544480000,"values":[{"type":"zhendong","value":10.0}]},
+	{"sensor":"zd000001","timestamp":1376544540000,"values":[{"type":"zhendong","value":13.0}]},
+	{"sensor":"zd000001","timestamp":1376544600000,"values":[{"type":"zhendong","value":16.0}]}]
