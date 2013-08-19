@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    var gd100;
+    var sensorValue1 = [];
+    var time1 = 0;
+    var dataArr1 = RGraph.array_pad([], 60);
+    var popLen1 = 0;
+        
+    $(document).ready(function(){
+        if (typeof(gd100)!="undefined") {
+            gd100.stopDrawing();
+            clearInterval(token1);
+            sensorValue1 = [];
+            dataArr1 = RGraph.array_pad([], 60);
+
+        };
+        gd100 = new RealGraphDrawer1("lineqs1", dataArr1);
+        gd100.drawGraph();
+        token1 = setInterval(function(){
+            $.ajax({
+                url:"http://localhost:8080/portmessageserver/sensors/sensor/zd000001/"+time1+".htm",
+                dataType:'jsonp',
+                data:'',
+                jsonp:'callback',
+                success: function(data) {
+                    sensorValue1 = [];
+                    for (var i = 0; i < data.length; i++) {
+                        sensorValue1 = sensorValue1.concat(data[i].values[0].value);
+                        time1 = data[i].timestamp;
+                    };
+                    popLen1 = data.length;
+                }
+            });
+        }, 1000);
+    });
+</script>
+    <div class="canvasDiv">
+        <div class="failureTitle">行程帽1行程位移监测<img src="assets/toggle/green.png"></div>
+        <canvas id="lineqs1" width="650" height="300">[No canvas support]</canvas>
+        <div class="detectLink"><a href="">检测</a></div>
+    </div>

@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    var gd200;
+    var sensorValue2 = [];
+    var time2 = 0;
+    var dataArr2 = RGraph.array_pad([], 60);
+    var popLen2 = 0;
+        
+    $(document).ready(function(){
+        if (typeof(gd200)!="undefined") {
+            gd200.stopDrawing();
+        };
+        gd200 = new RealGraphDrawer2("linebf1", dataArr2);
+        gd200.drawGraph();
+        token2 = setInterval(function(){
+            $.ajax({
+                url:"http://localhost:8080/portmessageserver/sensors/sensor/zd000002/"+time2+".htm",
+                dataType:'jsonp',
+                data:'',
+                jsonp:'callback',
+                success: function(data) {
+                    sensorValue2 = [];
+                    for (var i = 0; i < data.length; i++) {
+                        sensorValue2 = sensorValue2.concat(data[i].values[0].value);
+                        time2 = data[i].timestamp;
+                    };
+                    popLen2 = data.length;
+                }
+            });
+        }, 1000);
+    });
+</script>
+    <div class="canvasDiv">
+        <div class="failureTitle">高速轴外侧X向振动监测<img src="assets/toggle/green.png"></div>
+        <canvas id="linebf1" width="650" height="300">[No canvas support]</canvas>
+        <div class="detectLink"><a href="">检测</a></div>
+    </div>

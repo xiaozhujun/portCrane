@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    var gd300;
+    var sensorValue3 = [];
+    var time3 = 0;
+    var dataArr3 = RGraph.array_pad([], 60);
+    var popLen3 = 0;
+        
+    $(document).ready(function(){
+        if (typeof(gd300)!="undefined") {
+            gd300.stopDrawing();
+        };
+        gd300 = new RealGraphDrawer3("linejg1", dataArr3);
+        gd300.drawGraph();
+        token3 = setInterval(function(){
+            $.ajax({
+                url:"http://localhost:8080/portmessageserver/sensors/sensor/wd000001/"+time3+".htm",
+                dataType:'jsonp',
+                data:'',
+                jsonp:'callback',
+                success: function(data) {
+                    sensorValue3 = [];
+                    for (var i = 0; i < data.length; i++) {
+                        sensorValue3 = sensorValue3.concat(data[i].values[0].value);
+                        time3 = data[i].timestamp;
+                    };
+                    popLen3 = data.length;
+                }
+            });
+        }, 1000);
+    });
+</script>
+    <div class="canvasDiv">
+        <div class="failureTitle">耳板根部 角焊缝1应力监测<img src="assets/toggle/green.png"></div>
+        <canvas id="linejg1" width="650" height="300">[No canvas support]</canvas>
+        <div class="detectLink"><a href="">检测</a></div>
+    </div>

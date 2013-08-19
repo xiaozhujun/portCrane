@@ -16,7 +16,11 @@
       domain=$(this).parents("[domain]").attr("domain");
       $("#faultTreeContainer").hide();
       $("#monitorForcastContainer").show();
-      render("diagnosis");
+      if($(this).attr("real")=="true"){
+        $("#diagnosisContent").load(domain + "/" + scope + "/" + shownId + ".html");
+      } else {
+        render("diagnosis");
+      }
       event.stopPropagation();
     });
   });
@@ -45,7 +49,7 @@
               <div class="treeItem">
                 <div class="itemTitle">制动器</div>
                 <div class="itemContent">
-                  <div class="bullet" id="xingchengmao1">行程帽1行程位移监测</div>
+                  <div class="bullet" id="xingchengmao1" real="true">行程帽1行程位移监测</div>
                   <div class="bullet" id="xingchengmao2">行程帽2行程位移监测</div>
                   <div class="bullet" id="xingchengmao3">行程帽3行程位移监测</div>
                   <div class="bullet" id="xingchengmao4">行程帽4行程位移监测</div>
@@ -96,7 +100,7 @@
               <div class="treeItem">
                 <div class="itemTitle">减速机</div>
                 <div class="itemContent">
-                  <div class="bullet" id="gaosuzhoux">高速轴外侧X向振动监测</div>
+                  <div class="bullet" id="gaosuzhoux" real="true">高速轴外侧X向振动监测</div>
                   <div class="bullet" id="gaosuzhouy">高速轴外侧Y向振动监测</div>
                   <div class="bullet" id="gaosuzhouz">高速轴外侧Z向振动监测</div>
                   <div class="bullet" id="dijiao">高速轴地脚1振动监测</div>
