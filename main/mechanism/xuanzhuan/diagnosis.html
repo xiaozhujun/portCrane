@@ -1,14 +1,18 @@
 <script type="text/javascript">
-	var gd3,gd4,gd5;
+	var gdxzh50,gdxzh44,gdxzh51;
+	var data = RGraph.array_pad([], 60);
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		if (typeof(gd3)!="undefined") {gd3.stopDrawing();};
-		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
-		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
-		gd3 = new GraphDrawer("linexzh3", data);gd3.drawGraph();
-		gd4 = new GraphDrawer("linexzh4", data);gd4.drawGraph();
-		gd5 = new GraphDrawer("linexzh5", data);gd5.drawGraph();
+		if (typeof(gdxzh50)!="undefined") {gdxzh50.stopDrawing();}
+		else{gdxzh50 = new GraphDrawer("linexzh3", data);}
+		if (typeof(gdxzh44)!="undefined") {gdxzh44.stopDrawing();}
+		else{gdxzh44 = new GraphDrawer("linexzh4", data);}
+		if (typeof(gdxzh51)!="undefined") {gdxzh51.stopDrawing();}
+		else{gdxzh51 = new GraphDrawer("linexzh5", data);};
+		gdxzh50.drawGraph();
+		gdxzh44.drawGraph();
+		gdxzh51.drawGraph();
 	});
 </script>
 <div id="xuanzhuanFM" class="reversalInfoTable">
@@ -24,7 +28,7 @@
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>
 	<div class="canvasDiv" id="zhouduanzFM">
-		<div class="failureTitle">轴端 X向振动监测<img src="assets/toggle/green.png"></div>
+		<div class="failureTitle">轴端 Z向振动监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linexzh5" width="650" height="300">[No canvas support]</canvas>
 		<div class="detectLink"><a href="">检测</a></div>
 	</div>

@@ -16,11 +16,12 @@
       domain=$(this).parents("[domain]").attr("domain");
       $("#faultTreeContainer").hide();
       $("#monitorForcastContainer").show();
-      if($(this).attr("real")=="true"){
-        $("#diagnosisContent").load(domain + "/" + scope + "/" + shownId + ".html");
-      } else {
-        render("diagnosis");
-      }
+      // if($(this).attr("real")=="true"){
+      //   $("#diagnosisContent").load(domain + "/" + scope + "/" + shownId + ".html");
+      // } else {
+      // alert(domain+","+shownId+","+scope);
+      render("diagnosis");
+      // }
       event.stopPropagation();
     });
   });
@@ -148,7 +149,7 @@
                 <div class="itemContent">
                   <div class="bullet" id="zhouduanx">轴端 X向振动监测</div>
                   <div class="bullet" id="zhouduany">轴端 Y向振动监测</div>
-                  <div class="bullet" id="zhouduanz">轴端 X向振动监测</div>
+                  <div class="bullet" id="zhouduanz">轴端 Z向振动监测</div>
                 </div>
               </div>
               <div class="bullet" id="huizhuanzhicheng">回转支承</div>

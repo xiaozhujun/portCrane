@@ -16,11 +16,11 @@
       domain=$(this).parents("[domain]").attr("domain");
       $("#faultTreeContainer1").hide();
       $("#monitorForcastContainer1").show();
-      if($(this).attr("real")=="true"){
-        $("#diagnosisContent").load(domain + "/" + shownId + ".html");
-      } else {
+      // if($(this).attr("real")=="true"){
+      //   $("#diagnosisContent").load(domain + "/" + shownId + ".html");
+      // } else {
         render("diagnosis");
-      }
+      // }
       event.stopPropagation();
     });
   });
@@ -74,6 +74,9 @@
         </div>
       </div>
       <div class="treeItem">
+        <div class="bullet" id="zhuanpan">转盘结构</div>
+      </div>
+      <div class="treeItem">
         <div class="itemTitle titleShow">上转柱（人字架）</div>
         <div class="itemContent contentShow">
           <div class="treeItem">
@@ -86,6 +89,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="treeItem">
+        <div class="bullet" id="pingheng">平衡系统</div>
       </div>
       <div class="treeItem">
         <div class="itemTitle titleShow">主臂架</div>

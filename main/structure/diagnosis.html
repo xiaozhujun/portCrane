@@ -1,71 +1,119 @@
 <script type="text/javascript">
-	var gd1,gd2,gd3,gd4,gd5,gd6,gd7,gd8,gd9,gd10,gd11,gd12,gd13,gd14,gd15,gd16,gd17,gd18,gd19,gd20,gd21,gd22,gd23,gd24,gd25,gd26,gd27,gd28,gd29,gd30,gd31,gd32,gd33;
-	var data = RGraph.array_pad([], 60);
+	var gdjg1,gdjg2,gdjg3,gdjg4,gdjg5,gdjg6,gdjg7,gdjg8,gdjg9,gdjg10,gdjg11,gdjg12,gdjg13,gdjg14,gdjg15,gdjg16,gdjg17,gdjg18,gdjg19,gdjg20,gdjg21,gdjg22,gdjg23,gdjg24,gdjg25,gdjg26,gdjg27,gdjg28,gdjg29,gdjg30,gdjg31,gdjg32,gdjg33;
+	var jgdata = RGraph.array_pad([], 60);
+	var jgtime = 0;
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
-		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
-		if (typeof(gd3)!="undefined") {gd3.stopDrawing();};
-		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
-		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
-		if (typeof(gd6)!="undefined") {gd6.stopDrawing();};
-		if (typeof(gd7)!="undefined") {gd7.stopDrawing();};
-		if (typeof(gd8)!="undefined") {gd8.stopDrawing();};
-		if (typeof(gd9)!="undefined") {gd9.stopDrawing();};
-		if (typeof(gd10)!="undefined") {gd10.stopDrawing();};
-		if (typeof(gd11)!="undefined") {gd11.stopDrawing();};
-		if (typeof(gd12)!="undefined") {gd12.stopDrawing();};
-		if (typeof(gd13)!="undefined") {gd13.stopDrawing();};
-		if (typeof(gd14)!="undefined") {gd14.stopDrawing();};
-		if (typeof(gd15)!="undefined") {gd15.stopDrawing();};
-		if (typeof(gd16)!="undefined") {gd16.stopDrawing();};
-		if (typeof(gd17)!="undefined") {gd17.stopDrawing();};
-		if (typeof(gd18)!="undefined") {gd18.stopDrawing();};
-		if (typeof(gd19)!="undefined") {gd19.stopDrawing();};
-		if (typeof(gd20)!="undefined") {gd20.stopDrawing();};
-		if (typeof(gd21)!="undefined") {gd21.stopDrawing();};
-		if (typeof(gd22)!="undefined") {gd22.stopDrawing();};
-		if (typeof(gd23)!="undefined") {gd23.stopDrawing();};
-		if (typeof(gd24)!="undefined") {gd24.stopDrawing();};
-		if (typeof(gd25)!="undefined") {gd25.stopDrawing();};
-		if (typeof(gd26)!="undefined") {gd26.stopDrawing();};
-		if (typeof(gd27)!="undefined") {gd27.stopDrawing();};
-		if (typeof(gd28)!="undefined") {gd28.stopDrawing();};
-		if (typeof(gd29)!="undefined") {gd29.stopDrawing();};
-		if (typeof(gd30)!="undefined") {gd30.stopDrawing();};
-		gd1 = new GraphDrawer("linejg1", data);gd1.drawGraph();
-		gd2 = new GraphDrawer("linejg2", data);gd2.drawGraph();
-		gd3 = new GraphDrawer("linejg3", data);gd3.drawGraph();
-		gd4 = new GraphDrawer("linejg4", data);gd4.drawGraph();
-		gd5 = new GraphDrawer("linejg5", data);gd5.drawGraph();
-		gd6 = new GraphDrawer("linejg6", data);gd6.drawGraph();
-		gd7 = new GraphDrawer("linejg7", data);gd7.drawGraph();
-		gd8 = new GraphDrawer("linejg8", data);gd8.drawGraph();
-		gd9 = new GraphDrawer("linejg9", data);gd9.drawGraph();
-		gd10 = new GraphDrawer("linejg10", data);gd10.drawGraph();
-		gd11 = new GraphDrawer("linejg11", data);gd11.drawGraph();
-		gd12 = new GraphDrawer("linejg12", data);gd12.drawGraph();
-		gd13 = new GraphDrawer("linejg13", data);gd13.drawGraph();
-		gd14 = new GraphDrawer("linejg14", data);gd14.drawGraph();
-		gd15 = new GraphDrawer("linejg15", data);gd15.drawGraph();
-		gd16 = new GraphDrawer("linejg16", data);gd16.drawGraph();
-		gd17 = new GraphDrawer("linejg17", data);gd17.drawGraph();
-		gd18 = new GraphDrawer("linejg18", data);gd18.drawGraph();
-		gd19 = new GraphDrawer("linejg19", data);gd19.drawGraph();
-		gd20 = new GraphDrawer("linejg20", data);gd20.drawGraph();
-		gd21 = new GraphDrawer("linejg21", data);gd21.drawGraph();
-		gd22 = new GraphDrawer("linejg22", data);gd22.drawGraph();
-		gd23 = new GraphDrawer("linejg23", data);gd23.drawGraph();
-		gd24 = new GraphDrawer("linejg24", data);gd24.drawGraph();
-		gd25 = new GraphDrawer("linejg25", data);gd25.drawGraph();
-		gd26 = new GraphDrawer("linejg26", data);gd26.drawGraph();
-		gd27 = new GraphDrawer("linejg27", data);gd27.drawGraph();
-		gd28 = new GraphDrawer("linejg28", data);gd28.drawGraph();
-		gd29 = new GraphDrawer("linejg29", data);gd29.drawGraph();
-		gd30 = new GraphDrawer("linejg30", data);gd30.drawGraph();
+		if (typeof(gdjg1)!="undefined") {gdjg1.stopDrawing();}
+		else{gdjg1 = new GraphDrawer("linejg1", jgdata);}
+		if (typeof(gdjg2)!="undefined") {gdjg2.stopDrawing();}
+		else{gdjg2 = new GraphDrawer("linejg2", jgdata);}
+		if (typeof(gdjg3)!="undefined") {gdjg3.stopDrawing();}
+		else{gdjg3 = new GraphDrawer("linejg3", jgdata);}
+		if (typeof(gdjg4)!="undefined") {gdjg4.stopDrawing();}
+		else{gdjg4 = new GraphDrawer("linejg4", jgdata);}
+		if (typeof(gdjg5)!="undefined") {gdjg5.stopDrawing();}
+		else{gdjg5 = new GraphDrawer("linejg5", jgdata);}
+		if (typeof(gdjg6)!="undefined") {gdjg6.stopDrawing();}
+		else{gdjg6 = new GraphDrawer("linejg6", jgdata);}
+		if (typeof(gdjg7)!="undefined") {gdjg7.stopDrawing();}
+		else{gdjg7 = new GraphDrawer("linejg7", jgdata);}
+		if (typeof(gdjg8)!="undefined") {gdjg8.stopDrawing();}
+		else{gdjg8 = new GraphDrawer("linejg8", jgdata);}
+		if (typeof(gdjg9)!="undefined") {gdjg9.stopDrawing();}
+		else{gdjg9 = new GraphDrawer("linejg9", jgdata);}
+		if (typeof(gdjg10)!="undefined") {gdjg10.stopDrawing();}
+		else{gdjg10 = new GraphDrawer("linejg10", jgdata);}
+		if (typeof(gdjg11)!="undefined") {gdjg11.stopDrawing();}
+		else{gdjg11 = new GraphDrawer("linejg11", jgdata);}
+		if (typeof(gdjg12)!="undefined") {gdjg12.stopDrawing();}
+		else{gdjg12 = new GraphDrawer("linejg12", jgdata);}
+		if (typeof(gdjg13)!="undefined") {gdjg13.stopDrawing();}
+		else{gdjg13 = new GraphDrawer("linejg13", jgdata);}
+		if (typeof(gdjg14)!="undefined") {gdjg14.stopDrawing();}
+		else{gdjg14 = new GraphDrawer("linejg14", jgdata);}
+		if (typeof(gdjg15)!="undefined") {gdjg15.stopDrawing();}
+		else{gdjg15 = new GraphDrawer("linejg15", jgdata);}
+		if (typeof(gdjg16)!="undefined") {gdjg16.stopDrawing();}
+		else{gdjg16 = new GraphDrawer("linejg16", jgdata);}
+		if (typeof(gdjg17)!="undefined") {gdjg17.stopDrawing();}
+		else{gdjg17 = new GraphDrawer("linejg17", jgdata);}
+		if (typeof(gdjg18)!="undefined") {gdjg18.stopDrawing();}
+		else{gdjg18 = new GraphDrawer("linejg18", jgdata);}
+		if (typeof(gdjg19)!="undefined") {gdjg19.stopDrawing();}
+		else{gdjg19 = new GraphDrawer("linejg19", jgdata);}
+		if (typeof(gdjg20)!="undefined") {gdjg20.stopDrawing();}
+		else{gdjg20 = new GraphDrawer("linejg20", jgdata);}
+		if (typeof(gdjg21)!="undefined") {gdjg21.stopDrawing();}
+		else{gdjg21 = new GraphDrawer("linejg21", jgdata);}
+		if (typeof(gdjg22)!="undefined") {gdjg22.stopDrawing();}
+		else{gdjg22 = new GraphDrawer("linejg22", jgdata);}
+		if (typeof(gdjg23)!="undefined") {gdjg23.stopDrawing();}
+		else{gdjg23 = new GraphDrawer("linejg23", jgdata);}
+		if (typeof(gdjg24)!="undefined") {gdjg24.stopDrawing();}
+		else{gdjg24 = new GraphDrawer("linejg24", jgdata);}
+		if (typeof(gdjg25)!="undefined") {gdjg25.stopDrawing();}
+		else{gdjg25 = new GraphDrawer("linejg25", jgdata);}
+		if (typeof(gdjg26)!="undefined") {gdjg26.stopDrawing();}
+		else{gdjg26 = new GraphDrawer("linejg26", jgdata);}
+		if (typeof(gdjg27)!="undefined") {gdjg27.stopDrawing();}
+		else{gdjg27 = new GraphDrawer("linejg27", jgdata);}
+		if (typeof(gdjg28)!="undefined") {gdjg28.stopDrawing();}
+		else{gdjg28 = new GraphDrawer("linejg28", jgdata);}
+		if (typeof(gdjg29)!="undefined") {gdjg29.stopDrawing();}
+		else{gdjg29 = new GraphDrawer("linejg29", jgdata);}
+		if (typeof(gdjg30)!="undefined") {gdjg30.stopDrawing();}
+		else{gdjg30 = new GraphDrawer("linejg30", jgdata);}
+		// setInterval(function(){
+  //     $.ajax({
+  //       url:"http://localhost:8080/portmessageserver/sensors/sensor/wd000001/"+jgtime+".htm",
+  //       dataType:'jsonp',
+  //       success: function(data) {
+  //       	var sensorValue = [];
+  //         for (var i = 0; i < data.length; i++) {
+  //           sensorValue = sensorValue.concat(data[i].values[0].value);
+  //           jgtime = data[i].timestamp;
+  //         };
+		// 			$("#"+shownId+"FM").show().siblings().hide();
+  //         gdjg1.drawGraph(sensorValue);
+  //       }
+  //     });
+  //   }, 1000);
+		gdjg1.drawGraph();
+		gdjg2.drawGraph();
+		gdjg3.drawGraph();
+		gdjg4.drawGraph();
+		gdjg5.drawGraph();
+		gdjg6.drawGraph();
+		gdjg7.drawGraph();
+		gdjg8.drawGraph();
+		gdjg9.drawGraph();
+		gdjg10.drawGraph();
+		gdjg11.drawGraph();
+		gdjg12.drawGraph();
+		gdjg13.drawGraph();
+		gdjg14.drawGraph();
+		gdjg15.drawGraph();
+		gdjg16.drawGraph();
+		gdjg17.drawGraph();
+		gdjg18.drawGraph();
+		gdjg19.drawGraph();
+		gdjg20.drawGraph();
+		gdjg21.drawGraph();
+		gdjg22.drawGraph();
+		gdjg23.drawGraph();
+		gdjg24.drawGraph();
+		gdjg25.drawGraph();
+		gdjg26.drawGraph();
+		gdjg27.drawGraph();
+		gdjg28.drawGraph();
+		gdjg29.drawGraph();
+		gdjg30.drawGraph();
 	});
 </script>
+	<div id="zhuanpanFM"></div>
+	<div id="pinghengFM"></div>
 	<div class="canvasDiv" id="yuantonghaice1FM">
 		<div class="failureTitle">圆筒与横梁下板焊接处海侧角焊缝1应力监测<img src="assets/toggle/green.png"></div>
 		<canvas id="linejg1" width="650" height="300">[No canvas support]</canvas>

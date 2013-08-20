@@ -1,50 +1,87 @@
 <script type="text/javascript">
-	var gd1,gd2,gd4,gd5,gd6,gd7,gd14,gd15,gd16,gd17,gd18,gd19,gd20,gd21,gd22,gd23,gd24,gd30,gd31,gd32,gd33;
+	var gdbf1,gdbf2,gdbf4,gdbf5,gdbf6,gdbf7,gdbf14,gdbf15,gdbf16,gdbf17,gdbf18,gdbf19,gdbf20,gdbf21,gdbf22,gdbf23,gdbf24,gdbf30,gdbf31,gdbf32,gdbf33;
+	var bfdata = RGraph.array_pad([], 60);
 	$(document).ready(function(){
 		$("#"+shownId+"FM").show().siblings().hide();
 		// $(".failureTitle:not(:first)",$("[id$='FM']")).next().hide();
-		if (typeof(gd1)!="undefined") {gd1.stopDrawing();};
-		if (typeof(gd2)!="undefined") {gd2.stopDrawing();};
-		if (typeof(gd4)!="undefined") {gd4.stopDrawing();};
-		if (typeof(gd5)!="undefined") {gd5.stopDrawing();};
-		if (typeof(gd6)!="undefined") {gd6.stopDrawing();};
-		if (typeof(gd7)!="undefined") {gd7.stopDrawing();};
-		if (typeof(gd14)!="undefined") {gd14.stopDrawing();};
-		if (typeof(gd15)!="undefined") {gd15.stopDrawing();};
-		if (typeof(gd16)!="undefined") {gd16.stopDrawing();};
-		if (typeof(gd17)!="undefined") {gd17.stopDrawing();};
-		if (typeof(gd18)!="undefined") {gd18.stopDrawing();};
-		if (typeof(gd19)!="undefined") {gd19.stopDrawing();};
-		if (typeof(gd20)!="undefined") {gd20.stopDrawing();};
-		if (typeof(gd21)!="undefined") {gd21.stopDrawing();};
-		if (typeof(gd22)!="undefined") {gd22.stopDrawing();};
-		if (typeof(gd23)!="undefined") {gd23.stopDrawing();};
-		if (typeof(gd24)!="undefined") {gd24.stopDrawing();};
-		if (typeof(gd30)!="undefined") {gd30.stopDrawing();};
-		if (typeof(gd31)!="undefined") {gd31.stopDrawing();};
-		if (typeof(gd32)!="undefined") {gd32.stopDrawing();};
-		if (typeof(gd33)!="undefined") {gd33.stopDrawing();};
-		gd1 = new GraphDrawer("linebf1", data);gd1.drawGraph();
-		gd2 = new GraphDrawer("linebf2", data);gd2.drawGraph();
-		gd4 = new GraphDrawer("linebf4", data);gd4.drawGraph();
-		gd5 = new GraphDrawer("linebf5", data);gd5.drawGraph();
-		gd6 = new GraphDrawer("linebf6", data);gd6.drawGraph();
-		gd7 = new GraphDrawer("linebf7", data);gd7.drawGraph();
-		gd14 = new GraphDrawer("linebf14", data);gd14.drawGraph();
-		gd15 = new GraphDrawer("linebf15", data);gd15.drawGraph();
-		gd16 = new GraphDrawer("linebf16", data);gd16.drawGraph();
-		gd17 = new GraphDrawer("linebf17", data);gd17.drawGraph();
-		gd18 = new GraphDrawer("linebf18", data);gd18.drawGraph();
-		gd19 = new GraphDrawer("linebf19", data);gd19.drawGraph();
-		gd20 = new GraphDrawer("linebf20", data);gd20.drawGraph();
-		gd21 = new GraphDrawer("linebf21", data);gd21.drawGraph();
-		gd22 = new GraphDrawer("linebf22", data);gd22.drawGraph();
-		gd23 = new GraphDrawer("linebf23", data);gd23.drawGraph();
-		gd24 = new GraphDrawer("linebf24", data);gd24.drawGraph();
-		gd30 = new GraphDrawer("linebf30", data);gd30.drawGraph();
-		gd31 = new GraphDrawer("linebf31", data);gd31.drawGraph();
-		gd32 = new GraphDrawer("linebf32", data);gd32.drawGraph();
-		gd33 = new GraphDrawer("linebf33", data);gd33.drawGraph();
+		if (typeof(gdbf4)!="undefined") {gdbf4.stopDrawing();}
+		else{gdbf4 = new GraphDrawer("linebf4", bfdata);}
+		if (typeof(gdbf2)!="undefined") {gdbf2.stopDrawing();}
+		else{gdbf2 = new GraphDrawer("linebf2", bfdata);}
+		if (typeof(gdbf1)!="undefined") {gdbf1.stopDrawing();}
+		else{gdbf1 = new GraphDrawer("linebf1", bfdata);}
+		if (typeof(gdbf5)!="undefined") {gdbf5.stopDrawing();}
+		else{gdbf5 = new GraphDrawer("linebf5", bfdata);}
+		if (typeof(gdbf6)!="undefined") {gdbf6.stopDrawing();}
+		else{gdbf6 = new GraphDrawer("linebf6", bfdata);}
+		if (typeof(gdbf7)!="undefined") {gdbf7.stopDrawing();}
+		else{gdbf7 = new GraphDrawer("linebf7", bfdata);}
+		if (typeof(gdbf14)!="undefined") {gdbf14.stopDrawing();}
+		else{gdbf14 = new GraphDrawer("linebf14", bfdata);}
+		if (typeof(gdbf15)!="undefined") {gdbf15.stopDrawing();}
+		else{gdbf15 = new GraphDrawer("linebf15", bfdata);}
+		if (typeof(gdbf16)!="undefined") {gdbf16.stopDrawing();}
+		else{gdbf16 = new GraphDrawer("linebf16", bfdata);}
+		if (typeof(gdbf17)!="undefined") {gdbf17.stopDrawing();}
+		else{gdbf17 = new GraphDrawer("linebf17", bfdata);}
+		if (typeof(gdbf18)!="undefined") {gdbf18.stopDrawing();}
+		else{gdbf18 = new GraphDrawer("linebf18", bfdata);}
+		if (typeof(gdbf19)!="undefined") {gdbf19.stopDrawing();}
+		else{gdbf19 = new GraphDrawer("linebf19", bfdata);}
+		if (typeof(gdbf20)!="undefined") {gdbf20.stopDrawing();}
+		else{gdbf20 = new GraphDrawer("linebf20", bfdata);}
+		if (typeof(gdbf21)!="undefined") {gdbf21.stopDrawing();}
+		else{gdbf21 = new GraphDrawer("linebf21", bfdata);}
+		if (typeof(gdbf22)!="undefined") {gdbf22.stopDrawing();}
+		else{gdbf22 = new GraphDrawer("linebf22", bfdata);}
+		if (typeof(gdbf23)!="undefined") {gdbf23.stopDrawing();}
+		else{gdbf23 = new GraphDrawer("linebf23", bfdata);}
+		if (typeof(gdbf24)!="undefined") {gdbf24.stopDrawing();}
+		else{gdbf24 = new GraphDrawer("linebf24", bfdata);}
+		if (typeof(gdbf30)!="undefined") {gdbf30.stopDrawing();}
+		else{gdbf30 = new GraphDrawer("linebf30", bfdata);}
+		if (typeof(gdbf31)!="undefined") {gdbf31.stopDrawing();}
+		else{gdbf31 = new GraphDrawer("linebf31", bfdata);}
+		if (typeof(gdbf32)!="undefined") {gdbf32.stopDrawing();}
+		else{gdbf32 = new GraphDrawer("linebf32", bfdata);}
+		if (typeof(gdbf33)!="undefined") {gdbf33.stopDrawing();}
+		else{gdbf33 = new GraphDrawer("linebf33", bfdata);}
+    // setInterval(function(){
+    //   $.ajax({
+    //     url:"http://localhost:8080/portmessageserver/sensors/sensor/zd000002/"+bftime+".htm",
+    //     dataType:'jsonp',
+    //     success: function(data) {
+    //     	var sensorValue = [];
+    //       for (var i = 0; i < data.length; i++) {
+    //         sensorValue = sensorValue.concat(data[i].values[0].value);
+    //         bftime = data[i].timestamp;
+    //       };
+				// 	$("#"+shownId+"FM").show().siblings().hide();
+    //       gdbf4.drawGraph(sensorValue);
+    //     }
+    //   });
+    // }, 1000);
+		gdbf4.drawGraph();
+		gdbf2.drawGraph();
+		gdbf1.drawGraph();
+		gdbf5.drawGraph();
+		gdbf6.drawGraph();
+		gdbf7.drawGraph();
+		gdbf14.drawGraph();
+		gdbf15.drawGraph();
+		gdbf16.drawGraph();
+		gdbf17.drawGraph();
+		gdbf18.drawGraph();
+		gdbf19.drawGraph();
+		gdbf20.drawGraph();
+		gdbf21.drawGraph();
+		gdbf22.drawGraph();
+		gdbf23.drawGraph();
+		gdbf24.drawGraph();
+		gdbf30.drawGraph();
+		gdbf31.drawGraph();
+		gdbf32.drawGraph();
+		gdbf33.drawGraph();
 	});
 </script>
 <div id="bianfuFM" class="reversalInfoTable">
