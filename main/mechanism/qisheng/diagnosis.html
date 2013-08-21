@@ -1,29 +1,13 @@
 <script type="text/javascript">
     		var gdqs1,gdqs2,gdqs3,gdqs4,gdqs5,gdqs6,gdqs7,gdqs11,gdqs12,gdqs13,gdqs14,gdqs15,gdqs16,gdqs17,gdqs18,gdqs19,gdqs21,gdqs22,gdqs23,gdqs24,gdqs25,gdqs26,gdqs27,gdqs28,gdqs29,gdqs30,gdqs31;
-
-    function getData(){
-    	var qstime = 0;
-      $.ajax({
-        url:"http://localhost:8080/portmessageserver/sensors/sensor/zd000001/"+qstime+".htm",
-        dataType:'jsonp',
-        success: function(data) {
-        	var sensorValue = [];
-        	sensorValue = sensorValue.concat(data.values[0].value);
-            qstime = data.timestamp;
-          for (var i = 0; i < data.length; i++) {
-            
-            
-          };
-					$("#"+shownId+"FM").show().siblings().hide();
-          gdqs1.drawGraph(sensorValue);
-        }
-      });
-    }
+    		var qstime;
+    		var token;
 
 	$(document).ready(function(){
-	var qsdata = RGraph.array_pad([], 60);
+		var qsdata = RGraph.array_pad([], 60);
 		//alert(3);
-		var qstime = 0;
+		if (typeof(qstime)=="undefined") {qstime = 0;};
+		if (typeof(token)!="undefined") {clearInterval(token);}
 		$("#"+shownId+"FM").show().siblings().hide();	
 		if (typeof(gdqs1)!="undefined") {
 			//gdqs1.stopDrawing();
@@ -79,12 +63,22 @@
 		else{gdqs29 = new GraphDrawer("lineqs29", qsdata);}
 		if (typeof(gdqs30)!="undefined") {gdqs30.stopDrawing();}
 		else{gdqs30 = new GraphDrawer("lineqs30", qsdata);}
-        setInterval(getData, 1000);
-
-
-
+    token = setInterval(function(){
+      $.ajax({
+        url:"http://localhost:8080/portmessageserver/sensors/sensor/zd000001/"+qstime+".htm",
+        dataType:'jsonp',
+        success: function(data) {
+        	var sensorValue = [];
+          for (var i = 0; i < data.length; i++) {
+        		sensorValue = sensorValue.concat(data[i].values[0].value);
+            qstime = data[i].timestamp;
+          };
+					$("#"+shownId+"FM").show().siblings().hide();
+          gdqs1.drawGraph(sensorValue);
+        }
+      });
+    }, 5000);
 		gdqs2.drawGraph();
-		
 		gdqs3.drawGraph();
 		gdqs4.drawGraph();
 		gdqs5.drawGraph();

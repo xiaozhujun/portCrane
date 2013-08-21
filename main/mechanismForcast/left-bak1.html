@@ -1,0 +1,161 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    simpleTree($("#mTree"));
+    $(".faultTree .itemContent .bullet").click(function(event){
+      scope=shownId=$(this).attr("id");
+      domain=$(this).parents("[domain]").attr("domain");
+      $("#faultTreeContainer").show();
+      $("#monitorForcastContainer").hide();
+      render("faultTree");
+      event.stopPropagation();
+    });
+
+    $(".monitorForcast .itemContent .bullet").click(function(event){
+      shownId=$(this).attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+      $("#faultTreeContainer").hide();
+      $("#monitorForcastContainer").show();
+      // if($(this).attr("real")=="true"){
+      //   $("#diagnosisContent").load(domain + "/" + scope + "/" + shownId + ".html");
+      // } else {
+      // alert(domain+","+shownId+","+scope);
+      render("diagnosis");
+      // }
+      event.stopPropagation();
+    });
+  });
+
+</script>
+<div id="mTree" domain="mechanism">
+      <div class="treeItem faultTree">
+        <div class="itemTitle titleShow">
+          <div class="bullet">失效树</div>
+        </div>
+        <div class="itemContent contentShow">
+          <div class="bullet" scope="qisheng" id="qisheng">起升机构</div>
+          <div class="bullet" scope="bianfu" id="bianfu">变幅机构</div>
+          <div class="bullet" scope="xuanzhuan" id="xuanzhuan">旋转机构</div>
+          <div class="bullet" scope="xingzou" id="xingzou">行走机构</div>
+        </div>
+      </div>
+      <div class="treeItem monitorForcast">
+        <div class="itemTitle titleShow">
+          <div class="bullet">健康监测预警</div>
+        </div>
+        <div class="itemContent contentShow">
+          <div class="treeItem" scope="qisheng">
+            <div class="itemTitle titleShow">起升机构</div>
+            <div class="itemContent contentShow">
+              <div class="treeItem">
+                <div class="itemTitle">制动器</div>
+                <div class="itemContent">
+                  <div class="bullet" id="xingchengmao1" real="true">行程帽1行程位移监测</div>
+                  <div class="bullet" id="xingchengmao2">行程帽2行程位移监测</div>
+                  <div class="bullet" id="xingchengmao3">行程帽3行程位移监测</div>
+                  <div class="bullet" id="xingchengmao4">行程帽4行程位移监测</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">驱动主电机</div>
+                <div class="itemContent">
+                  <div class="bullet" id="shuchuduanx">输出端 X向振动监测</div>
+                  <div class="bullet" id="shuchuduany">输出端 Y向振动监测</div>
+                  <div class="bullet" id="shuchuduanz">输出端 Z向振动监测</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">减速机</div>
+                <div class="itemContent">
+                  <div class="bullet" id="gaosuzhoux">高速轴外侧X向振动监测</div>
+                  <div class="bullet" id="gaosuzhouy">高速轴外侧Y向振动监测</div>
+                  <div class="bullet" id="gaosuzhouz">高速轴外侧Z向振动监测</div>
+                  <div class="bullet" id="dijiaoy">电机地脚1内侧Y向振动监测</div>
+                  <div class="bullet" id="dijiaoz">电机地脚1内侧Z向振动监测</div>
+                  <div class="bullet" id="disuzhoux">低速轴外侧X向振动监测</div>
+                  <div class="bullet" id="disuzhouy">低速轴外侧Y向振动监测</div>
+                  <div class="bullet" id="disuzhouz">低速轴外侧Z向振动监测</div>
+                  <div class="bullet" id="shangyoufeng">高速轴上油封温度监测</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">钢丝绳</div>
+                <div class="itemContent">
+                  <div class="bullet" id="juantong1x">卷筒1支撑轴承X向振动监测</div>
+                  <div class="bullet" id="juantong1y">卷筒1支撑轴承Y向振动监测</div>
+                  <div class="bullet" id="juantong1z">卷筒1支撑轴承Z向振动监测</div>
+                  <div class="bullet" id="juantong2x">卷筒2支撑轴承X向振动监测</div>
+                  <div class="bullet" id="juantong2y">卷筒2支撑轴承Y向振动监测</div>
+                  <div class="bullet" id="juantong2z">卷筒2支撑轴承Z向振动监测</div>
+                  <div class="bullet" id="s1">S轮1 钢丝绳磨损、断丝监测</div>
+                  <div class="bullet" id="s2">S轮2 钢丝绳磨损、断丝监测</div>
+                  <div class="bullet" id="s3">S轮3 钢丝绳磨损、断丝监测</div>
+                  <div class="bullet" id="s4">S轮4 钢丝绳磨损、断丝监测</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="treeItem" scope="bianfu">
+            <div class="itemTitle titleShow">变幅机构</div>
+            <div class="itemContent contentShow">
+              <div class="treeItem">
+                <div class="itemTitle">减速机</div>
+                <div class="itemContent">
+                  <div class="bullet" id="gaosuzhoux" real="true">高速轴外侧X向振动监测</div>
+                  <div class="bullet" id="gaosuzhouy">高速轴外侧Y向振动监测</div>
+                  <div class="bullet" id="gaosuzhouz">高速轴外侧Z向振动监测</div>
+                  <div class="bullet" id="dijiao">高速轴地脚1振动监测</div>
+                  <div class="bullet" id="disuzhoux">低速轴外侧X向振动监测</div>
+                  <div class="bullet" id="disuzhouy">低速轴外侧Y向振动监测</div>
+                  <div class="bullet" id="disuzhouz">低速轴外侧Z向振动监测</div>
+                  <div class="bullet" id="youchuang">减速机油窗上侧温度监测</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">齿条轴承</div>
+                <div class="itemContent">
+                  <div class="bullet" id="shangyalun12">上压轮12点方向应力监测</div>
+                  <div class="bullet" id="shangyalun6">上压轮6点方向应力监测</div>
+                  <div class="bullet" id="1xiayalun12">1#下压轮12点方向应力监测</div>
+                  <div class="bullet" id="1xiayalun6">1#压轮6点方向应力监测</div>
+                  <div class="bullet" id="2xiayalun12">2#下压轮12点方向应力监测</div>
+                  <div class="bullet" id="2xiayalun6">2#压轮6点方向应力监测</div>
+                  <div class="bullet" id="qudonglunyingli">驱动轮12点方向应力监测</div>
+                  <div class="bullet" id="qudonglunzhendong">驱动轮12点方向振动监测</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">变幅电机</div>
+                <div class="itemContent">
+                  <div class="bullet" id="zhouduanx">轴端 X向振动监测</div>
+                  <div class="bullet" id="zhouduany">轴端 Y向振动监测</div>
+                  <div class="bullet" id="zhouduanz">轴端 Z向振动监测</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">高速制动器</div>
+                <div class="itemContent">
+                  <div class="bullet" id="chuandongzhoux">传动轴输入X 向振动监测</div>
+                  <div class="bullet" id="chuandongzhouy">传动轴输入Y 向振动监测</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="treeItem" scope="xuanzhuan">
+            <div class="itemTitle titleShow">回转机构</div>
+            <div class="itemContent contentShow">
+              <div class="treeItem">
+                <div class="itemTitle">回转电机</div>
+                <div class="itemContent">
+                  <div class="bullet" id="zhouduanx">轴端 X向振动监测</div>
+                  <div class="bullet" id="zhouduany">轴端 Y向振动监测</div>
+                  <div class="bullet" id="zhouduanz">轴端 Z向振动监测</div>
+                </div>
+              </div>
+              <div class="bullet" id="huizhuanzhicheng">回转支承</div>
+              <div class="bullet" id="huizhuanzhoucheng">回转轴承</div> 
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

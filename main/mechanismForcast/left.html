@@ -1,4 +1,8 @@
 <script type="text/javascript">
+  var gd;
+  var rgd;
+  var time;
+  var token;
   $(document).ready(function(){
     simpleTree($("#mTree"));
     $(".faultTree .itemContent .bullet").click(function(event){
@@ -11,17 +15,38 @@
     });
 
     $(".monitorForcast .itemContent .bullet").click(function(event){
-      shownId=$(this).attr("id");
-      scope=$(this).parents("[scope]").attr("scope");
-      domain=$(this).parents("[domain]").attr("domain");
-      $("#faultTreeContainer").hide();
-      $("#monitorForcastContainer").show();
-      // if($(this).attr("real")=="true"){
-      //   $("#diagnosisContent").load(domain + "/" + scope + "/" + shownId + ".html");
-      // } else {
-      // alert(domain+","+shownId+","+scope);
-      render("diagnosis");
-      // }
+      $("#graphTitle").text($(this).text());
+      if (typeof(gd)!="undefined") {
+        gd.stopDrawing();
+      } 
+      if (typeof(rgd)!="undefined") {
+        if (typeof(token)!="undefined") {
+          clearInterval(token);
+        }
+      } 
+      if($(this).attr("real")=="true"){
+        var data = RGraph.array_pad([], 60);
+        if (typeof(time)=="undefined") {time = 0;}
+        rgd = new RealGraphDrawer("graphContent", data);
+        token = setInterval(function(){
+          $.ajax({
+            url:"http://localhost:8080/portmessageserver/sensors/sensor/zd000001/"+time+".htm",
+            dataType:'jsonp',
+            success: function(data) {
+              var sensorValue = [];
+              for (var i = 0; i < data.length; i++) {
+                sensorValue = sensorValue.concat(data[i].values[0].value);
+                time = data[i].timestamp;
+              };
+              rgd.drawGraph(sensorValue);
+            }
+          });
+        }, 1000);
+      } else {
+        var data = RGraph.array_pad([], 60);
+        gd = new GraphDrawer("graphContent", data);
+        gd.drawGraph();
+      }
       event.stopPropagation();
     });
   });

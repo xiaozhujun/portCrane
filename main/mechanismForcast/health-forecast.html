@@ -6,7 +6,7 @@
     domain="mechanism";
     $("#faultTreeContainer").hide();
     $("#monitorForcastContainer").show();
-    $("#diagnosisContent").load("mechanism/qisheng/diagnosis.html");
+    // $("#diagnosisContent").load("mechanism/qisheng/diagnosis.html");
     $('#navDiv').load('mechanismForcast/left.html');
     $('#mainTab .tabItem').click(function(){
     	$(".containerselected").removeClass("containerselected");
@@ -28,7 +28,13 @@
 
 	<div id='monitorForcastContainer'>
 		<div id='diagnosisDiv'>
-			<div id='diagnosisContent'></div>
+			<div id='diagnosisContent'>
+				<div class="canvasDiv">
+					<div id="graphTitle" class="failureTitle">行程帽1行程位移监测<img src="assets/toggle/green.png"></div>
+					<canvas id="graphContent" width="650" height="300">[No canvas support]</canvas>
+					<div class="detectLink"><a href="">检测</a></div>
+				</div>
+			</div>
 		</div>
 		<!-- <div id='forecastDiv'>
 			<div id="forecastTitleDiv">健康预报</div>
