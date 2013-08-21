@@ -11,6 +11,7 @@
               .Set('numxticks', 5)
               .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
               .Draw();
+              //alert(target+":"+sensorValue);
           data = sensorValue.concat(data);
           for (var i = 0; i < sensorValue.length; i++) {
             data.pop();
@@ -45,6 +46,7 @@
 
       function GraphDrawer (target,data) {
         this.drawGraph = function(){
+          //alert("target:"+target);
           RGraph.Clear(document.getElementById(target));
           RGraph.ObjectRegistry.Clear();
           var line = new RGraph.Line(target, data)
@@ -59,10 +61,16 @@
           var r = RGraph.random(0,60);
           data = [r].concat(data);
           data.pop();
-          this.timer = setInterval(this.drawGraph, 1000);
+
+          if(typeof this.timer=="undefined" || this.timer==null)
+          {
+            this.timer = setInterval(this.drawGraph, 1000);
+          }
+          
           };
           this.stopDrawing = function(){
             clearInterval(this.timer);
+            this.timer = null;
           };
         }
 
