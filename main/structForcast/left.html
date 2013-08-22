@@ -1,4 +1,8 @@
 <script type="text/javascript">
+  var gd1;
+  var rgd1;
+  var time1;
+  var token1;
   $(document).ready(function(){
     simpleTree($("#mTree"));
     $(".faultTree .itemContent .bullet").click(function(event){
@@ -11,16 +15,46 @@
     });
 
     $(".monitorForcast .itemContent .bullet").click(function(event){
-      shownId=$(this).attr("id");
-      scope=$(this).parents("[scope]").attr("scope");
-      domain=$(this).parents("[domain]").attr("domain");
-      $("#faultTreeContainer1").hide();
-      $("#monitorForcastContainer1").show();
-      // if($(this).attr("real")=="true"){
-      //   $("#diagnosisContent").load(domain + "/" + shownId + ".html");
-      // } else {
-        render("diagnosis");
-      // }
+      $("#graphTitle1").text($(this).text());
+      var data = RGraph.array_pad([], 60);
+      if (typeof(gd)!="undefined") {
+        gd.stopDrawing();
+      } 
+      if (typeof(rgd)!="undefined") {
+        if (typeof(token)!="undefined") {
+          clearInterval(token);
+        }
+      } 
+      if (typeof(gd1)!="undefined") {
+        gd1.stopDrawing();
+      } 
+      if (typeof(rgd1)!="undefined") {
+        if (typeof(token1)!="undefined") {
+          clearInterval(token1);
+        }
+      } 
+      if($(this).attr("real")=="true"){
+        if (typeof(time1)=="undefined") {time1 = 0;}
+        var sensorId = $(this).attr("id");
+        rgd1 = new RealGraphDrawer("graphContent1", data);
+        token1 = setInterval(function(){
+          $.ajax({
+            url:"http://localhost:8080/portmessageserver/sensors/sensor/"+sensorId+"/"+time1+".htm",
+            dataType:'jsonp',
+            success: function(data) {
+              var sensorValue = [];
+              for (var i = 0; i < data.length; i++) {
+                sensorValue = sensorValue.concat(data[i].values[0].value);
+                time1 = data[i].timestamp;
+              };
+              rgd1.drawGraph(sensorValue);
+            }
+          });
+        }, 1000);
+      } else {
+        gd1 = new GraphDrawer("graphContent1", data);
+        gd1.drawGraph();
+      }
       event.stopPropagation();
     });
   });
@@ -49,9 +83,9 @@
         <div class="itemTitle titleShow">门架结构</div>
         <div class="itemContent contentShow">
           <div class="treeItem">
-            <div class="itemTitle">焊缝</div>
-            <div class="itemContent">
-              <div class="bullet" id="yuantonghaice1">圆筒与横梁下板焊接处海侧角焊缝1应力监测</div>
+            <div class="itemTitle titleShow">焊缝</div>
+            <div class="itemContent contentShow">
+              <div class="bullet menuSelected" id="yuantonghaice1">圆筒与横梁下板焊接处海侧角焊缝1应力监测</div>
               <div class="bullet" id="yuantonghaice2">圆筒与横梁下板焊接处海侧角焊缝2应力监测</div>
               <div class="bullet" id="yuantongluce1">圆筒与横梁下板焊接处陆侧角焊缝1应力监测</div>
               <div class="bullet" id="yuantongluce2">圆筒与横梁下板焊接处陆侧角焊缝2应力监测</div>
@@ -113,7 +147,7 @@
           <div class="treeItem">
             <div class="itemTitle">耳板根部</div>
             <div class="itemContent">
-              <div class="bullet" id="erban1" real="true">耳板根部 角焊缝1应力监测</div>
+              <div class="bullet" id="wd000001" real="true">耳板根部 角焊缝1应力监测</div>
               <div class="bullet" id="erban2">耳板根部 角焊缝2应力监测</div>
               <div class="bullet" id="erban3">耳板根部 角焊缝3应力监测</div>
               <div class="bullet" id="erban4">耳板根部 角焊缝4应力监测</div>

@@ -7,7 +7,9 @@
     $("#faultTreeContainer").hide();
     $("#monitorForcastContainer").show();
     // $("#diagnosisContent").load("mechanism/qisheng/diagnosis.html");
-    $('#navDiv').load('mechanismForcast/left.html');
+    $('#navDiv').load('mechanismForcast/left.html',function(){
+   		$("#zd000001").trigger("click");
+    });
     $('#mainTab .tabItem').click(function(){
     	$(".containerselected").removeClass("containerselected");
     	$(this).addClass("containerselected");

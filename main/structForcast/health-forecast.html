@@ -3,13 +3,15 @@
   $(document).ready(function(){
     shownId="yuantonghaice1";
     domain="structure";
-    $("#diagnosisContent").load("structure/diagnosis.html");
+    // $("#diagnosisContent1").load("structure/diagnosis.html");
     // $("#forecastContent").load("structure/qisheng/forecast.html");
 
     $("#faultTreeContainer1").hide();
     $("#monitorForcastContainer1").show();
 
-    $('#navDiv').load('structForcast/left.html');
+    $('#navDiv').load('structForcast/left.html',function(){
+    	$("#yuantonghaice1").trigger("click");
+    });
 
     $('#mainTab .tabItem').click(function(){
     	$(".containerselected").removeClass("containerselected");
@@ -30,9 +32,15 @@
 	</div>
 
 	<div id='monitorForcastContainer1'>
-		<div id='diagnosisDiv'>
+		<div id='diagnosisDiv1'>
 			<!-- <div id="diagnosisTitleDiv">损伤监测检测</div> -->
-			<div id='diagnosisContent'></div>
+			<div id='diagnosisContent1'>
+				<div class="canvasDiv">
+					<div id="graphTitle1" class="failureTitle">圆筒与横梁下板焊接处海侧角焊缝1应力监测<img src="assets/toggle/green.png"></div>
+					<canvas id="graphContent1" width="650" height="300">[No canvas support]</canvas>
+					<div class="detectLink"><a href="">检测</a></div>
+				</div>
+			</div>
 		</div>
 		<!-- <div id='forecastDiv'>
 			<div id="forecastTitleDiv">健康预报</div>
