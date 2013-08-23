@@ -5,14 +5,14 @@
   var token;
   $(document).ready(function(){
     simpleTree($("#mTree"));
-    $(".faultTree .itemContent .bullet").click(function(event){
-      scope=shownId=$(this).attr("id");
-      domain=$(this).parents("[domain]").attr("domain");
-      $("#faultTreeContainer").show();
-      $("#monitorForcastContainer").hide();
-      render("faultTree");
-      event.stopPropagation();
-    });
+    // $(".faultTree .itemContent .bullet").click(function(event){
+    //   scope=shownId=$(this).attr("id");
+    //   domain=$(this).parents("[domain]").attr("domain");
+    //   $("#faultTreeContainer").show();
+    //   $("#monitorForcastContainer").hide();
+    //   render("faultTree");
+    //   event.stopPropagation();
+    // });
 
     $(".monitorForcast .itemContent .bullet").click(function(event){
       $("#graphTitle").text($(this).text());
@@ -61,7 +61,7 @@
 
 </script>
 <div id="mTree" domain="mechanism">
-      <div class="treeItem faultTree">
+<!--       <div class="treeItem faultTree">
         <div class="itemTitle titleShow">
           <div class="bullet">失效树</div>
         </div>
@@ -71,7 +71,7 @@
           <div class="bullet" scope="xuanzhuan" id="xuanzhuan">旋转机构</div>
           <div class="bullet" scope="xingzou" id="xingzou">行走机构</div>
         </div>
-      </div>
+      </div> -->
       <div class="treeItem monitorForcast">
         <div class="itemTitle titleShow">
           <div class="bullet">健康监测预警</div>
