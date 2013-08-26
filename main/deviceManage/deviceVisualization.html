@@ -5,10 +5,10 @@
   	$("#modelDiv").show();
   	$("#baseinfoDiv").show();
   	$("#faultTreeContainer").hide();
-		$("#modelContent").load("mechanism/qisheng/model.html");
-		$("#baseinfoContent").load("mechanism/qisheng/baseinfo.html");
+		$("#modelContent").load("machine/model.html");
+		$("#baseinfoContent").load("machine/baseinfo.html");
     $('#structNavDiv').load('left.html',function(){
-    	$("#qisheng").trigger("click");
+    	$("#machine").trigger("click");
     });
 
   //   $(".infoTab").mouseover(function(){
@@ -22,7 +22,6 @@
 <div id='contentDiv'>
 	<div id="modelDiv">
 		<div id="modelTitleDiv">
-			<div class="infoTab">模型</div>
 			<div class='infoTab'>图纸</div>
 		</div>
 		<div id="modelContent"></div>

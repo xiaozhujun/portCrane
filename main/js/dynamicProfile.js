@@ -45,8 +45,8 @@
 
 
       function GraphDrawer (target,data) {
+        var that = this;
         this.drawGraph = function(){
-          //alert("target:"+target);
           RGraph.Clear(document.getElementById(target));
           RGraph.ObjectRegistry.Clear();
           var line = new RGraph.Line(target, data)
@@ -62,15 +62,15 @@
           data = [r].concat(data);
           data.pop();
 
-          if(typeof this.timer=="undefined" || this.timer==null)
+          if(typeof that.timer=="undefined" || that.timer==null)
           {
-            this.timer = setInterval(this.drawGraph, 1000);
+            that.timer = setInterval(that.drawGraph, 1000);
           }
           
           };
           this.stopDrawing = function(){
-            clearInterval(this.timer);
-            this.timer = null;
+            clearInterval(that.timer);
+            that.timer = null;
           };
         }
 

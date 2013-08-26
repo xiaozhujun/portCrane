@@ -14,6 +14,11 @@
     font-weight: 900;
 }
 
+#modelTitleDiv .infoTab
+{
+    width: 100%;
+}
+
 .infoTab:HOVER
 {
     background-color: #9cf;
