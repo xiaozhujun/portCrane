@@ -6,21 +6,22 @@
 		};
 		$("#"+tempId+"M").show().siblings().hide();
 		$(".modelImg").click(function(){
-			var that=this;
-			$("#MyDiv").append(function(){
-				return "<img src='"+$(that).attr("src")+"'>";
-			});
-			ShowDiv('MyDiv','fade');
+			window.open($(this).attr("src"));
+			// var that=this;
+			// $("#MyDiv").append(function(){
+			// 	return "<img src='"+$(that).attr("src")+"'>";
+			// });
+			// ShowDiv('MyDiv','fade');
 		});
 	});
 </script>
-
+<!-- 
 <div id="fade" class="black_overlay"></div>
 <div id="MyDiv" class="white_content">
 	<div class="closeBtn">
 		<span style="font-size: 16px;" onclick="CloseDiv('MyDiv','fade')">关闭</span>
 	</div>
-</div>
+</div> -->
 <div id="xingzouM">
 		<img class="modelImg" src="assets/model/xingzou/xingzou.jpg">
 </div>
