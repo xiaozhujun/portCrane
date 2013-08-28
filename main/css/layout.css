@@ -124,8 +124,9 @@
 	width: 97.2%;
 }
 
-.modelImg,object
+.modelImg
 {
+	cursor: pointer;
 	margin-top: 20px;
 	width: 70%;
 	height: 90%;

@@ -1,9 +1,22 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#"+shownId+"M").show().siblings().hide();
+		$(".modelImg").click(function(){
+			var that=this;
+			$("#MyDiv").append(function(){
+				return "<img src='"+$(that).attr("src")+"'>";
+			});
+			ShowDiv('MyDiv','fade');
+		});
 	});
 </script>
 
+<div id="fade" class="black_overlay"></div>
+<div id="MyDiv" class="white_content">
+	<div class="closeBtn">
+		<span style="font-size: 16px;" onclick="CloseDiv('MyDiv','fade')">关闭</span>
+	</div>
+</div>
 <div id="menjiaM">
 <!-- 	<object width="100%" border="0" height="100%" style="MARGIN: 0px" type="application/x-3dxmlplugin">
 		<param value="3DXML/menjia.3DXML" name="DocumentFile">
@@ -32,25 +45,6 @@
 	<!--<img class="modelImg" src="assets/model/duanliang.jpg">-->
 	<img class="modelImg" src="assets/model/structure/duanliang.jpg">
 </div>
-<div id="lizhushangduanM">
-<!-- 	<object width="100%" border="0" height="100%" style="MARGIN: 0px" type="application/x-3dxmlplugin">
-		<param value="3DXML/shangchuanzhu.3DXML" name="DocumentFile">
-	</object> -->
-	<!--<img class="modelImg" src="assets/model/1_shangzhuanzhu.jpg">-->
-	<img class="modelImg" src="assets/model/structure/lizhushangduan.jpg">
-</div>
-<div id="lizhuxiaduanM">
-	<img class="modelImg" src="assets/model/structure/lizhuxiaduan.jpg">
-</div>
-<div id="zhuantaizongchengM">
-	<img class="modelImg" src="assets/model/structure/zhuantaizongcheng.jpg">
-</div>
-<div id="pinghengliangM">
-	<img class="modelImg" src="assets/model/structure/pinghengliang.jpg">
-</div>
-<div id="xiaolaganM">
-	<img class="modelImg" src="assets/model/structure/xiaolagan.jpg">
-</div>
 <div id="bijiaM">
 <!-- 	<object width="100%" border="0" height="100%" style="MARGIN: 0px" type="application/x-3dxmlplugin">
 		<param value="3DXML/bijia.3DXML" name="DocumentFile">
@@ -78,4 +72,23 @@
 	</object> -->
 	<!--<img class="modelImg" src="assets/model/bijia.jpg">-->
 	<img class="modelImg" src="assets/model/structure/bijia2.jpg">
+</div>
+<div id="lizhushangduanM">
+<!-- 	<object width="100%" border="0" height="100%" style="MARGIN: 0px" type="application/x-3dxmlplugin">
+		<param value="3DXML/shangchuanzhu.3DXML" name="DocumentFile">
+	</object> -->
+	<!--<img class="modelImg" src="assets/model/1_shangzhuanzhu.jpg">-->
+	<img class="modelImg" src="assets/model/structure/lizhushangduan.jpg">
+</div>
+<div id="lizhuxiaduanM">
+	<img class="modelImg" src="assets/model/structure/lizhuxiaduan.jpg">
+</div>
+<div id="zhuantaizongchengM">
+	<img class="modelImg" src="assets/model/structure/zhuantaizongcheng.jpg">
+</div>
+<div id="pinghengliangM">
+	<img class="modelImg" src="assets/model/structure/pinghengliang.jpg">
+</div>
+<div id="xiaolaganM">
+	<img class="modelImg" src="assets/model/structure/xiaolagan.jpg">
 </div>
