@@ -16,6 +16,7 @@ function simpleTree(obj) {
 		$(this).addClass("menuSelected");
 	});
 }
+
 function hierarchicalList (obj) {
 	$(".itemTitle",obj).find(".sn").text(function(i){
 		$(this).parent().next().find(".bullet .sn").text(function(j){
