@@ -2,54 +2,25 @@
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
 	<title>港口起重机械健康监测与预报可视化系统</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" type="text/css" href="css/title.css">
+	<link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#welcomeContainer").click(function(){
+				location = "port.html";
+			});
+		//setInterval(toPortPage,5000);
+		});
+
+		function toPortPage()
+		{
+			location = "port.html";
+		}
+	</script>
 </head>
 <body>
-	<div id='mainContainer'>
-	<div id='titleDiv'>港口起重机械健康监测与预报可视化系统</div>
-	<!--
-	<div id='title2Div'>----唐山曹妃甸实业港务有限公司</div>
-	-->
-	<div class="categoryDiv">
-		<div class="categoryTitle">门机队</div>
-		<div class="machineDiv">
-			<div><a href="main.html?devName=门机#01">门机#01</a><img src="assets/toggle/green.png" ></div>
-			<div><a href="main.html?devName=门机#02">门机#02</a><img src="assets/toggle/grey.png" ></div>
-			<div><a href="main.html?devName=门机#03">门机#03</a><img src="assets/toggle/green.png" ></div>
-			<div><a href="main.html?devName=门机#04">门机#04</a><img src="assets/toggle/green.png" ></div>
-			<div><a href="main.html?devName=门机#05">门机#05</a><img src="assets/toggle/green.png" ></div>
-			<div><a href="main.html?devName=门机#06">门机#06</a><img src="assets/toggle/grey.png" ></div>
-			<div><a href="main.html?devName=门机#07">门机#07</a><img src="assets/toggle/green.png" ></div>
-			<div><a href="main.html?devName=门机#08">门机#08</a><img src="assets/toggle/grey.png" ></div>
-		</div>
-	</div>
-	<div class="categoryDiv">
-		<div class="categoryTitle">卸船机</div>
-		<div class="machineDiv">
-			<div><a href="main.html?devName=卸船机#01">卸船机#01</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=卸船机#02">卸船机#02</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=卸船机#03">卸船机#03</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=卸船机#04">卸船机#04</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=卸船机#05">卸船机#05</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=卸船机#06">卸船机#06</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=卸船机#07">卸船机#07</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=卸船机#08">卸船机#08</a><img src="assets/toggle/green.png"></div>
-		</div>
-	</div>
-	<div class="categoryDiv">
-		<div class="categoryTitle">岸桥</div>
-		<div class="machineDiv">
-			<div><a href="main.html?devName=岸桥#01">岸桥#01</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=岸桥#02">岸桥#02</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=岸桥#03">岸桥#03</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=岸桥#04">岸桥#04</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=岸桥#05">岸桥#05</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=岸桥#06">岸桥#06</a><img src="assets/toggle/grey.png"></div>
-			<div><a href="main.html?devName=岸桥#07">岸桥#07</a><img src="assets/toggle/green.png"></div>
-			<div><a href="main.html?devName=岸桥#08">岸桥#08</a><img src="assets/toggle/grey.png"></div>
-		</div>
-	</div>
+	<div id='welcomeContainer'>
+		<img width="100%" height="100%" src="assets/welcome/welcome.jpg">
 	</div>
 </body>
 </html>
