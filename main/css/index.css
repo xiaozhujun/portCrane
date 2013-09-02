@@ -6,7 +6,7 @@ body
 #mainContainer
 {
 	margin: 0 auto;
-	width: 1400px;
+	width: 100%;
 }
 
 .categoryDiv
@@ -40,7 +40,6 @@ body
 .machineDiv a
 {
 	float: left;
-	width: 60%;
 	margin: 10;
 	vertical-align: middle;
 }
