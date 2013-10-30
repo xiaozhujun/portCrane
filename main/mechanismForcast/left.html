@@ -39,7 +39,7 @@
         rgd = new RealGraphDrawer("graphContent", data);
         token = setInterval(function(){
           $.ajax({
-            url:"http://localhost:8080/portmessageserver/sensors/sensor/"+sensorId+"/"+time+".htm",
+            url:$.URL.sensor.getDataWithTime+sensorId+"/"+time+".htm",
             dataType:'jsonp',
             success: function(data) {
               var sensorValue = [];
