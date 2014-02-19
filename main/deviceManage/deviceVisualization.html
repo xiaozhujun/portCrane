@@ -7,15 +7,9 @@
   	$("#faultTreeContainer").hide();
 		$("#modelContent").load("machine/model.html");
 		$("#baseinfoContent").load("machine/baseinfo.html");
-    $('#structNavDiv').load('left.html',function(){
+    $('#structNavDiv').load('deviceManage/safety-document.html',function(){
     	$("#machine").trigger("click");
     });
-
-  //   $(".infoTab").mouseover(function(){
-		// 	$(".currentInfoTab").removeClass("currentInfoTab");
-		// 	$(this).addClass("currentInfoTab");
-		// 	$("."+$(this).attr("cref")).show().siblings().hide();
-		// });
   });
 </script>
 <div id='structNavDiv'></div>

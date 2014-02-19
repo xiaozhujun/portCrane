@@ -1,0 +1,272 @@
+<link rel="stylesheet" href="css/safety.css" type="text/css">
+<script type="text/javascript">
+  $(document).ready(function(){
+    simpleTree($("#tree"));
+    $("#machine").click(function(event){
+      $("#modelContent").load("machine/model.html");
+      $("#baseinfoContent").load("machine/baseinfo.html");
+      $("#modelDiv").show();
+      $("#baseinfoDiv").show();
+      $("#faultTreeContainer").hide();
+      event.stopPropagation();
+    });
+    $(".inform .bullet").click(function(event){
+      shownId=$(this).attr("id");
+      scope=$(this).parents("[scope]").attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+      $("#modelDiv").show();
+      $("#baseinfoDiv").show();
+      $("#faultTreeContainer").hide();
+      render("model");
+      render("baseinfo");
+      // render("faultTree");
+      render("diagnosis");
+      render("forecast");
+
+      if (shownId.endWith("diankong")) {
+        $("#faultTreeTitleDiv").text("故障树");
+        $("#diagnosisTitleDiv").text("故障诊断");
+      } else {
+        $("#faultTreeTitleDiv").text("失效模式与失效树");
+        $("#diagnosisTitleDiv").text("损伤监测检测");
+      }
+      event.stopPropagation();
+    });
+
+    $(".faulttree .bullet").click(function(event){
+      shownId=$(this).attr("id");
+      scope=$(this).attr("scope");
+      domain=$(this).parents("[domain]").attr("domain");
+      $("#faultTreeContainer").show().siblings().hide();
+      render("faultTree");
+      event.stopPropagation();
+    });
+  });
+
+</script>
+
+<div id="tree">
+  <div class="treeItem">
+    <div class="itemTitle titleShow">设计制造资料</div> 
+    <div class="itemContent contentShow">
+      <div class="treeItem">
+    <div class="itemTitle titleShow">
+      <div class="bullet menuSelected" id="machine">设备档案</div>
+    </div>
+    <div class="itemContent contentShow">
+      <div class="treeItem inform" domain="structure">
+        <div class="itemTitle titleShow">主要结构</div>
+        <div class="itemContent contentShow">
+          <div class="treeItem">
+            <div class="itemTitle">
+              <div class="bullet" id="menjia">门架结构</div>
+            </div>
+            <div class="itemContent">
+              <div class="bullet" id="yuantong">圆筒</div>
+              <div class="bullet" id="hengliang">横梁</div>
+              <div class="bullet" id="duanliang">端梁</div>
+            </div>
+          </div>
+          <div class="treeItem">
+            <div class="itemTitle">
+              <div class="bullet" id="bijia">臂架系统</div>
+            </div>
+            <div class="itemContent">
+              <div class="bullet" id="xiangbiliang">象鼻梁</div>
+              <div class="bullet" id="dalagan">大拉杆</div>
+              <div class="bullet" id="bijia2">臂架</div>
+            </div>
+          </div>
+          <div class="treeItem">
+            <div class="itemTitle">上转柱</div>
+            <div class="itemContent">
+              <div class="bullet" id="lizhushangduan">立柱上段</div>
+              <div class="bullet" id="lizhuxiaduan">立柱下段</div>
+            </div>
+          </div>
+          <div class="bullet" id="zhuantaizongcheng">转台总成</div>
+          <div class="treeItem">
+            <div class="itemTitle">平衡系统</div>
+            <div class="itemContent">
+              <div class="bullet" id="pinghengliang">平衡梁</div>
+              <div class="bullet" id="xiaolagan">小拉杆</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="treeItem inform" domain="mechanism">
+        <div class="itemTitle titleShow">主要机构</div>
+        <div class="itemContent contentShow">
+          <div class="treeItem" scope="qisheng">
+            <div class="itemTitle">
+              <div class="bullet" id="qisheng">起升机构</div>
+            </div>
+            <div class="itemContent">
+              <div class="treeItem">
+                <div class="itemTitle">驱动装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="qsdiandongji">电动机</div>
+                  <div class="bullet" id="qszhidongqi">制动器</div>
+                  <div class="bullet" id="qsjiansuqi">减速器</div>
+                  <div class="bullet" id="chishilianzhouqi">带制动盘鼓形齿式联轴器</div>
+                  <div class="bullet" id="gaosuzhoulianzhouqi">高速轴联轴器</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">钢丝绳卷绕系统</div>
+                <div class="itemContent">
+                  <div class="bullet" id="juantong">卷筒总成</div>
+                  <div class="bullet" id="gangsisheng">钢丝绳</div>
+                  <div class="bullet" id="hualun">滑轮</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">取物装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="diaogou">吊钩总成</div>
+                  <div class="bullet" id="zhuadou">抓斗</div>
+                </div>
+              </div>
+<!--               <div class="treeItem">
+                <div class="bullet" id="qishengdiankong">电控系统</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="treeItem" scope="xuanzhuan">
+            <div class="itemTitle">
+              <div class="bullet" id="xuanzhuan">回转机构</div>
+            </div>
+            <div class="itemContent">
+              <div class="bullet" id="zhicheng">支承装置</div>
+              <div class="treeItem">
+                <div class="itemTitle">驱动装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="xzhdiandongji">电动机</div>
+                  <div class="bullet" id="xzhzhidongqi">制动器</div>
+                  <div class="bullet" id="xzhjiansuqi">减速器</div>
+                  <div class="bullet" id="lianzhoujie">锥盘式极限力矩联轴节</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">安全保护装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="xzhmaoding">回转锚定装置</div>
+                </div>
+              </div>
+  <!--             <div class="treeItem">
+                <div class="bullet" id="xuanzhuandiankong">电控系统</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="treeItem" scope="xingzou">
+            <div class="itemTitle">
+              <div class="bullet" id="xingzou">行走机构</div>
+            </div>
+            <div class="itemContent">
+              <div class="treeItem">
+                <div class="itemTitle">支承装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="balunjunhengliang">八轮均衡梁</div>
+                  <div class="bullet" id="silunjunhengliang">四轮均衡梁</div>
+                  <div class="treeItem">
+                    <div class="itemTitle">车轮组</div>
+                    <div class="itemContent">
+                      <div class="bullet" id="qudongchejia">驱动车架</div>
+                      <div class="bullet" id="congdongchejia">从动车架</div>
+                      <div class="bullet" id="qudonglunzhuangpei">驱动轮装配</div>
+                      <div class="bullet" id="congdonglunzhuangpei">从动轮装配</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">驱动装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="xzjiansuqi">三合一减速器</div>
+                </div>
+              </div>
+              <div class="treeItem">
+                <div class="itemTitle">安全保护装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="dianlanjuanraoxitong">电缆卷绕系统</div>
+                  <div class="bullet" id="xzmaoding">锚定装置</div>
+                  <div class="bullet" id="fangpaoqi">电动防跑器</div>
+                  <div class="bullet" id="huanchongqi">缓冲器</div>
+                </div>
+              </div>
+              <div class="bullet" id="fangfengxilan">防风系缆</div>
+            </div>
+          </div>
+          <div class="treeItem" scope="bianfu">
+            <div class="itemTitle">
+              <div class="bullet" id="bianfu">变幅机构</div>
+            </div>
+            <div class="itemContent">
+              <div class="treeItem">
+                <div class="itemTitle">驱动装置</div>
+                <div class="itemContent">
+                  <div class="bullet" id="bfdiandongji">电动机</div>
+                  <div class="bullet" id="bfzhidongqi">电力液压块式制动器</div>
+                  <div class="bullet" id="bfjiansuqi">减速器</div>
+                  <div class="bullet" id="lianzhouqi">高速轴齿形联轴器</div>
+                  <div class="bullet" id="daizhilunlianzhoujie">带制轮齿形联轴节</div>
+                  <div class="bullet" id="disulianzhoujie">低速轴齿形联轴节</div>
+                  <div class="bullet" id="yaojia">摇架装配</div>
+                  <div class="bullet" id="chitiao">齿条总成</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="treeItem inform" domain="electricity">
+        <div class="itemTitle titleShow">电气控制系统</div>
+        <div class="itemContent contentShow">
+          <div class="bullet">电气控制1</div>
+          <div class="bullet">电气控制2</div>
+          <div class="bullet">电气控制3</div>
+        </div>
+      </div>
+      <div class="treeItem faulttree">
+        <div class="itemTitle">失效树</div>
+        <div class="itemContent">
+          <div class="treeItem" domain="mechanism">
+            <div class="itemTitle">结构失效树</div>
+            <div class="itemContent">
+              <div class="bullet" scope="qisheng" id="qishengTree">起升机构</div>
+              <div class="bullet" scope="bianfu" id="bianfuTree">变幅机构</div>
+              <div class="bullet" scope="xuanzhuan" id="xuanzhuanTree">旋转机构</div>
+              <div class="bullet" scope="xingzou" id="xingzouTree">行走机构</div>
+            </div>
+          </div>
+          <div class="treeItem" domain="structure">
+            <div class="itemTitle">机构失效树</div>
+            <div class="itemContent">
+              <div class="bullet" id="menjiaTree">门架结构</div>
+              <div class="bullet" id="zhuanpanTree">转盘结构</div>
+              <div class="bullet" id="shangzhuanzhuTree">上转柱</div>
+              <div class="bullet" id="pinghangTree">平衡系统</div>
+              <div class="bullet" id="bijiaTree">臂架系统</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="bullet">产品质量合格证明</div>
+      <div class="bullet">安装及使用维护保养说明</div>
+      <div class="bullet">监督检验证明</div>
+    </div>
+  </div>
+  <div class="treeItem">
+    <div class="itemTitle titleShow">检验检查记录</div> 
+    <div class="itemContent contentShow">
+      <div class="bullet">定期检验报告</div>
+      <div class="bullet">定期自行检查记录</div>
+    </div>
+  </div>
+  <div class="itemBullet bullet">使用状况记录</div>
+  <div class="itemBullet bullet">维护保养记录</div>
+  <div class="itemBullet bullet">运行故障记录</div>
+  
+</div>

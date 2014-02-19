@@ -1,21 +1,13 @@
 <script type="text/javascript">
-  var gd1;
-  var rgd1;
-  var time1;
-  var token1;
+  var gd;
+  var rgd;
+  var time;
+  var token;
   $(document).ready(function(){
     simpleTree($("#mTree"));
-    // $(".faultTree .itemContent .bullet").click(function(event){
-    //   shownId=$(this).attr("id");
-    //   domain=$(this).parents("[domain]").attr("domain");
-    //   $("#faultTreeContainer1").show();
-    //   $("#monitorForcastContainer1").hide();
-    //   render("faultTree");
-    //   event.stopPropagation();
-    // });
 
     $(".monitorForcast .itemContent .bullet").click(function(event){
-      $("#graphTitle1").text($(this).text());
+      $("#graphTitle").text($(this).text());
       var data = RGraph.array_pad([], 60);
       if (typeof(gd)!="undefined") {
         gd.stopDrawing();
@@ -34,127 +26,88 @@
         }
       } 
       if($(this).attr("real")=="true"){
-        if (typeof(time1)=="undefined") {time1 = 0;}
+        if (typeof(time)=="undefined") {time = 0;}
         var sensorId = $(this).attr("id");
-        rgd1 = new RealGraphDrawer("graphContent1", data);
-        token1 = setInterval(function(){
+        rgd = new RealGraphDrawer("graphContent1", data);
+        token = setInterval(function(){
           $.ajax({
-            url:"http://localhost:8080/portmessageserver/sensors/sensor/"+sensorId+"/"+time1+".htm",
+            url:$.URL.sensor.getDataWithTime+sensorId+"/"+time+".htm",
             dataType:'jsonp',
             success: function(data) {
               var sensorValue = [];
               for (var i = 0; i < data.length; i++) {
                 sensorValue = sensorValue.concat(data[i].values[0].value);
-                time1 = data[i].timestamp;
+                time = data[i].timestamp;
               };
-              rgd1.drawGraph(sensorValue);
+              rgd.drawGraph(sensorValue);
             }
           });
         }, 1000);
       } else {
-        gd1 = new GraphDrawer("graphContent1", data);
-        gd1.drawGraph();
+        gd = new GraphDrawer("graphContent1", data);
+        gd.drawGraph();
       }
       event.stopPropagation();
     });
+    $("#yingbing11").trigger("click");
+
   });
 
 </script>
 
-<div id="mTree" domain="structure">
-<!--   <div class="treeItem faultTree">
-    <div class="itemTitle titleShow">
-      <div class="bullet">失效树</div>
-    </div>
-    <div class="itemContent contentShow">
-      <div class="bullet" id="menjia">门架结构</div>
-      <div class="bullet" id="zhuanpan">转盘结构</div>
-      <div class="bullet" id="shangzhuanzhu">上转柱</div>
-      <div class="bullet" id="pinghang">平衡系统</div>
-      <div class="bullet" id="bijia">臂架系统</div>
-    </div>
-  </div> -->
-  <div class="treeItem monitorForcast">
-    <div class="itemTitle titleShow">
-      <div class="bullet">健康监测预警</div>
-    </div>
-    <div class="itemContent contentShow">
-      <div class="treeItem">
-        <div class="itemTitle titleShow">门架结构</div>
+<div id="mTree" domain="structure" class="monitorForcast">
+  <div class="treeItem">
+        <div class="itemTitle titleShow">耳板</div>
         <div class="itemContent contentShow">
           <div class="treeItem">
-            <div class="itemTitle titleShow">焊缝</div>
+            <div class="itemTitle titleShow">耳板根部角焊缝1应力监测</div>
             <div class="itemContent contentShow">
-              <div class="bullet menuSelected" id="yuantonghaice1">圆筒与横梁下板焊接处海侧角焊缝1应力监测</div>
-              <div class="bullet" id="yuantonghaice2">圆筒与横梁下板焊接处海侧角焊缝2应力监测</div>
-              <div class="bullet" id="yuantongluce1">圆筒与横梁下板焊接处陆侧角焊缝1应力监测</div>
-              <div class="bullet" id="yuantongluce2">圆筒与横梁下板焊接处陆侧角焊缝2应力监测</div>
-              <div class="bullet" id="yuantong2">圆筒与上板环焊缝2点钟方向应力监测</div>
-              <div class="bullet" id="yuantong4">圆筒与上板环焊缝4点钟方向应力监测</div>
-              <div class="bullet" id="yuantong6">圆筒与上板环焊缝6点钟方向应力监测</div>
-              <div class="bullet" id="yuantong8">圆筒与上板环焊缝8点钟方向应力监测</div>
-              <div class="bullet" id="yuantong10">圆筒与上板环焊缝10点钟方向应力监测</div>
-              <div class="bullet" id="yuantong12">圆筒与上板环焊缝12点钟方向应力监测</div>
-              <div class="bullet" id="henglianghaice1">横梁底端与端梁焊接处海侧角焊缝1应力监测</div>
-              <div class="bullet" id="henglianghaice2">横梁底端与端梁焊接处海侧角焊缝2应力监测</div>
-              <div class="bullet" id="henglianghaice3">横梁底端与端梁焊接处海侧角焊缝3应力监测</div>
-              <div class="bullet" id="henglianghaice4">横梁底端与端梁焊接处海侧角焊缝4应力监测</div>
-              <div class="bullet" id="hengliangluce1">横梁底端与端梁焊接处陆侧角焊缝1应力监测</div>
-              <div class="bullet" id="hengliangluce2">横梁底端与端梁焊接处陆侧角焊缝2应力监测</div>
-              <div class="bullet" id="hengliangluce3">横梁底端与端梁焊接处陆侧角焊缝3应力监测</div>
-              <div class="bullet" id="hengliangluce4">横梁底端与端梁焊接处陆侧角焊缝4应力监测</div>
+              <div class="bullet" id="yingbing1">应变传感器1#</div>
+              <div class="bullet" id="yingbing2">应变传感器2#</div>
             </div>
           </div>
-        </div>
+          <div class="treeItem">
+            <div class="itemTitle titleShow">耳板根部角焊缝2应力监测</div>
+            <div class="itemContent contentShow">
+              <div class="bullet" id="yingbing3">应变传感器3#</div>
+              <div class="bullet" id="yingbing4">应变传感器4#</div>
+            </div>
+          </div>
+
+          <div class="treeItem">
+            <div class="itemTitle titleShow">耳板根部角焊缝3应力监测</div>
+            <div class="itemContent contentShow">
+              <div class="bullet" id="yingbing5">应变传感器5#</div>
+              <div class="bullet" id="yingbing6">应变传感器6#</div>
+            </div>
+          </div>
+          <div class="treeItem">
+            <div class="itemTitle titleShow">耳板根部角焊缝4应力监测</div>
+            <div class="itemContent contentShow">
+              <div class="bullet" id="yingbing7">应变传感器7#</div>
+              <div class="bullet" id="yingbing8">应变传感器8#</div>
+            </div>
+          </div>
       </div>
-      <div class="treeItem">
-        <div class="bullet" id="zhuanpan">转盘结构</div>
-      </div>
-      <div class="treeItem">
-        <div class="itemTitle titleShow">上转柱（人字架）</div>
+</div>
+
+<div class="treeItem">
+        <div class="itemTitle titleShow">大臂</div>
         <div class="itemContent contentShow">
           <div class="treeItem">
-            <div class="itemTitle">焊缝</div>
-            <div class="itemContent">
-              <div class="bullet" id="jiaohanfeng1">角焊缝1应力监测</div>
-              <div class="bullet" id="jiaohanfeng2">角焊缝2应力监测</div>
-              <div class="bullet" id="jiaohanfeng3">角焊缝3应力监测</div>
-              <div class="bullet" id="jiaohanfeng4">角焊缝4应力监测</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="treeItem">
-        <div class="bullet" id="pingheng">平衡系统</div>
-      </div>
-      <div class="treeItem">
-        <div class="itemTitle titleShow">主臂架</div>
-        <div class="itemContent contentShow">
-          <div class="treeItem">
-            <div class="itemTitle">大臂</div>
-            <div class="itemContent">
-              <div class="bullet" id="dabishang">大臂右支座位置轴线上侧应力监测</div>
-              <div class="bullet" id="dabixia">大臂左支座位置轴线下侧应力监测</div>
+            <div class="itemTitle titleShow">大臂右支座位置轴线上侧应力监测</div>
+            <div class="itemContent contentShow">
+              <div class="bullet" id="yingbing9">应变传感器9#</div>
+              <div class="bullet" id="yingbing10">应变传感器10#</div>
             </div>
           </div>
           <div class="treeItem">
-            <div class="itemTitle">耳板铰接处</div>
-            <div class="itemContent">
-              <div class="bullet" id="bianfux">变幅齿条与主臂架铰接处12点方向X向振动监测</div>
-              <div class="bullet" id="bianfuy">变幅齿条与主臂架铰接处12点方向Y向振动监测</div>
+            <div class="itemTitle titleShow">大臂右支座位置轴线下侧应力监测</div>
+            <div class="itemContent contentShow">
+              <div class="bullet" id="yingbing11">应变传感器11#</div>
+              <div class="bullet" id="yingbing12">应变传感器12#</div>
             </div>
           </div>
-          <div class="treeItem">
-            <div class="itemTitle">耳板根部</div>
-            <div class="itemContent">
-              <div class="bullet" id="wd000001" real="true">耳板根部 角焊缝1应力监测</div>
-              <div class="bullet" id="erban2">耳板根部 角焊缝2应力监测</div>
-              <div class="bullet" id="erban3">耳板根部 角焊缝3应力监测</div>
-              <div class="bullet" id="erban4">耳板根部 角焊缝4应力监测</div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
+</div>
 </div>
