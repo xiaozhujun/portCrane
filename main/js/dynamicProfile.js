@@ -7,7 +7,8 @@
               .Set('linewidth', 1)
               .Set('filled', true)
               .Set('fillstyle', 'rgba(128,255,128,0.5)')
-              .Set('ymax', 60)
+              .Set('ymax', 1500)
+              .Set('xaxispos', 'center')
               .Set('numxticks', 5)
               .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
               .Draw();
@@ -55,10 +56,11 @@
               .Set('filled', true)
               .Set('fillstyle', 'rgba(128,255,128,0.5)')
               .Set('ymax', 60)
+              .Set('xaxispos', 'center')
               .Set('numxticks', 5)
-              .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
+              .Set('labels', ['Now','10s','15s','20s','25s','30s','35s','40s','45s','50s','55s','60s'])
               .Draw();
-          var r = RGraph.random(0,60);
+          var r = RGraph.random(-60,60);
           data = [r].concat(data);
           data.pop();
 
