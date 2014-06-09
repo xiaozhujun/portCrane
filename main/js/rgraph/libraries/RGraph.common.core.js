@@ -1433,7 +1433,7 @@
 
         // Reset the line dash
         if (typeof co.setLineDash == 'function') {
-            co.setLineDash(null);
+            co.setLineDash([]);
         }
 
         // If it's a bar and 3D variant, translate
