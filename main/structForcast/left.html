@@ -6,50 +6,45 @@
   $(document).ready(function(){
     simpleTree($("#mTree"));
 
-    $(".monitorForcast .itemContent .bullet").click(function(event){
-      $("#graphTitle").text($(this).text());
-      var data = RGraph.array_pad([], 60);
-      if (typeof(gd)!="undefined") {
-        gd.stopDrawing();
-      } 
-      if (typeof(rgd)!="undefined") {
-        if (typeof(token)!="undefined") {
-          clearInterval(token);
-        }
-      } 
-      if (typeof(gd1)!="undefined") {
-        gd1.stopDrawing();
-      } 
-      if (typeof(rgd1)!="undefined") {
-        if (typeof(token1)!="undefined") {
-          clearInterval(token1);
-        }
-      } 
-      if($(this).attr("real")=="true"){
-        if (typeof(time)=="undefined") {time = 0;}
-        var sensorId = $(this).attr("id");
-        rgd = new RealGraphDrawer("graphContent1", data);
-        token = setInterval(function(){
-          $.ajax({
-            url:$.URL.sensor.getDataWithTime+sensorId+"/"+time+".htm",
-            dataType:'jsonp',
-            success: function(data) {
-              var sensorValue = [];
-              for (var i = 0; i < data.length; i++) {
-                sensorValue = sensorValue.concat(data[i].values[0].value);
-                time = data[i].timestamp;
-              };
-              rgd.drawGraph(sensorValue);
-            }
-          });
-        }, 1000);
-      } else {
-        gd = new GraphDrawer("graphContent1", data);
-        gd.drawGraph();
-      }
-      event.stopPropagation();
-    });
-    $("#yingbing11").trigger("click");
+      $(".monitorForcast .itemContent .bullet").click(function(event){
+          $("#graphTitle").text($(this).text());
+          var data = RGraph.array_pad([], 60);
+          if (typeof(gd)!="undefined") {
+              gd.stopDrawing();
+          }
+          if (typeof(rgd)!="undefined") {
+              if (typeof(token)!="undefined") {
+                  clearInterval(token);
+              }
+          }
+          if (typeof(gd1)!="undefined") {
+              gd1.stopDrawing();
+          }
+          if (typeof(rgd1)!="undefined") {
+              if (typeof(token1)!="undefined") {
+                  clearInterval(token1);
+              }
+          }
+          if($(this).attr("real")=="true"){
+              if (typeof(time)=="undefined") {time = 0;}
+              var sensorId = $(this).attr("sensorNum");
+              rgd = new RealGraphDrawer("graphContent1", data);
+              token = setInterval(function(){
+                  $.ajax({
+                      url:$.URL.sensor.getDataWithTime+sensorId+".htm",
+                      dataType:'jsonp',
+                      success: function(response) {
+                          rgd.drawGraph(response.data);
+                      }
+                  });
+              }, 1000);
+          } else {
+              gd = new GraphDrawer("graphContent1", data);
+              gd.drawGraph();
+          }
+          event.stopPropagation();
+      });
+    $("#yingbing101").trigger("click");
 
   });
 
@@ -62,13 +57,13 @@
           <div class="treeItem">
             <div class="itemTitle titleShow">刚性支腿纵上应力监测</div>
             <div class="itemContent contentShow">
-              <div class="bullet" id="yingbing1">应变传感器1</div>
+              <div class="bullet"  real="true" sensorNum="101" id="yingbing101">应变传感器1</div>
             </div>
           </div>
           <div class="treeItem">
             <div class="itemTitle titleShow">刚性支腿纵下应力监测</div>
             <div class="itemContent contentShow">
-              <div class="bullet" id="yingbing3">应变传感器2</div>
+              <div class="bullet"  real="true" sensorNum="102" id="yingbing102">应变传感器2</div>
             </div>
           </div>
       </div>
@@ -80,25 +75,25 @@
               <div class="treeItem">
                 <div class="itemTitle titleShow">东梁上盖板0/4处应力监测</div>
                 <div class="itemContent contentShow">
-                  <div class="bullet" id="yingbing9">应变传感器3</div>
+                  <div class="bullet"  real="true" sensorNum="201" id="yingbing201">应变传感器3</div>
                 </div>
               </div>
              <div class="treeItem">
                 <div class="itemTitle titleShow">东梁上盖板温补处应力监测</div>
                 <div class="itemContent contentShow">
-                    <div class="bullet" id="yingbing11">应变传感器4</div>
+                    <div class="bullet"  real="true" sensorNum="202" id="yingbing202">应变传感器4</div>
                 </div>
             </div>
             <div class="treeItem">
                 <div class="itemTitle titleShow">西梁上盖板1/4处应力监测</div>
                 <div class="itemContent contentShow">
-                    <div class="bullet" id="yingbing11">应变传感器5</div>
+                    <div class="bullet"  real="true" sensorNum="203" id="yingbing203">应变传感器5</div>
                 </div>
             </div>
             <div class="treeItem">
                 <div class="itemTitle titleShow">西梁上盖板2/4处应力监测</div>
                 <div class="itemContent contentShow">
-                    <div class="bullet" id="yingbing11">应变传感器6</div>
+                    <div class="bullet"  real="true" sensorNum="204" id="yingbing204">应变传感器6</div>
                 </div>
             </div>
 

@@ -6,51 +6,46 @@
   $(document).ready(function(){
     simpleTree($("#mTree"));
 
-    $(".monitorForcast .itemContent .bullet").click(function(event){
-      $("#graphTitle").text($(this).text());
-      var data = RGraph.array_pad([], 60);
-      if (typeof(gd)!="undefined") {
-        gd.stopDrawing();
-      } 
-      if (typeof(rgd)!="undefined") {
-        if (typeof(token)!="undefined") {
-          clearInterval(token);
-        }
-      } 
-      if (typeof(gd1)!="undefined") {
-        gd1.stopDrawing();
-      } 
-      if (typeof(rgd1)!="undefined") {
-        if (typeof(token1)!="undefined") {
-          clearInterval(token1);
-        }
-      } 
-      if($(this).attr("real")=="true"){
-        if (typeof(time)=="undefined") {time = 0;}
-        var sensorId = $(this).attr("id");
-        rgd = new RealGraphDrawer("graphContent", data);
-        token = setInterval(function(){
-          $.ajax({
-            url:$.URL.sensor.getDataWithTime+sensorId+"/"+time+".htm",
-            dataType:'jsonp',
-            success: function(data) {
-              var sensorValue = [];
-              for (var i = 0; i < data.length; i++) {
-                sensorValue = sensorValue.concat(data[i].values[0].value);
-                time = data[i].timestamp;
-              };
-              rgd.drawGraph(sensorValue);
-            }
-          });
-        }, 1000);
-      } else {
-        gd = new GraphDrawer("graphContent", data);
-        gd.drawGraph();
-      }
-      event.stopPropagation();
-    });
+      $(".monitorForcast .itemContent .bullet").click(function(event){
+          $("#graphTitle").text($(this).text());
+          var data = RGraph.array_pad([], 60);
+          if (typeof(gd)!="undefined") {
+              gd.stopDrawing();
+          }
+          if (typeof(rgd)!="undefined") {
+              if (typeof(token)!="undefined") {
+                  clearInterval(token);
+              }
+          }
+          if (typeof(gd1)!="undefined") {
+              gd1.stopDrawing();
+          }
+          if (typeof(rgd1)!="undefined") {
+              if (typeof(token1)!="undefined") {
+                  clearInterval(token1);
+              }
+          }
+          if($(this).attr("real")=="true"){
+              if (typeof(time)=="undefined") {time = 0;}
+              var sensorId = $(this).attr("sensorNum");
+              rgd = new RealGraphDrawer("graphContent", data);
+              token = setInterval(function(){
+                  $.ajax({
+                      url:$.URL.sensor.getDataWithTime+sensorId+".htm",
+                      dataType:'jsonp',
+                      success: function(response) {
+                          rgd.drawGraph(response.data);
+                      }
+                  });
+              }, 1000);
+          } else {
+              gd = new GraphDrawer("graphContent1", data);
+              gd.drawGraph();
+          }
+          event.stopPropagation();
+      });
 
-    $("#gaosuzhoux").trigger("click");
+    $("#zhendong301").trigger("click");
   });
 
 </script>
@@ -61,13 +56,13 @@
             <div class="treeItem">
                 <div class="itemTitle titleShow">高速轴外侧X向振动监测</div>
                 <div class="itemContent contentShow">
-                    <div class="bullet" id="gaosuzhoux">振动传感器1</div>
+                    <div class="bullet"  real="true" sensorNum="301" id="zhendong301">振动传感器1</div>
                 </div>
             </div>
             <div class="treeItem">
                 <div class="itemTitle titleShow">高速轴外侧Y向振动监测</div>
                 <div class="itemContent contentShow">
-                    <div class="bullet" id="gaosuzhoux">振动传感器2</div>
+                    <div class="bullet"  real="true" sensorNum="302" id="zhendong302">振动传感器2</div>
                 </div>
             </div>
         </div>
