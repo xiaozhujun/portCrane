@@ -8,6 +8,7 @@
               .Set('filled', true)
               .Set('fillstyle', 'rgba(128,255,128,0.5)')
               .Set('ymax', 10000)
+              .Set('gutter.left', 50)
               .Set('xaxispos', 'center')
               .Set('numxticks', 5)
               .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
