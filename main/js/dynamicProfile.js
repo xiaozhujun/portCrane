@@ -2,23 +2,37 @@
         this.drawGraph = function(sensorValue){
           RGraph.Clear(document.getElementById(target));
           RGraph.ObjectRegistry.Clear();
+          data = sensorValue.concat(data);
+          for (var i = 0; i < sensorValue.length; i++) {
+                data.pop();
+          };
+          var YMax = arrrayMax(data);
+
           var line = new RGraph.Line(target, data)
               .Set('colors', ['green'])
               .Set('linewidth', 1)
               .Set('filled', true)
               .Set('fillstyle', 'rgba(128,255,128,0.5)')
-              .Set('ymax', 10000)
+              .Set('ymax', YMax)
               .Set('gutter.left', 50)
               .Set('xaxispos', 'center')
               .Set('numxticks', 5)
               .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
               .Draw();
               //alert(target+":"+sensorValue);
-          data = sensorValue.concat(data);
-          for (var i = 0; i < sensorValue.length; i++) {
-            data.pop();
-          };
+
         };
+      }
+
+      function arrrayMax(data){
+          var j = data[0];
+          var length = data.length;
+          for(i=0;i<length;i++){
+              if(data[i]>j){
+                  j=data[i];
+              }
+          }
+          return j;
       }
 
 /*      function RealGraphDrawer (target,data) {
