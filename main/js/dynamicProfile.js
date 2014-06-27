@@ -2,12 +2,18 @@
         this.drawGraph = function(sensorValue){
           RGraph.Clear(document.getElementById(target));
           RGraph.ObjectRegistry.Clear();
+          if(sensorValue==null){
+             sensorValue = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+          }
           data = sensorValue.concat(data);
           for (var i = 0; i < sensorValue.length; i++) {
                 data.pop();
           };
-          var YMax = arrrayMax(data);
 
+          var YMax = arrrayMax(data);
+          if(YMax<5){
+              YMax=5;
+          }
           var line = new RGraph.Line(target, data)
               .Set('colors', ['green'])
               .Set('linewidth', 1)
@@ -17,7 +23,7 @@
               .Set('gutter.left', 50)
               .Set('xaxispos', 'center')
               .Set('numxticks', 5)
-              .Set('labels', ['Now','10s','20s','30s','40s','50s','60s'])
+              .Set('labels', ['Now','10','20','30','40','50','60'])
               .Draw();
               //alert(target+":"+sensorValue);
 
