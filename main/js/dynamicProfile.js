@@ -25,14 +25,23 @@
       }
 
       function arrrayMax(data){
-          var j = data[0];
+          var max = data[0];
+          var min = data[0];
           var length = data.length;
           for(i=0;i<length;i++){
-              if(data[i]>j){
-                  j=data[i];
+              if(data[i]>max){
+                  max=data[i];
+              }
+
+              if(data[i]<min){
+                  min=data[i];
               }
           }
-          return j;
+          if(max>Math.abs(min)){
+              return max;
+          }else{
+              return Math.abs(min);
+          }
       }
 
 /*      function RealGraphDrawer (target,data) {
