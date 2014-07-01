@@ -7,7 +7,7 @@
     simpleTree($("#mTree"));
 
       $(".monitorForcast .itemContent .bullet").click(function(event){
-          $("#graphTitle").text($(this).text());
+          $("#graphTitle1").text($(this).text());
           var data = RGraph.array_pad([], 60);
           if (typeof(gd)!="undefined") {
               gd.stopDrawing();

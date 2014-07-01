@@ -23,7 +23,7 @@
               .Set('gutter.left', 50)
               .Set('xaxispos', 'center')
               .Set('numxticks', 5)
-              .Set('labels', ['Now','10','20','30','40','50','60'])
+              .Set('labels', ['Now','','','','','',''])
               .Draw();
               //alert(target+":"+sensorValue);
 
